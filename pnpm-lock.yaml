@@ -8,6 +8,9 @@ importers:
 
   .:
     devDependencies:
+      '@types/dom-view-transitions':
+        specifier: ^1.0.5
+        version: 1.0.5
       sass:
         specifier: ^1.80.6
         version: 1.80.6
@@ -462,6 +465,9 @@ packages:
 
   '@shikijs/vscode-textmate@9.3.0':
     resolution: {integrity: sha512-jn7/7ky30idSkd/O5yDBfAnVt+JJpepofP/POZ1iMOxK59cOfqIgg/Dj0eFsjOTMw+4ycJN0uhZH/Eb0bs/EUA==}
+
+  '@types/dom-view-transitions@1.0.5':
+    resolution: {integrity: sha512-N2sILR7fxSMnaFaAPwGj4DtHCXjIyQTHt+xJyf9jATpzUsTkMNM0DWtqZB6W7f501B/Y0tq3uqat/VlbjuTpMA==}
 
   '@types/estree@1.0.6':
     resolution: {integrity: sha512-AYnb1nQyY49te+VRAVgmzfcgjYS91mY5P0TKUDCLEM+gNnA+3T6rWITXRLYCpahpqSQbN5cE+gHpnPyXjHWxcw==}
@@ -1252,6 +1258,8 @@ snapshots:
       '@types/hast': 3.0.4
 
   '@shikijs/vscode-textmate@9.3.0': {}
+
+  '@types/dom-view-transitions@1.0.5': {}
 
   '@types/estree@1.0.6': {}
 
