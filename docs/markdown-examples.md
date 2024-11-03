@@ -32,6 +32,41 @@ export default {
 }
 ```
 
+## Code Group
+
+**Input**
+````md
+::: code-group
+
+```sh [pnpm]
+#查询pnpm版本
+pnpm -v
+```
+
+```sh [yarn]
+#查询yarn版本
+yarn -v
+```
+
+:::
+````
+
+**Output**
+
+::: code-group
+
+```sh [pnpm]
+#查询pnpm版本
+pnpm -v
+```
+
+```sh [yarn]
+#查询yarn版本
+yarn -v
+```
+
+:::
+
 ## Custom Containers
 
 **Input**

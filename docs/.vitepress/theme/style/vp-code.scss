@@ -1,0 +1,67 @@
+/* .vitepress/theme/style/vp-code.scss */
+
+/* 代码块：增加留空边距 增加阴影 */
+.vp-doc div[class*='language-'] {
+  box-shadow: 2px 2px 10px 2px var(--vp-code-block-shadow);
+  padding-top: 20px;
+  /* 代码块：添加macOS风格的小圆点 */
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    width: 12px;
+    height: 12px;
+    background-color: #ff5f56;
+    border-radius: 50%;
+    box-shadow: 20px 0 0 #ffbd2e, 40px 0 0 #27c93f;
+    z-index: 1;
+  }
+  /* 代码块：下移行号 隐藏右侧竖线 */
+  .line-numbers-wrapper {
+    padding-top: 40px;
+    border-right: none;
+    /* 代码块：重建行号右侧竖线 */
+    &::after {
+      content: '';
+      position: absolute;
+      top: 40px;
+      right: 0;
+      border-right: 1px solid var(--vp-code-block-divider-color);
+      height: calc(100% - 60px);
+    }
+  }
+}
+.vp-doc .vp-code-group {
+  box-shadow: 2px 2px 10px 2px var(--vp-code-block-shadow);
+  border-radius: 8px;
+  .tabs {
+    padding-top: 20px;
+    &::before {
+      content: " ";
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      height: 12px;
+      width: 12px;
+      background: #fc625d;
+      border-radius: 50%;
+      box-shadow: 20px 0 #fdbc40, 40px 0 #35cd4b;
+    }
+  }
+  div[class*='language-'] {
+    box-shadow: none;
+    padding-top: 0;
+    &::before {
+      display: none;
+    }
+    .line-numbers-wrapper {
+      padding-top: 20px;
+      &::after {
+        top: 20px;
+        height: calc(100% - 40px);
+      }
+    }
+  }
+}

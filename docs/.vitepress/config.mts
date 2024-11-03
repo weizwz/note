@@ -24,5 +24,10 @@ export default defineConfig({
     socialLinks: [
       { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
     ]
-  }
+  },
+  //markdown配置
+  markdown: {
+    //行号显示
+    lineNumbers: true, //false关闭
+  },
 })
