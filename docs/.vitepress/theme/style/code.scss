@@ -2,7 +2,7 @@
 
 /* 代码块：增加留空边距 增加阴影 */
 .vp-doc div[class*='language-'] {
-  box-shadow: 2px 2px 10px 2px var(--vp-code-block-shadow);
+  box-shadow: var(--vp-code-block-shadow);
   padding-top: 20px;
   /* 代码块：添加macOS风格的小圆点 */
   &::before {
@@ -34,7 +34,7 @@
   }
 }
 .vp-doc .vp-code-group {
-  box-shadow: 2px 2px 10px 2px var(--vp-code-block-shadow);
+  box-shadow: var(--vp-code-block-shadow);
   border-radius: 8px;
   .tabs {
     padding-top: 20px;

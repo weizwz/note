@@ -2,5 +2,6 @@
 //.vitepress/theme/style/index.scss
 @use  './vars.scss';
 @use './rainbow.scss';
-@use  './vp-code.scss';
+@use  './code.scss';
+@use  './blockquote.scss';
 @use  './custom.scss';
