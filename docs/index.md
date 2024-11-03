@@ -6,6 +6,9 @@ hero:
   name: "weizwz"
   text: "blog with vitePress"
   tagline: My great project tagline
+  image:
+    src: /head.png
+    alt: VitePress
   actions:
     - theme: brand
       text: Markdown 示例
