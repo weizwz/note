@@ -35,7 +35,7 @@
 }
 .vp-doc .vp-code-group {
   box-shadow: var(--vp-code-block-shadow);
-  border-radius: 8px;
+  border-radius: var(--vp-code-block-radius);
   .tabs {
     padding-top: 20px;
     &::before {

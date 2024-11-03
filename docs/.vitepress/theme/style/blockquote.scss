@@ -2,7 +2,7 @@
 .vp-doc blockquote {
   margin: 0 0 20px;
   padding: 12px 15px;
-  border-radius: 8px;
-  border-left: 4px solid var(--vp-c-brand-1);
+  border-radius: var(--vp-code-block-radius);
+  border-left: var(--vp-c-radius-1) solid var(--vp-c-brand-1);
   background-color: var(--vp-quote-block-bg);
 }
