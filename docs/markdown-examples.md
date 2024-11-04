@@ -1,4 +1,9 @@
-# Markdown 示例
+---
+title: Markdown 示例
+editLink: true
+---
+
+# {{ $frontmatter.title }}
 
 此页面演示了 `VitePress` 提供的一些内置 `markdown` 扩展。
 

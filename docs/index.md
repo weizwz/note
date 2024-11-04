@@ -2,6 +2,9 @@
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
+title: weizwz
+titleTemplate: 博客
+
 hero:
   name: "weizwz"
   text: "blog with vitePress"
