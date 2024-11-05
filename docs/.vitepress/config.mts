@@ -7,9 +7,9 @@ export default defineConfig({
   lang: 'zh-CN',
   themeConfig: {
     // 左上角logo
-    logo: '/logo.png',
+    logo: '/favicon.ico',
     // 标题隐藏
-    siteTitle: false,
+    siteTitle: "weizwz",
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: '首页', link: '/' },

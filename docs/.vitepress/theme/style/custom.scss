@@ -14,10 +14,3 @@
 .dark::view-transition-old(root) {
     z-index: 9999;
 }
-
-// 首页按钮
-.VPHome {
-    .VPButton.brand {
-        background-color: var(--vp-button-brand-border);
-    }
-}
