@@ -133,3 +133,20 @@ This is a dangerous warning.
 This is a details block.
 :::
 
+## 折叠语法
+
+**输入**
+
+```md
+<details>
+  <summary>点我展开</summary>
+  Markdown默认折叠语法，Vitepress可以使用容器折叠语法，更加美观
+</details>
+```
+
+**输出**
+
+<details>
+  <summary>点我展开</summary>
+  Markdown默认折叠语法，Vitepress可以使用容器折叠语法，更加美观
+</details>

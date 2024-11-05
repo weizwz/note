@@ -14,6 +14,8 @@
   --vp-c-radius-2: 8px;
   --vp-c-radius-3: 12px;
 
+  --vp-c-font-size: 14px;
+
   --vp-shadow-black-1: 1px 1px 5px 1px rgba(0, 0, 0, 0.1);
   --vp-shadow-black-9: 1px 1px 5px 1px rgba(0, 0, 0, 0.9);
   --vp-shadow-white-1: 1px 1px 5px 1px rgba(255, 255, 255, 0.1);
@@ -107,6 +109,14 @@
   --vp-custom-block-tip-border: var(--vp-c-brand-1);
   --vp-custom-block-tip-text: var(--vp-c-brand-lightest);
   --vp-custom-block-tip-bg: var(--vp-c-brand-dimm);
+}
+
+
+/**
+* body
+* -------------------------------------------------------------------------- */
+body {
+  font-size: var(--vp-c-font-size);
 }
 
 /**

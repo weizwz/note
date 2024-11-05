@@ -5,4 +5,8 @@
   border-radius: var(--vp-code-block-radius);
   border-left: var(--vp-c-radius-1) solid var(--vp-c-brand-1);
   background-color: var(--vp-quote-block-bg);
+
+  >p {
+    font-size: var(--vp-c-font-size);
+  }
 }

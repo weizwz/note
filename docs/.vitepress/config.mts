@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import { nav } from './configs'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -11,10 +12,7 @@ export default defineConfig({
     // 标题隐藏
     siteTitle: "weizwz",
     // https://vitepress.dev/reference/default-theme-config
-    nav: [
-      { text: '首页', link: '/' },
-      { text: '示例', link: '/markdown-examples' }
-    ],
+    nav,
 
     sidebar: [
       {
