@@ -16,6 +16,7 @@
   "devDependencies": {
     "@types/dom-view-transitions": "^1.0.5",
     "sass": "^1.80.6",
+    "vite-plugin-markdown-preview": "^1.1.1",
     "vitepress": "^1.4.3",
     "vue": "^3.5.12"
   }
