@@ -2,13 +2,12 @@
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
-title: weizwz
-titleTemplate: 博客
+title: 博客
 
 hero:
   name: "weizwz"
-  text: "blog with vitePress"
-  tagline: My great project tagline
+  text: "个人博客 · 时光笔墨"
+  tagline: 知之为知之，不知为不知
   image:
     src: /head.png
     alt: VitePress
