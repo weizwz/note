@@ -1,5 +1,5 @@
-# weizwz
-一个由vitepress打造的个人博客。
+# 唯知笔记
+一个基于VitePress的个人博客网站。
 
 ## 搭建
 
