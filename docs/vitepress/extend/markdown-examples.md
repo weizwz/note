@@ -1,5 +1,5 @@
 ---
-title: Markdown 示例
+title: markdown 示例
 editLink: true
 ---
 

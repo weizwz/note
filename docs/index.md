@@ -2,23 +2,23 @@
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
-title: 唯知笔记
-titleTemplate: '唯知笔记'
+title: 唯之为之
+titleTemplate: '唯之为之'
 
 hero:
-  name: "唯知笔记"
-  text: "基于VitePress的网站"
-  tagline: 记录岁月的哼唧
+  name: "唯之为之"
+  text: "岁月的哼唧"
+  tagline: 基于VitePress的个人博客网站
   image:
     src: /head.png
     alt: VitePress
   actions:
     - theme: brand
-      text: Markdown 示例
-      link: /write/vitepress/markdown-examples
+      text: markdown 示例
+      link: /vitepress/extend/markdown-examples
     - theme: alt
-      text: VitePress API 示例
-      link: /write/vitepress/api-examples
+      text: api 示例
+      link: /vitepress/basic/api-examples
 
 features:
   - title: Feature A

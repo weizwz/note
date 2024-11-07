@@ -4,15 +4,20 @@ import type { DefaultTheme } from 'vitepress'
 export const nav: DefaultTheme.Config['nav'] = [
   { text: '首页', link: '/' },
   {
-    text: '写作',
+    text: 'VitePress',
     items: [
       {
-        text: 'VitePress 语法',
+        text: '基础设置',
         items: [
-          { text: 'markdown 示例', link: '/write/vitepress/markdown-examples.md' },
-          { text: 'VitePress api 示例', link: '/write/vitepress/api-examples.md' }
+          { text: 'api 示例', link: 'vitepress/basic/api-examples.md' }
         ]
-      }
+      },
+      {
+        text: '扩展用法',
+        items: [
+          { text: 'markdown 示例', link: '/vitepress/extend/markdown-examples.md' },
+        ]
+      },
     ]
   }
 ]

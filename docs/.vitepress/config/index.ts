@@ -14,7 +14,7 @@ export default defineConfig({
   lang: 'zh-CN',
   title: 'weizwz',
   // 完全自定义标题，:title 不要动，改后面的
-  titleTemplate: ':title - 唯知笔记',
+  titleTemplate: ':title - 唯之为之',
   description: '唯知笔记',
   // fav图标
   head,

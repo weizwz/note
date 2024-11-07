@@ -2,7 +2,7 @@
 outline: deep
 ---
 
-# VitePress API 示例
+# api 示例
 
 此页面演示了 `VitePress` 提供的一些运行时 `API` 的使用方法。
 
