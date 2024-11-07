@@ -1,7 +1,7 @@
 {
   "name": "weizwz",
   "short_name": "weizwz",
-  "description": "个人博客 · 时光笔墨",
+  "description": "唯知笔记",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#000000",

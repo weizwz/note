@@ -1,13 +1,18 @@
 import type { DefaultTheme } from 'vitepress'
 
 export const sidebar: DefaultTheme.Config['sidebar'] = {
-  '/blog/': [
+  '/write/': [
     {
-      text: '博客',
+      text: '写作',
       collapsed: false,
       items: [
-        { text: 'Markdown 示例', link: '/blog/markdown-examples' },
-        { text: 'Runtime API Examples', link: '/api-examples' }
+        {
+          text: 'VitePress 语法',
+          items: [
+            { text: 'markdown 示例', link: '/write/vitepress/markdown-examples.md' },
+            { text: 'VitePress api 示例', link: '/write/vitepress/api-examples.md' }
+          ]
+        }
       ]
     }
   ]

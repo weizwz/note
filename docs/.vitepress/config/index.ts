@@ -14,8 +14,8 @@ export default defineConfig({
   lang: 'zh-CN',
   title: 'weizwz',
   // 完全自定义标题，:title 不要动，改后面的
-  titleTemplate: ':title - weizwz.com',
-  description: '个人博客 · 时光笔墨',
+  titleTemplate: ':title - 唯知笔记',
+  description: '唯知笔记',
   // fav图标
   head,
 
