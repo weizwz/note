@@ -8,7 +8,7 @@ import MarkdownPreview from 'vite-plugin-markdown-preview'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   // 部署路径
-  base: '/',
+  base: '/note',
   outDir: '../dist',
 
   lang: 'zh-CN',
