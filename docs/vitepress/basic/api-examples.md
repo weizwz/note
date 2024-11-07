@@ -44,6 +44,6 @@ const { site, theme, page, frontmatter } = useData()
 ### 页面格式
 <pre>{{ frontmatter }}</pre>
 
-## 其他
+## 更多
 
-请查看官方文档 [full list of runtime APIs](https://vitepress.dev/reference/runtime-api#usedata).
+请查看官方文档 [VitePress 运行时 API](https://vitepress.dev/zh/reference/runtime-api)。

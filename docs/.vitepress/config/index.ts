@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import { APP_BASE_PATH } from './env'
 import { nav } from './nav'
 import { algolia } from './algolia'
 import { head } from './head'
@@ -8,47 +9,41 @@ import MarkdownPreview from 'vite-plugin-markdown-preview'
 
 // https://vitepress.dev/zh/reference/site-config
 export default defineConfig({
-  // 部署路径
-  base: '/note',
   outDir: '../dist',
+  base: APP_BASE_PATH ? `/${APP_BASE_PATH}/` : '/',
 
   lang: 'zh-CN',
   title: '唯知笔记',
-  // 完全自定义标题，:title 不要动，改后面的
   titleTemplate: ':title - 唯知笔记',
   description: '唯知笔记',
-  // fav图标
+
   head,
 
   lastUpdated: true,
   cleanUrls: true,
 
-  // markdown配置
   markdown: {
     // 行号显示
-    lineNumbers: true, // false关闭
+    lineNumbers: true,
     image: {
-      lazyLoading: true,
-    },
+      lazyLoading: true
+    }
   },
 
+
+  // https://vitepress.dev/reference/default-theme-config
   themeConfig: {
-    // 左上角logo
     logo: '/favicon.ico',
-    // 标题隐藏
+    // 标题隐藏 需设置为false
     siteTitle: '唯知笔记',
+    
     i18nRouting: false,
 
-    // https://vitepress.dev/reference/default-theme-config
     nav,
-
     sidebar,
-
     footer,
-    
     // 社交按钮
     socialLinks: [{ icon: 'github', link: 'https://github.com/weizwz/' }],
-
 
     // 相关文字和提示修改
     returnToTopLabel: '回到顶部', // 返回顶部文字修改(移动端)
@@ -67,8 +62,8 @@ export default defineConfig({
       text: '最后更新于',
       formatOptions: {
         dateStyle: 'short',
-        timeStyle: 'medium',
-      },
+        timeStyle: 'medium'
+      }
     },
 
     // 自定义上下页名
@@ -97,5 +92,5 @@ export default defineConfig({
         }
       }
     }
-  },
+  }
 })
