@@ -1,4 +1,3 @@
-//.vitepress/theme/index.ts
 import { watch } from 'vue'
 import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
@@ -36,4 +35,3 @@ function updateHomePageStyle(value: boolean) {
         homePageStyle = undefined
     }
 }
-// 如上29-31行所示，设置主题色过渡时间为12s

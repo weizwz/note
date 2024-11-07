@@ -6,7 +6,7 @@ import { sidebar } from './sidebar'
 import { footer } from './footer'
 import MarkdownPreview from 'vite-plugin-markdown-preview'
 
-// https://vitepress.dev/reference/site-config
+// https://vitepress.dev/zh/reference/site-config
 export default defineConfig({
   // 部署路径
   base: '/note',
