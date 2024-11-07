@@ -12,9 +12,9 @@ export default defineConfig({
   outDir: '../dist',
 
   lang: 'zh-CN',
-  title: 'weizwz',
+  title: '唯知笔记',
   // 完全自定义标题，:title 不要动，改后面的
-  titleTemplate: ':title - 唯之为之',
+  titleTemplate: ':title - 唯知笔记',
   description: '唯知笔记',
   // fav图标
   head,
@@ -35,7 +35,7 @@ export default defineConfig({
     // 左上角logo
     logo: '/favicon.ico',
     // 标题隐藏
-    siteTitle: 'weizwz',
+    siteTitle: '唯知笔记',
     i18nRouting: false,
 
     // https://vitepress.dev/reference/default-theme-config
@@ -44,7 +44,7 @@ export default defineConfig({
     sidebar,
 
     // 社交按钮
-    socialLinks: [{ icon: 'github', link: 'https://github.com/weizwz/blog' }],
+    socialLinks: [{ icon: 'github', link: 'https://github.com/weizwz/' }],
 
 
     // 相关文字和提示修改

@@ -2,11 +2,11 @@
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
-title: 唯之为之
-titleTemplate: '唯之为之'
+title: 唯知笔记
+titleTemplate: '唯知笔记'
 
 hero:
-  name: "唯之为之"
+  name: "唯知笔记"
   text: "岁月的哼唧"
   tagline: 基于VitePress的个人博客网站
   image:
