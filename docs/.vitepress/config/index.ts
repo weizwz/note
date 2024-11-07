@@ -10,7 +10,7 @@ import MarkdownPreview from 'vite-plugin-markdown-preview'
 // https://vitepress.dev/zh/reference/site-config
 export default defineConfig({
   outDir: '../dist',
-  base: APP_BASE_PATH ? `/${APP_BASE_PATH}/` : '/',
+  base: APP_BASE_PATH,
 
   lang: 'zh-CN',
   title: '唯知笔记',
