@@ -1,0 +1,29 @@
+.VPFooter  {
+  padding: 20px !important;
+  border-top: none !important;
+  .container {
+    display: flex;
+    flex-flow: column-reverse;
+  }
+  .message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 8px;
+    > a {
+      display: flex;
+      align-items: center;
+      margin-right: 8px;
+      > img {
+        height: 20px;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .VPFooter  {
+    padding: 20px !important;
+  }
+}

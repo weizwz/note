@@ -3,6 +3,7 @@ import { nav } from './nav'
 import { algolia } from './algolia'
 import { head } from './head'
 import { sidebar } from './sidebar'
+import { footer } from './footer'
 import MarkdownPreview from 'vite-plugin-markdown-preview'
 
 // https://vitepress.dev/reference/site-config
@@ -43,6 +44,8 @@ export default defineConfig({
 
     sidebar,
 
+    footer,
+    
     // 社交按钮
     socialLinks: [{ icon: 'github', link: 'https://github.com/weizwz/' }],
 
