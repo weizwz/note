@@ -1,4 +1,9 @@
 # blog/.gitignore
 docs/.vitepress/cache
 docs/.vitepress/dist
+
+.DS_Store
 node_modules
+dist
+.temp
+cache
