@@ -5,6 +5,8 @@ import { head } from './head'
 import { sidebar } from './sidebar'
 import { footer } from './footer'
 import MarkdownPreview from 'vite-plugin-markdown-preview'
+// https://shiki-zh-docs.vercel.app/packages/vitepress
+import { transformerTwoslash } from '@shikijs/vitepress-twoslash'
 
 // https://github.com/vuejs/vitepress/discussions/3533
 export default async ({ mode }) => {
@@ -30,7 +32,10 @@ export default async ({ mode }) => {
       lineNumbers: true,
       image: {
         lazyLoading: true
-      }
+      },
+      codeTransformers: [
+        transformerTwoslash() 
+      ]
     },
 
     // https://vitepress.dev/reference/default-theme-config

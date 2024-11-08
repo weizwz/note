@@ -8,7 +8,7 @@ outline: deep
 
 主 `useData() API` 可用于访问当前页面的网站、主题和页面数据。它在 `.md` 和 `.vue` 文件中都有效：
 
-```md
+```vue twoslash
 <script setup>
 import { useData } from 'vitepress'
 
