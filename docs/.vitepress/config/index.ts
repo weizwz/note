@@ -42,7 +42,7 @@ export default async ({ mode }) => {
 
     // https://vitepress.dev/reference/default-theme-config
     themeConfig: {
-      logo: '/favicon.ico',
+      logo: '/logo.png',
       // 标题隐藏 需设置为false
       siteTitle: '唯知笔记',
 

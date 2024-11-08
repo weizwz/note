@@ -7,8 +7,8 @@ titleTemplate: '唯知笔记'
 
 hero:
   name: "唯知笔记"
-  text: "岁月的哼唧"
-  tagline: 基于VitePress的个人博客网站
+  text: "一个知识分享网站"
+  tagline: 双手敲击间，亦刻下岁月的诗篇
   image:
     src: /head.png
     alt: VitePress
