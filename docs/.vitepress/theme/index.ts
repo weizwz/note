@@ -2,7 +2,7 @@ import { watch } from 'vue'
 import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import './style/index.scss'
-import Layout from './layout/index.vue'
+import WLayout from './components/WLayout.vue'
 import { EnhanceAppContext } from 'vitepress'
 import TwoslashFloatingVue from '@shikijs/vitepress-twoslash/client'
 import '@shikijs/vitepress-twoslash/style.css'
@@ -11,7 +11,7 @@ let homePageStyle: HTMLStyleElement | undefined
 
 export default {
   extends: DefaultTheme,
-  Layout,
+  Layout: WLayout,
   enhanceApp({ app, router }: EnhanceAppContext) {
     app.use(TwoslashFloatingVue)
     if (typeof window === 'undefined') return
