@@ -26,6 +26,8 @@ export default async ({ mode }) => {
 
     lastUpdated: true,
     cleanUrls: true,
+    // 忽略死链查询
+    ignoreDeadLinks: true,
 
     markdown: {
       // 行号显示
