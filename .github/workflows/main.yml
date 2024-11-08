@@ -21,11 +21,8 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  # 单次部署的工作描述
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  # 构建
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -39,17 +36,27 @@ jobs:
         with:
           node-version: 20
           cache: 'pnpm'
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
       - name: Install dependencies
         run: pnpm install
       - name: Build
         run: pnpm run docs:build
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3
         with:
           # Upload dist repository
           path: './dist'
+
+  # 部署
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    needs: build
+    runs-on: ubuntu-latest
+    name: Deploy
+    steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4

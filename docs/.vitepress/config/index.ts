@@ -1,5 +1,5 @@
 import { defineConfig } from 'vitepress'
-import { APP_BASE_PATH } from './env'
+import { env } from './env'
 import { nav } from './nav'
 import { algolia } from './algolia'
 import { head } from './head'
@@ -10,7 +10,7 @@ import MarkdownPreview from 'vite-plugin-markdown-preview'
 // https://vitepress.dev/zh/reference/site-config
 export default defineConfig({
   outDir: '../dist',
-  base: APP_BASE_PATH,
+  base: env.VITE_APP_BASE_PATH,
 
   lang: 'zh-CN',
   title: '唯知笔记',
@@ -88,7 +88,7 @@ export default defineConfig({
     css: {
       preprocessorOptions: {
         scss: {
-          api: 'modern-compiler'
+          api: 'modern'
         }
       }
     }

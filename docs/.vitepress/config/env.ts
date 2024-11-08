@@ -1,5 +1,6 @@
-import { basename } from 'node:path'
+import { loadEnv } from 'vitepress'
 
-const path = basename(process.env.APP_BASE_PATH || '')
+console.log(loadEnv(process.env.NODE_ENV as string, process.cwd()));
 
-export const APP_BASE_PATH = path ? `/${path}` : '/'
+
+export const env = loadEnv(process.env.NODE_ENV as string, process.cwd())
