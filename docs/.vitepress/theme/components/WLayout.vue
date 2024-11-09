@@ -13,11 +13,11 @@ toggleAppearance(isDark) //实现切换主题过渡动画
 
 <template>
   <DefaultTheme.Layout>
-    <template #doc-footer-before>
-      <WBackToTop />
-    </template>
     <template #doc-after>
       <WDocFooter />
+    </template>
+    <template #aside-bottom>
+      <WBackToTop />
     </template>
   </DefaultTheme.Layout>
 </template>

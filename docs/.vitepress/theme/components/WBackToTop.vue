@@ -43,10 +43,7 @@ onBeforeUnmount(() => window.removeEventListener("scroll", onScroll));
 
 <style lang="css" scoped>
 .vitepress-backTop-main {
-  z-index: 999;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
+  margin-left: 20px;
   cursor: pointer;
   width: 32px;
   height: 32px;
@@ -54,17 +51,6 @@ onBeforeUnmount(() => window.removeEventListener("scroll", onScroll));
   background-color: var(--vp-c-indigo-1);
   padding: 10px;
   box-shadow: 2px 2px 10px 4px rgba(0, 0, 0, 0.15);
-}
-
-@media (min-width: 1280px) {
-  .vitepress-backTop-main {
-    right: 214px;
-  }
-}
-@media (min-width: 1440px) {
-  .vitepress-backTop-main {
-    right: calc((100vw - var(--vp-layout-max-width)) / 2 + 214px);
-  }
 }
 
 .vitepress-backTop-main:hover {

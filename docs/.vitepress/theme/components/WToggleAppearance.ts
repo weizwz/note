@@ -35,7 +35,7 @@ export function toggleAppearance(isDark) {
                 { clipPath: isDark.value ? clipPath.reverse() : clipPath },
                 // { clipPath: clipPath },
                 {
-                    duration: 600,
+                    duration: 500,
                     easing: 'ease-in',
                     pseudoElement: `::view-transition-${
                         isDark.value ? 'old' : 'new'
