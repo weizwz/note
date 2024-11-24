@@ -37,7 +37,23 @@ export default async ({ mode }) => {
       },
       codeTransformers: [
         transformerTwoslash() 
-      ]
+      ],
+      // 对markdown中的内容进行替换或者批量处理
+      // config: (md) => {
+      //   // 创建 markdown-it 插件
+      //   md.use((md) => {
+      //     const defaultRender = md.render
+      //     md.render = function (...args) {
+      //       // 调用原始渲染
+      //       let defaultContent = defaultRender.apply(md, args)
+      //       // 替换内容
+      //       defaultContent = defaultContent
+      //             .replace(/NOTE/g, '提醒')
+      //       // 返回渲染的内容
+      //       return defaultContent
+      //     }
+      //   })
+      // }
     },
 
     // https://vitepress.dev/reference/default-theme-config
@@ -106,6 +122,6 @@ export default async ({ mode }) => {
           }
         }
       }
-    }
+    },
   })
 }
