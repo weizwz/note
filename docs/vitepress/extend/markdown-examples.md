@@ -90,11 +90,11 @@ yarn -v
 **输入**
 
 ```md
-::: info 信息
+::: info 提醒
 This is an info box.
 :::
 
-::: tip 提示
+::: tip 建议
 This is a tip.
 :::
 
@@ -104,20 +104,16 @@ This is a warning.
 
 ::: danger 危险
 This is a dangerous warning.
-:::
-
-::: details 详情
-This is a details block.
 :::
 ```
 
 **输出**
 
-::: info 信息
+::: info 提醒
 This is an info box.
 :::
 
-::: tip 提示
+::: tip 建议
 This is a tip.
 :::
 
@@ -127,10 +123,6 @@ This is a warning.
 
 ::: danger 危险
 This is a dangerous warning.
-:::
-
-::: details 详情
-This is a details block.
 :::
 
 ## Github风格提示
