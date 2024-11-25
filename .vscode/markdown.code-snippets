@@ -1,59 +1,25 @@
 {
-  "markdown frontmatter": {
+  // 新建markdown文档
+  "vitepress new markdown": {
     "scope": "markdown",
-    "prefix": "md",
+    "prefix": "!newmd",
     "body": [
       "---",
-      "${1:title}: $2",
-      "description: $3",
+      "title: $1",
+      "description: $2",
+      "editLink: true",
       "---",
       "",
+      "# {{ \\$frontmatter.title }}",
+      "",
+      "$3",
     ],
-    "description": "markdown frontmatter"
+    "description": "vitepress 新建markdown文档"
   },
-  "vitepress custom containers info": {
-    "scope": "markdown",
-    "prefix": "info",
-    "body": [
-      "::: info $1",
-      "$2",
-      ":::"
-    ],
-    "description": "vitepress 自定义容器 info"
-  },
-  "vitepress custom containers tip": {
-    "scope": "markdown",
-    "prefix": "tip",
-    "body": [
-      "::: tip $1",
-      "$2",
-      ":::"
-    ],
-    "description": "vitepress 自定义容器 tip"
-  },
-  "vitepress custom containers warn": {
-    "scope": "markdown",
-    "prefix": "warn",
-    "body": [
-      "::: warning $1",
-      "$2",
-      ":::"
-    ],
-    "description": "vitepress 自定义容器 warning"
-  },
-  "vitepress custom containers danger": {
-    "scope": "markdown",
-    "prefix": "danger",
-    "body": [
-      "::: danger $1",
-      "$2",
-      ":::"
-    ],
-    "description": "vitepress 自定义容器 danger"
-  },
+  // 折叠容器
   "vitepress custom containers details": {
     "scope": "markdown",
-    "prefix": "details",
+    "prefix": "!details",
     "body": [
       "::: details $1",
       "$2",
@@ -61,24 +27,136 @@
     ],
     "description": "vitepress 自定义容器 details"
   },
-  "typescript challenges": {
+  // 常用代码块
+  "vitepress custom code block markdown": {
     "scope": "markdown",
-    "prefix": "challenge",
+    "prefix": "!md",
     "body": [
-      "### $1",
-      "",
-      "$2",
-      "",
-      "```ts",
-      "type result$3",
-      "```",
-      "",
-      "**实现**:",
-      "",
-      "```ts",
-      "$4",
+      "```md",
+      "$1",
       "```"
     ],
-    "description": "typescript 类型体操"
-  }
+    "description": "vitepress 常用代码块 markdown"
+  },
+  "vitepress custom code block shell": {
+    "scope": "markdown",
+    "prefix": "!sh",
+    "body": [
+      "```sh",
+      "$1",
+      "```"
+    ],
+    "description": "vitepress 常用代码块 shell"
+  },
+  "vitepress custom code block js": {
+    "scope": "markdown",
+    "prefix": "!js",
+    "body": [
+      "```js",
+      "$1",
+      "```"
+    ],
+    "description": "vitepress 常用代码块 js"
+  },
+  "vitepress custom code block ts": {
+    "scope": "markdown",
+    "prefix": "!ts",
+    "body": [
+      "```ts",
+      "$1",
+      "```"
+    ],
+    "description": "vitepress 常用代码块 ts"
+  },
+  "vitepress custom code block html": {
+    "scope": "markdown",
+    "prefix": "!html",
+    "body": [
+      "```html",
+      "$1",
+      "```"
+    ],
+    "description": "vitepress 常用代码块 html"
+  },
+  "vitepress custom code block css": {
+    "scope": "markdown",
+    "prefix": "!css",
+    "body": [
+      "```css",
+      "$1",
+      "```"
+    ],
+    "description": "vitepress 常用代码块 css"
+  },
+  "vitepress custom code block vue": {
+    "scope": "markdown",
+    "prefix": "!vue",
+    "body": [
+      "```vue",
+      "$1",
+      "```"
+    ],
+    "description": "vitepress 常用代码块 vue"
+  },
+  // 代码块组
+  "vitepress custom containers code group": {
+    "scope": "markdown",
+    "prefix": "!code",
+    "body": [
+      "::: code-group",
+      "",
+      "```$1 [$2]",
+      "$3",
+      "```",
+      "",
+      ":::"
+    ],
+    "description": "vitepress 自定义代码块组"
+  },
+  // github风格提示
+  "vitepress custom containers note": {
+    "scope": "markdown",
+    "prefix": "!note",
+    "body": [
+      "> [!NOTE] $1",
+      "> $2",
+    ],
+    "description": "github 风格提示 note"
+  },
+  "vitepress custom containers tip": {
+    "scope": "markdown",
+    "prefix": "!tip",
+    "body": [
+      "> [!TIP] $1",
+      "> $2",
+    ],
+    "description": "github 风格提示 tip"
+  },
+  "vitepress custom containers important": {
+    "scope": "markdown",
+    "prefix": "!important",
+    "body": [
+      "> [!IMPORTANT] $1",
+      "> $2",
+    ],
+    "description": "github 风格提示 important"
+  },
+  "vitepress custom containers warning": {
+    "scope": "markdown",
+    "prefix": "!warning",
+    "body": [
+      "> [!WARNING] $1",
+      "> $2",
+    ],
+    "description": "github 风格提示 warning"
+  },
+  "vitepress custom containers caution": {
+    "scope": "markdown",
+    "prefix": "!caution",
+    "body": [
+      "> [!CAUTION] $1",
+      "> $2",
+    ],
+    "description": "github 风格提示 caution"
+  },
 }
