@@ -13,7 +13,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
           ]
         },
         {
-          text: '扩展用法',
+          text: '进阶用法',
           items: [
             { text: 'markdown 示例', link: '/vitepress/extend/markdown-examples.md' },
           ]

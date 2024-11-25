@@ -1,133 +1,116 @@
 ---
 title: markdown 示例
+description: markdown 使用说明文档
 editLink: true
 ---
 
 # {{ $frontmatter.title }}
 
-此页面演示了 `VitePress` 提供的一些内置 `markdown` 扩展。
+此页面演示了 `VitePress` 提供的一些内置 `markdown` 扩展。详情可查看 [官方文档](https://vitepress.dev/zh/guide/markdown)
 
-## 引用信息
+## 基础功能
 
-**输入**
+### 基本配置
+
+::: code-group
+```ts [.vitepress/config/index.ts]
+export default defineConfig({
+  // markdown配置搞里头
+  markdown:{
+      // 代码块行号显示
+      lineNumbers: true,
+      // 图片懒加载
+      image: {
+        lazyLoading: true
+      },
+  },
+})
+```
+:::
+
+### 标题锚点 {#title-link}
+
+标题会自动应用当前标题文字作为锚点，也支持自定义锚点，格式为 `标题+空格+{#自定义锚点}`
+```md
+## 标题锚点 {#title-link}
+```
+也可以利用链接跳转到指定标题
+```md
+[点击我跳转到基本配置](#基本配置)
+```
+
+[点击我跳转到基本配置](#基本配置)
+
+
+### 引用信息
 
 ```md
 > 这是一个引用 `VitePress`
 ```
-
-**输出**
-
 > 这是一个引用 `VitePress`
 
+### 折叠语法
 
-## 代码高亮
-
-`VitePress` 使用 `markdown-it` 作为解析器，并使用 `Shiki` 来突出显示语言语法
-
-**输入**
-
-````md
-```js{4}
-export default {
-  data () {
-    return {
-      msg: 'Highlighted!'
-    }
-  }
-}
+```md
+<details>
+  <summary>点我展开</summary>
+  Markdown默认折叠语法，Vitepress可以使用容器折叠语法，更加美观
+</details>
 ```
-````
+<details>
+  <summary>点我展开</summary>
+  Markdown默认折叠语法，Vitepress可以使用容器折叠语法，更加美观
+</details>
 
-**输出**
+## 容器
 
-```js{4}
-export default {
-  data () {
-    return {
-      msg: 'Highlighted!'
-    }
-  }
-}
-```
+### 折叠容器
 
-## 代码块组
-
-**输入**
-````md
-::: code-group
-
-```sh [pnpm]
-#查询pnpm版本
-pnpm -v
-```
-
-```sh [yarn]
-#查询yarn版本
-yarn -v
-```
-
+```md
+::: details 点我查看
+这是一个折叠容器
 :::
-````
-
-**输出**
-
-::: code-group
-
-```sh [pnpm]
-#查询pnpm版本
-pnpm -v
 ```
-
-```sh [yarn]
-#查询yarn版本
-yarn -v
-```
-
+::: details 点我查看
+这是一个折叠容器
 :::
 
-## 提示信息
-
-**输入**
+### 提示容器
 
 ```md
 ::: info 提醒
-This is an info box.
+这是一条提醒，格式为：`info+空格+自定义文字`
 :::
 
 ::: tip 建议
-This is a tip.
+这是一个建议，格式为：`tip+空格+自定义文字`
 :::
 
 ::: warning 警告
-This is a warning.
+这是一条警告，格式为：`warning+空格+自定义文字`
 :::
 
 ::: danger 危险
-This is a dangerous warning.
+这是一个危险警告，格式为：`danger+空格+自定义文字`
 :::
 ```
-
-**输出**
-
 ::: info 提醒
-This is an info box.
+这是一条提醒，格式为：`info+空格+自定义文字`
 :::
 
 ::: tip 建议
-This is a tip.
+这是一个建议，格式为：`tip+空格+自定义文字`
 :::
 
 ::: warning 警告
-This is a warning.
+这是一条警告，格式为：`warning+空格+自定义文字`
 :::
 
 ::: danger 危险
-This is a dangerous warning.
+这是一个危险警告，格式为：`danger+空格+自定义文字`
 :::
 
-## Github风格提示
-
-**输入**
+### github提示
 
 ```md
 > [!NOTE] 提醒
@@ -145,9 +128,6 @@ This is a dangerous warning.
 > [!CAUTION] 注意
 > 行为可能带来的负面影响。
 ```
-
-**输入**
-
 > [!NOTE] 提醒
 > 强调用户在快速浏览文档时也不应忽略的重要信息。
 
@@ -163,20 +143,61 @@ This is a dangerous warning.
 > [!CAUTION] 注意
 > 行为可能带来的负面影响。
 
-## 折叠语法
 
-**输入**
+## 代码块
 
-```md
-<details>
-  <summary>点我展开</summary>
-  Markdown默认折叠语法，Vitepress可以使用容器折叠语法，更加美观
-</details>
+### 代码高亮
+
+````md
+```js{4}
+export default {
+  data () {
+    return {
+      msg: 'Highlighted!'
+    }
+  }
+}
+```
+````
+
+```js{4}
+export default {
+  data () {
+    return {
+      msg: 'Highlighted!'
+    }
+  }
+}
 ```
 
-**输出**
+### 代码块组
 
-<details>
-  <summary>点我展开</summary>
-  Markdown默认折叠语法，Vitepress可以使用容器折叠语法，更加美观
-</details>
+````md
+::: code-group
+
+```sh [pnpm]
+#查询pnpm版本
+pnpm -v
+```
+
+```sh [yarn]
+#查询yarn版本
+yarn -v
+```
+
+:::
+````
+
+::: code-group
+
+```sh [pnpm]
+#查询pnpm版本
+pnpm -v
+```
+
+```sh [yarn]
+#查询yarn版本
+yarn -v
+```
+
+:::
