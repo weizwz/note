@@ -3,21 +3,6 @@
   --vp-c-font-size: 14px;
 }
 
-/**
-* Component: Button
-* -------------------------------------------------------------------------- */
-:root {
-  --vp-button-brand-border: var(--vp-c-brand-light);
-  --vp-button-brand-text: var(--vp-c-white);
-  --vp-button-brand-bg: var(--vp-c-brand-1);
-  --vp-button-brand-hover-border: var(--vp-c-brand-lighter);
-  --vp-button-brand-hover-text: var(--vp-c-white);
-  --vp-button-brand-hover-bg: var(--vp-c-brand-lighter);
-  --vp-button-brand-active-border: var(--vp-c-brand-light);
-  --vp-button-brand-active-text: var(--vp-c-white);
-  --vp-button-brand-active-bg: var(--vp-button-brand-bg);
-}
-
 /* Safari has a very bad performance on gradient and filter */
 .browser-safari,
 .browser-firefox {
@@ -25,26 +10,43 @@
   --vp-home-hero-image-filter: '';
 }
 
+/* MacOS风格相关颜色 */
+:root {
+  --macos-window-red: #FE5450;
+  --macos-window-yellow: #FFB23B;
+  --macos-window-green: #30C045;
+}
+
+/* 提示块颜色 */
+:root {
+  --custom-block-info: #909399;
+  --custom-block-info-rgb: 133,136,142;
+  --custom-block-info-bg: rgba(var(--custom-block-info-rgb), .1);
+
+  --custom-block-note: #409eff;
+  --custom-block-note-rgb: 48,149,250;
+  --custom-block-note-bg: rgba(var(--custom-block-note-rgb), .1);
+
+  --custom-block-tip: #67c23a;
+  --custom-block-tip-rgb: 97,185, 64;
+  --custom-block-tip-bg: rgba(var(--custom-block-tip-rgb), .1);
+
+  --custom-block-important: #a371f7;
+  --custom-block-important-rgb: 149,105,240;
+  --custom-block-important-bg: rgba(var(--custom-block-important-rgb), .1);
+
+  --custom-block-warning: #e6a23c;
+  --custom-block-warning-rgb: 227,151, 63;
+  --custom-block-warning-bg: rgba(var(--custom-block-warning-rgb), .1);
+
+  --custom-block-danger: #f05659;
+  --custom-block-danger-rgb: 243, 97, 98;
+  --custom-block-danger-bg: rgba(var(--custom-block-danger-rgb), .1);
+}
+
 /**
 * body
 * -------------------------------------------------------------------------- */
 body {
   font-size: var(--vp-c-font-size);
-}
-
-/**
-* 标题色
-* -------------------------------------------------------------------------- */
-h1 {
-  background: -webkit-linear-gradient(15deg, var(--vp-c-indigo-1) 10%, var(--vp-c-indigo-5) 60%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/**
-* a 链接
-* -------------------------------------------------------------------------- */
-.vp-doc a {
-  text-decoration: none;
 }

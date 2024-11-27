@@ -11,9 +11,9 @@
     left: 12px;
     width: 12px;
     height: 12px;
-    background-color: #ff5f56;
+    background-color: var(--macos-window-red);
     border-radius: 50%;
-    box-shadow: 20px 0 0 #ffbd2e, 40px 0 0 #27c93f;
+    box-shadow: 20px 0 0 var(--macos-window-yellow), 40px 0 0 var(--macos-window-green);
     z-index: 1;
   }
   /* 代码块：下移行号 隐藏右侧竖线 */
@@ -44,9 +44,9 @@
         left: 12px;
         height: 12px;
         width: 12px;
-        background: #fc625d;
+        background: var(--macos-window-red);
         border-radius: 50%;
-        box-shadow: 20px 0 #fdbc40, 40px 0 #35cd4b;
+        box-shadow: 20px 0 var(--macos-window-yellow), 40px 0 var(--macos-window-green);
       }
     }
     div[class*='language-'] {
