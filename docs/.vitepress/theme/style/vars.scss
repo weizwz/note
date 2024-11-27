@@ -1,6 +1,13 @@
-// 基础变量定义
+/* 基础变量&主题色 */
 :root {
-  --vp-c-font-size: 14px;
+  --main-primary-color: #409eff;
+  --main-block-radius: 8px;
+  --main-font-size: 14px;
+  
+  --vp-c-indigo-1: var(--main-primary-color);
+  --vp-c-indigo-1-rgb: 48,149,250;
+  --vp-c-indigo-2: rgb(121.3, 187.1, 255);
+  --vp-c-indigo-3: rgb(159.5, 206.5, 255);
 }
 
 /* Safari has a very bad performance on gradient and filter */
@@ -23,8 +30,8 @@
   --custom-block-info-rgb: 133,136,142;
   --custom-block-info-bg: rgba(var(--custom-block-info-rgb), .1);
 
-  --custom-block-note: #409eff;
-  --custom-block-note-rgb: 48,149,250;
+  --custom-block-note: var(--vp-c-indigo-1);
+  --custom-block-note-rgb: var(--vp-c-indigo-1-rgb);
   --custom-block-note-bg: rgba(var(--custom-block-note-rgb), .1);
 
   --custom-block-tip: #67c23a;
@@ -44,9 +51,24 @@
   --custom-block-danger-bg: rgba(var(--custom-block-danger-rgb), .1);
 }
 
+
 /**
-* body
+* 界面元素
 * -------------------------------------------------------------------------- */
 body {
-  font-size: var(--vp-c-font-size);
+  font-size: var(--main-font-size);
+}
+
+/* 搜索 */
+:root {
+  --docsearch-primary-color: var(--main-primary-color);
+  --docsearch-logo-color: var(--main-primary-color);
+}
+.cls-1, .cls-2 {
+  fill: var(--docsearch-primary-color) !important;
+}
+
+/* 按钮 */
+:root {
+  --vp-button-brand-bg: var(--vp-c-brand-1);
 }
