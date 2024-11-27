@@ -78,8 +78,8 @@ export default defineConfig({
 ### 提示容器
 
 ```md
-::: info 提醒
-这是一条提醒，格式为：`info+空格+自定义文字`
+::: info 信息
+这是一条信息，格式为：`info+空格+自定义文字`
 :::
 
 ::: tip 建议
@@ -94,8 +94,8 @@ export default defineConfig({
 这是一个危险警告，格式为：`danger+空格+自定义文字`
 :::
 ```
-::: info 提醒
-这是一条提醒，格式为：`info+空格+自定义文字`
+::: info 信息
+这是一条信息，格式为：`info+空格+自定义文字`
 :::
 
 ::: tip 建议
@@ -113,7 +113,7 @@ export default defineConfig({
 ### github提示
 
 ```md
-> [!NOTE] 提醒
+> [!NOTE] 提示
 > 强调用户在快速浏览文档时也不应忽略的重要信息。
 
 > [!TIP] 建议
@@ -125,10 +125,10 @@ export default defineConfig({
 > [!WARNING] 警告
 > 因为可能存在风险，所以需要用户立即关注的关键内容。
 
-> [!CAUTION] 注意
+> [!CAUTION] 危险
 > 行为可能带来的负面影响。
 ```
-> [!NOTE] 提醒
+> [!NOTE] 提示
 > 强调用户在快速浏览文档时也不应忽略的重要信息。
 
 > [!TIP] 建议
@@ -140,7 +140,7 @@ export default defineConfig({
 > [!WARNING] 警告
 > 因为可能存在风险，所以需要用户立即关注的关键内容。
 
-> [!CAUTION] 注意
+> [!CAUTION] 危险
 > 行为可能带来的负面影响。
 
 

@@ -1,78 +1,6 @@
 // 基础变量定义
 :root {
-  --vp-c-brand: #0958D9;
-  --vp-c-brand-light: #1890ff;
-  --vp-c-brand-lighter: #69b1ff;
-  --vp-c-brand-dark: #0958D9;
-  --vp-c-brand-darker: #003EB3;
-
-  --vp-c-indigo-1: #1890ff;
-  --vp-c-indigo-4: #E8F5FF;
-  --vp-c-indigo-5: #04DBEE;
-
-  --vp-c-radius-1: 4px;
-  --vp-c-radius-2: 8px;
-  --vp-c-radius-3: 12px;
-
   --vp-c-font-size: 14px;
-
-  --vp-shadow-black-1: 1px 1px 5px 1px rgba(0, 0, 0, 0.1);
-  --vp-shadow-black-9: 1px 1px 5px 1px rgba(0, 0, 0, 0.9);
-  --vp-shadow-white-1: 1px 1px 5px 1px rgba(255, 255, 255, 0.1);
-  --vp-shadow-white-9: 1px 1px 5px 1px rgba(255, 255, 255, 0.9);
-
-  --vp-c-default-1: var(--vp-c-gray-1);
-  --vp-c-default-2: var(--vp-c-gray-2);
-  --vp-c-default-3: var(--vp-c-gray-3);
-  --vp-c-default-soft: var(--vp-c-gray-soft);
-
-  // 用于主品牌颜色，如链接文本、按钮、品牌主题等。
-  --vp-c-brand-1: var(--vp-c-indigo-1);
-  --vp-c-brand-2: var(--vp-c-indigo-2);
-  --vp-c-brand-3: var(--vp-c-indigo-3);
-  --vp-c-brand-soft: var(--vp-c-indigo-soft);
-
-  --vp-c-tip-1: var(--vp-c-brand-1);
-  --vp-c-tip-2: var(--vp-c-brand-2);
-  --vp-c-tip-3: var(--vp-c-brand-3);
-  --vp-c-tip-soft: var(--vp-c-brand-soft);
-
-  --vp-c-warning-1: var(--vp-c-yellow-1);
-  --vp-c-warning-2: var(--vp-c-yellow-2);
-  --vp-c-warning-3: var(--vp-c-yellow-3);
-  --vp-c-warning-soft: var(--vp-c-yellow-soft);
-
-  --vp-c-danger-1: var(--vp-c-red-1);
-  --vp-c-danger-2: var(--vp-c-red-2);
-  --vp-c-danger-3: var(--vp-c-red-3);
-  --vp-c-danger-soft: var(--vp-c-red-soft);
-
-  --vp-c-gutter: var(--vp-c-divider);
-  --vp-code-block-bg: rgba(125, 125, 125, 0.04);
-  --vp-code-block-shadow: var(--vp-shadow-black-1);
-  --vp-code-block-radius: var(--vp-c-radius-2);
-  --vp-code-tab-divider: var(--vp-c-divider);
-  --vp-code-copy-code-bg: rgba(125, 125, 125, 0.1);
-  --vp-code-copy-code-hover-bg: rgba(125, 125, 125, 0.2);
-  --vp-c-disabled-bg: rgba(125, 125, 125, 0.2);
-  --vp-code-tab-text-color: var(--vp-c-text-2);
-  --vp-code-tab-active-text-color: var(--vp-c-text-1);
-  --vp-code-tab-hover-text-color: var(--vp-c-text-1);
-  --vp-code-copy-code-active-text: var(--vp-c-text-2);
-  --vp-c-text-dark-3: rgba(56, 56, 56, 0.8);
-  --vp-c-brand-lightest: var(--vp-c-brand-1);
-
-  --vp-c-highlight-bg: var(--vp-c-brand-light);
-  --vp-c-highlight-text: var(--vp-c-bg);
-
-  --vp-quote-block-bg: var(--vp-c-indigo-4);
-}
-
-.dark {
-  --vp-code-block-bg: rgba(0, 0, 0, 0.2);
-  --vp-c-text-code: #c0cec0;
-  --vp-code-block-shadow: var(--vp-shadow-black-9);
-  --vp-quote-block-bg: var(--vp-code-block-bg);
 }
 
 /**
@@ -96,21 +24,6 @@
   --vp-home-hero-image-background-image: transparent;
   --vp-home-hero-image-filter: '';
 }
-
-/**
-* Component: Custom Block
-* -------------------------------------------------------------------------- */
-:root {
-  --vp-custom-block-tip-border: var(--vp-c-brand-1);
-  --vp-custom-block-tip-text: var(--vp-c-brand-darker);
-  --vp-custom-block-tip-bg: var(--vp-c-brand-dimm);
-}
-.dark {
-  --vp-custom-block-tip-border: var(--vp-c-brand-1);
-  --vp-custom-block-tip-text: var(--vp-c-brand-lightest);
-  --vp-custom-block-tip-bg: var(--vp-c-brand-dimm);
-}
-
 
 /**
 * body
