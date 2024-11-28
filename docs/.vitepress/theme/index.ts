@@ -1,6 +1,8 @@
 import { watch } from 'vue'
 import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
+import ElementPlus from 'element-plus'
+import 'element-plus/dist/index.css'
 import './style/index.scss'
 import WLayout from './components/WLayout.vue'
 import { EnhanceAppContext } from 'vitepress'
@@ -14,6 +16,7 @@ export default {
   Layout: WLayout,
   enhanceApp({ app, router }: EnhanceAppContext) {
     app.use(TwoslashFloatingVue)
+    app.use(ElementPlus)
     if (typeof window === 'undefined') return
     watch(
       () => router.route.data.relativePath,

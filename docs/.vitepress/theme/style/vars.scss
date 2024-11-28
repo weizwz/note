@@ -1,20 +1,30 @@
 /* 基础变量&主题色 */
 :root {
-  --main-primary-color: #409eff;
-  --main-block-radius: 8px;
-  --main-font-size: 14px;
-  
-  --vp-c-indigo-1: var(--main-primary-color);
-  --vp-c-indigo-1-rgb: 48,149,250;
-  --vp-c-indigo-2: rgb(121.3, 187.1, 255);
-  --vp-c-indigo-3: rgb(159.5, 206.5, 255);
+  --weiz-primary-color: #4096ff;
+  --weiz-primary-color-rgb: 48,141,250;
+  --weiz-primary-color-dark: rgb(51.2, 126.4, 204);
+  --weiz-font-size: 14px;
+
+  --weiz-primary-color-light-1: rgb(121.3, 187.1, 255);
+  --weiz-primary-color-light-2: rgb(159.5, 206.5, 255);
+  --weiz-primary-color-light-3: rgb(197.7, 225.9, 255);
+  --weiz-primary-color-light-4: rgb(216.8, 235.6, 255);
+  --weiz-primary-color-light-5: rgb(235.9, 245.3, 255);
+
+  --vp-c-indigo-1: var(--weiz-primary-color);
 }
 
-/* Safari has a very bad performance on gradient and filter */
-.browser-safari,
-.browser-firefox {
-  --vp-home-hero-image-background-image: transparent;
-  --vp-home-hero-image-filter: '';
+
+.dark {
+  --weiz-primary-color: #4096ff;
+  --weiz-primary-color-rgb: 48,141,250;
+  --weiz-primary-color-dark: rgb(102.2, 177.4, 255);
+
+  --weiz-primary-color-light-1: rgb(50.8, 116.6, 184.5);
+  --weiz-primary-color-light-2: rgb(42, 89, 137.5);
+  --weiz-primary-color-light-3: rgb(33.2, 61.4, 90.5);
+  --weiz-primary-color-light-4: rgb(28.8, 47.6, 67);
+  --weiz-primary-color-light-5: rgb(24.4, 33.8, 43.5);
 }
 
 /* MacOS风格相关颜色 */
@@ -53,22 +63,41 @@
 
 
 /**
-* 界面元素
+* 界面/组件
 * -------------------------------------------------------------------------- */
 body {
-  font-size: var(--main-font-size);
+  font-size: var(--weiz-font-size);
 }
 
-/* 搜索 */
-:root {
-  --docsearch-primary-color: var(--main-primary-color);
-  --docsearch-logo-color: var(--main-primary-color);
-}
-.cls-1, .cls-2 {
-  fill: var(--docsearch-primary-color) !important;
+/* 链接 */
+.vp-doc a {
+  &:hover {
+    color: var(--weiz-primary-color-light-1);
+  }
+  &:active {
+    color: var(--weiz-primary-color-dark);
+  }
 }
 
 /* 按钮 */
 :root {
-  --vp-button-brand-bg: var(--vp-c-brand-1);
+  --vp-button-brand-bg: var(--weiz-primary-color);
+  --vp-button-brand-hover-border: transparent;
+  --vp-button-brand-hover-bg: var(--weiz-primary-color-light-1);
+  --vp-button-brand-active-border: transparent;
+  --vp-button-brand-active-bg: var(--weiz-primary-color-dark);
+}
+
+/* 代码 */
+:root {
+  --vp-code-link-hover-color: var(--weiz-primary-color-light-1);
+}
+
+/* 搜索 */
+:root {
+  --docsearch-primary-color: var(--weiz-primary-color);
+  --docsearch-logo-color: var(--weiz-primary-color);
+}
+.cls-1, .cls-2 {
+  fill: var(--docsearch-primary-color) !important;
 }

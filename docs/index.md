@@ -3,12 +3,12 @@
 layout: home
 
 title: 唯知笔记
-titleTemplate: '唯知笔记'
+titleTemplate: 唯知笔记
 
 hero:
-  name: "唯知笔记"
-  text: "一个知识分享网站"
-  tagline: 双手敲击间，亦刻下岁月的诗篇
+  name: 唯知笔记
+  text: 一个知识分享网站
+  tagline: 闲来无事会，笔墨皆尽染
   image:
     src: /head.png
     alt: VitePress
@@ -21,11 +21,20 @@ hero:
       link: /vitepress/basic/api-examples
 
 features:
-  - title: Feature A
+  - icon:
+      dark: /logo.png
+      light: /logo.png
+    title: Feature A
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
+  - icon:
+      dark: /logo.png
+      light: /logo.png
+    title: Feature B
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
+  - icon:
+      dark: /logo.png
+      light: /logo.png
+    title: Feature C
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
 
