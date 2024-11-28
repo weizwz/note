@@ -1,0 +1,18 @@
+{
+  "Vue3 Markdown中快速插入Vue3模版": {
+    "scope": "markdown",
+    "prefix": "!vue3",
+    "body": [
+      "<template>",
+      "\t<div>$1</div>",
+      "</template>\n",
+      "<script setup lang='ts'>",
+      "$2",
+      "</script>\n",
+      "<style lang='scss' scoped>\n",
+      "</style>",
+      ""
+    ],
+    "description": "Vue3 Markdown中快速插入Vue3模版"
+  }
+}

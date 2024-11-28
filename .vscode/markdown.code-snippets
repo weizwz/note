@@ -1,6 +1,6 @@
 {
   // 新建markdown文档
-  "vitepress new markdown": {
+  "vitepress 新建markdown文档": {
     "scope": "markdown",
     "prefix": "!newmd",
     "body": [
@@ -15,8 +15,25 @@
     ],
     "description": "vitepress 新建markdown文档"
   },
+  // mrkdown中快速插入Vue3模版
+  "vitepress markdown中插入vue3模版": {
+    "scope": "markdown",
+    "prefix": "!vue3",
+    "body": [
+      "<template>",
+      "\t<div>$1</div>",
+      "</template>\n",
+      "<script setup lang='ts'>",
+      "$2",
+      "</script>\n",
+      "<style lang='scss' scoped>\n",
+      "</style>",
+      ""
+    ],
+    "description": "vitepress markdown中插入vue3模版"
+  },
   // 折叠容器
-  "vitepress custom containers details": {
+  "vitepress 折叠容器 details": {
     "scope": "markdown",
     "prefix": "!details",
     "body": [
@@ -24,81 +41,10 @@
       "$2",
       ":::"
     ],
-    "description": "vitepress 自定义容器 details"
-  },
-  // 常用代码块
-  "vitepress custom code block markdown": {
-    "scope": "markdown",
-    "prefix": "!md",
-    "body": [
-      "```md",
-      "$1",
-      "```"
-    ],
-    "description": "vitepress 常用代码块 markdown"
-  },
-  "vitepress custom code block shell": {
-    "scope": "markdown",
-    "prefix": "!sh",
-    "body": [
-      "```sh",
-      "$1",
-      "```"
-    ],
-    "description": "vitepress 常用代码块 shell"
-  },
-  "vitepress custom code block js": {
-    "scope": "markdown",
-    "prefix": "!js",
-    "body": [
-      "```js",
-      "$1",
-      "```"
-    ],
-    "description": "vitepress 常用代码块 js"
-  },
-  "vitepress custom code block ts": {
-    "scope": "markdown",
-    "prefix": "!ts",
-    "body": [
-      "```ts",
-      "$1",
-      "```"
-    ],
-    "description": "vitepress 常用代码块 ts"
-  },
-  "vitepress custom code block html": {
-    "scope": "markdown",
-    "prefix": "!html",
-    "body": [
-      "```html",
-      "$1",
-      "```"
-    ],
-    "description": "vitepress 常用代码块 html"
-  },
-  "vitepress custom code block css": {
-    "scope": "markdown",
-    "prefix": "!css",
-    "body": [
-      "```css",
-      "$1",
-      "```"
-    ],
-    "description": "vitepress 常用代码块 css"
-  },
-  "vitepress custom code block vue": {
-    "scope": "markdown",
-    "prefix": "!vue",
-    "body": [
-      "```vue",
-      "$1",
-      "```"
-    ],
-    "description": "vitepress 常用代码块 vue"
+    "description": "vitepress 折叠容器 details"
   },
   // 代码块组
-  "vitepress custom containers code group": {
+  "vitepress 自定义代码块组 code-group": {
     "scope": "markdown",
     "prefix": "!code",
     "body": [
@@ -110,10 +56,10 @@
       "",
       ":::"
     ],
-    "description": "vitepress 自定义代码块组"
+    "description": "vitepress 自定义代码块组 code-group"
   },
   // github风格提示
-  "vitepress custom containers note": {
+  "vitepress github风格提示 note": {
     "scope": "markdown",
     "prefix": "!note",
     "body": [
@@ -122,40 +68,121 @@
     ],
     "description": "github 风格提示 note"
   },
-  "vitepress custom containers tip": {
+  "vitepress github风格提示 tip": {
     "scope": "markdown",
     "prefix": "!tip",
     "body": [
       "> [!TIP] $1",
       "> $2",
     ],
-    "description": "github 风格提示 tip"
+    "description": "github风格提示 tip"
   },
-  "vitepress custom containers important": {
+  "vitepress github风格提示 important": {
     "scope": "markdown",
     "prefix": "!important",
     "body": [
       "> [!IMPORTANT] $1",
       "> $2",
     ],
-    "description": "github 风格提示 important"
+    "description": "github风格提示 important"
   },
-  "vitepress custom containers warning": {
+  "vitepress github风格提示 warning": {
     "scope": "markdown",
     "prefix": "!warning",
     "body": [
       "> [!WARNING] $1",
       "> $2",
     ],
-    "description": "github 风格提示 warning"
+    "description": "github风格提示 warning"
   },
-  "vitepress custom containers caution": {
+  "vitepress github风格提示 caution": {
     "scope": "markdown",
     "prefix": "!caution",
     "body": [
       "> [!CAUTION] $1",
       "> $2",
     ],
-    "description": "github 风格提示 caution"
+    "description": "github风格提示 caution"
+  },
+  // 常用代码块
+  "vitepress 常用代码块 markdown": {
+    "scope": "markdown",
+    "prefix": "!md",
+    "body": [
+      "```md",
+      "$1",
+      "```"
+    ],
+    "description": "vitepress 常用代码块 markdown"
+  },
+  "vitepress 常用代码块 shell": {
+    "scope": "markdown",
+    "prefix": "!sh",
+    "body": [
+      "```sh",
+      "$1",
+      "```"
+    ],
+    "description": "vitepress 常用代码块 shell"
+  },
+  "vitepress 常用代码块 vue": {
+    "scope": "markdown",
+    "prefix": "!vue",
+    "body": [
+      "```vue",
+      "$1",
+      "```"
+    ],
+    "description": "vitepress 常用代码块 vue"
+  },
+  "vitepress 常用代码块 js": {
+    "scope": "markdown",
+    "prefix": "!js",
+    "body": [
+      "```js",
+      "$1",
+      "```"
+    ],
+    "description": "vitepress 常用代码块 js"
+  },
+  "vitepress 常用代码块 ts": {
+    "scope": "markdown",
+    "prefix": "!ts",
+    "body": [
+      "```ts",
+      "$1",
+      "```"
+    ],
+    "description": "vitepress 常用代码块 ts"
+  },
+  "vitepress 常用代码块 html": {
+    "scope": "markdown",
+    "prefix": "!html",
+    "body": [
+      "```html",
+      "$1",
+      "```"
+    ],
+    "description": "vitepress 常用代码块 html"
+  },
+  "vitepress 常用代码块 css": {
+    "scope": "markdown",
+    "prefix": "!css",
+    "body": [
+      "```css",
+      "$1",
+      "```"
+    ],
+    "description": "vitepress 常用代码块 css"
+  },
+  "vitepress 常用代码块 scss": {
+    "scope": "markdown",
+    "prefix": "!scss",
+    "body": [
+      "```scss",
+      "$1",
+      "```"
+    ],
+    "description": "vitepress 常用代码块 scss"
   },
 }
