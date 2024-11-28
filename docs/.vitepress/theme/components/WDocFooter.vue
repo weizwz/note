@@ -30,7 +30,7 @@
 .WeizDocFooter {
   margin: 0 auto;
   max-width: var(--vp-layout-max-width);
-  padding: 40px 20px 10px 20px !important;
+  padding: 40px 0 0 !important;
   text-align: center;
   display: flex;
   flex-direction: column-reverse;
@@ -39,10 +39,6 @@
     font-size: 14px;
     font-weight: 500;
     color: var(--vp-c-text-2);
-    margin-top: 0;
-    > a {
-      margin-top: 8px;
-    }
   }
   .copyright {
     line-height: 24px;

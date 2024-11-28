@@ -1,7 +1,9 @@
 <template>
   <Transition name="fade">
     <div v-show="showBackTop" class="vitepress-backTop-main" title="返回顶部" @click="scrollToTop()">
-      <svg t="1731072264985" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="23170" width="256" height="256"><path d="M1003.52 549.546667l-477.866667-477.866667c-6.826667-6.826667-17.066667-6.826667-23.893333 0l-477.866667 477.866667c-3.413333 3.413333-3.413333 6.826667-3.413333 13.653333v375.466667c0 6.826667 3.413333 13.653333 10.24 17.066666 3.413333 0 10.24 0 17.066667-3.413333L512 484.693333l464.213333 464.213334c3.413333 3.413333 6.826667 3.413333 13.653334 3.413333h6.826666c6.826667-3.413333 10.24-10.24 10.24-17.066667v-375.466666s-3.413333-6.826667-3.413333-10.24z" fill="#ffffff" p-id="23171"></path></svg>
+      <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1003.52 549.546667l-477.866667-477.866667c-6.826667-6.826667-17.066667-6.826667-23.893333 0l-477.866667 477.866667c-3.413333 3.413333-3.413333 6.826667-3.413333 13.653333v375.466667c0 6.826667 3.413333 13.653333 10.24 17.066666 3.413333 0 10.24 0 17.066667-3.413333L512 484.693333l464.213333 464.213334c3.413333 3.413333 6.826667 3.413333 13.653334 3.413333h6.826666c6.826667-3.413333 10.24-10.24 10.24-17.066667v-375.466666s-3.413333-6.826667-3.413333-10.24z" fill="#ffffff"></path>
+      </svg>
     </div>
   </Transition>
 </template>
@@ -43,7 +45,9 @@ onBeforeUnmount(() => window.removeEventListener("scroll", onScroll));
 
 <style lang="css" scoped>
 .vitepress-backTop-main {
-  margin-left: 20px;
+  position: fixed;
+  bottom: 32px;
+  right: 10px;
   cursor: pointer;
   width: 32px;
   height: 32px;
@@ -53,8 +57,23 @@ onBeforeUnmount(() => window.removeEventListener("scroll", onScroll));
   box-shadow: 2px 2px 10px 4px rgba(0, 0, 0, 0.15);
 }
 
+@media (min-width: 1280px) {
+  .vitepress-backTop-main {
+    position: static;
+    margin-left: 20px;
+  }
+  .content .vitepress-backTop-main {
+    display: none;
+  }
+}
+@media (min-width: 768px) { 
+  .vitepress-backTop-main {
+    right: 16px;
+  }
+}
+
 .vitepress-backTop-main:hover {
-  background-color: var(--vp-c-brand-lighter);
+  background-color: var(--weiz-primary-color-light-1);
 }
 
 svg {

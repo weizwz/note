@@ -13,6 +13,7 @@
   --weiz-primary-color-light-5: rgb(235.9, 245.3, 255);
 
   --vp-c-indigo-1: var(--weiz-primary-color);
+  --vp-c-indigo-2: var(--weiz-primary-color-light-1);
 }
 
 
@@ -62,9 +63,34 @@
   --custom-block-danger-bg: rgba(var(--custom-block-danger-rgb), .1);
 }
 
+/**
+* 界面布局
+* -------------------------------------------------------------------------- */
+.Layout {
+  .VPDoc {
+    padding-bottom: 20px;
+  }
+}
+@media (min-width: 768px) {
+  .Layout {
+    .VPDoc {
+      padding-bottom: 20px;
+    }
+  }
+}
+@media (min-width: 960px) {
+  .Layout {
+    .VPDoc {
+      padding-bottom: 0;
+    }
+    .content {
+      padding-bottom: 20px;
+    }
+  }
+}
 
 /**
-* 界面/组件
+* 界面元素/组件
 * -------------------------------------------------------------------------- */
 body {
   font-size: var(--weiz-font-size);
@@ -101,4 +127,9 @@ body {
 }
 .cls-1, .cls-2 {
   fill: var(--docsearch-primary-color) !important;
+}
+
+/* 编辑按钮 */
+.edit-link-button:hover {
+  color: var(--weiz-primary-color-light-1);
 }
