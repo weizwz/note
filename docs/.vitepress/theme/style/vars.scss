@@ -63,6 +63,13 @@
   --custom-block-danger-bg: rgba(var(--custom-block-danger-rgb), .1);
 }
 
+/* 图标集 */
+:root {
+  --weiz-icon-github: url(https://api.iconify.design/simple-icons/github.svg?color=%23ffffff);
+  --weiz-icon-gitee: url(https://api.iconify.design/simple-icons/gitee.svg?color=%23ffffff);
+  --weiz-icon-blog: url(https://api.iconify.design/la/blog.svg?color=%23ffffff);
+}
+
 /**
 * 界面布局
 * -------------------------------------------------------------------------- */
