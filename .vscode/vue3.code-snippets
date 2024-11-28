@@ -1,6 +1,6 @@
 {
-  "Vue3 Markdown中快速插入Vue3模版": {
-    "scope": "markdown",
+	"vue3 基础模版": {
+    "scope": "vue",
     "prefix": "!vue3",
     "body": [
       "<template>",
@@ -13,6 +13,6 @@
       "</style>",
       ""
     ],
-    "description": "Vue3 Markdown中快速插入Vue3模版"
+    "description": "vue3 基础模版"
   }
 }
