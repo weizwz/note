@@ -1,14 +1,14 @@
 ---
-outline: deep
+title: API 示例
+description: VitePress 运行时 API 示例
+editLink: true
 ---
 
-# api 示例
+# API 示例
 
-## 简介
+此页面展示了 `VitePress` 提供的一些运行时 `API` 的使用方法
 
-此页面演示了 `VitePress` 提供的一些运行时 `API` 的使用方法。
-
-主 `useData() API` 可用于访问当前页面的网站、主题和页面数据。它在 `.md` 和 `.vue` 文件中都有效：
+主 `useData() API` 可用于访问当前页面的网站、主题和页面数据，它在 `.md` 和 `.vue` 文件中都有效
 
 ## 用法说明
 

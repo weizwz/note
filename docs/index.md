@@ -13,10 +13,10 @@ hero:
     alt: VitePress
   actions:
     - theme: brand
-      text: markdown 示例
+      text: Markdown 示例
       link: /vitepress/extend/markdown-examples
     - theme: alt
-      text: api 示例
+      text: API 示例
       link: /vitepress/basic/api-examples
 
 features:

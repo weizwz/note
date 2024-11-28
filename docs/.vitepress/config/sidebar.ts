@@ -8,13 +8,13 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
         {
           text: '基础设置',
           items: [
-            { text: 'api 示例', link: '/vitepress/basic/api-examples.md' }
+            { text: 'API 示例', link: '/vitepress/basic/api-examples.md' }
           ]
         },
         {
           text: '进阶用法',
           items: [
-            { text: 'markdown 示例', link: '/vitepress/extend/markdown-examples.md' },
+            { text: 'Markdown 示例', link: '/vitepress/extend/markdown-examples.md' },
           ]
         },
       ]

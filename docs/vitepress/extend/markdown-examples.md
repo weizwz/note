@@ -1,10 +1,10 @@
 ---
-title: markdown 示例
-description: markdown 使用说明文档
+title: Markdown 示例
+description: Markdown 使用说明文档
 editLink: true
 ---
 
-# {{ $frontmatter.title }}
+# Markdown 示例
 
 此页面演示了 `VitePress` 提供的一些内置 `markdown` 扩展。详情可查看 [官方文档](https://vitepress.dev/zh/guide/markdown)
 
