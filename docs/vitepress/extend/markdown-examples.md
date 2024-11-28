@@ -1,7 +1,6 @@
 ---
 title: Markdown 示例
 description: Markdown 使用说明文档
-editLink: true
 ---
 
 # Markdown 示例

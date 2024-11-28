@@ -1,7 +1,6 @@
 ---
 title: API 示例
 description: VitePress 运行时 API 示例
-editLink: true
 ---
 
 # API 示例
