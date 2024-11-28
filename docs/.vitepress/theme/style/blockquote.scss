@@ -2,11 +2,11 @@
 .vp-doc blockquote {
   margin: 0 0 20px;
   padding: 12px 15px;
-  border-radius: var(--main-block-radius);
-  border-left: 5px solid var(--main-primary-color);
-  background-color: rgba(var(--vp-c-indigo-1-rgb), .1);
+  border-radius: var(--weiz-block-radius);
+  border-left: 5px solid var(--weiz-primary-color);
+  background-color: rgba(var(--weiz-primary-color-rgb), .1);
 
   >p {
-    font-size: var(--main-font-size);
+    font-size: var(--weiz-font-size);
   }
 }
