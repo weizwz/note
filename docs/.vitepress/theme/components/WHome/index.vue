@@ -31,7 +31,15 @@
     </div>
   </div>
 </template>
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { onMounted } from 'vue'
+import { useData } from 'vitepress'
+const { title, theme, page, frontmatter } = useData()
+
+onMounted(()=> {
+  window.document.title = title.value
+})
+</script>
 <style lang="scss" scoped>
 @use './index.scss';
 </style>

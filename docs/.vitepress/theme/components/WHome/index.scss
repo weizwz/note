@@ -71,7 +71,7 @@
       li a {
         display: flex;
         backdrop-filter: blur(5px);
-        background: rgba(44, 57, 67, 0.4);
+        background: rgba(44, 57, 67, 0.3);
         width: 36px;
         height: 36px;
         border-radius: 50%;
@@ -79,7 +79,7 @@
         line-height: 44px;
         color: white;
         &:hover {
-          background: rgba(44, 57, 67, 0.3);
+          background: rgba(44, 57, 67, 0.6);
         }
         i {
           width: 36px;
