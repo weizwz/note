@@ -1,14 +1,12 @@
 import type { HeadConfig } from 'vitepress'
 
 export const head: HeadConfig[] = [
-  ['meta', { name: 'theme-color', content: '#3eaf7c' }],
-  ['meta', { name: 'mobile-web-app-capable', content: 'yes' }],
-  ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
-  ['meta', { name: 'msapplication-TileColor', content: '#000000' }],
-  ['meta', { name: 'msapplication-TileImage', content: 'favicon.ico' }],
-  // ['meta', { name: 'baidu-site-verification', content: 'code-baidusitemap' }],
   ['link', { rel: 'icon', href: 'favicon.ico' }],
-  ['link', { rel: 'apple-touch-icon', href: 'favicon.ico' }],
-  ['link', { rel: 'mask-icon', href: 'favicon.ico', color: '#1890ff' }],
-  ['link', { rel: 'manifest', href: 'manifest.webmanifest' }]
+  ['link', { rel: 'icon', type: 'image/png', href: 'logo.png' }],
+  ['meta', { name: 'theme-color', content: '#4096ff' }],
+  ['meta', { property: 'og:type', content: 'website' }],
+  ['meta', { property: 'og:locale', content: 'zh' }],
+  ['meta', { property: 'og:title', content: '唯知笔记 | 一个知识分享网站' }],
+  ['meta', { property: 'og:site_name', content: '唯知笔记' }],
+  ['meta', { property: 'og:url', content: 'https://weizwz.com/note/' }]
 ]

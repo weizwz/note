@@ -11,7 +11,7 @@
         </el-col>
         <el-col :span="8" class="container-right">
           <div class="hero-avatar">
-            <img src="../../../../head_bg.png" alt="" />
+            <img src="../../../../public/head_bg.png" alt="" />
             <div class="avatar-icon">
               <ul class="list-inline">
                 <li>
@@ -33,5 +33,5 @@
 </template>
 <script setup lang="ts"></script>
 <style lang="scss" scoped>
-@import './index.scss';
+@use './index.scss';
 </style>
