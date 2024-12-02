@@ -1,3 +1,20 @@
+@keyframes typing {
+  from { width: 0; }
+  to { width: 4em; }
+}
+@keyframes typing-desc {
+  from { width: 0; }
+  to { width: 8em; }
+}
+@keyframes blink-caret {
+  from, to { box-shadow: 8px 0 0 0 transparent; }
+  50% { box-shadow: 8px 0 0 0 #000; }
+}
+@keyframes blink-end {
+  from { box-shadow: 8px 0 0 0 transparent; }
+  to { box-shadow: 8px 0 0 0 transparent; }
+}
+
 #about {
   padding: calc(var(--vp-layout-top-height, 0px) + 80px) 48px 64px;
   .container {
@@ -8,20 +25,33 @@
     order: 2;
     max-width: 100%;
     flex: 0 0 auto;
-    h1, h2 {
-      letter-spacing: -.4px;
-      white-space: pre-wrap;
+    .title {
+      width: fit-content;
+      color: transparent;
+      background: -webkit-linear-gradient(120deg, #bd34fe 30%, var(--weiz-primary-color));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
     h1 {
       font-weight: 700;
       line-height: 40px;
       font-size: 32px;
-      > span {
-        color: transparent;
-        background: -webkit-linear-gradient(120deg, #bd34fe 30%, #41d1ff);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
+      span {
+        width: 0;
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+      &.about-title {
+        span {
+          animation: typing 2s steps(4, end) 0s forwards, blink-caret .75s step-end infinite, blink-end 0s linear 2.1s forwards;
+        }
+      }
+      &.about-desc {
+        span {
+          animation: typing-desc 2s steps(8, end) 2.2s forwards, blink-caret .75s step-end 2.8s infinite;
+        }
       }
     }
     h2 {
@@ -45,10 +75,24 @@
         position: absolute;
         top: -15px;
         bottom: -15px;
-        right: 15px;
-        background: rgba(255, 255, 255, 0.3);
+        right: 10px;
+        background: var(--weiz-primary-color);
         width: 100%;
         height: calc(100% + 30px);
+        border: 1px solid var(--weiz-primary-color);
+        border-top-left-radius: 50%;
+        border-bottom-left-radius: 50%;
+      }
+      &::after {
+        content: '';
+        z-index: -2;
+        position: absolute;
+        top: -30px;
+        bottom: -30px;
+        right: 30px;
+        background: rgba(255, 255, 255, .3);
+        width: 100%;
+        height: calc(100% + 60px);
         border: 1px dashed rgba(44, 57, 67, 0.2);
         border-top-left-radius: 50%;
         border-bottom-left-radius: 50%;
@@ -61,7 +105,7 @@
     .avatar-icon {
       position: absolute;
       bottom: 6px;
-      right: 6px;
+      left: 6px;
       .list-inline {
         display: flex;
         > li {
@@ -71,19 +115,19 @@
       li a {
         display: flex;
         backdrop-filter: blur(5px);
-        background: rgba(44, 57, 67, 0.3);
-        width: 36px;
-        height: 36px;
+        background: rgba(44, 57, 67, 0.4);
+        width: 42px;
+        height: 42px;
         border-radius: 50%;
         text-align: center;
         line-height: 44px;
         color: white;
         &:hover {
-          background: rgba(44, 57, 67, 0.6);
+          background: rgba(44, 57, 67, 0.3);
         }
         i {
-          width: 36px;
-          height: 36px;
+          width: 42px;
+          height: 42px;
           fill: currentColor;
           &.github {
             background: var(--weiz-icon-github) no-repeat center center;
@@ -96,6 +140,10 @@
           &.cnblogs {
             background: var(--weiz-icon-blog) no-repeat center center;
             background-size: 42% 42%;
+          }
+          &:hover {
+            background-size: 60% 60%;
+            transition: .1s;
           }
         }
       }

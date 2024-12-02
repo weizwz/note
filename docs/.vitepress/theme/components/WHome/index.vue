@@ -3,15 +3,19 @@
     <div class="container">
       <el-row class="container-row">
         <el-col :span="16" class="container-left">
-          <h1 class="about-title">
-            <span>唯知笔记</span>
-          </h1>
-          <h1 class="about-title">一个知识分享网站</h1>
-          <h2 class="about-desc">闲来无事会，笔墨皆尽染</h2>
+          <div class="title">
+            <h1 class="about-title">
+              <span>唯知笔记</span>
+            </h1>
+            <h1 class="about-desc">
+              <span>一个知识分享网站</span>
+            </h1>
+          </div>
+          <h2 class="about-tagline">闲来无事会，笔墨皆尽染</h2>
         </el-col>
         <el-col :span="8" class="container-right">
           <div class="hero-avatar">
-            <img src="../../../../public/head_bg.png" alt="" />
+            <img src="../../../../public/head.png" alt="" />
             <div class="avatar-icon">
               <ul class="list-inline">
                 <li>
