@@ -81,7 +81,6 @@
           justify-content: space-between;
           align-items: center;
           background: var(--vp-button-alt-bg);
-          border: solid 1px transparent;
           height: 42px;
           line-height: 42px;
           padding: 0 8px;
@@ -99,7 +98,6 @@
           }
           &:hover {
             padding: 0 12px;
-            border-color: var(--weiz-primary-color);
             span {
               margin-left: 6px;
               width: 56px;
