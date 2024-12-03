@@ -11,24 +11,33 @@
               <span>一个知识分享网站</span>
             </h1>
           </div>
-          <h2 class="about-tagline">闲来无事会，笔墨皆尽染</h2>
+          <h2 class="about-tagline">知之为知之，不知为不知</h2>
+          <div class="avatar-icon">
+            <ul class="list-inline">
+              <li>
+                <a href="https://github.com/weizwz" target="_blank">
+                  <i class="github"></i>
+                  <span>Github</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://gitee.com/weizwz" target="_blank">
+                  <i class="gitee"></i>
+                  <span>Gitee</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.cnblogs.com/weizwz" target="_blank">
+                  <i class="cnblogs"></i>
+                  <span>博客园</span>
+                </a>
+              </li>
+            </ul>
+          </div>
         </el-col>
         <el-col :span="8" class="container-right">
           <div class="hero-avatar">
             <img src="../../../../public/head.png" alt="" />
-            <div class="avatar-icon">
-              <ul class="list-inline">
-                <li>
-                  <a href="https://github.com/weizwz" target="_blank"><i class="github"></i></a>
-                </li>
-                <li>
-                  <a href="https://gitee.com/weizwz" target="_blank"><i class="gitee"></i></a>
-                </li>
-                <li>
-                  <a href="https://www.cnblogs.com/weizwz" target="_blank"><i class="cnblogs"></i></a>
-                </li>
-              </ul>
-            </div>
           </div>
         </el-col>
       </el-row>
