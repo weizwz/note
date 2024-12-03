@@ -15,21 +15,33 @@
           <div class="avatar-icon">
             <ul class="list-inline">
               <li>
-                <a href="https://github.com/weizwz" target="_blank">
-                  <i class="github"></i>
-                  <span>Github</span>
+                <a href="" target="_blank">
+                  <i class="web"></i>
+                  <span>前端笔记</span>
                 </a>
               </li>
               <li>
-                <a href="https://gitee.com/weizwz" target="_blank">
-                  <i class="gitee"></i>
-                  <span>Gitee</span>
+                <a href="" target="_blank">
+                  <i class="code"></i>
+                  <span>编码提效</span>
                 </a>
               </li>
               <li>
-                <a href="https://www.cnblogs.com/weizwz" target="_blank">
-                  <i class="cnblogs"></i>
-                  <span>博客园</span>
+                <a href="" target="_blank">
+                  <i class="blog"></i>
+                  <span>博客文档</span>
+                </a>
+              </li>
+              <li>
+                <a href="" target="_blank">
+                  <i class="resource"></i>
+                  <span>资源分享</span>
+                </a>
+              </li>
+              <li>
+                <a href="" target="_blank">
+                  <i class="other"></i>
+                  <span>其他杂项</span>
                 </a>
               </li>
             </ul>

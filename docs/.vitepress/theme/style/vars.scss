@@ -12,9 +12,16 @@
   --weiz-primary-color-light-4: rgb(216.8, 235.6, 255);
   --weiz-primary-color-light-5: rgb(235.9, 245.3, 255);
 
+  // 紫红色
+  --vp-c-purple-1: #bd34fe;
+
   --vp-c-indigo-1: var(--weiz-primary-color);
   --vp-c-indigo-1-rgb: var(--weiz-primary-color-rgb);
   --vp-c-indigo-2: var(--weiz-primary-color-light-1);
+
+  --weiz-gradient-color1: #358bff, #15c6ff;
+  --weiz-gradient-color2: #18e7ae, #1eebeb;
+  --weiz-gradient-color3: #f65, #ffbf37;
 }
 
 
@@ -62,13 +69,6 @@
   --custom-block-danger: #f05659;
   --custom-block-danger-rgb: 243, 97, 98;
   --custom-block-danger-bg: rgba(var(--custom-block-danger-rgb), .1);
-}
-
-/* 图标集 */
-:root {
-  --weiz-icon-github: url(https://api.iconify.design/simple-icons/github.svg?color=%23ffffff);
-  --weiz-icon-gitee: url(https://api.iconify.design/simple-icons/gitee.svg?color=%23ffffff);
-  --weiz-icon-blog: url(https://api.iconify.design/la/blog.svg?color=%23ffffff);
 }
 
 /**
