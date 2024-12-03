@@ -1,31 +1,15 @@
-@keyframes typing {
-  from { width: 0; }
-  to { width: 4em; }
+.container {
+  max-width: 1152px;
+  margin: 0 auto;
 }
-@keyframes typing-desc {
-  from { width: 0; }
-  to { width: 8em; }
-}
-@keyframes blink-caret {
-  from, to { box-shadow: 8px 0 0 0 transparent; }
-  50% { box-shadow: 8px 0 0 0 #000; }
-}
-@keyframes blink-end {
-  from { box-shadow: 8px 0 0 0 transparent; }
-  to { box-shadow: 8px 0 0 0 transparent; }
-}
-
+/**
+* 标题模块
+* -------------------------------------------------------------------------- */
 #about {
   padding: calc(var(--vp-layout-top-height, 0px) + 80px) 48px 64px;
-  .container {
-    max-width: 1152px;
-    margin: 0 auto;
-  }
   .container-left {
     order: 2;
-    max-width: 100%;
     margin-top: 30px;
-    flex: 0 0 auto;
     .title {
       width: fit-content;
     }
@@ -64,7 +48,7 @@
       font-size: 18px;
       color: var(--vp-c-text-2);
     }
-    .avatar-icon {
+    .about-nav {
       margin-top: 20px;
       .list-inline {
         display: flex;
@@ -83,7 +67,7 @@
           background: var(--vp-button-alt-bg);
           height: 42px;
           line-height: 42px;
-          padding: 0 8px;
+          padding: 0 9px;
           margin-right: 10px;
           border-radius: 42px;
           text-align: center;
@@ -129,14 +113,15 @@
   }
   .container-right {
     order: 1;
-    max-width: 100%;
-    flex: 0 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     .hero-avatar {
-      display: inline-block;
       position: relative;
+      display: flex;
+      justify-content: end;
       img {
-        max-height: 240px;
-        border-bottom-left-radius: 42%;
+        border-bottom-left-radius: 32%;
       }
       &::before {
         content: '';
@@ -168,13 +153,63 @@
   }
 }
 
+/**
+* 文章模块
+* -------------------------------------------------------------------------- */
+#post {
+  padding: var(--vp-layout-top-height, 0px) 48px 64px;
+  .post-card {
+    border-radius: 25px;
+    background-color: var(--vp-c-bg-soft);
+  }
+}
+
+/**
+* 暗黑模式适配
+* -------------------------------------------------------------------------- */
+.dark {
+  #about {
+    .container-right {
+      .hero-avatar {
+        &::before {
+          background: var(--vp-c-gray-1);
+        }
+        &::after {
+          border-color: rgba(255, 255, 255, 0.3);
+        }
+      }
+    }
+  }
+}
+
+/**
+* 动画
+* -------------------------------------------------------------------------- */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 4em; }
+}
+@keyframes typing-desc {
+  from { width: 0; }
+  to { width: 8em; }
+}
+@keyframes blink-caret {
+  from, to { box-shadow: 8px 0 0 0 transparent; }
+  50% { box-shadow: 8px 0 0 0 #000; }
+}
+@keyframes blink-end {
+  from { box-shadow: 8px 0 0 0 transparent; }
+  to { box-shadow: 8px 0 0 0 transparent; }
+}
+
+/**
+* 自适应
+* -------------------------------------------------------------------------- */
 @media (min-width: 768px) {
   #about {
     .container-left {
       order: 1;
-      max-width: 66.6666666666%;
       margin-top: 0;
-      flex: 0 0 66.6666666666%;
       h1 {
         line-height: 56px;
         font-size: 48px;
@@ -183,7 +218,7 @@
         line-height: 32px;
         font-size: 20px;
       }
-      .avatar-icon {
+      .about-nav {
         li:first-child a {
           padding: 0 15px;
           span {
@@ -203,17 +238,18 @@
     }
     .container-right {
       order: 2;
-      max-width: 33.3333333333%;
-      flex: 0 0 33.3333333333%;
+      justify-content: end;
+      .hero-avatar img {
+        max-height: 240px;
+        border-bottom-left-radius: 32%;
+      }
     }
   }
 }
 
-@media (min-width: 960px) {
+@media (min-width: 992px) {
   #about {
     .container-left {
-      max-width: 75%;
-      flex: 0 0 75%;
       h1 {
         line-height: 64px;
         font-size: 56px;
@@ -221,25 +257,6 @@
       h2 {
         line-height: 36px;
         font-size: 24px;
-      }
-    }
-    .container-right {
-      max-width: 25%;
-      flex: 0 0 25%;
-    }
-  }
-}
-
-.dark {
-  #about {
-    .container-right {
-      .hero-avatar {
-        &::before {
-          background: var(--vp-c-gray-1);
-        }
-        &::after {
-          border-color: rgba(255, 255, 255, 0.3);
-        }
       }
     }
   }
