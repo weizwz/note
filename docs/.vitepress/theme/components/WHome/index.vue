@@ -47,11 +47,20 @@
           <div class="post-card statistic">
             <div class="post-container">
               <div class="number">200+</div>
-              <div class="desc">在过去的5年里，累计写作时长已达800+小时</div>
+              <div class="desc">在过去的5年里，累计产出200+篇文章</div>
             </div>
           </div>
         </el-col>
       </el-row>
+    </div>
+  </div>
+  <div id="skill">
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-item" v-for="(item, index) of skills" :key="index">
+          <h2>{{ item }}</h2>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -65,6 +74,13 @@ const navList = ref([
   { title: '博客文档', className: 'blog' },
   { title: '资源分享', className: 'resource' },
   { title: '杂项记录', className: 'other' },
+])
+
+const skills = ref([
+  'Javascript', 'Vue', 'Typescript', 'Scss', 'Nodejs', 'Npm', 'Vite', 'Webpack', 'Html', 'Css', 'Photoshop', 'Git', 'Terminal', 'Code', 'Map', 'Echarts', 
+  'Blog', 'Json', 'Vscode', 'Vue 3', 'Idea', 'Pnpm', 'Mac OS', 'App', 'Uni-app', 'Windows', 'Hexo', 'Github', 'Vitepress', 'Svn', 'Nginx', 'Chrome', 
+  'WebGL', 'React', 'Markdown', 'Gulp', 'Yaml', 'Yarn', 'Proxy', 'Less', 'Clash', 'Gitee', 'Jsx', 'Http', 'Xml', 'Element Plus', 'Nuxt', 'JQuery', 
+  'Sublime Text', 'AngularJs', 'Bootstrap', 'AntDesign', 'ECMAScript', 'Canvas', 'Tomcat', 'Linux', 'Axios', 'Mockjs', 'XSS', 'SSR', 'Cookie'
 ])
 
 </script>
