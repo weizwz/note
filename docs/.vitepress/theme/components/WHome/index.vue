@@ -15,7 +15,7 @@
           <div class="about-nav">
             <ul class="list-inline">
               <li v-for="(item, index) of navList" :key="index">
-                <a href="" target="_blank">
+                <a href="">
                   <i :class="item.className"></i>
                   <span>{{ item.title }}</span>
                 </a>
@@ -34,14 +34,21 @@
   <div id="post">
     <div class="container">
       <el-row class="container-row" :gutter="20">
-        <el-col v-for="i of 3" :key="i" :xs="24" :sm="8" :md="6">
-          <div class="post-card">
-            1
-          </div>
+        <el-col v-for="i of 3" :key="i" :xs="24" :sm="12" :md="6">
+          <a class="post-card" href="">
+            <div class="post-container">
+              <div class="icon" />
+              <div class="title">专注内容</div>
+              <div class="desc">只需 Markdown 即可轻松创建美观的文档站点。只需 Markdown 即可轻松创建美观的文档站点。只需 Markdown 即可轻松创建美观的文档站点。</div>
+            </div>
+          </a>
         </el-col>
-        <el-col  :xs="24" :md="6">
-          <div class="post-card">
-            2
+        <el-col  :xs="24" :sm="12" :md="6">
+          <div class="post-card statistic">
+            <div class="post-container">
+              <div class="number">200+</div>
+              <div class="desc">在过去的5年里，累计写作时长已达800+小时</div>
+            </div>
           </div>
         </el-col>
       </el-row>
