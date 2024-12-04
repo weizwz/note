@@ -108,6 +108,26 @@
             content: var(--weiz-icon-other);
           }
         }
+        &:hover {
+          color: var(--weiz-primary-color);
+          i {
+            &.web {
+              content: var(--weiz-icon-web-main);
+            }
+            &.code {
+              content: var(--weiz-icon-code-main);
+            }
+            &.blog {
+              content: var(--weiz-icon-blog-main);
+            }
+            &.resource {
+              content: var(--weiz-icon-resource-main);
+            }
+            &.other {
+              content: var(--weiz-icon-other-main);
+            }
+          }
+        }
       }
     }
   }
@@ -164,14 +184,15 @@
     display: flex;
     height: 100%;
     border-radius: 12px;
-    border: 1px solid var(--vp-c-bg-soft);
+    border: 2px solid var(--vp-c-bg-soft);
     background-color: var(--vp-c-bg-soft);
     &.statistic {
       border-color: var(--weiz-primary-color);
       background: var(--weiz-primary-color);
     }
     &:hover {
-      box-shadow: var(--el-box-shadow-light);
+      border-color: var(--weiz-primary-color);
+      cursor: pointer;
     }
   }
   .post-container {
@@ -182,8 +203,17 @@
     .icon {
       width: 40px;
       height: 40px;
-      content: var(--weiz-icon-js-line);
+      content: var(--weiz-icon-bookmark-line);
       margin-bottom: 16px;
+      &.js {
+        content: var(--weiz-icon-js-line);
+      }
+      &.vue {
+        content: var(--weiz-icon-vue-line);
+      }
+      &.blog {
+        content: var(--weiz-icon-blog-line);
+      }
     }
     .title {
       line-height: 1.4;
@@ -209,6 +239,18 @@
     }
   }
   .post-card:hover .post-container {
+    .icon {
+      content: var(--weiz-icon-bookmark-line-main);
+      &.js {
+        content: var(--weiz-icon-js-line-main);
+      }
+      &.vue {
+        content: var(--weiz-icon-vue-line-main);
+      }
+      &.blog {
+        content: var(--weiz-icon-blog-line-main);
+      }
+    }
     .title {
       color: var(--weiz-primary-color);
     }

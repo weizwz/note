@@ -5,18 +5,18 @@
         <el-col :xs="24" :sm="16" :md="18" class="container-left">
           <div class="title">
             <h1 class="about-title">
-              <span>唯知笔记</span>
+              <span>{{ aboutData.title }}</span>
             </h1>
             <h1 class="about-desc">
-              <span>一个知识分享网站</span>
+              <span>{{ aboutData.desc }}</span>
             </h1>
           </div>
-          <h2 class="about-tagline">知之为知之，不知为不知</h2>
+          <h2 class="about-tagline">{{ aboutData.tagline }}</h2>
           <div class="about-nav">
             <ul class="list-inline">
-              <li v-for="(item, index) of navList" :key="index">
-                <a href="">
-                  <i :class="item.className"></i>
+              <li v-for="(item, index) of aboutData.links" :key="index">
+                <a :href="item.link">
+                  <i :class="item.iconName"></i>
                   <span>{{ item.title }}</span>
                 </a>
               </li>
@@ -25,7 +25,7 @@
         </el-col>
         <el-col :xs="24" :sm="8" :md="6" class="container-right">
           <div class="hero-avatar">
-            <img :src="withBase('head.png')" alt="head-avatar" />
+            <img :src="withBase(aboutData.logo)" alt="head-avatar" />
           </div>
         </el-col>
       </el-row>
@@ -34,12 +34,12 @@
   <div id="post">
     <div class="container">
       <el-row class="container-row" :gutter="20">
-        <el-col v-for="i of 3" :key="i" :xs="24" :sm="12" :md="6">
-          <a class="post-card" href="">
+        <el-col v-for="(item, index) of postData" :key="index" :xs="24" :sm="12" :md="6">
+          <a class="post-card" :href="item.link">
             <div class="post-container">
-              <div class="icon" />
-              <div class="title">专注内容</div>
-              <div class="desc">只需 Markdown 即可轻松创建美观的文档站点。只需 Markdown 即可轻松创建美观的文档站点。只需 Markdown 即可轻松创建美观的文档站点。</div>
+              <div :class="'icon ' + item.iconName" />
+              <div class="title">{{ item.title }}</div>
+              <div class="desc">{{ item.desc }}</div>
             </div>
           </a>
         </el-col>
@@ -65,23 +65,15 @@
   </div>
 </template>
 <script setup lang="ts">
-import { onMounted, ref } from 'vue'
 import { useData, withBase } from 'vitepress'
+import { HomeAbout, HomePost } from '../../type/WHome'
+import { title } from 'process'
 
-const navList = ref([
-  { title: '前端笔记', className: 'web' },
-  { title: '编码提效', className: 'code' },
-  { title: '博客文档', className: 'blog' },
-  { title: '资源分享', className: 'resource' },
-  { title: '杂项记录', className: 'other' },
-])
+const { frontmatter: fm } = useData()
 
-const skills = ref([
-  'Javascript', 'Vue', 'Typescript', 'Scss', 'Nodejs', 'Npm', 'Vite', 'Webpack', 'Html', 'Css', 'Photoshop', 'Git', 'Terminal', 'Code', 'Map', 'Echarts', 
-  'Blog', 'Json', 'Vscode', 'Vue 3', 'Idea', 'Pnpm', 'Mac OS', 'App', 'Uni-app', 'Windows', 'Hexo', 'Github', 'Vitepress', 'Svn', 'Nginx', 'Chrome', 
-  'WebGL', 'React', 'Markdown', 'Gulp', 'Yaml', 'Yarn', 'Proxy', 'Less', 'Clash', 'Gitee', 'Jsx', 'Http', 'Xml', 'Element Plus', 'Nuxt', 'JQuery', 
-  'Sublime Text', 'AngularJs', 'Bootstrap', 'AntDesign', 'ECMAScript', 'Canvas', 'Tomcat', 'Linux', 'Axios', 'Mockjs', 'XSS', 'SSR', 'Cookie'
-])
+const aboutData = fm.value.about as HomeAbout
+const postData = fm.value.post as HomePost[]
+const skills = fm.value.skills.split(',')
 
 </script>
 <style lang="scss" scoped>
