@@ -37,7 +37,7 @@
       }
       &.about-desc {
         span {
-          animation: typing-desc 2s steps(8, end) 3.8s forwards, blink-caret .75s step-end 3.8s infinite, blink-end 0s linear 7.55s forwards;
+          animation: typing-desc 2s steps(11, end) 3.8s forwards, blink-caret .75s step-end 3.8s infinite, blink-end 0s linear 7.55s forwards;
         }
       }
     }
@@ -59,13 +59,17 @@
       margin-top: 12px;
       &:first-child a {
         background: var(--weiz-primary-color);
-        color: #ffffff;
+        color: white;
+        &:hover {
+          color: white;
+        }
       }
       a {
         display: flex;
         justify-content: space-between;
         align-items: center;
         background: var(--vp-button-alt-bg);
+        border: solid 1px transparent;
         height: 42px;
         line-height: 42px;
         padding: 0 9px;
@@ -83,6 +87,7 @@
         }
         &:hover {
           padding: 0 12px;
+          border-color: var(--weiz-primary-color);
           span {
             margin-left: 6px;
             width: 56px;
@@ -198,6 +203,7 @@
   .post-container {
     display: flex;
     flex-direction: column;
+    width: 100%;
     height: 100%;
     padding: 24px;
     .icon {
@@ -219,6 +225,7 @@
       line-height: 1.4;
       font-size: 16px;
       font-weight: 600;
+      width: 100%;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -346,11 +353,11 @@
 }
 @keyframes typing-desc {
   from { width: 0; }
-  to { width: 8em; }
+  to { width: 11em; }
 }
 @keyframes blink-caret {
   from, to { box-shadow: 8px 0 0 0 transparent; }
-  50% { box-shadow: 8px 0 0 0 #000; }
+  50% { box-shadow: 8px 0 0 0 var(--vp-c-text-1); }
 }
 @keyframes blink-end {
   from { box-shadow: 8px 0 0 0 transparent; }

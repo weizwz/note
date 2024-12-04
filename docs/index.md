@@ -4,24 +4,24 @@ layout: weiz-home
 about:
   title: 唯知笔记
   logo: head.png
-  desc: 一个知识分享网站
+  desc: 一个有趣的知识分享网站
   tagline: 知之为知之，不知为不知
   links:
     - title: 前端笔记
       iconName: web
-      link: 
+      link: vitepress/basic/api-examples
     - title: 编码提效
       iconName: code
-      link: 
+      link: vitepress/basic/api-examples
     - title: 博客文档
       iconName: blog
       link: vitepress/basic/api-examples
     - title: 资源分享
       iconName: resource
-      link: 
+      link: vitepress/basic/api-examples
     - title: 杂项记录
       iconName: other
-      link: 
+      link: vitepress/basic/api-examples
 
 post:
   - title: JS脚本批量处理TS数据类型
