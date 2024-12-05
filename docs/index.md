@@ -36,6 +36,9 @@ post:
     iconName: blog
     link: vitepress/basic/api-examples
     desc: 本文列举了常见的markdown写法，以及一些示例。
+  - title: 200+
+    type: card
+    desc: 在过去的两年里，累计产出200+文章
 
 skills: Javascript,Vue,Typescript,Scss,Nodejs,Npm,Vite,Webpack,Html,Css,Photoshop,Git,Terminal,Code,Map,Echarts,Blog,Json,Vscode,Vue 3,Idea,Pnpm,Mac OS,App,Uni-app,Windows,Hexo,Github,Vitepress,Svn,Nginx,Chrome,WebGL,React,Markdown,Gulp,Yaml,Yarn,Proxy,Less,SPA,Clash,Gitee,Jsx,Http,Xml,Element Plus,Nuxt,JQuery,Sublime Text,AngularJs,Bootstrap,AntDesign,ECMAScript,Canvas,Tomcat,Linux,Axios,Mockjs,XSS,SSR,Cookie,Electronjs,Flutter,MVVM,seo,Browser,Ajax,Babel,DOM,BOM,SVG,Https,WeChat Mini Program
 ---

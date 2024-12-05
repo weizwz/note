@@ -35,21 +35,19 @@
     <div class="container">
       <el-row class="container-row" :gutter="20">
         <el-col v-for="(item, index) of postData" :key="index" :xs="24" :sm="12" :md="6">
-          <a class="post-card" :href="item.link">
+          <div v-if="item.type && item.type === 'card'" class="post-card statistic">
+            <div class="post-container">
+              <div class="number">{{ item.title }}</div>
+              <div class="desc">{{ item.desc }}</div>
+            </div>
+          </div>
+          <a v-else class="post-card" :href="item.link">
             <div class="post-container">
               <div :class="'icon ' + item.iconName" />
               <div class="title">{{ item.title }}</div>
               <div class="desc">{{ item.desc }}</div>
             </div>
           </a>
-        </el-col>
-        <el-col  :xs="24" :sm="12" :md="6">
-          <div class="post-card statistic">
-            <div class="post-container">
-              <div class="number">200+</div>
-              <div class="desc">在过去的5年里，累计产出200+篇文章</div>
-            </div>
-          </div>
         </el-col>
       </el-row>
     </div>
@@ -67,7 +65,6 @@
 <script setup lang="ts">
 import { useData, withBase } from 'vitepress'
 import { HomeAbout, HomePost } from '../../type/WHome'
-import { title } from 'process'
 
 const { frontmatter: fm } = useData()
 

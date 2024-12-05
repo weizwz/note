@@ -23,12 +23,14 @@ export interface HomeAbout {
 export interface HomePost {
   // 标题
   title: string
+  // 类型
+  type?: 'post' | 'card'
   // 链接
-  link: string
+  link?: string
   // m描述
   desc: string
   // 图标名称
-  iconName: string
+  iconName?: string
 }
 
 export interface HomePostStatistic {
