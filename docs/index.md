@@ -37,6 +37,6 @@ post:
     link: vitepress/basic/api-examples
     desc: 本文列举了常见的markdown写法，以及一些示例。
 
-skills: Javascript,Vue,Typescript,Scss,Nodejs,Npm,Vite,Webpack,Html,Css,Photoshop,Git,Terminal,Code,Map,Echarts,Blog,Json,Vscode,Vue 3,Idea,Pnpm,Mac OS,App,Uni-app,Windows,Hexo,Github,Vitepress,Svn,Nginx,Chrome,WebGL,React,Markdown,Gulp,Yaml,Yarn,Proxy,Less,Clash,Gitee,Jsx,Http,Xml,Element Plus,Nuxt,JQuery,Sublime Text,AngularJs,Bootstrap,AntDesign,ECMAScript,Canvas,Tomcat,Linux,Axios,Mockjs,XSS,SSR,Cookie
+skills: Javascript,Vue,Typescript,Scss,Nodejs,Npm,Vite,Webpack,Html,Css,Photoshop,Git,Terminal,Code,Map,Echarts,Blog,Json,Vscode,Vue 3,Idea,Pnpm,Mac OS,App,Uni-app,Windows,Hexo,Github,Vitepress,Svn,Nginx,Chrome,WebGL,React,Markdown,Gulp,Yaml,Yarn,Proxy,Less,SPA,Clash,Gitee,Jsx,Http,Xml,Element Plus,Nuxt,JQuery,Sublime Text,AngularJs,Bootstrap,AntDesign,ECMAScript,Canvas,Tomcat,Linux,Axios,Mockjs,XSS,SSR,Cookie,Electronjs,Flutter,MVVM,seo,Browser,Ajax,Babel,DOM,BOM,SVG,Https,WeChat Mini Program
 ---
 
