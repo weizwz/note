@@ -21,7 +21,7 @@
       /></a>
     </p>
     <p class="copyright">
-      {{ `Copyright © 2024${new Date().getFullYear() === 2024 ? '' : '-' + new Date().getFullYear()} By weizwz` }}
+      {{ `Copyright © 2024${new Date().getFullYear() === 2024 ? '' : '-' + new Date().getFullYear()} weizwz` }}
     </p>
   </div>
 </template>
