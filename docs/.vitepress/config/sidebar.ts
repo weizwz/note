@@ -6,7 +6,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       text: 'VitePress',
       items: [
         {
-          text: '基础设置',
+          text: '基础配置',
           items: [
             { text: 'API 示例', link: '/vitepress/basic/api-examples.md' }
           ]
