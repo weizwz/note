@@ -59,9 +59,12 @@
       margin-top: 12px;
       &:first-child a {
         background: var(--weiz-primary-color);
+        border-color: var(--weiz-primary-color);
         color: white;
         &:hover {
           color: white;
+          background: var(--weiz-primary-color-light-1);
+          border-color: var(--weiz-primary-color-light-1);
         }
       }
       a {
@@ -69,10 +72,10 @@
         justify-content: space-between;
         align-items: center;
         background: var(--vp-button-alt-bg);
-        border: solid 1px transparent;
+        border: solid 1px var(--vp-button-alt-bg);
         height: 42px;
         line-height: 42px;
-        padding: 0 9px;
+        padding: 0 8px;
         margin-right: 10px;
         border-radius: 42px;
         text-align: center;
@@ -99,7 +102,7 @@
           height: 24px;
           fill: currentColor;
           &.web {
-            content: var(--weiz-icon-web-main);
+            content: var(--weiz-icon-web);
           }
           &.code {
             content: var(--weiz-icon-code-main);
@@ -173,15 +176,15 @@
     border: 1px solid var(--vp-c-bg-soft);
     background-color: var(--vp-c-bg-soft);
     transition: all 0.25s ease;
+    &:hover {
+      border-color: var(--weiz-primary-color);
+      box-shadow: 0 0.5em 0.5em -0.4em var(--weiz-primary-color);
+      transform: translateY(-0.25em);
+    }
     &.statistic {
       border-color: var(--weiz-primary-color);
       background: var(--weiz-primary-color);
     }
-  }
-  a.post-card:hover {
-    border-color: var(--weiz-primary-color);
-    box-shadow: 0 0.5em 0.5em -0.4em var(--weiz-primary-color);
-    transform: translateY(-0.25em);
   }
   .post-container {
     display: flex;

@@ -1,10 +1,9 @@
 /* 基础变量&主题色 */
 :root {
-  --weiz-primary-color: #4096ff;
-  --weiz-primary-color-rgb: 48,141,250;
+  --weiz-primary-color: #409eff;
+  --weiz-primary-color-rgb: 64,158,255;
   --weiz-primary-color-dark: rgb(51.2, 126.4, 204);
   --weiz-font-size: 14px;
-  --weiz-block-radius: 8px;
 
   --weiz-primary-color-light-1: rgb(121.3, 187.1, 255);
   --weiz-primary-color-light-2: rgb(159.5, 206.5, 255);
@@ -22,15 +21,14 @@
   --vp-c-indigo-1-rgb: var(--weiz-primary-color-rgb);
   --vp-c-indigo-2: var(--weiz-primary-color-light-1);
 
-  --weiz-gradient-color1: #358bff, #15c6ff;
-  --weiz-gradient-color2: #18e7ae, #1eebeb;
-  --weiz-gradient-color3: #f65, #ffbf37;
+  // border
+  --weiz-border-color: #dcdfe6;
 }
 
 
 .dark {
-  --weiz-primary-color: #4096ff;
-  --weiz-primary-color-rgb: 48,141,250;
+  --weiz-primary-color: #409eff;
+  --weiz-primary-color-rgb: 64,158,255;
   --weiz-primary-color-dark: rgb(102.2, 177.4, 255);
 
   --weiz-primary-color-light-1: rgb(50.8, 116.6, 184.5);
@@ -50,31 +48,33 @@
   --macos-window-green: #30C045;
 }
 
-/* 提示块颜色 */
+/* 提示块 */
 :root {
-  --custom-block-info: #909399;
-  --custom-block-info-rgb: 133,136,142;
-  --custom-block-info-bg: rgba(var(--custom-block-info-rgb), .1);
+  --weiz-block-radius: 8px;
+  
+  --weiz-block-info: #909399;
+  --weiz-block-info-rgb: 133,136,142;
+  --weiz-block-info-bg: rgba(var(--weiz-block-info-rgb), .1);
 
-  --custom-block-note: var(--vp-c-indigo-1);
-  --custom-block-note-rgb: var(--vp-c-indigo-1-rgb);
-  --custom-block-note-bg: rgba(var(--custom-block-note-rgb), .1);
+  --weiz-block-note: var(--vp-c-indigo-1);
+  --weiz-block-note-rgb: var(--vp-c-indigo-1-rgb);
+  --weiz-block-note-bg: rgba(var(--weiz-block-note-rgb), .1);
 
-  --custom-block-tip: #67c23a;
-  --custom-block-tip-rgb: 97,185, 64;
-  --custom-block-tip-bg: rgba(var(--custom-block-tip-rgb), .1);
+  --weiz-block-tip: #67c23a;
+  --weiz-block-tip-rgb: 97,185, 64;
+  --weiz-block-tip-bg: rgba(var(--weiz-block-tip-rgb), .1);
 
-  --custom-block-important: #a371f7;
-  --custom-block-important-rgb: 149,105,240;
-  --custom-block-important-bg: rgba(var(--custom-block-important-rgb), .1);
+  --weiz-block-important: #a371f7;
+  --weiz-block-important-rgb: 149,105,240;
+  --weiz-block-important-bg: rgba(var(--weiz-block-important-rgb), .1);
 
-  --custom-block-warning: #e6a23c;
-  --custom-block-warning-rgb: 227,151, 63;
-  --custom-block-warning-bg: rgba(var(--custom-block-warning-rgb), .1);
+  --weiz-block-warning: #e6a23c;
+  --weiz-block-warning-rgb: 227,151, 63;
+  --weiz-block-warning-bg: rgba(var(--weiz-block-warning-rgb), .1);
 
-  --custom-block-danger: #f05659;
-  --custom-block-danger-rgb: 243, 97, 98;
-  --custom-block-danger-bg: rgba(var(--custom-block-danger-rgb), .1);
+  --weiz-block-danger: #f05659;
+  --weiz-block-danger-rgb: 243, 97, 98;
+  --weiz-block-danger-bg: rgba(var(--weiz-block-danger-rgb), .1);
 }
 
 /**
