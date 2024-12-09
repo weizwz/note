@@ -22,31 +22,32 @@ const { theme, page, frontmatter } = useData()
 
 ## 结果展示
 
-### 主题数据
-<pre>{{ theme.nav }}</pre>
+#### 主题数据
+<pre>{{ theme.sidebar }}</pre>
 
-### 页面数据
+#### 页面数据
 <pre>{{ page }}</pre>
 
-### 页面格式
+#### 页面格式
 <pre>{{ frontmatter }}</pre>
 ```
 
 <script setup>
 import { useData } from 'vitepress'
 
-const { site, theme, page, frontmatter } = useData()
+const { theme, page, frontmatter } = useData()
+
 </script>
 
 ## 结果展示
 
-### 主题数据
-<pre>{{ theme.nav }}</pre>
+#### 主题数据
+<pre>{{ theme.sidebar }}</pre>
 
-### 页面数据
+#### 页面数据
 <pre>{{ page }}</pre>
 
-### 页面格式
+#### 页面格式
 <pre>{{ frontmatter }}</pre>
 
 ## 更多

@@ -110,6 +110,10 @@ body {
   font-size: var(--weiz-font-size);
 }
 
+pre:not(.vp-code) {
+  font-size: var(--vp-code-font-size);
+}
+
 /* 链接 */
 .vp-doc a {
   &:hover {
