@@ -1,6 +1,8 @@
 ---
 title: API 示例
 description: VitePress 运行时 API 示例
+tags:
+  - vitepress
 ---
 
 # API 示例

@@ -1,6 +1,10 @@
 ---
 title: Markdown 示例
 description: Markdown 使用说明文档
+tags:
+  - markdown
+  - vitepress
+  - github
 ---
 
 # Markdown 示例
