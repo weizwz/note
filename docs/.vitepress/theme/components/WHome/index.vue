@@ -41,6 +41,12 @@
               <div class="desc">{{ item.desc }}</div>
             </div>
           </div>
+          <div v-else-if="item.type && item.type === 'busuanzi'" class="post-card statistic">
+            <div class="post-container">
+              <div class="number"><span id="busuanzi_value_site_uv" /></div>
+              <div class="desc">本站当前访问量 <span id="busuanzi_value_site_pv" /> 人次</div>
+            </div>
+          </div>
           <a v-else class="post-card" :href="item.link">
             <div class="post-container">
               <div :class="'icon ' + item.iconName" />

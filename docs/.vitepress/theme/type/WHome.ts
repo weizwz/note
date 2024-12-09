@@ -24,7 +24,7 @@ export interface HomePost {
   // 标题
   title: string
   // 类型
-  type?: 'post' | 'card'
+  type?: 'post' | 'card' | 'busuanzi'
   // 链接
   link?: string
   // m描述

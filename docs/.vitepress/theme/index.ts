@@ -8,6 +8,8 @@ import WHome from './components/WHome/index.vue'
 import { EnhanceAppContext } from 'vitepress'
 import TwoslashFloatingVue from '@shikijs/vitepress-twoslash/client'
 import '@shikijs/vitepress-twoslash/style.css'
+import { inBrowser } from 'vitepress'
+import busuanzi from 'busuanzi.pure.js'
 
 export default {
   extends: DefaultTheme,
@@ -16,5 +18,10 @@ export default {
     app.component("weiz-home", WHome);
     app.use(TwoslashFloatingVue)
     app.use(ElementPlus)
+    if (inBrowser) {
+      router.onAfterRouteChanged = () => {
+        busuanzi.fetch()
+      }
+    }
   }
 } satisfies Theme
