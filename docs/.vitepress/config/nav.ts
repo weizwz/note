@@ -90,6 +90,11 @@ export const nav: DefaultTheme.Config['nav'] = [
           { text: '图床使用', link: 'vitepress/extend/markdown-examples.md' },
         ]
       },
+      {
+        items: [
+          { text: '标签页', link: 'pages/tags.md' },
+        ]
+      },
     ]
   },
   {

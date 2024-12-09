@@ -4,6 +4,7 @@ import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
 import './style/index.scss'
 import WLayout from './components/WLayout.vue'
+import WTag from './components/WTag.vue'
 import WHome from './components/WHome/index.vue'
 import { EnhanceAppContext } from 'vitepress'
 import TwoslashFloatingVue from '@shikijs/vitepress-twoslash/client'
@@ -16,6 +17,7 @@ export default {
   Layout: WLayout,
   enhanceApp({ app, router }: EnhanceAppContext) {
     app.component("weiz-home", WHome);
+    app.component("weiz-tag", WTag);
     app.use(TwoslashFloatingVue)
     app.use(ElementPlus)
     if (inBrowser) {

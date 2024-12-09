@@ -26,6 +26,10 @@ export default async ({ mode }) => {
 
     lastUpdated: true,
     cleanUrls: true,
+    // 路由重写
+    rewrites: {
+      'post/(.*)': '(.*)'
+    },
     // 忽略死链查询
     ignoreDeadLinks: true,
 
