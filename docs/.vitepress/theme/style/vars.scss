@@ -77,9 +77,30 @@
   --weiz-block-danger-bg: rgba(var(--weiz-block-danger-rgb), .1);
 }
 
+/* 滚动条 */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--weiz-primary-color);
+  border-radius: 2em;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+::-moz-selection {
+  color: var(--vp-c-white);
+  background-color: var(--weiz-primary-color);
+}
+
 /**
 * 界面布局
 * -------------------------------------------------------------------------- */
+
 .Layout {
   .VPDoc {
     padding-bottom: 20px;
