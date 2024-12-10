@@ -1,11 +1,11 @@
 ---
-title: API 示例
+title: 运行时 API 示例
 description: VitePress 运行时 API 示例
 tags:
   - vitepress
 ---
 
-# API 示例
+# 运行时 API 示例
 
 此页面展示了 `VitePress` 提供的一些运行时 `API` 的使用方法
 

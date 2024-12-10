@@ -8,7 +8,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
         {
           text: '基础配置',
           items: [
-            { text: 'API 示例', link: '/vitepress/basic/api-examples.md' }
+            { text: '运行时 API 示例', link: '/vitepress/basic/api-examples.md' }
           ]
         },
         {
