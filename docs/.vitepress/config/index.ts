@@ -33,8 +33,8 @@ export default async ({ mode }) => {
     // 忽略死链查询
     ignoreDeadLinks: true,
 
+    // https://github.com/vuejs/vitepress/blob/main/src/node/markdown/markdown.ts
     markdown: {
-      // 行号显示
       lineNumbers: true,
       image: {
         lazyLoading: true

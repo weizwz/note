@@ -3,7 +3,7 @@ import { basename, extname, sep, normalize } from 'path'
 import { spawn } from 'child_process'
 import { statSync } from 'fs'
 
-interface Post {
+export interface Post {
   title: string // 标题
   url: string // url
   date: [number, number] // 日期：创建日期，更新日期
@@ -11,10 +11,10 @@ interface Post {
   abstract: string // 摘要
   tags?: string[] | undefined // 标签
 }
-type Year = {
+export type Year = {
   [key: string]: Post[]
 }
-type Tag = {
+export type Tag = {
   [key: string]: Post[]
 }
 

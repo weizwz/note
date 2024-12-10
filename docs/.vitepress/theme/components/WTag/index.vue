@@ -7,8 +7,8 @@
           v-for="(item, index) of tagsText"
           :key="index"
           :style="{ fontSize: 1 + tags[item].length * 0.05 + 'em' }"
-          @click="tapTag(item)"
-          v-bind:class="{ tag: true, 'tag-active': activeTag === item }">
+          @click="activeTag(item)"
+          v-bind:class="{ tag: true, 'tag-active': currentTag === item }">
           {{ item }}
           <span class="tag-length">{{ tags[item].length }}</span>
         </div>
@@ -36,21 +36,40 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
-import { data } from '../../utils/post.data'
+import { ref, onMounted, onBeforeUnmount } from 'vue'
+import { useRouter } from 'vitepress'
+import { Post, data } from '../../utils/post.data'
 
+const routeData = useRouter()
 const tags = ref(data.tags)
 const tagsText = ref(Object.keys(tags.value))
 
-let activeTag = ref(tagsText.value[0])
-let posts = ref(tags.value[activeTag.value])
+let currentTag = ref('')
+let posts = ref<Post[]>([])
 
-
-const tapTag = (tag) => {
-  activeTag.value = tag
+const activeTag = (tag) => {
+  currentTag.value = tag
   posts.value = tags.value[tag]
+  routeData.go(routeData.route.path + '?q=' + tag)
 }
 
+// 监听url里参数变化
+const handlePopState = () => {
+    const params = new URLSearchParams(window.location.search)
+    const tag = params.get('q')
+    if (tag && tagsText.value.indexOf(tag) !== -1) {
+      activeTag(tag)
+    } else {
+      activeTag(tagsText.value[0])
+    }
+};
+onMounted(() => {
+  window.addEventListener('popstate', handlePopState);
+  handlePopState()
+});
+onBeforeUnmount(() => {
+  window.removeEventListener('popstate', handlePopState)
+});
 </script>
 
 <style lang="scss" scoped>
