@@ -19,10 +19,17 @@
     <div class="container">
       <h1><i />文章列表</h1>
       <div class="posts-wrapper">
-        <div v-for="(item, index) of posts" :key="index" class="post">
-          {{ item.title }}
-          <span class="post-date">{{ item.dateText[1] }}</span>
-        </div>
+        <el-row v-for="(item, index) of posts" :key="index" class="post" :gutter="20" >
+          <el-col :xs="24" :sm="4" :md="3" class="post-date">
+            <span class="post-date">{{ item.dateText[1] }}</span>
+          </el-col>
+          <el-col :xs="24" :sm="20" :md="21" class="post-details">
+            <a :href="'../' + item.url">
+              <span class="post-title">{{ item.title }}</span>
+              <span class="post-abstract">摘要：{{ item.abstract }}</span>
+            </a>
+          </el-col>
+        </el-row>
       </div>
     </div>
   </div>
@@ -37,8 +44,6 @@ const tagsText = ref(Object.keys(tags.value))
 
 let activeTag = ref(tagsText.value[0])
 let posts = ref(tags.value[activeTag.value])
-
-console.log(posts);
 
 
 const tapTag = (tag) => {

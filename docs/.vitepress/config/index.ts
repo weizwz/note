@@ -28,7 +28,7 @@ export default async ({ mode }) => {
     cleanUrls: true,
     // 路由重写
     rewrites: {
-      'post/(.*)': '(.*)'
+      'post/(.*)': '(.*)',
     },
     // 忽略死链查询
     ignoreDeadLinks: true,

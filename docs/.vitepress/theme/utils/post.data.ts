@@ -67,9 +67,9 @@ export default createContentLoader(
         // 如果你的文档在doc目录下，需要拼接。如果开启了cleanUrls，需要拼接 .md
         const task = getGitTimestamp('docs/' + link + '.md').then((date) => ({
           title,
-          url: link,
+          url: link.replace(/post\//, ''), // 由于使用了rewrites重定向，这里也对url作处理
           date, // 更新时间
-          dateText: [new Date(date[0]).toLocaleDateString(), new Date(date[1]).toLocaleDateString()],
+          dateText: [new Date(date[0]).toLocaleDateString().replaceAll('/', '-'), new Date(date[1]).toLocaleDateString().replaceAll('/', '-')],
           abstract: src
             // 去除html标签
             ?.replace(/<[^>]+?>/g, '')
@@ -89,6 +89,8 @@ export default createContentLoader(
             .replace(/^:::.*$/gm, '')
             // 统一空白字符为一个空格
             .replace(/\s/g, ' ')
+            // 去除首尾空格
+            .trim()
             // 仅保留可能显示的部分，减小数据大小
             .slice(0, 200),
           tags: _tags
