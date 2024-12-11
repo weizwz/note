@@ -39,6 +39,7 @@ export default async ({ mode }) => {
       image: {
         lazyLoading: true
       },
+      codeCopyButtonTitle: '复制',
       codeTransformers: [
         transformerTwoslash() 
       ],
@@ -88,7 +89,7 @@ export default async ({ mode }) => {
 
       // 大纲显示2-3级标题
       outline: {
-        level: [2, 3],
+        level: [2, 4],
         label: '页面导航'
       },
 
