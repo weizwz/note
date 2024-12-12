@@ -1,7 +1,7 @@
 import { defineConfig, loadEnv } from 'vitepress'
 import { nav } from './nav'
 import { algolia } from './algolia'
-import { head } from './head'
+import { createHead } from './head'
 import { sidebar } from './sidebar'
 import { footer } from './footer'
 import MarkdownPreview from 'vite-plugin-markdown-preview'
@@ -22,7 +22,7 @@ export default async ({ mode }) => {
     titleTemplate: ':title - 唯知笔记',
     description: '唯知笔记',
 
-    head,
+    head: createHead(env.VITE_APP_BASE_PATH),
 
     lastUpdated: true,
     cleanUrls: true,
