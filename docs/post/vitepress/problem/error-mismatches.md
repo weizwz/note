@@ -44,7 +44,7 @@ const date = computed(() => new Date(page.value.lastUpdated!))
 对于以上代码中可能出现的动态数据/内容，那我们可以 **放到界面加载完后，再由vue去重新渲染**，这样vue在客户端对比dom虚拟树/数据时，所有的内容都是 **初始** 的状态，因而不会出现不匹配的情况。
 
 综上，我们使用 vue 的 `onMounted`，代码修改如下：
-```vue
+```vue twoslash
 <template>
   <div class="updated">
     <span>更新于 {{ date }}</span>
