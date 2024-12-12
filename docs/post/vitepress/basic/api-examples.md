@@ -195,7 +195,7 @@ const { theme } = useData()
 
 ## $frontmatter
 
-在 Vue 表达式中直接访问当前页面的 `frontmatter` 数据。效果等同于 `useData()` 里的 [`frontmatter`](#数据展示)。
+在 Vue 表达式中直接访问当前页面的 `frontmatter` 数据，效果等同于 `useData()` 里的 [`frontmatter`](#数据展示)，区别在于 `$frontmatter` 只能在 `md` 文件中使用。
 
 #### 用法示例
 
