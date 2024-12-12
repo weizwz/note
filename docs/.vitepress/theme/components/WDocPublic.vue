@@ -32,11 +32,18 @@
 
 <script setup lang="ts">
 import { useData } from 'vitepress'
+import { onMounted, ref } from 'vue'
 
 const { site, theme } = useData()
-const domain = window.location.origin
-const siteHref = domain + site.value.base
-const postHref = domain + window.location.pathname
+
+const siteHref = ref('')
+const postHref = ref('')
+
+onMounted(() => {
+  const domain = window.location.origin
+  siteHref.value = domain + site.value.base
+  postHref.value = domain + window.location.pathname
+})
 </script>
 
 <style lang="scss" scoped>
