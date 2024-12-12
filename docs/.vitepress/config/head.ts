@@ -9,17 +9,17 @@ export const head: HeadConfig[] = [
   ['meta', { property: 'og:title', content: '唯知笔记 | 一个知识分享网站' }],
   ['meta', { property: 'og:site_name', content: '唯知笔记' }],
   ['meta', { property: 'og:url', content: 'https://weizwz.com/note/' }],
-  [
-    'script',
-    {},
-    `
-    window._hmt = window._hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?abcdefgeggsdfsdf123123";
-      var s = document.getElementsByTagName("script")[0]; 
-      s.parentNode.insertBefore(hm, s);
-    })();
-    `,
-  ],
+  // [
+  //   'script',
+  //   {},
+  //   `
+  //   window._hmt = window._hmt || [];
+  //   (function() {
+  //     var hm = document.createElement("script");
+  //     hm.src = "https://hm.baidu.com/hm.js?abcdefgeggsdfsdf123123";
+  //     var s = document.getElementsByTagName("script")[0]; 
+  //     s.parentNode.insertBefore(hm, s);
+  //   })();
+  //   `,
+  // ],
 ]
