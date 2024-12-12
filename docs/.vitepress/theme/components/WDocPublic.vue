@@ -2,28 +2,24 @@
   <div class="weiz-public">
     <div class="copyright">
       <div class="copyright__author">
-        <span class="copyright-meta">
-          <i class="icon-user"></i>文章作者:
-        </span>
+        <span class="copyright-meta"> <i class="icon-user"></i>文章作者: </span>
         <span class="copyright-info">
           <a :href="siteHref">weiz</a>
         </span>
       </div>
       <div class="copyright__type">
-        <span class="copyright-meta">
-          <i class="icon-link"></i>文章链接:
-        </span>
+        <span class="copyright-meta"> <i class="icon-link"></i>文章链接: </span>
         <span class="copyright-info">
           <a :href="postHref">{{ postHref }}</a>
         </span>
       </div>
       <div class="copyright__notice">
-        <span class="copyright-meta">
-          <i class="icon-cc"></i>版权声明:
-        </span>
+        <span class="copyright-meta"> <i class="icon-cc"></i>版权声明: </span>
         <span class="copyright-info">
-          本站文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">BY-NC-SA 4.0</a> 许可协议，
-          转载请注明来自 <a :href="siteHref">{{ theme.siteTitle }}</a>！
+          本站文章除特别声明外，均采用
+          <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">BY-NC-SA 4.0</a>
+          许可协议， 转载请注明来自 <a :href="siteHref">{{ theme.siteTitle }}</a
+          >！
         </span>
       </div>
     </div>
@@ -31,18 +27,28 @@
 </template>
 
 <script setup lang="ts">
-import { useData } from 'vitepress'
-import { onMounted, ref } from 'vue'
+import { useData, useRoute } from 'vitepress'
+import { onMounted, ref, watch } from 'vue'
 
 const { site, theme } = useData()
+const route = useRoute()
+
 
 const siteHref = ref('')
 const postHref = ref('')
 
-onMounted(() => {
+const setHref = () => {
   const domain = window.location.origin
   siteHref.value = domain + site.value.base
   postHref.value = domain + window.location.pathname
+}
+
+watch(route, () => {
+  setHref();
+})
+
+onMounted(() => {
+  setHref()
 })
 </script>
 
