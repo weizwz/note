@@ -6,7 +6,7 @@
           <i class="icon-user"></i>文章作者:
         </span>
         <span class="copyright-info">
-          <a :href="domain">weiz</a>
+          <a :href="siteHref">weiz</a>
         </span>
       </div>
       <div class="copyright__type">
@@ -23,7 +23,7 @@
         </span>
         <span class="copyright-info">
           本站文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">BY-NC-SA 4.0</a> 许可协议，
-          转载请注明来自 <a :href="domain">{{ theme.siteTitle }}</a>！
+          转载请注明来自 <a :href="siteHref">{{ theme.siteTitle }}</a>！
         </span>
       </div>
     </div>
@@ -33,9 +33,10 @@
 <script setup lang="ts">
 import { useData } from 'vitepress'
 
-const { site, theme, page } = useData()
-const domain = window.location.host + site.value.base
-const postHref = (domain + page.value.relativePath).replace(/.md/, '')
+const { site, theme } = useData()
+const domain = window.location.origin
+const siteHref = domain + site.value.base
+const postHref = domain + window.location.pathname
 </script>
 
 <style lang="scss" scoped>
