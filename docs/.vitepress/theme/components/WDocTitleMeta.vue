@@ -3,7 +3,7 @@
     <div class="tags">
       <div class="updated">
         <i class="tags-icon updated-icon"></i>
-        <span>更新于 {{ date.toLocaleDateString() }}</span>
+        <span>更新于 {{ date }}</span>
       </div>
       <div class="word">
         <i class="tags-icon word-icon"></i>
@@ -15,15 +15,15 @@
 
 <script setup lang="ts">
 import { useData } from 'vitepress'
-import { computed, ref, onMounted } from 'vue'
+import { ref, onMounted } from 'vue'
 import { countWord } from '../utils/tools'
 
 const { page } = useData()
 const wordCount = ref(0)
-
-const date = computed(() => new Date(page.value.lastUpdated!))
+const date = ref('')
 
 onMounted(() => {
+  date.value = (new Date(page.value.lastUpdated!)).toLocaleDateString()
   const docDomContainer = window.document.querySelector('#VPContent')
   const words = docDomContainer?.querySelector('.content-container .main')?.textContent || ''
   wordCount.value = countWord(words)
