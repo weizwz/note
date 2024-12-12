@@ -2,6 +2,7 @@
 import { useData } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import WBackToTop from './WBackToTop.vue' //返回顶部
+import WDocPublic from './WDocPublic.vue' //文章footer
 import WDocFooter from './WDocFooter.vue' //文章footer
 // import Comment from './Comment.vue'
 const { isDark } = useData()
@@ -12,6 +13,9 @@ toggleDark(isDark) //实现切换主题过渡动画
 
 <template>
   <DefaultTheme.Layout>
+    <template #doc-footer-before>
+      <WDocPublic />
+    </template>
     <template #doc-after>
       <WDocFooter />
       <WBackToTop />

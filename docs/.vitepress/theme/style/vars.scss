@@ -13,8 +13,9 @@
 
   --vp-c-text-4: rgba(60, 60, 67, 0.34);
   --vp-c-text-5: rgba(60, 60, 67, 0.12);
+  --vp-c-text-6: #99a9bf;
 
-  // 紫红色
+  // 颜色 - 紫红色
   --vp-c-purple-1: #bd34fe;
 
   --vp-c-indigo-1: var(--weiz-primary-color);
@@ -23,6 +24,7 @@
 
   // border
   --weiz-border-color: #dcdfe6;
+  --weiz-border-radius: 8px;
 }
 
 
@@ -39,6 +41,7 @@
 
   --vp-c-text-4: rgba(235, 235, 245, 0.24);
   --vp-c-text-5: rgba(235, 235, 245, 0.08);
+  --vp-c-text-6: #99a9bf;
 }
 
 /* MacOS风格相关颜色 */
@@ -50,7 +53,7 @@
 
 /* 提示块 */
 :root {
-  --weiz-block-radius: 8px;
+  --weiz-block-radius: var(--weiz-border-radius);
   
   --weiz-block-info: #909399;
   --weiz-block-info-rgb: 133,136,142;
