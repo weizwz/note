@@ -17,6 +17,12 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
             { text: 'Markdown 示例', link: '/vitepress/extend/markdown-examples.md' },
           ]
         },
+        {
+          text: '常见问题',
+          items: [
+            { text: 'Hydration completed but contains mismatches', link: '/vitepress/problem/error-mismatches.md' },
+          ]
+        },
       ]
     }
   ]

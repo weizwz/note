@@ -74,6 +74,7 @@ export const nav: DefaultTheme.Config['nav'] = [
         items: [
           { text: '基础配置', link: 'vitepress/basic/api-examples.md' },
           { text: '进阶用法', link: 'vitepress/extend/markdown-examples.md' },
+          { text: '常见问题', link: 'vitepress/problem/error-mismatches.md' },
         ]
       },
       {
