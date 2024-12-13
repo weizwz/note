@@ -1,7 +1,7 @@
 ---
 title: Hydration completed but contains mismatches
 description: 控制台报错 Hydration completed but contains mismatches 的描述和解决办法
-tag: 
+tags: 
  - vitepress
  - ssr
  - vue
