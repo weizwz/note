@@ -21,17 +21,16 @@
   .tag {
     padding: 6px 8px;
     font-size: .85em;
+    font-weight: 500;
     line-height: 25px;
     transition: .4s;
     cursor: pointer;
     &:hover {
       color: var(--weiz-primary-color);
-      font-weight: 700;
       transform: scale(1.1);
     }
     &.tag-active {
       color: var(--weiz-primary-color);
-      font-weight: 700;
     }
   }
   .tag-length {
@@ -87,5 +86,14 @@
     word-break: break-all;
     overflow: hidden;
     text-overflow: ellipsis;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  #posts {
+    .post-abstract {
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+    }
   }
 }

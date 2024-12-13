@@ -69,7 +69,7 @@ export default createContentLoader(
           title,
           url: link.replace(/post\//, ''), // 由于使用了rewrites重定向，这里也对url作处理
           date, // 更新时间
-          dateText: [new Date(date[0]).toLocaleDateString().replaceAll('/', '-'), new Date(date[1]).toLocaleDateString().replaceAll('/', '-')],
+          dateText: [new Date(date[0]).toLocaleDateString(), new Date(date[1]).toLocaleDateString()],
           abstract: src
             // 去除html标签
             ?.replace(/<[^>]+?>/g, '')
@@ -87,12 +87,12 @@ export default createContentLoader(
             .replace(/\[(.+?)\]\(.+?\)/g, '$1')
             // 去除提示块
             .replace(/^:::.*$/gm, '')
-            // 统一空白字符为一个空格
-            .replace(/\s/g, ' ')
+            // 一个或多个空白字符统一替换为一个空格
+            .replace(/\s+/g, ' ')
             // 去除首尾空格
             .trim()
             // 仅保留可能显示的部分，减小数据大小
-            .slice(0, 200),
+            .slice(0, 240),
           tags: _tags
         }))
         promises.push(task)

@@ -21,3 +21,14 @@ export function countWord(data: string) {
     }
     return count
 }
+
+/**
+ * 生成随机颜色 hsl
+ * @returns 颜色
+ */
+export const randomColor = () => {
+    return "hsl(" + 
+        Math.round(Math.random() * 360) + "," + 
+        Math.round(Math.random() * 100) + '%,' + 
+        Math.round(Math.random() * 80) + '%)';
+}
