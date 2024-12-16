@@ -7,7 +7,11 @@
       </div>
       <div class="word">
         <i class="tags-icon word-icon"></i>
-        <span>字数总计 {{ wordCount }}</span>
+        <span>总字数 {{ wordCount }}</span>
+      </div>
+      <div class="reader">
+        <i class="tags-icon eye-icon"></i>
+        <span>阅读量 <span id="busuanzi_value_page_pv"></span></span>
       </div>
     </div>
   </div>
@@ -35,12 +39,17 @@ onMounted(() => {
   .tags {
     display: flex;
     margin-top: 10px;
-    color: var(--vp-c-text-2);
+    color: var(--vp-c-text-3);
     font-weight: 500;
+    line-height: 18px;
+    word-break: keep-all;
     > div {
       display: flex;
       align-items: center;
       margin-right: 10px;
+      &:last-child {
+        margin-right: 0;
+      }
     }
   }
   .tags-icon {
@@ -53,6 +62,9 @@ onMounted(() => {
     }
     &.word-icon {
       content: var(--weiz-icon-word);
+    }
+    &.eye-icon {
+      content: var(--weiz-icon-eye);
     }
   }
 }

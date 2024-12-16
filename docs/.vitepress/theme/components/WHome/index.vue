@@ -1,7 +1,7 @@
 <template>
   <div id="about">
     <div class="container">
-      <el-row class="container-row" :gutter="20" >
+      <el-row class="container-row" :gutter="20">
         <el-col :xs="24" :sm="16" :md="18" class="container-left">
           <div class="title">
             <h1 class="about-title">
@@ -43,8 +43,8 @@
           </div>
           <div v-else-if="item.type && item.type === 'busuanzi'" class="post-card statistic">
             <div class="post-container">
-              <div class="number"><span id="busuanzi_value_site_uv" /></div>
-              <div class="desc">本站当前访问量 <span id="busuanzi_value_site_pv" /> 人次</div>
+              <div class="number">{{ uv }}<span id="busuanzi_value_site_uv" style="display: none;"/></div>
+              <div class="desc">本站总访问量 {{ pv }}<span id="busuanzi_value_site_pv" style="display: none;" /></div>
             </div>
           </div>
           <a v-else class="post-card" :href="item.link">
@@ -71,13 +71,56 @@
 <script setup lang="ts">
 import { useData, withBase } from 'vitepress'
 import { HomeAbout, HomePost } from '../../type/WHome'
+import { onMounted, ref } from 'vue'
 
 const { frontmatter: fm } = useData()
 
 const aboutData = fm.value.about as HomeAbout
 const postData = fm.value.post as HomePost[]
 const skills = fm.value.skills.split(',')
+const uv = ref('')
+const pv = ref('')
 
+const formatNumber = (num) => {
+  if (num >= 1000000) {
+    return (num / 1000000).toFixed(1) + 'M' // 超过6位数，转换为百万单位
+  } else {
+    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') // 千分位格式化
+  }
+}
+
+let timeoutUV = 0
+const getUV = () => {
+  if (timeoutUV) clearTimeout(timeoutUV)
+  timeoutUV = window.setTimeout(() => {
+    const $UV = document.querySelector("#busuanzi_value_site_uv")
+    if ($UV) {
+      const text = $UV.innerHTML
+      uv.value = formatNumber(text)
+    } else {
+      getUV()
+    }
+  }, 500)
+}
+
+let timeoutPV = 0
+const getPV = () => {
+  if (timeoutPV) clearTimeout(timeoutPV)
+  timeoutPV = window.setTimeout(() => {
+    const $PV = document.querySelector("#busuanzi_value_site_pv")
+    if ($PV) {
+      const text = $PV.innerHTML
+      pv.value = formatNumber(text)
+    } else {
+      getPV()
+    }
+  }, 500)
+}
+
+onMounted(() => {
+  getUV()
+  getPV()
+})
 </script>
 <style lang="scss" scoped>
 @use './index.scss';
