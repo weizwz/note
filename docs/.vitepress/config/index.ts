@@ -25,7 +25,7 @@ export default async ({ mode }) => {
     head: createHead(env.VITE_APP_BASE_PATH),
 
     lastUpdated: true,
-    cleanUrls: true,
+    // cleanUrls: true,
     // 路由重写
     rewrites: {
       'post/(.*)': '(.*)',
