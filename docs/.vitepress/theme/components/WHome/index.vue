@@ -43,7 +43,7 @@
           </div>
           <a v-else class="post-card" :href="item.url">
             <div class="post-container">
-              <div :class="'icon ' + (item.tags ? item.tags[0] : '')" />
+              <div :class="'icon ' + (item.tags ? item.tags.reverse().join(' ') : '')" />
               <div class="title">{{ item.title }}</div>
               <div class="desc">{{ item.abstract }}</div>
             </div>

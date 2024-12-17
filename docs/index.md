@@ -27,7 +27,7 @@ about:
 
 post:
   # - title: JS脚本批量处理TS数据类型
-  #   tags: 
+  #   tags: # 标签，对于图标 docs/.vitepress/theme/components/WHome/index.scss 中可看
   #     - js
   #   url: vitepress/basic/api-examples
   #   abstract: 在TS开发中，经常会遇到后台数据字段比较多的情况，这时候需要一个个复制字段然后给他手动配置数据类型来完成我们的TS类型定义，相当麻烦。有什么快速的方法呢，我就目前遇到的两种情况分别写了JS脚本来处理后台数据，直接生成我们需要的数据格式。
