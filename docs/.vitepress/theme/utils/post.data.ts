@@ -64,7 +64,7 @@ export default createContentLoader(
           .filter((item) => item)
           .join(sep)
         // https://vitepress.dev/zh/guide/getting-started#file-structure
-        // 如果你的文档在doc目录下，需要拼接。如果开启了cleanUrls，需要拼接.md
+        // 如果你的文档在doc目录下，路径开头需要拼接 docs/ ，末尾需要拼接 .md
         const task = getGitTimestamp('docs/' + link.replace(/.html/, '') + '.md').then((date) => ({
           title,
           url: link.replace(/post\//, ''), // 由于使用了rewrites重定向，这里也对url作处理

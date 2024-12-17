@@ -68,7 +68,7 @@ onMounted(() => {
       right: 6px;
       color: currentColor;
       width: 20px;
-      width: 20px;
+      height: 20px;
     }
     &:hover {
       box-shadow: var(--vp-shadow-1);

@@ -1,88 +1,156 @@
-$default-color: 3c3c43;
-$dark-color: fffff5db;
-$weiz-color:  409eff;
-$text3: 3A3A40;
-
-:root {
-  --weiz-icon-github: url(https://api.iconify.design/simple-icons/github.svg?color=%23#{$default-color});
-  --weiz-icon-gitee: url(https://api.iconify.design/simple-icons/gitee.svg?color=%23#{$default-color});
-  --weiz-icon-cnblog: url(https://api.iconify.design/la/blog.svg?color=%23#{$default-color});
-
-  --weiz-icon-user: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath d='m12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036q-.016-.004-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.016-.018m.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01z'/%3E%3Cpath fill='%23#{$default-color}' d='M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10s10-4.477 10-10S17.523 2 12 2M8.5 9.5a3.5 3.5 0 1 1 7 0a3.5 3.5 0 0 1-7 0m9.758 7.484A7.99 7.99 0 0 1 12 20a7.99 7.99 0 0 1-6.258-3.016C7.363 15.821 9.575 15 12 15s4.637.821 6.258 1.984'/%3E%3C/g%3E%3C/svg%3E");
-  --weiz-icon-link: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23#{$default-color}' d='M3 6.25A3.25 3.25 0 0 1 6.25 3h11.5A3.25 3.25 0 0 1 21 6.25v11.5A3.25 3.25 0 0 1 17.75 21H6.25A3.25 3.25 0 0 1 3 17.75zM13.49 9.5l-5.268 5.217a.75.75 0 1 0 1.056 1.066L14.5 10.61v4.639a.75.75 0 1 0 1.5 0v-6.5a.75.75 0 0 0-.75-.75h-6.5a.75.75 0 0 0 0 1.5z'/%3E%3C/svg%3E");
-  --weiz-icon-cc: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23#{$default-color}' fill-rule='evenodd' d='M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12s4.477 10 10 10s10-4.477 10-10M12 7a1 1 0 0 1 1 1v5a1 1 0 1 1-2 0V8a1 1 0 0 1 1-1m-1 9a1 1 0 0 1 1-1h.008a1 1 0 1 1 0 2H12a1 1 0 0 1-1-1' clip-rule='evenodd'/%3E%3C/svg%3E");
-  --weiz-icon-public: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23#{$default-color}' d='M12 2c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12S6.48 2 12 2m0 5c-2.76 0-5 2.24-5 5s2.24 5 5 5a5 5 0 0 0 4.288-2.428l-1.715-1.028A3 3 0 1 1 12 9c1.093 0 2.05.584 2.573 1.457l1.715-1.03A5 5 0 0 0 12 7'/%3E%3C/svg%3E");
-  
-  --weiz-icon-js: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23#{$default-color}' d='M6 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3V6a3 3 0 0 0-3-3zm7.334 13.055q1.08.87 2.156.858q.66 0 1.012-.242a.75.75 0 0 0 .341-.66a.97.97 0 0 0-.34-.748q-.352-.307-1.332-.616q-1.177-.34-1.815-.88q-.626-.54-.638-1.507q0-.913.792-1.529q.77-.616 1.97-.616q1.672 0 2.683.814l-.77 1.199a2.6 2.6 0 0 0-.935-.462a3.2 3.2 0 0 0-.946-.165q-.57 0-.913.209q-.34.21-.34.55q0 .374.417.638q.42.254 1.43.561q1.221.363 1.738.968t.517 1.54q0 .957-.737 1.65q-.726.682-2.112.715q-1.815 0-3.036-1.089zm-5.53.638q.352.22.847.22q.517 0 .858-.297q.34-.308.341-1.067v-5.302h1.485v5.588q-.033 1.298-.748 1.87a2.5 2.5 0 0 1-.891.484a3.3 3.3 0 0 1-.935.143q-.825 0-1.463-.286q-.682-.307-1.144-1.089l1.034-.847q.285.385.616.583'/%3E%3C/svg%3E");
-  --weiz-icon-js-line: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='%23#{$default-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5'%3E%3Cpath d='M9.75 8.5v7.964c0 .866-.456 1.626-1.142 2.052c-.745.463-1.672.13-2.432-.308l-1.43-.826a2.07 2.07 0 0 1-1.034-1.792V8.41c0-.74.394-1.423 1.035-1.792l6.218-3.59a2.07 2.07 0 0 1 2.07 0l6.218 3.59a2.07 2.07 0 0 1 1.035 1.792v7.18a2.07 2.07 0 0 1-1.035 1.792l-6.218 3.59a2.07 2.07 0 0 1-2.07 0l-.989-.57'/%3E%3Cpath d='M17.29 8.5h-2.75a1.75 1.75 0 0 0-1.75 1.75v0c0 .966.784 1.75 1.75 1.75h1c.966 0 1.75.784 1.75 1.75v0a1.75 1.75 0 0 1-1.75 1.75h-2.75'/%3E%3C/g%3E%3C/svg%3E");
-  --weiz-icon-bookmark-line: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23#{$default-color}' d='M19 2.01H6c-1.206 0-3 .799-3 3v14c0 2.201 1.794 3 3 3h15v-2H6.012C5.55 19.998 5 19.815 5 19.01q0-.15.024-.273c.112-.575.583-.717.987-.727H20c.018 0 .031-.009.049-.01H21V4.01c0-1.103-.897-2-2-2m0 14H5v-11c0-.806.55-.988 1-1h7v7l2-1l2 1v-7h2z'/%3E%3C/svg%3E");
-  --weiz-icon-vue-line: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='%23#{$default-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5'%3E%3Cpath d='M12 20.5L22.5 4h-4L12 14L5.5 4h-4z'/%3E%3Cpath d='M18.5 4h-4L12 7.5L9.5 4h-4'/%3E%3C/g%3E%3C/svg%3E");
-
-  --weiz-icon-web: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cg fill='none'%3E%3Cpath stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='4' d='M23 40H7C5.34315 40 4 38.6569 4 37V11C4 9.34315 5.34315 8 7 8H41C42.6569 8 44 9.34315 44 11V25.8824'/%3E%3Cpath fill='none' stroke='%23ffffff' stroke-width='4' d='M4 11C4 9.34315 5.34315 8 7 8H41C42.6569 8 44 9.34315 44 11V20H4V11Z'/%3E%3Cpath stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='4' d='M34 33L30 37L34 41'/%3E%3Cpath stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='4' d='M40 33L44 37L40 41'/%3E%3Ccircle r='2' fill='%23ffffff' transform='matrix(0 -1 -1 0 10 14)'/%3E%3Ccircle r='2' fill='%23ffffff' transform='matrix(0 -1 -1 0 16 14)'/%3E%3C/g%3E%3C/svg%3E");
-  --weiz-icon-code: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%23#{$default-color}' d='M6.25 3A3.25 3.25 0 0 0 3 6.25v11.5A3.25 3.25 0 0 0 6.25 21h11.5A3.25 3.25 0 0 0 21 17.75V6.25A3.25 3.25 0 0 0 17.75 3zm4.28 6.28L7.81 12l2.72 2.72a.75.75 0 1 1-1.06 1.06l-3.25-3.25a.75.75 0 0 1 0-1.06l3.25-3.25a.75.75 0 1 1 1.06 1.06m4-1.06l3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 1 1-1.06-1.06L16.19 12l-2.72-2.72a.75.75 0 0 1 1.06-1.06'/%3E%3C/svg%3E");
-  --weiz-icon-blog: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23#{$default-color}' d='M19.822 9.729H18.73a1.113 1.113 0 0 1-1.093-1.094A5.636 5.636 0 0 0 12 3H8.636A5.636 5.636 0 0 0 3 8.635v6.73A5.636 5.636 0 0 0 8.636 21h6.729A5.636 5.636 0 0 0 21 15.364v-4.458a1.15 1.15 0 0 0-1.178-1.177M8.552 7.542h4.037c.589 0 1.093.504 1.093 1.093S13.178 9.73 12.59 9.73H8.55a1.113 1.113 0 0 1-1.093-1.094c0-.589.505-1.093 1.093-1.093m6.897 8.916H8.636a1.113 1.113 0 0 1-1.094-1.094c0-.589.505-1.093 1.094-1.093h6.813c.588 0 1.093.504 1.093 1.093s-.505 1.094-1.093 1.094'/%3E%3C/svg%3E");
-  --weiz-icon-blog-line: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23#{$default-color}' d='M3 9.009a6.01 6.01 0 0 1 6.01-6.01H12a6.01 6.01 0 0 1 6.01 5.982h.943c1.15 0 2.047.896 2.047 2.047v3.962A6.01 6.01 0 0 1 14.99 21H9.01A6.01 6.01 0 0 1 3 14.99zm6.01-4.01A4.01 4.01 0 0 0 5 9.01v5.981A4.01 4.01 0 0 0 9.01 19h5.98A4.01 4.01 0 0 0 19 14.99V11h-1c-1.076 0-2-.924-2-2c0-2.214-1.786-4-4-4zM8 9a1 1 0 0 1 1-1h3.5a1 1 0 1 1 0 2H9a1 1 0 0 1-1-1m1 5a1 1 0 1 0 0 2h6a1 1 0 1 0 0-2z'/%3E%3C/svg%3E");
-  --weiz-icon-resource: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath d='m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z'/%3E%3Cpath fill='%23#{$default-color}' d='M6 3.586A2 2 0 0 1 7.414 3h9.172A2 2 0 0 1 18 3.586L20.414 6A2 2 0 0 1 21 7.414V19a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V7.414A2 2 0 0 1 3.586 6zM16.586 5H7.414l-2 2h13.172zM10 12a1 1 0 1 0-2 0a4 4 0 0 0 8 0a1 1 0 1 0-2 0a2 2 0 1 1-4 0'/%3E%3C/g%3E%3C/svg%3E");
-  --weiz-icon-other: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23#{$default-color}' d='M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10s10-4.477 10-10S17.523 2 12 2M8.25 12a1.25 1.25 0 1 1-2.5 0a1.25 1.25 0 0 1 2.5 0m5 0a1.25 1.25 0 1 1-2.5 0a1.25 1.25 0 0 1 2.5 0m5 0a1.25 1.25 0 1 1-2.5 0a1.25 1.25 0 0 1 2.5 0'/%3E%3C/svg%3E");
-
-  --weiz-icon-book: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23#{$default-color}' d='M6.012 18H21V4a2 2 0 0 0-2-2H6c-1.206 0-3 .799-3 3v14c0 2.201 1.794 3 3 3h15v-2H6.012C5.55 19.988 5 19.805 5 19s.55-.988 1.012-1M8 6h9v2H8z'/%3E%3C/svg%3E");
-  --weiz-icon-updated: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23#{$default-color}' d='M12 21q-1.875 0-3.512-.712t-2.85-1.925t-1.925-2.85T3 12t.713-3.512t1.924-2.85t2.85-1.925T12 3q2.05 0 3.888.875T19 6.35V4h2v6h-6V8h2.75q-1.025-1.4-2.525-2.2T12 5Q9.075 5 7.038 7.038T5 12t2.038 4.963T12 19q2.625 0 4.588-1.7T18.9 13h2.05q-.375 3.425-2.937 5.713T12 21m2.8-4.8L11 12.4V7h2v4.6l3.2 3.2z'/%3E%3C/svg%3E");
-  --weiz-icon-word: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='%23#{$default-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'%3E%3Cpath d='M14 3v4a1 1 0 0 0 1 1h4'/%3E%3Cpath d='M17 21H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7l5 5v11a2 2 0 0 1-2 2'/%3E%3Cpath d='m9 12l1.333 5L12 13l1.667 4L15 12'/%3E%3C/g%3E%3C/svg%3E");
-  --weiz-icon-eye: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23#{$default-color}' d='M12 3c5.392 0 9.878 3.88 10.819 9c-.94 5.12-5.427 9-10.819 9s-9.878-3.88-10.818-9C2.122 6.88 6.608 3 12 3m0 16a9.005 9.005 0 0 0 8.778-7a9.005 9.005 0 0 0-17.555 0A9.005 9.005 0 0 0 12 19m0-2.5a4.5 4.5 0 1 1 0-9a4.5 4.5 0 0 1 0 9m0-2a2.5 2.5 0 1 0 0-5a2.5 2.5 0 0 0 0 5'/%3E%3C/svg%3E");
-}
+$colors: (
+  default: 3C3C43,
+  dark: FFFFF5DB,
+  main: 409EFF,
+  white: FFFFFF,
+  gray: 3C3C43C7,
+  gray-dark: EBEBF599,
+);
 
 /**
-* 暗黑模式 $dark-color
+* 图标组  大小：24*24，底色：%23000
 * -------------------------------------------------------------------------- */
-.dark {
-  --weiz-icon-github: url(https://api.iconify.design/simple-icons/github.svg?color=%23#{$dark-color});
-  --weiz-icon-gitee: url(https://api.iconify.design/simple-icons/gitee.svg?color=%23#{$dark-color});
-  --weiz-icon-cnblog: url(https://api.iconify.design/la/blog.svg?color=%23#{$dark-color});
+$icons: (
+  name: --weiz-icon-github,
+  content: url(https://api.iconify.design/simple-icons/github.svg?color=%23000),
+),(
+  name: --weiz-icon-gitee,
+  content: url(https://api.iconify.design/simple-icons/gitee.svg?color=%23000),
+),(
+  name: --weiz-icon-cnblog,
+  content: url(https://api.iconify.design/la/blog.svg?color=%23000),
+),
 
-  --weiz-icon-public: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23#{$dark-color}' d='M12 2c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12S6.48 2 12 2m0 5c-2.76 0-5 2.24-5 5s2.24 5 5 5a5 5 0 0 0 4.288-2.428l-1.715-1.028A3 3 0 1 1 12 9c1.093 0 2.05.584 2.573 1.457l1.715-1.03A5 5 0 0 0 12 7'/%3E%3C/svg%3E");
+// 首页大分类
+(
+  name: --weiz-icon-web,
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cdefs%3E%3Cmask id='ipSWebPage0'%3E%3Cg fill='none'%3E%3Crect width='40' height='32' x='4' y='8' stroke='%23fff' stroke-linejoin='round' stroke-width='4' rx='3'/%3E%3Cpath fill='none' stroke='%23000' stroke-width='4' d='M4 11a3 3 0 0 1 3-3h34a3 3 0 0 1 3 3v9H4z'/%3E%3Ccircle r='2' fill='%23000' transform='matrix(0 -1 -1 0 10 14)'/%3E%3Ccircle r='2' fill='%23000' transform='matrix(0 -1 -1 0 16 14)'/%3E%3C/g%3E%3C/mask%3E%3C/defs%3E%3Cpath fill='%23000' d='M0 0h48v48H0z' mask='url(%23ipSWebPage0)'/%3E%3C/svg%3E"),
+  main: map-get($colors, main),
+  white: map-get($colors, white),
+),(
+  name: --weiz-icon-code,
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M6.25 3A3.25 3.25 0 0 0 3 6.25v11.5A3.25 3.25 0 0 0 6.25 21h11.5A3.25 3.25 0 0 0 21 17.75V6.25A3.25 3.25 0 0 0 17.75 3zm4.28 6.28L7.81 12l2.72 2.72a.75.75 0 1 1-1.06 1.06l-3.25-3.25a.75.75 0 0 1 0-1.06l3.25-3.25a.75.75 0 1 1 1.06 1.06m4-1.06l3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 1 1-1.06-1.06L16.19 12l-2.72-2.72a.75.75 0 0 1 1.06-1.06'/%3E%3C/svg%3E"),
+  main: map-get($colors, main),
+),(
+  name: --weiz-icon-blog,
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-2 -2 24 24'%3E%3Cpath fill='%23000' d='M13.593 19.96c3.48 0 6.307-2.836 6.327-6.297l.039-5.095l-.059-.278l-.167-.348l-.283-.22c-.367-.287-2.228.02-2.729-.435c-.355-.324-.41-.91-.518-1.706c-.2-1.54-.326-1.62-.568-2.142C14.76 1.585 12.382.193 10.75 0H6.325C2.845 0 0 2.839 0 6.307v7.356c0 3.461 2.845 6.296 6.325 6.296h7.268zM6.406 5.151h3.507c.67 0 1.212.544 1.212 1.205c0 .657-.542 1.206-1.212 1.206H6.406c-.67 0-1.21-.549-1.21-1.206c0-.661.54-1.205 1.21-1.205m-1.21 8.418c0-.66.54-1.2 1.21-1.2h7.127c.665 0 1.205.54 1.205 1.2c0 .652-.54 1.2-1.205 1.2H6.406a1.21 1.21 0 0 1-1.21-1.2'/%3E%3C/svg%3E"),
+  main: map-get($colors, main),
+),(
+  name: --weiz-icon-resource,
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M6.505 2h11a1 1 0 0 1 .8.4l2.7 3.6v15a1 1 0 0 1-1 1h-16a1 1 0 0 1-1-1V6l2.7-3.6a1 1 0 0 1 .8-.4m12 4l-1.5-2h-10l-1.5 2zm-9.5 4h-2v2a5 5 0 0 0 10 0v-2h-2v2a3 3 0 0 1-6 0z'/%3E%3C/svg%3E"),
+  main: map-get($colors, main),
+),(
+  name: --weiz-icon-other,
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M15.25 18.75q.3 0 .525-.225T16 18t-.225-.525t-.525-.225t-.525.225T14.5 18t.225.525t.525.225m2.75 0q.3 0 .525-.225T18.75 18t-.225-.525T18 17.25t-.525.225t-.225.525t.225.525t.525.225m2.75 0q.3 0 .525-.225T21.5 18t-.225-.525t-.525-.225t-.525.225T20 18t.225.525t.525.225M18 23q-2.075 0-3.537-1.463T13 18t1.463-3.537T18 13t3.538 1.463T23 18t-1.463 3.538T18 23M7 9h10V7H7zm4.675 12H5q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h14q.825 0 1.413.588T21 5v6.7q-.725-.35-1.463-.525T18 11q-.275 0-.513.012t-.487.063V11H7v2h6.125q-.45.425-.812.925T11.675 15H7v2h4.075q-.05.25-.062.488T11 18q0 .825.15 1.538T11.675 21'/%3E%3C/svg%3E"),
+  main: map-get($colors, main),
+),
 
-  --weiz-icon-js: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23#{$dark-color}' d='M6 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3V6a3 3 0 0 0-3-3zm7.334 13.055q1.08.87 2.156.858q.66 0 1.012-.242a.75.75 0 0 0 .341-.66a.97.97 0 0 0-.34-.748q-.352-.307-1.332-.616q-1.177-.34-1.815-.88q-.626-.54-.638-1.507q0-.913.792-1.529q.77-.616 1.97-.616q1.672 0 2.683.814l-.77 1.199a2.6 2.6 0 0 0-.935-.462a3.2 3.2 0 0 0-.946-.165q-.57 0-.913.209q-.34.21-.34.55q0 .374.417.638q.42.254 1.43.561q1.221.363 1.738.968t.517 1.54q0 .957-.737 1.65q-.726.682-2.112.715q-1.815 0-3.036-1.089zm-5.53.638q.352.22.847.22q.517 0 .858-.297q.34-.308.341-1.067v-5.302h1.485v5.588q-.033 1.298-.748 1.87a2.5 2.5 0 0 1-.891.484a3.3 3.3 0 0 1-.935.143q-.825 0-1.463-.286q-.682-.307-1.144-1.089l1.034-.847q.285.385.616.583'/%3E%3C/svg%3E");
-  --weiz-icon-js-line: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='%23#{$dark-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5'%3E%3Cpath d='M9.75 8.5v7.964c0 .866-.456 1.626-1.142 2.052c-.745.463-1.672.13-2.432-.308l-1.43-.826a2.07 2.07 0 0 1-1.034-1.792V8.41c0-.74.394-1.423 1.035-1.792l6.218-3.59a2.07 2.07 0 0 1 2.07 0l6.218 3.59a2.07 2.07 0 0 1 1.035 1.792v7.18a2.07 2.07 0 0 1-1.035 1.792l-6.218 3.59a2.07 2.07 0 0 1-2.07 0l-.989-.57'/%3E%3Cpath d='M17.29 8.5h-2.75a1.75 1.75 0 0 0-1.75 1.75v0c0 .966.784 1.75 1.75 1.75h1c.966 0 1.75.784 1.75 1.75v0a1.75 1.75 0 0 1-1.75 1.75h-2.75'/%3E%3C/g%3E%3C/svg%3E");
-  --weiz-icon-bookmark-line: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23#{$dark-color}' d='M19 2.01H6c-1.206 0-3 .799-3 3v14c0 2.201 1.794 3 3 3h15v-2H6.012C5.55 19.998 5 19.815 5 19.01q0-.15.024-.273c.112-.575.583-.717.987-.727H20c.018 0 .031-.009.049-.01H21V4.01c0-1.103-.897-2-2-2m0 14H5v-11c0-.806.55-.988 1-1h7v7l2-1l2 1v-7h2z'/%3E%3C/svg%3E");
-  --weiz-icon-vue-line: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='%23#{$dark-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5'%3E%3Cpath d='M12 20.5L22.5 4h-4L12 14L5.5 4h-4z'/%3E%3Cpath d='M18.5 4h-4L12 7.5L9.5 4h-4'/%3E%3C/g%3E%3C/svg%3E");
+// 文章小分类/标签 都是线条图标
+(
+  name: --weiz-icon-post-line,
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M19 2.01H6c-1.206 0-3 .799-3 3v14c0 2.201 1.794 3 3 3h15v-2H6.012C5.55 19.998 5 19.815 5 19.01q0-.15.024-.273c.112-.575.583-.717.987-.727H20c.018 0 .031-.009.049-.01H21V4.01c0-1.103-.897-2-2-2m0 14H5v-11c0-.806.55-.988 1-1h7v7l2-1l2 1v-7h2z'/%3E%3C/svg%3E"),
+),
+(
+  name: --weiz-icon-js-line,
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'%3E%3Cpath d='M9 9v8.044a2 2 0 0 1-2.996 1.734l-1.568-.9A3 3 0 0 1 3 15.317V8.682a3 3 0 0 1 1.436-2.56l6-3.667a3 3 0 0 1 3.128 0l6 3.667A3 3 0 0 1 21 8.683v6.634a3 3 0 0 1-1.436 2.56l-6 3.667a3 3 0 0 1-3.128 0'/%3E%3Cpath d='M17 9h-3.5a1.5 1.5 0 0 0 0 3h2a1.5 1.5 0 0 1 0 3H12'/%3E%3C/g%3E%3C/svg%3E"),
+),
+(
+  name: --weiz-icon-vue-line,
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M19.114 2H15l-3 4.9L9.429 2H0l12 21L24 2zM3 3.75h2.914L12 14.6l6.086-10.85H21L12 19.5z'/%3E%3C/svg%3E"),
+),
+(
+  name: --weiz-icon-blog-line,
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'%3E%3Cpath d='M8 21h8a5 5 0 0 0 5-5v-3a3 3 0 0 0-3-3h-1V8a5 5 0 0 0-5-5H8a5 5 0 0 0-5 5v8a5 5 0 0 0 5 5'/%3E%3Cpath d='M7 8.5A1.5 1.5 0 0 1 8.5 7h3A1.5 1.5 0 0 1 13 8.5v0a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 7 8.5m0 7A1.5 1.5 0 0 1 8.5 14h7a1.5 1.5 0 0 1 1.5 1.5v0a1.5 1.5 0 0 1-1.5 1.5h-7A1.5 1.5 0 0 1 7 15.5'/%3E%3C/g%3E%3C/svg%3E"),
+),
+(
+  name: --weiz-icon-vitepress-line,
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M17.029.001a2 2 0 0 0-.187.018L4.085 1.833A1.86 1.86 0 0 0 2.518 3.94l2.56 18.457a1.846 1.846 0 0 0 2.08 1.586l12.757-1.816a1.86 1.86 0 0 0 1.567-2.106l-2.56-18.455A1.85 1.85 0 0 0 17.029 0m.127.932a.926.926 0 0 1 .853.8l2.56 18.458a.93.93 0 0 1-.782 1.053L7.03 23.058a.92.92 0 0 1-1.04-.793L3.43 3.81a.93.93 0 0 1 .783-1.053L16.97.941a1 1 0 0 1 .186-.008m-3.644 5.354L9.967 7.521a.136.136 0 0 0-.09.141l.318 3.87c.008.09.1.149.184.116l.982-.378a.136.136 0 0 1 .184.136l-.09 1.54c-.006.103.1.176.193.132l.6-.281c.093-.044.198.03.192.135l-.147 2.418c-.01.15.195.203.258.066l.04-.092L14.716 8.9c.035-.107-.066-.21-.172-.173l-1.018.351c-.095.033-.191-.049-.177-.15l.343-2.49a.137.137 0 0 0-.142-.157c-.016 0-.042.009-.037.006zm2.822.799a.3.3 0 0 0-.08.014L14 7.85l-.076.56l.455-.156a.636.636 0 0 1 .81.803l-2.13 6.449l-.053.117a.64.64 0 0 1-.738.352a.64.64 0 0 1-.473-.657l.11-1.808a.638.638 0 0 1-.948-.594l.057-.976l-.454.175a.64.64 0 0 1-.863-.543L9.453 8.6l-3.062-.123c-.23-.01-.364.255-.223.44l6.29 8.23a.27.27 0 0 0 .468-.069l3.668-9.619a.275.275 0 0 0-.26-.373'/%3E%3C/svg%3E"),
+),
+(
+  name: --weiz-icon-markdown-line,
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='m16 15l3-3l-1.05-1.075l-1.2 1.2V9h-1.5v3.125l-1.2-1.2L13 12zM4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h16q.825 0 1.413.588T22 6v12q0 .825-.587 1.413T20 20zm0-2h16V6H4zm0 0V6zm1.5-3H7v-4.5h1v3h1.5v-3h1V15H12v-5q0-.425-.288-.712T11 9H6.5q-.425 0-.712.288T5.5 10z'/%3E%3C/svg%3E"),
+),
 
-  --weiz-icon-web: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cg fill='none'%3E%3Cpath stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='4' d='M23 40H7C5.34315 40 4 38.6569 4 37V11C4 9.34315 5.34315 8 7 8H41C42.6569 8 44 9.34315 44 11V25.8824'/%3E%3Cpath fill='none' stroke='%23ffffff' stroke-width='4' d='M4 11C4 9.34315 5.34315 8 7 8H41C42.6569 8 44 9.34315 44 11V20H4V11Z'/%3E%3Cpath stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='4' d='M34 33L30 37L34 41'/%3E%3Cpath stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='4' d='M40 33L44 37L40 41'/%3E%3Ccircle r='2' fill='%23ffffff' transform='matrix(0 -1 -1 0 10 14)'/%3E%3Ccircle r='2' fill='%23ffffff' transform='matrix(0 -1 -1 0 16 14)'/%3E%3C/g%3E%3C/svg%3E");
-  --weiz-icon-code: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%23#{$dark-color}' d='M6.25 3A3.25 3.25 0 0 0 3 6.25v11.5A3.25 3.25 0 0 0 6.25 21h11.5A3.25 3.25 0 0 0 21 17.75V6.25A3.25 3.25 0 0 0 17.75 3zm4.28 6.28L7.81 12l2.72 2.72a.75.75 0 1 1-1.06 1.06l-3.25-3.25a.75.75 0 0 1 0-1.06l3.25-3.25a.75.75 0 1 1 1.06 1.06m4-1.06l3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 1 1-1.06-1.06L16.19 12l-2.72-2.72a.75.75 0 0 1 1.06-1.06'/%3E%3C/svg%3E");
-  --weiz-icon-blog: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23#{$dark-color}' d='M19.822 9.729H18.73a1.113 1.113 0 0 1-1.093-1.094A5.636 5.636 0 0 0 12 3H8.636A5.636 5.636 0 0 0 3 8.635v6.73A5.636 5.636 0 0 0 8.636 21h6.729A5.636 5.636 0 0 0 21 15.364v-4.458a1.15 1.15 0 0 0-1.178-1.177M8.552 7.542h4.037c.589 0 1.093.504 1.093 1.093S13.178 9.73 12.59 9.73H8.55a1.113 1.113 0 0 1-1.093-1.094c0-.589.505-1.093 1.093-1.093m6.897 8.916H8.636a1.113 1.113 0 0 1-1.094-1.094c0-.589.505-1.093 1.094-1.093h6.813c.588 0 1.093.504 1.093 1.093s-.505 1.094-1.093 1.094'/%3E%3C/svg%3E");
-  --weiz-icon-blog-line: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23#{$dark-color}' d='M3 9.009a6.01 6.01 0 0 1 6.01-6.01H12a6.01 6.01 0 0 1 6.01 5.982h.943c1.15 0 2.047.896 2.047 2.047v3.962A6.01 6.01 0 0 1 14.99 21H9.01A6.01 6.01 0 0 1 3 14.99zm6.01-4.01A4.01 4.01 0 0 0 5 9.01v5.981A4.01 4.01 0 0 0 9.01 19h5.98A4.01 4.01 0 0 0 19 14.99V11h-1c-1.076 0-2-.924-2-2c0-2.214-1.786-4-4-4zM8 9a1 1 0 0 1 1-1h3.5a1 1 0 1 1 0 2H9a1 1 0 0 1-1-1m1 5a1 1 0 1 0 0 2h6a1 1 0 1 0 0-2z'/%3E%3C/svg%3E");
-  --weiz-icon-resource: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath d='m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z'/%3E%3Cpath fill='%23#{$dark-color}' d='M6 3.586A2 2 0 0 1 7.414 3h9.172A2 2 0 0 1 18 3.586L20.414 6A2 2 0 0 1 21 7.414V19a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V7.414A2 2 0 0 1 3.586 6zM16.586 5H7.414l-2 2h13.172zM10 12a1 1 0 1 0-2 0a4 4 0 0 0 8 0a1 1 0 1 0-2 0a2 2 0 1 1-4 0'/%3E%3C/g%3E%3C/svg%3E");
-  --weiz-icon-other: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23#{$dark-color}' d='M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10s10-4.477 10-10S17.523 2 12 2M8.25 12a1.25 1.25 0 1 1-2.5 0a1.25 1.25 0 0 1 2.5 0m5 0a1.25 1.25 0 1 1-2.5 0a1.25 1.25 0 0 1 2.5 0m5 0a1.25 1.25 0 1 1-2.5 0a1.25 1.25 0 0 1 2.5 0'/%3E%3C/svg%3E");
+// 文章标题扩展信息
+(
+  name: --weiz-icon-updated,
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M12 21q-1.875 0-3.512-.712t-2.85-1.925t-1.925-2.85T3 12t.713-3.512t1.924-2.85t2.85-1.925T12 3q2.05 0 3.888.875T19 6.35V4h2v6h-6V8h2.75q-1.025-1.4-2.525-2.2T12 5Q9.075 5 7.038 7.038T5 12t2.038 4.963T12 19q2.625 0 4.588-1.7T18.9 13h2.05q-.375 3.425-2.937 5.713T12 21m2.8-4.8L11 12.4V7h2v4.6l3.2 3.2z'/%3E%3C/svg%3E"),
+  gray: map-get($colors, gray),
+),(
+  name: --weiz-icon-word,
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'%3E%3Cpath d='M14 3v4a1 1 0 0 0 1 1h4'/%3E%3Cpath d='M17 21H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7l5 5v11a2 2 0 0 1-2 2'/%3E%3Cpath d='m9 12l1.333 5L12 13l1.667 4L15 12'/%3E%3C/g%3E%3C/svg%3E"),
+  gray: map-get($colors, gray),
+),(
+  name: --weiz-icon-eye,
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M12 3c5.392 0 9.878 3.88 10.819 9c-.94 5.12-5.427 9-10.819 9s-9.878-3.88-10.818-9C2.122 6.88 6.608 3 12 3m0 16a9.005 9.005 0 0 0 8.778-7a9.005 9.005 0 0 0-17.555 0A9.005 9.005 0 0 0 12 19m0-2.5a4.5 4.5 0 1 1 0-9a4.5 4.5 0 0 1 0 9m0-2a2.5 2.5 0 1 0 0-5a2.5 2.5 0 0 0 0 5'/%3E%3C/svg%3E"),
+  gray: map-get($colors, gray),
+),
 
-  --weiz-icon-book: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23#{$dark-color}' d='M6.012 18H21V4a2 2 0 0 0-2-2H6c-1.206 0-3 .799-3 3v14c0 2.201 1.794 3 3 3h15v-2H6.012C5.55 19.988 5 19.805 5 19s.55-.988 1.012-1M8 6h9v2H8z'/%3E%3C/svg%3E");
-  --weiz-icon-updated: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23#{$dark-color}' d='M12 21q-1.875 0-3.512-.712t-2.85-1.925t-1.925-2.85T3 12t.713-3.512t1.924-2.85t2.85-1.925T12 3q2.05 0 3.888.875T19 6.35V4h2v6h-6V8h2.75q-1.025-1.4-2.525-2.2T12 5Q9.075 5 7.038 7.038T5 12t2.038 4.963T12 19q2.625 0 4.588-1.7T18.9 13h2.05q-.375 3.425-2.937 5.713T12 21m2.8-4.8L11 12.4V7h2v4.6l3.2 3.2z'/%3E%3C/svg%3E");
-  --weiz-icon-word: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='%23#{$dark-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'%3E%3Cpath d='M14 3v4a1 1 0 0 0 1 1h4'/%3E%3Cpath d='M17 21H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7l5 5v11a2 2 0 0 1-2 2'/%3E%3Cpath d='m9 12l1.333 5L12 13l1.667 4L15 12'/%3E%3C/g%3E%3C/svg%3E");
-  --weiz-icon-eye: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23#{$dark-color}' d='M12 3c5.392 0 9.878 3.88 10.819 9c-.94 5.12-5.427 9-10.819 9s-9.878-3.88-10.818-9C2.122 6.88 6.608 3 12 3m0 16a9.005 9.005 0 0 0 8.778-7a9.005 9.005 0 0 0-17.555 0A9.005 9.005 0 0 0 12 19m0-2.5a4.5 4.5 0 1 1 0-9a4.5 4.5 0 0 1 0 9m0-2a2.5 2.5 0 1 0 0-5a2.5 2.5 0 0 0 0 5'/%3E%3C/svg%3E");
-}
+// 文章内版权
+(
+  name: --weiz-icon-user,
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M12 19.2c-2.5 0-4.71-1.28-6-3.2c.03-2 4-3.1 6-3.1s5.97 1.1 6 3.1a7.23 7.23 0 0 1-6 3.2M12 5a3 3 0 0 1 3 3a3 3 0 0 1-3 3a3 3 0 0 1-3-3a3 3 0 0 1 3-3m0-3A10 10 0 0 0 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10c0-5.53-4.5-10-10-10'/%3E%3C/svg%3E"),
+  main: map-get($colors, main),
+),(
+  name: --weiz-icon-link,
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M1 21v-2h22v2zm1-3V3h20v15zm6-4h2v-2q0-.425.288-.712T11 11h2v2l3-3l-3-3v2h-2q-1.25 0-2.125.875T8 12z'/%3E%3C/svg%3E"),
+  main: map-get($colors, main),
+),(
+  name: --weiz-icon-cc,
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10s-4.477 10-10 10m-1-7v2h2v-2zm0-8v6h2V7z'/%3E%3C/svg%3E"),
+  main: map-get($colors, main),
+),(
+  name: --weiz-icon-public,
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M12 2c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12S6.48 2 12 2m0 5c-2.76 0-5 2.24-5 5s2.24 5 5 5a5 5 0 0 0 4.288-2.428l-1.715-1.028A3 3 0 1 1 12 9c1.093 0 2.05.584 2.573 1.457l1.715-1.03A5 5 0 0 0 12 7'/%3E%3C/svg%3E"),
+  main: map-get($colors, main),
+),
+
+// 标签页
+(
+  name: --weiz-icon-post,
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M6.012 18H21V4a2 2 0 0 0-2-2H6c-1.206 0-3 .799-3 3v14c0 2.201 1.794 3 3 3h15v-2H6.012C5.55 19.988 5 19.805 5 19s.55-.988 1.012-1M8 6h9v2H8z'/%3E%3C/svg%3E"),
+)
+;
 
 /**
-* 主题色 $weiz-color
+* 图标生成
 * -------------------------------------------------------------------------- */
-:root {
-  --weiz-icon-github-main: url(https://api.iconify.design/simple-icons/github.svg?color=%23#{$weiz-color});
-  --weiz-icon-gitee-main: url(https://api.iconify.design/simple-icons/gitee.svg?color=%23#{$weiz-color});
-  --weiz-icon-cnblog-main: url(https://api.iconify.design/la/blog.svg?color=%23#{$weiz-color});
 
-  --weiz-icon-user-main: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath d='m12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036q-.016-.004-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.016-.018m.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01z'/%3E%3Cpath fill='%23#{$weiz-color}' d='M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10s10-4.477 10-10S17.523 2 12 2M8.5 9.5a3.5 3.5 0 1 1 7 0a3.5 3.5 0 0 1-7 0m9.758 7.484A7.99 7.99 0 0 1 12 20a7.99 7.99 0 0 1-6.258-3.016C7.363 15.821 9.575 15 12 15s4.637.821 6.258 1.984'/%3E%3C/g%3E%3C/svg%3E");
-  --weiz-icon-link-main: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23#{$weiz-color}' d='M3 6.25A3.25 3.25 0 0 1 6.25 3h11.5A3.25 3.25 0 0 1 21 6.25v11.5A3.25 3.25 0 0 1 17.75 21H6.25A3.25 3.25 0 0 1 3 17.75zM13.49 9.5l-5.268 5.217a.75.75 0 1 0 1.056 1.066L14.5 10.61v4.639a.75.75 0 1 0 1.5 0v-6.5a.75.75 0 0 0-.75-.75h-6.5a.75.75 0 0 0 0 1.5z'/%3E%3C/svg%3E");
-  --weiz-icon-cc-main: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23#{$weiz-color}' fill-rule='evenodd' d='M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12s4.477 10 10 10s10-4.477 10-10M12 7a1 1 0 0 1 1 1v5a1 1 0 1 1-2 0V8a1 1 0 0 1 1-1m-1 9a1 1 0 0 1 1-1h.008a1 1 0 1 1 0 2H12a1 1 0 0 1-1-1' clip-rule='evenodd'/%3E%3C/svg%3E");
-  --weiz-icon-public-main: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23#{$weiz-color}' d='M12 2c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12S6.48 2 12 2m0 5c-2.76 0-5 2.24-5 5s2.24 5 5 5a5 5 0 0 0 4.288-2.428l-1.715-1.028A3 3 0 1 1 12 9c1.093 0 2.05.584 2.573 1.457l1.715-1.03A5 5 0 0 0 12 7'/%3E%3C/svg%3E");
+// sass 字符串替换
+@function str-replace($string, $search, $replace: '') {
+  $index: str-index($string, $search);
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace +
+      str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+  @return $string;
+}
 
-  --weiz-icon-js-main: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23#{$weiz-color}' d='M6 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3V6a3 3 0 0 0-3-3zm7.334 13.055q1.08.87 2.156.858q.66 0 1.012-.242a.75.75 0 0 0 .341-.66a.97.97 0 0 0-.34-.748q-.352-.307-1.332-.616q-1.177-.34-1.815-.88q-.626-.54-.638-1.507q0-.913.792-1.529q.77-.616 1.97-.616q1.672 0 2.683.814l-.77 1.199a2.6 2.6 0 0 0-.935-.462a3.2 3.2 0 0 0-.946-.165q-.57 0-.913.209q-.34.21-.34.55q0 .374.417.638q.42.254 1.43.561q1.221.363 1.738.968t.517 1.54q0 .957-.737 1.65q-.726.682-2.112.715q-1.815 0-3.036-1.089zm-5.53.638q.352.22.847.22q.517 0 .858-.297q.34-.308.341-1.067v-5.302h1.485v5.588q-.033 1.298-.748 1.87a2.5 2.5 0 0 1-.891.484a3.3 3.3 0 0 1-.935.143q-.825 0-1.463-.286q-.682-.307-1.144-1.089l1.034-.847q.285.385.616.583'/%3E%3C/svg%3E");
-  --weiz-icon-js-line-main: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='%23#{$weiz-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5'%3E%3Cpath d='M9.75 8.5v7.964c0 .866-.456 1.626-1.142 2.052c-.745.463-1.672.13-2.432-.308l-1.43-.826a2.07 2.07 0 0 1-1.034-1.792V8.41c0-.74.394-1.423 1.035-1.792l6.218-3.59a2.07 2.07 0 0 1 2.07 0l6.218 3.59a2.07 2.07 0 0 1 1.035 1.792v7.18a2.07 2.07 0 0 1-1.035 1.792l-6.218 3.59a2.07 2.07 0 0 1-2.07 0l-.989-.57'/%3E%3Cpath d='M17.29 8.5h-2.75a1.75 1.75 0 0 0-1.75 1.75v0c0 .966.784 1.75 1.75 1.75h1c.966 0 1.75.784 1.75 1.75v0a1.75 1.75 0 0 1-1.75 1.75h-2.75'/%3E%3C/g%3E%3C/svg%3E");
-  --weiz-icon-bookmark-line-main: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23#{$weiz-color}' d='M19 2.01H6c-1.206 0-3 .799-3 3v14c0 2.201 1.794 3 3 3h15v-2H6.012C5.55 19.998 5 19.815 5 19.01q0-.15.024-.273c.112-.575.583-.717.987-.727H20c.018 0 .031-.009.049-.01H21V4.01c0-1.103-.897-2-2-2m0 14H5v-11c0-.806.55-.988 1-1h7v7l2-1l2 1v-7h2z'/%3E%3C/svg%3E");
-  --weiz-icon-vue-line-main: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='%23#{$weiz-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5'%3E%3Cpath d='M12 20.5L22.5 4h-4L12 14L5.5 4h-4z'/%3E%3Cpath d='M18.5 4h-4L12 7.5L9.5 4h-4'/%3E%3C/g%3E%3C/svg%3E");
-
-  --weiz-icon-web-main: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cg fill='none'%3E%3Cpath stroke='%23#{$weiz-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='4' d='M23 40H7C5.34315 40 4 38.6569 4 37V11C4 9.34315 5.34315 8 7 8H41C42.6569 8 44 9.34315 44 11V25.8824'/%3E%3Cpath fill='none' stroke='%23#{$weiz-color}' stroke-width='4' d='M4 11C4 9.34315 5.34315 8 7 8H41C42.6569 8 44 9.34315 44 11V20H4V11Z'/%3E%3Cpath stroke='%23#{$weiz-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='4' d='M34 33L30 37L34 41'/%3E%3Cpath stroke='%23#{$weiz-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='4' d='M40 33L44 37L40 41'/%3E%3Ccircle r='2' fill='%23#{$weiz-color}' transform='matrix(0 -1 -1 0 10 14)'/%3E%3Ccircle r='2' fill='%23#{$weiz-color}' transform='matrix(0 -1 -1 0 16 14)'/%3E%3C/g%3E%3C/svg%3E");
-  --weiz-icon-code-main: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%23#{$weiz-color}' d='M6.25 3A3.25 3.25 0 0 0 3 6.25v11.5A3.25 3.25 0 0 0 6.25 21h11.5A3.25 3.25 0 0 0 21 17.75V6.25A3.25 3.25 0 0 0 17.75 3zm4.28 6.28L7.81 12l2.72 2.72a.75.75 0 1 1-1.06 1.06l-3.25-3.25a.75.75 0 0 1 0-1.06l3.25-3.25a.75.75 0 1 1 1.06 1.06m4-1.06l3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 1 1-1.06-1.06L16.19 12l-2.72-2.72a.75.75 0 0 1 1.06-1.06'/%3E%3C/svg%3E");
-  --weiz-icon-blog-main: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23#{$weiz-color}' d='M19.822 9.729H18.73a1.113 1.113 0 0 1-1.093-1.094A5.636 5.636 0 0 0 12 3H8.636A5.636 5.636 0 0 0 3 8.635v6.73A5.636 5.636 0 0 0 8.636 21h6.729A5.636 5.636 0 0 0 21 15.364v-4.458a1.15 1.15 0 0 0-1.178-1.177M8.552 7.542h4.037c.589 0 1.093.504 1.093 1.093S13.178 9.73 12.59 9.73H8.55a1.113 1.113 0 0 1-1.093-1.094c0-.589.505-1.093 1.093-1.093m6.897 8.916H8.636a1.113 1.113 0 0 1-1.094-1.094c0-.589.505-1.093 1.094-1.093h6.813c.588 0 1.093.504 1.093 1.093s-.505 1.094-1.093 1.094'/%3E%3C/svg%3E");
-  --weiz-icon-blog-line-main: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23#{$weiz-color}' d='M3 9.009a6.01 6.01 0 0 1 6.01-6.01H12a6.01 6.01 0 0 1 6.01 5.982h.943c1.15 0 2.047.896 2.047 2.047v3.962A6.01 6.01 0 0 1 14.99 21H9.01A6.01 6.01 0 0 1 3 14.99zm6.01-4.01A4.01 4.01 0 0 0 5 9.01v5.981A4.01 4.01 0 0 0 9.01 19h5.98A4.01 4.01 0 0 0 19 14.99V11h-1c-1.076 0-2-.924-2-2c0-2.214-1.786-4-4-4zM8 9a1 1 0 0 1 1-1h3.5a1 1 0 1 1 0 2H9a1 1 0 0 1-1-1m1 5a1 1 0 1 0 0 2h6a1 1 0 1 0 0-2z'/%3E%3C/svg%3E");
-  --weiz-icon-resource-main: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath d='m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z'/%3E%3Cpath fill='%23#{$weiz-color}' d='M6 3.586A2 2 0 0 1 7.414 3h9.172A2 2 0 0 1 18 3.586L20.414 6A2 2 0 0 1 21 7.414V19a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V7.414A2 2 0 0 1 3.586 6zM16.586 5H7.414l-2 2h13.172zM10 12a1 1 0 1 0-2 0a4 4 0 0 0 8 0a1 1 0 1 0-2 0a2 2 0 1 1-4 0'/%3E%3C/g%3E%3C/svg%3E");
-  --weiz-icon-other-main: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23#{$weiz-color}' d='M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10s10-4.477 10-10S17.523 2 12 2M8.25 12a1.25 1.25 0 1 1-2.5 0a1.25 1.25 0 0 1 2.5 0m5 0a1.25 1.25 0 1 1-2.5 0a1.25 1.25 0 0 1 2.5 0m5 0a1.25 1.25 0 1 1-2.5 0a1.25 1.25 0 0 1 2.5 0'/%3E%3C/svg%3E");
-
-  --weiz-icon-book-main: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23#{$weiz-color}' d='M6.012 18H21V4a2 2 0 0 0-2-2H6c-1.206 0-3 .799-3 3v14c0 2.201 1.794 3 3 3h15v-2H6.012C5.55 19.988 5 19.805 5 19s.55-.988 1.012-1M8 6h9v2H8z'/%3E%3C/svg%3E");
+@each $icon in $icons {
+  $name: map-get($icon, name);
+  $content: map-get($icon, content);
+  $default: map-get($colors, default);
+  $dark: map-get($colors, dark);
+  $main: map-get($icon, main);
+  $white: map-get($icon, white);
+  $gray: map-get($icon, gray);
+  $gray-dark: map-get($colors, gray-dark);
+  :root {
+    #{$name}: str-replace(#{$content}, '%23000', '%23' + #{$default});
+    @if $main {
+      #{$name + '-main'}: str-replace(#{$content}, '%23000', '%23' + #{$main});
+    }
+    @if $white {
+      #{$name + '-white'}: str-replace(#{$content}, '%23000', '%23' + #{$white});
+    }
+    @if $gray {
+      #{$name + '-gray'}: str-replace(#{$content}, '%23000', '%23' + #{$gray});
+    }
+  }
+  .dark {
+    #{$name}: str-replace(#{$content}, '%23000', '%23' + #{$dark});
+    @if $gray {
+      #{$name + '-gray'}: str-replace(#{$content}, '%23000', '%23' + #{$gray-dark});
+    }
+  }
 }

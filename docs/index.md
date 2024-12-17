@@ -35,7 +35,7 @@ post:
     link: vitepress/basic/api-examples
     desc: 此教程适应于以webpack，vue-cli，vite等脚手架构建的vue项目。当然，vue2和vue3都是可以的。
   - title: 博客常用标签/语法
-    iconName: blog
+    iconName: vitepress
     link: vitepress/basic/api-examples
     desc: 本文列举了常见的markdown写法，以及一些示例。
   - title: 访问量统计

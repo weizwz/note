@@ -9,10 +9,11 @@
         <i class="tags-icon word-icon"></i>
         <span>总字数 {{ wordCount }}</span>
       </div>
-      <div class="reader">
+      <!-- 由于卜算子对单页面统计不正确，先搁置 -->
+      <!-- <div class="reader">
         <i class="tags-icon eye-icon"></i>
         <span>阅读量 <span id="busuanzi_value_page_pv"></span></span>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
@@ -39,7 +40,7 @@ onMounted(() => {
   .tags {
     display: flex;
     margin-top: 10px;
-    color: var(--vp-c-text-3);
+    color: var(--vp-c-text-2);
     font-weight: 500;
     line-height: 18px;
     word-break: keep-all;
@@ -58,13 +59,13 @@ onMounted(() => {
     color: currentColor;
     margin-right: 2px;
     &.updated-icon {
-      content: var(--weiz-icon-updated);
+      content: var(--weiz-icon-updated-gray);
     }
     &.word-icon {
-      content: var(--weiz-icon-word);
+      content: var(--weiz-icon-word-gray);
     }
     &.eye-icon {
-      content: var(--weiz-icon-eye);
+      content: var(--weiz-icon-eye-gray);
     }
   }
 }

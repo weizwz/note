@@ -102,7 +102,7 @@
           height: 24px;
           fill: currentColor;
           &.web {
-            content: var(--weiz-icon-web);
+            content: var(--weiz-icon-web-white);
           }
           &.code {
             content: var(--weiz-icon-code-main);
@@ -195,7 +195,7 @@
     .icon {
       width: 40px;
       height: 40px;
-      content: var(--weiz-icon-bookmark-line);
+      content: var(--weiz-icon-post-line);
       margin-bottom: 16px;
       &.js {
         content: var(--weiz-icon-js-line);
@@ -205,6 +205,12 @@
       }
       &.blog {
         content: var(--weiz-icon-blog-line);
+      }
+      &.vitepress {
+        content: var(--weiz-icon-vitepress-line);
+      }
+      &.markdown {
+        content: var(--weiz-icon-markdown-line);
       }
     }
     .title {

@@ -78,8 +78,8 @@ const { frontmatter: fm } = useData()
 const aboutData = fm.value.about as HomeAbout
 const postData = fm.value.post as HomePost[]
 const skills = fm.value.skills.split(',')
-const uv = ref('')
-const pv = ref('')
+const uv = ref('loading')
+const pv = ref('loading')
 
 const formatNumber = (num) => {
   if (num >= 1000000) {
