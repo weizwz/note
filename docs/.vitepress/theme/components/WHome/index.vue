@@ -52,8 +52,8 @@
         <el-col :xs="24" :sm="12" :md="6">
           <div class="post-card statistic">
             <div class="post-container">
-              <div class="number">{{ uv }}<span id="busuanzi_value_site_uv" style="display: none;"/></div>
-              <div class="desc">本站总访问量 {{ pv }}<span id="busuanzi_value_site_pv" style="display: none;" /></div>
+              <div class="number">{{ pv }}<span id="busuanzi_value_site_uv" style="display: none;"/></div>
+              <div class="desc">本站总访问量<span id="busuanzi_value_site_pv" style="display: none;" /></div>
             </div>
           </div>
         </el-col>
@@ -81,7 +81,7 @@ const { frontmatter: fm } = useData()
 const aboutData = fm.value.about as HomeAbout
 let postData = ref<HomePost[]>([])
 const skills = fm.value.skills.split(',')
-const uv = ref('loading')
+// const uv = ref('loading')
 const pv = ref('loading')
 
 const postMerge = () => {
@@ -101,19 +101,19 @@ const formatNumber = (num) => {
   }
 }
 
-let timeoutUV = 0
-const getUV = () => {
-  if (timeoutUV) clearTimeout(timeoutUV)
-  timeoutUV = window.setTimeout(() => {
-    const $UV = document.querySelector("#busuanzi_value_site_uv")
-    if ($UV) {
-      const text = $UV.innerHTML
-      uv.value = formatNumber(text)
-    } else {
-      getUV()
-    }
-  }, 500)
-}
+// let timeoutUV = 0
+// const getUV = () => {
+//   if (timeoutUV) clearTimeout(timeoutUV)
+//   timeoutUV = window.setTimeout(() => {
+//     const $UV = document.querySelector("#busuanzi_value_site_uv")
+//     if ($UV) {
+//       const text = $UV.innerHTML
+//       uv.value = formatNumber(text)
+//     } else {
+//       getUV()
+//     }
+//   }, 500)
+// }
 
 let timeoutPV = 0
 const getPV = () => {
@@ -131,7 +131,7 @@ const getPV = () => {
 
 onMounted(() => {
   postMerge()
-  getUV()
+  // getUV()
   getPV()
 })
 </script>
