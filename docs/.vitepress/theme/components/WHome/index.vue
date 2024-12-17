@@ -43,7 +43,7 @@
           </div>
           <a v-else class="post-card" :href="item.url">
             <div class="post-container">
-              <div :class="'icon ' + (item.tags ? item.tags.reverse().join(' ') : '')" />
+              <div :class="'icon ' + (item.tags ? item.tags.join(' ') : '')" />
               <div class="title">{{ item.title }}</div>
               <div class="desc">{{ item.abstract }}</div>
             </div>
@@ -120,8 +120,8 @@ const getPV = () => {
   if (timeoutPV) clearTimeout(timeoutPV)
   timeoutPV = window.setTimeout(() => {
     const $PV = document.querySelector("#busuanzi_value_site_pv")
-    if ($PV) {
-      const text = $PV.innerHTML
+    const text = $PV?.innerHTML
+    if ($PV && text) {
       pv.value = formatNumber(text)
     } else {
       getPV()

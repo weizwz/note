@@ -4,7 +4,7 @@
       <div class="copyright__author">
         <span class="copyright-meta"> <i class="icon-user"></i>文章作者: </span>
         <span class="copyright-info">
-          <a :href="siteHref">weiz</a>
+          <a :href="siteHref">weizwz</a>
         </span>
       </div>
       <div class="copyright__type">
