@@ -184,6 +184,9 @@
     &.statistic {
       border-color: var(--weiz-primary-color);
       background: var(--weiz-primary-color);
+      .post-container {
+        padding: 24px 0;
+      }
     }
   }
   .post-container {

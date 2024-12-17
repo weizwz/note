@@ -38,22 +38,24 @@
           <div v-if="item.type && item.type === 'card'" class="post-card statistic">
             <div class="post-container">
               <div class="number">{{ item.title }}</div>
-              <div class="desc">{{ item.desc }}</div>
+              <div class="desc">{{ item.abstract }}</div>
             </div>
           </div>
-          <div v-else-if="item.type && item.type === 'busuanzi'" class="post-card statistic">
+          <a v-else class="post-card" :href="item.url">
+            <div class="post-container">
+              <div :class="'icon ' + (item.tags ? item.tags[0] : '')" />
+              <div class="title">{{ item.title }}</div>
+              <div class="desc">{{ item.abstract }}</div>
+            </div>
+          </a>
+        </el-col>
+        <el-col :xs="24" :sm="12" :md="6">
+          <div class="post-card statistic">
             <div class="post-container">
               <div class="number">{{ uv }}<span id="busuanzi_value_site_uv" style="display: none;"/></div>
               <div class="desc">本站总访问量 {{ pv }}<span id="busuanzi_value_site_pv" style="display: none;" /></div>
             </div>
           </div>
-          <a v-else class="post-card" :href="item.link">
-            <div class="post-container">
-              <div :class="'icon ' + item.iconName" />
-              <div class="title">{{ item.title }}</div>
-              <div class="desc">{{ item.desc }}</div>
-            </div>
-          </a>
         </el-col>
       </el-row>
     </div>
@@ -71,15 +73,25 @@
 <script setup lang="ts">
 import { useData, withBase } from 'vitepress'
 import { HomeAbout, HomePost } from '../../type/WHome'
+import { data } from '../../utils/post.data'
 import { onMounted, ref } from 'vue'
 
 const { frontmatter: fm } = useData()
 
 const aboutData = fm.value.about as HomeAbout
-const postData = fm.value.post as HomePost[]
+let postData = ref<HomePost[]>([])
 const skills = fm.value.skills.split(',')
 const uv = ref('loading')
 const pv = ref('loading')
+
+const postMerge = () => {
+  const postLength = 3
+  const fmLength = fm.value.post ? fm.value.post.length : 0
+  postData.value = fm.value.post && fmLength >= postLength ? fm.value.post : (() => {
+    const newPosts = data.posts.slice(0, postLength - fmLength)
+    return newPosts.concat(fm.value.post || []) as unknown as HomePost
+  })()
+}
 
 const formatNumber = (num) => {
   if (num >= 1000000) {
@@ -118,6 +130,7 @@ const getPV = () => {
 }
 
 onMounted(() => {
+  postMerge()
   getUV()
   getPV()
 })

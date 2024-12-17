@@ -26,11 +26,11 @@ export interface HomePost {
   // 类型
   type?: 'post' | 'card' | 'busuanzi'
   // 链接
-  link?: string
-  // m描述
-  desc: string
-  // 图标名称
-  iconName?: string
+  url?: string
+  // 摘要
+  abstract: string
+  // 标签名称
+  tags?: string[]
 }
 
 export interface HomePostStatistic {
