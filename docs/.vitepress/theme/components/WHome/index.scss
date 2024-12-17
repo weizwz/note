@@ -75,7 +75,7 @@
         border: solid 1px var(--vp-button-alt-bg);
         height: 42px;
         line-height: 42px;
-        padding: 0 8px;
+        padding: 0 12px;
         margin-right: 10px;
         border-radius: 42px;
         text-align: center;
@@ -88,12 +88,12 @@
           white-space: nowrap;
           overflow: hidden;
           transition: .4s;
+          margin-left: 6px;
         }
         &:hover {
           padding: 0 12px;
           border-color: var(--weiz-primary-color);
           span {
-            margin-left: 6px;
             width: 56px;
           }
         }
@@ -373,11 +373,16 @@
         }
       }
       li a {
+        padding: 0 8px;
         &:hover {
           padding: 0 30px;
+          span {
+            margin-left: 6px;
+          }
         }
         span {
           width: 0;
+          margin-left: 0;
         }
       }
     }
