@@ -67,6 +67,7 @@ onMounted(() => {
     margin-bottom: 10px;
     border: solid 1px var(--vp-c-divider);
     border-radius: var(--weiz-border-radius);
+    transition: all .2s;
     &::before {
       content: var(--weiz-icon-public-main);
       display: inline-block;
@@ -78,7 +79,7 @@ onMounted(() => {
       height: 20px;
     }
     &:hover {
-      box-shadow: var(--vp-shadow-1);
+      border-color: var(--weiz-primary-color);
     }
   }
   .copyright-meta {

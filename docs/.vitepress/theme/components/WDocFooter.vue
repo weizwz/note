@@ -30,10 +30,11 @@
 .WeizDocFooter {
   margin: 0 auto;
   max-width: var(--vp-layout-max-width);
-  padding: 40px 0 0 !important;
   text-align: center;
   display: flex;
   flex-direction: column-reverse;
+  position: relative;
+  z-index: 111;
   .message {
     line-height: 24px;
     font-size: 14px;

@@ -104,26 +104,9 @@
 * 界面布局
 * -------------------------------------------------------------------------- */
 
-.Layout {
-  .VPDoc {
-    padding-bottom: 20px;
-  }
-}
 @media (min-width: 768px) {
-  .Layout {
-    .VPDoc {
-      padding-bottom: 20px;
-    }
-  }
-}
-@media (min-width: 960px) {
-  .Layout {
-    .VPDoc {
-      padding-bottom: 0;
-    }
-    .content {
-      padding-bottom: 20px;
-    }
+  footer.VPFooter {
+    display: none;
   }
 }
 

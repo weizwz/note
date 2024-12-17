@@ -46,6 +46,7 @@ onBeforeUnmount(() => window.removeEventListener("scroll", onScroll));
 <style lang="css" scoped>
 .vitepress-backTop-main {
   position: fixed;
+  z-index: 1111;
   bottom: 32px;
   right: 10px;
   cursor: pointer;
