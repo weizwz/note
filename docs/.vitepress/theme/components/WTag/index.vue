@@ -56,16 +56,14 @@ const activeTag = (tag) => {
 // 监听url里参数变化
 const handlePopState = () => {
     const params = new URLSearchParams(window.location.search)
-    const tag = params.get('q')
-    if (tag && tagsText.value.indexOf(tag) !== -1) {
-      activeTag(tag)
-    } else {
-      activeTag(tagsText.value[0])
-    }
+    let tag = params.get('q')
+    tag = tag && tagsText.value.indexOf(tag) !== -1 ? tag : tagsText.value[0]
+    currentTag.value = tag
+    posts.value = tags.value[tag]
 };
 onMounted(() => {
-  window.addEventListener('popstate', handlePopState);
   handlePopState()
+  window.addEventListener('popstate', handlePopState);
 });
 onBeforeUnmount(() => {
   window.removeEventListener('popstate', handlePopState)
