@@ -24,23 +24,30 @@
       </div>
     </div>
   </div>
+  <div class="post-tags">
+    <div class="tags-list">
+      <a v-for="(item, index) of postTags" :key="index" :href="withBase('/pages/tags?q=' + item)" class="tag">{{ item }}</a>
+    </div>
+  </div>
 </template>
 
 <script setup lang="ts">
-import { useData, useRoute } from 'vitepress'
+import { useData, useRoute, withBase } from 'vitepress'
 import { onMounted, ref, watch } from 'vue'
 
-const { site, theme } = useData()
+const { site, theme, frontmatter } = useData()
 const route = useRoute()
 
 
 const siteHref = ref('')
 const postHref = ref('')
+const postTags = ref([])
 
 const setHref = () => {
   const domain = window.location.origin
   siteHref.value = domain + site.value.base
   postHref.value = domain + window.location.pathname
+  postTags.value = frontmatter.value.tags
 }
 
 watch(route, () => {
@@ -56,8 +63,8 @@ onMounted(() => {
 .weiz-public {
   .copyright {
     position: relative;
-    margin-bottom: 14px;
     padding: 10px 16px;
+    margin-bottom: 10px;
     border: solid 1px var(--vp-c-divider);
     border-radius: var(--weiz-border-radius);
     &::before {
@@ -107,6 +114,26 @@ onMounted(() => {
     &:hover {
       color: var(--weiz-primary-color);
       text-decoration: none;
+    }
+  }
+}
+.post-tags {
+  margin-bottom: 44px;
+  .tags-list a {
+    display: inline-block;
+    margin: 8px 8px 8px 0;
+    padding: 0 12px;
+    line-height: 24px;
+    width: fit-content;
+    border: 1px solid var(--weiz-primary-color);
+    box-sizing: border-box;
+    border-radius: 13px;
+    color: var(--weiz-primary-color);
+    font-size: 0.9em;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      background: var(--weiz-primary-color);
+      color: var(--vp-c-white);
     }
   }
 }
