@@ -123,7 +123,7 @@ $icons: (
 // 返回顶部
 (
   name: --weiz-icon-backTop,
-  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024'%3E%3Cpath fill='%23000' d='M512 128C299.52 128 128 299.52 128 512s171.52 384 384 384 384-171.52 384-384S724.48 128 512 128z m189.44 460.8c-17.92 17.92-46.08 17.92-64 0l-128-128-128 128c-17.92 17.92-46.08 17.92-64 0s-17.92-46.08 0-64l128-128c35.84-35.84 92.16-35.84 128 0l125.44 128c20.48 17.92 20.48 46.08 2.56 64z' p-id='180530'%3E%3C/path%3E%3C/svg%3E"),
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M12 22A10 10 0 0 1 2 12A10 10 0 0 1 12 2a10 10 0 0 1 10 10a10 10 0 0 1-10 10m5-8l-5-5l-5 5z'/%3E%3C/svg%3E"),
   main: map.get($colors, main),
 )
 ;
