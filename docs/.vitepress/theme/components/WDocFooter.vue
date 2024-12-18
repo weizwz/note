@@ -1,6 +1,6 @@
 <template>
-  <div class="VPFooter WeizDocFooter">
-    <p class="message">
+  <div class="VPFooter weiz-doc-footer">
+    <p class="site">
       <a target="_blank" href="https://vitepress.dev/" title="本站框架基于 VitePress_v1.5.0"
         ><img src="https://img.shields.io/badge/Frame-VitePress-5C73E7?logo=vitepress&amp;logoColor=fff"
       /></a>
@@ -27,7 +27,8 @@
 </template>
 
 <style lang="scss" scoped>
-.WeizDocFooter {
+.weiz-doc-footer {
+  padding: 20px 0;
   margin: 0 auto;
   max-width: var(--vp-layout-max-width);
   text-align: center;
@@ -35,11 +36,18 @@
   flex-direction: column-reverse;
   position: relative;
   z-index: 111;
-  .message {
-    line-height: 24px;
-    font-size: 14px;
+  .site {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     font-weight: 500;
-    color: var(--vp-c-text-2);
+    > a {
+      display: flex;
+      align-items: center;
+      margin: 8px 4px 0;
+      height: 20px;
+    }
   }
   .copyright {
     line-height: 24px;
