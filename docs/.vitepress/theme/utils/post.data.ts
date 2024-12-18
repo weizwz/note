@@ -92,7 +92,7 @@ export default createContentLoader(
             // 去除首尾空格
             .trim()
             // 仅保留可能显示的部分，减小数据大小
-            .slice(0, 240),
+            .slice(0, 200),
           tags: _tags
         }))
         promises.push(task)
