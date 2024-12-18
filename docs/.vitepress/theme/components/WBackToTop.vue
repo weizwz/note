@@ -1,9 +1,7 @@
 <template>
   <Transition name="fade">
     <div v-show="showBackTop" class="vitepress-backTop-main" title="返回顶部" @click="scrollToTop()">
-      <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
-        <path d="M1003.52 549.546667l-477.866667-477.866667c-6.826667-6.826667-17.066667-6.826667-23.893333 0l-477.866667 477.866667c-3.413333 3.413333-3.413333 6.826667-3.413333 13.653333v375.466667c0 6.826667 3.413333 13.653333 10.24 17.066666 3.413333 0 10.24 0 17.066667-3.413333L512 484.693333l464.213333 464.213334c3.413333 3.413333 6.826667 3.413333 13.653334 3.413333h6.826666c6.826667-3.413333 10.24-10.24 10.24-17.066667v-375.466666s-3.413333-6.826667-3.413333-10.24z" fill="#ffffff"></path>
-      </svg>
+      <i class="weiz-icon xxl weiz-icon-backTop-main" />
     </div>
   </Transition>
 </template>
@@ -50,12 +48,11 @@ onBeforeUnmount(() => window.removeEventListener("scroll", onScroll));
   bottom: 32px;
   right: 10px;
   cursor: pointer;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background-color: var(--vp-c-indigo-1);
-  padding: 10px;
-  box-shadow: 2px 2px 10px 4px rgba(0, 0, 0, 0.15);
+  width: 40px;
+  height: 40px;
+  &:hover {
+  opacity: .8;
+  }
 }
 
 @media (min-width: 1280px) {
@@ -71,40 +68,5 @@ onBeforeUnmount(() => window.removeEventListener("scroll", onScroll));
   .vitepress-backTop-main {
     right: 16px;
   }
-}
-
-.vitepress-backTop-main:hover {
-  background-color: var(--weiz-primary-color-light-1);
-}
-
-svg {
-  width: 100%;
-  height: 100%;
-}
-
-/* 旋转动画 */
-@keyframes bounce {
-  0% {
-    transform: translateY(0) rotateY(0);
-  }
-
-  50% {
-    transform: translateY(-10px) rotateY(180deg);
-  }
-
-  100% {
-    transform: translateY(0) rotateY(360deg);
-  }
-}
-
-/* 进入 退出动画 */
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s ease;
-}
-
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
 }
 </style>

@@ -2,16 +2,16 @@
   <div class="weiz-title-meta">
     <div class="tags">
       <div class="updated">
-        <i class="tags-icon updated-icon"></i>
+        <i class="weiz-icon weiz-icon-updated-gray"/>
         <span>更新于 {{ date }}</span>
       </div>
       <div class="word">
-        <i class="tags-icon word-icon"></i>
+        <i class="weiz-icon weiz-icon-word-gray"/>
         <span>总字数 {{ wordCount }}</span>
       </div>
       <!-- 由于卜算子对单页面统计不正确，先搁置 -->
       <!-- <div class="reader">
-        <i class="tags-icon eye-icon"></i>
+        <i class="weiz-icon weiz-icon-eye-gray"></i>
         <span>阅读量 <span id="busuanzi_value_page_pv"></span></span>
       </div> -->
     </div>
@@ -53,20 +53,8 @@ onMounted(() => {
       }
     }
   }
-  .tags-icon {
-    width: 18px;
-    height: 18px;
-    color: currentColor;
+  .weiz-icon {
     margin-right: 2px;
-    &.updated-icon {
-      content: var(--weiz-icon-updated-gray);
-    }
-    &.word-icon {
-      content: var(--weiz-icon-word-gray);
-    }
-    &.eye-icon {
-      content: var(--weiz-icon-eye-gray);
-    }
   }
 }
 </style>

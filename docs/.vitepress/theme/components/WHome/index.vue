@@ -16,7 +16,7 @@
             <ul class="list-inline">
               <li v-for="(item, index) of aboutData.links" :key="index">
                 <a :href="item.link">
-                  <i :class="'weiz-icon l ' + item.iconName"></i>
+                  <i :class="'weiz-icon l ' + item.iconName" />
                   <span>{{ item.title }}</span>
                 </a>
               </li>
@@ -30,13 +30,13 @@
           <div class="hero-social">
             <ul>
               <li class="hero-social-item">
-                <a class="social" href="https://github.com/weizwz" target="_blank"><i class="weiz-icon weiz-icon-github-main"></i></a>
+                <a class="social" href="https://github.com/weizwz" target="_blank"><i class="weiz-icon weiz-icon-github-main" /></a>
               </li>
               <li class="hero-social-item">
-                <a class="social" href="https://gitee.com/weizwz" target="_blank"><i class="weiz-icon weiz-icon-gitee-main"></i></a>
+                <a class="social" href="https://gitee.com/weizwz" target="_blank"><i class="weiz-icon weiz-icon-gitee-main" /></a>
               </li>
               <li class="hero-social-item">
-                <a class="social" href="https://www.cnblogs.com/weizwz" target="_blank"><i class="weiz-icon weiz-icon-cnblog-main"></i></a>
+                <a class="social" href="https://www.cnblogs.com/weizwz" target="_blank"><i class="weiz-icon weiz-icon-cnblog-main" /></a>
               </li>
             </ul>
           </div>

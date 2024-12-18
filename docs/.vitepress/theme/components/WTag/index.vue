@@ -17,7 +17,7 @@
           </div>
         </div>
         <div id="posts">
-          <h1><i />文章列表</h1>
+          <h1><i class="weiz-icon l weiz-icon-post"/>文章列表</h1>
           <div class="posts-wrapper">
             <el-row v-for="(item, index) of posts" :key="index" class="post" :gutter="20">
               <el-col :xs="24" :sm="4" :md="3" class="post-date">

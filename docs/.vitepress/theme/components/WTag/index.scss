@@ -62,11 +62,7 @@
     font-size: 1.2em;
     display: flex;
     align-items: center;
-    > i {
-      width: 24px;
-      height: 24px;
-      fill: currentColor;
-      content: var(--weiz-icon-post);
+    .weiz-icon {
       margin-right: 6px;
     }
   }
