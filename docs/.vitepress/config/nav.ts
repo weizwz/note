@@ -73,7 +73,7 @@ export const nav: DefaultTheme.Config['nav'] = [
         text: '站内导航',
         items: [
           { text: '文章标签', link: 'pages/tags.md' },
-          { text: '更新日志', link: 'vitepress/extend/markdown-examples.md' },
+          { text: '更新日志', link: 'pages/logs.md' },
         ]
       },
       {
