@@ -79,7 +79,7 @@ export default async ({ mode }) => {
       sidebar,
       footer,
       // 社交按钮
-      socialLinks: [{ icon: 'github', link: 'https://github.com/weizwz/' }],
+      // socialLinks: [{ icon: 'github', link: 'https://github.com/weizwz/' }],
       //编辑本页
       editLink: {
         pattern: 'https://github.com/weizwz/note/edit/main/docs/:path', // 改成自己的仓库

@@ -17,12 +17,18 @@ $colors: (
 $icons: (
   name: --weiz-icon-github,
   content: url(https://api.iconify.design/simple-icons/github.svg?color=%23000),
+  main: map.get($colors, main),
+  white: map.get($colors, white),
 ),(
   name: --weiz-icon-gitee,
   content: url(https://api.iconify.design/simple-icons/gitee.svg?color=%23000),
+  main: map.get($colors, main),
+  white: map.get($colors, white),
 ),(
   name: --weiz-icon-cnblog,
   content: url(https://api.iconify.design/la/blog.svg?color=%23000),
+  main: map.get($colors, main),
+  white: map.get($colors, white),
 ),
 
 // 首页大分类

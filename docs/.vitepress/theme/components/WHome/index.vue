@@ -27,6 +27,19 @@
           <div class="hero-avatar">
             <img :src="withBase(aboutData.logo)" alt="head-avatar" />
           </div>
+          <div class="hero-social">
+            <ul>
+              <li class="hero-social-item">
+                <a class="social" href=""><i class="weiz-icon weiz-icon-github"></i></a>
+              </li>
+              <li class="hero-social-item">
+                <a class="social" href=""><i class="weiz-icon weiz-icon-gitee"></i></a>
+              </li>
+              <li class="hero-social-item">
+                <a class="social" href=""><i class="weiz-icon weiz-icon-cnblog"></i></a>
+              </li>
+            </ul>
+          </div>
         </el-col>
       </el-row>
     </div>
@@ -81,7 +94,6 @@ const { frontmatter: fm } = useData()
 const aboutData = fm.value.about as HomeAbout
 let postData = ref<HomePost[]>([])
 const skills = fm.value.skills.split(',')
-// const uv = ref('loading')
 const pv = ref('loading')
 
 const postMerge = () => {
@@ -101,6 +113,7 @@ const formatNumber = (num) => {
   }
 }
 
+// const uv = ref('loading')
 // let timeoutUV = 0
 // const getUV = () => {
 //   if (timeoutUV) clearTimeout(timeoutUV)
@@ -131,7 +144,6 @@ const getPV = () => {
 
 onMounted(() => {
   postMerge()
-  // getUV()
   getPV()
 })
 </script>

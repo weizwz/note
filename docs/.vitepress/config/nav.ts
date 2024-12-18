@@ -70,6 +70,13 @@ export const nav: DefaultTheme.Config['nav'] = [
     text: '博客文档',
     items: [
       {
+        text: '站内导航',
+        items: [
+          { text: '文章标签', link: 'pages/tags.md' },
+          { text: '更新日志', link: 'vitepress/extend/markdown-examples.md' },
+        ]
+      },
+      {
         text: 'Vitepress',
         items: [
           { text: '基础配置', link: 'vitepress/basic/api-examples.md' },
@@ -89,11 +96,6 @@ export const nav: DefaultTheme.Config['nav'] = [
           { text: '服务器站点', link: 'vitepress/basic/api-examples.md' },
           { text: '域名证书', link: 'vitepress/basic/api-examples.md' },
           { text: '图床使用', link: 'vitepress/extend/markdown-examples.md' },
-        ]
-      },
-      {
-        items: [
-          { text: '标签页', link: 'pages/tags.md' },
         ]
       },
     ]

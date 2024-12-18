@@ -82,13 +82,13 @@
         font-size: var(--weiz-font-size);
         color: var(--weiz-primary-color);
         font-weight: 500;
-        transition: .4s;
+        transition: var(--weiz-transition-4);
         span {
           width: 56px;
           white-space: nowrap;
           overflow: hidden;
-          transition: .4s;
           margin-left: 6px;
+          transition: var(--weiz-transition-4);
         }
         &:hover {
           padding: 0 12px;
@@ -125,6 +125,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
   }
   .hero-avatar {
     position: relative;
@@ -159,6 +160,48 @@
       border-radius: 50% 12px 12px 50%;
     }
   }
+  .hero-social {
+    position: absolute;
+    left: -24px;
+    > ul {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  .hero-social-item {
+    padding-bottom: 6px;
+  }
+  .social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    border: solid 1px var(--vp-button-alt-bg);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 44px;
+    color: white;
+    // box-shadow: 1px 1px 10px -1px rgba(0, 0, 0, 0.2);
+    transition: var(--weiz-transition);
+    .weiz-icon {
+      width: 16px;
+      height: 16px;
+      &.weiz-icon-github {
+        content: var(--weiz-icon-github-main);
+      }
+      &.weiz-icon-gitee {
+        content: var(--weiz-icon-gitee-main);
+      }
+      &.weiz-icon-cnblog {
+        content: var(--weiz-icon-cnblog-main);
+      }
+    }
+    &:hover {
+      border-color: var(--weiz-primary-color);
+    }
+  }
 }
 
 /**
@@ -175,11 +218,11 @@
     border-radius: 12px;
     border: 1px solid var(--vp-c-bg-soft);
     background-color: var(--vp-c-bg-soft);
-    transition: all 0.25s ease;
+    transition: var(--weiz-transition);
     &:hover {
       border-color: var(--weiz-primary-color);
-      box-shadow: 0 0.5em 0.5em -0.4em var(--weiz-primary-color);
-      transform: translateY(-0.25em);
+      box-shadow: 0 0.5em 0.5em -0.2em var(--weiz-primary-color);
+      transform: translateY(-0.5em);
     }
     &.statistic {
       border-color: var(--weiz-primary-color);
