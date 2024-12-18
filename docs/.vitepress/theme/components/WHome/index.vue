@@ -16,7 +16,7 @@
             <ul class="list-inline">
               <li v-for="(item, index) of aboutData.links" :key="index">
                 <a :href="item.link">
-                  <i :class="item.iconName"></i>
+                  <i :class="'weiz-icon l ' + item.iconName"></i>
                   <span>{{ item.title }}</span>
                 </a>
               </li>
@@ -30,13 +30,13 @@
           <div class="hero-social">
             <ul>
               <li class="hero-social-item">
-                <a class="social" href=""><i class="weiz-icon weiz-icon-github"></i></a>
+                <a class="social" href=""><i class="weiz-icon weiz-icon-github-main"></i></a>
               </li>
               <li class="hero-social-item">
-                <a class="social" href=""><i class="weiz-icon weiz-icon-gitee"></i></a>
+                <a class="social" href=""><i class="weiz-icon weiz-icon-gitee-main"></i></a>
               </li>
               <li class="hero-social-item">
-                <a class="social" href=""><i class="weiz-icon weiz-icon-cnblog"></i></a>
+                <a class="social" href=""><i class="weiz-icon weiz-icon-cnblog-main"></i></a>
               </li>
             </ul>
           </div>
@@ -56,7 +56,7 @@
           </div>
           <a v-else class="post-card" :href="item.url">
             <div class="post-container">
-              <div :class="'icon ' + (item.tags ? item.tags.join(' ') : '')" />
+              <div :class="'weiz-icon xl ' + (item.tags ? 'weiz-icon-' + item.tags.join(' weiz-icon-') : '')" />
               <div class="title">{{ item.title }}</div>
               <div class="desc">{{ item.abstract }}</div>
             </div>
@@ -65,8 +65,11 @@
         <el-col :xs="24" :sm="12" :md="6">
           <div class="post-card statistic">
             <div class="post-container">
-              <div class="number">{{ pv }}<span id="busuanzi_value_site_uv" style="display: none;"/></div>
+              <div class="number">{{ uv }}</div>
+              <div class="desc">本站总访客<span id="busuanzi_value_site_uv" style="display: none;" /></div>
+              <div class="desc-line"><span /></div>
               <div class="desc">本站总访问量<span id="busuanzi_value_site_pv" style="display: none;" /></div>
+              <div class="number">{{ pv }}</div>
             </div>
           </div>
         </el-col>
@@ -113,20 +116,20 @@ const formatNumber = (num) => {
   }
 }
 
-// const uv = ref('loading')
-// let timeoutUV = 0
-// const getUV = () => {
-//   if (timeoutUV) clearTimeout(timeoutUV)
-//   timeoutUV = window.setTimeout(() => {
-//     const $UV = document.querySelector("#busuanzi_value_site_uv")
-//     if ($UV) {
-//       const text = $UV.innerHTML
-//       uv.value = formatNumber(text)
-//     } else {
-//       getUV()
-//     }
-//   }, 500)
-// }
+const uv = ref('loading')
+let timeoutUV = 0
+const getUV = () => {
+  if (timeoutUV) clearTimeout(timeoutUV)
+  timeoutUV = window.setTimeout(() => {
+    const $UV = document.querySelector("#busuanzi_value_site_uv")
+    if ($UV) {
+      const text = $UV.innerHTML
+      uv.value = formatNumber(text)
+    } else {
+      getUV()
+    }
+  }, 500)
+}
 
 let timeoutPV = 0
 const getPV = () => {
@@ -144,6 +147,7 @@ const getPV = () => {
 
 onMounted(() => {
   postMerge()
+  getUV()
   getPV()
 })
 </script>

@@ -6,7 +6,7 @@
 * 标题模块
 * -------------------------------------------------------------------------- */
 #about {
-  padding: calc(var(--vp-layout-top-height, 0px) + 64px) 48px 54px;
+  padding: calc(var(--vp-layout-top-height, 0px) + 54px) 48px 54px;
   .container-left {
     order: 2;
     margin-top: 30px;
@@ -97,26 +97,6 @@
             width: 56px;
           }
         }
-        i {
-          width: 24px;
-          height: 24px;
-          fill: currentColor;
-          &.web {
-            content: var(--weiz-icon-web-white);
-          }
-          &.code {
-            content: var(--weiz-icon-code-main);
-          }
-          &.blog {
-            content: var(--weiz-icon-blog-main);
-          }
-          &.resource {
-            content: var(--weiz-icon-resource-main);
-          }
-          &.other {
-            content: var(--weiz-icon-other-main);
-          }
-        }
       }
     }
   }
@@ -133,29 +113,27 @@
     justify-content: end;
     margin-right: -15px;
     img {
-      border-bottom-left-radius: 42%;
+      border-bottom-left-radius: 41%;
     }
     &::before {
       content: '';
       z-index: -1;
       position: absolute;
-      top: -15px;
-      bottom: 0;
+      top: -10px;
       right: 15px;
       background: var(--weiz-primary-color);
       width: 100%;
-      height: calc(100% + 15px);
+      height: calc(100% + 10px);
       border-radius: 50% 12px 12px 50%;
     }
     &::after {
       content: '';
       z-index: -2;
       position: absolute;
-      top: -30px;
-      bottom: -15px;
+      top: -25px;
       right: 30px;
       width: 100%;
-      height: calc(100% + 45px);
+      height: calc(100% + 40px);
       border: 1px dashed var(--vp-c-gray-1);
       border-radius: 50% 12px 12px 50%;
     }
@@ -185,19 +163,6 @@
     color: white;
     // box-shadow: 1px 1px 10px -1px rgba(0, 0, 0, 0.2);
     transition: var(--weiz-transition);
-    .weiz-icon {
-      width: 16px;
-      height: 16px;
-      &.weiz-icon-github {
-        content: var(--weiz-icon-github-main);
-      }
-      &.weiz-icon-gitee {
-        content: var(--weiz-icon-gitee-main);
-      }
-      &.weiz-icon-cnblog {
-        content: var(--weiz-icon-cnblog-main);
-      }
-    }
     &:hover {
       border-color: var(--weiz-primary-color);
     }
@@ -219,17 +184,14 @@
     border: 1px solid var(--vp-c-bg-soft);
     background-color: var(--vp-c-bg-soft);
     transition: var(--weiz-transition);
-    &:hover {
-      border-color: var(--weiz-primary-color);
-      box-shadow: 0 0.5em 0.5em -0.2em var(--weiz-primary-color);
-      transform: translateY(-0.5em);
-    }
     &.statistic {
       border-color: var(--weiz-primary-color);
       background: var(--weiz-primary-color);
-      .post-container {
-        padding: 24px 0;
-      }
+    }
+    &:not(.statistic):hover {
+      border-color: var(--weiz-primary-color);
+      box-shadow: 0 0.5em 0.5em -0.2em var(--weiz-primary-color);
+      transform: translateY(-0.5em);
     }
   }
   .post-container {
@@ -238,26 +200,9 @@
     width: 100%;
     height: 100%;
     padding: 24px;
-    .icon {
-      width: 40px;
-      height: 40px;
+    .weiz-icon {
       content: var(--weiz-icon-post-line);
       margin-bottom: 16px;
-      &.js {
-        content: var(--weiz-icon-js-line);
-      }
-      &.vue {
-        content: var(--weiz-icon-vue-line);
-      }
-      &.blog {
-        content: var(--weiz-icon-blog-line);
-      }
-      &.vitepress {
-        content: var(--weiz-icon-vitepress-line);
-      }
-      &.markdown {
-        content: var(--weiz-icon-markdown-line);
-      }
     }
     .title {
       line-height: 1.4;
@@ -284,12 +229,31 @@
     }
   }
   .statistic .post-container {
+    padding: 20px 0;
+    justify-content: space-between;
     text-align: center;
+    .desc {
+      padding-top: 0;
+      line-height: 1;
+      position: relative;
+    }
+    .desc-line {
+      width: 100%;
+      height: 13px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      > span {
+        height: 1px;
+        width: 16%;
+        background: white;
+      }
+    }
     .number {
       letter-spacing: 4px;
-      line-height: 2;
+      line-height: 1.2;
       font-weight: 700;
-      font-size: 48px;
+      font-size: 42px;
       color: white;
       -webkit-text-fill-color: transparent;
       -webkit-text-stroke-color: white;
@@ -300,9 +264,12 @@
         position: absolute;
         top: 0;
         right: 0;
-        bottom: -5px;
+        bottom: 0;
         left: 0;
-        background-image: linear-gradient(0deg, var(--weiz-primary-color) 0,transparent 100%);
+        background-image: linear-gradient(0deg, var(--weiz-primary-color) 0%, transparent 70%);
+      }
+      &:first-child::after {
+        background-image: linear-gradient(0deg, transparent 30%, var(--weiz-primary-color) 100%);
       }
     }
     .desc {
@@ -360,6 +327,13 @@
         border-color: rgba(255, 255, 255, 0.3);
       }
     }
+  }
+  #post .post-card.statistic {
+    border-color: var(--vp-c-gray-1);
+    background: var(--vp-c-gray-1);
+  }
+  #post .statistic .post-container .number::after {
+    background-image: linear-gradient(0deg, var(--vp-c-gray-1) 0, transparent 100%);
   }
 }
 

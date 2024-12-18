@@ -10,19 +10,19 @@ about:
   tagline: 知之为知之，不知为不知
   links:
     - title: 前端笔记
-      iconName: web
+      iconName: weiz-icon-web-white
       link: vitepress/basic/api-examples
     - title: 编码提效
-      iconName: code
+      iconName: weiz-icon-code-main
       link: vitepress/basic/api-examples
     - title: 博客文档
-      iconName: blog
+      iconName: weiz-icon-blog-main
       link: vitepress/basic/api-examples
     - title: 资源分享
-      iconName: resource
+      iconName: weiz-icon-resource-main
       link: vitepress/basic/api-examples
     - title: 杂项记录
-      iconName: other
+      iconName: weiz-icon-other-main
       link: vitepress/basic/api-examples
 
 post:
