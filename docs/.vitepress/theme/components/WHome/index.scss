@@ -36,8 +36,9 @@
         }
       }
       &.about-desc {
+        font-size: 28px;
         span {
-          animation: typing-desc 2s steps(11, end) 3.8s forwards, blink-caret .75s step-end 3.8s infinite, blink-end 0s linear 7.55s forwards;
+          animation: typing-desc 2s steps(9, end) 3.8s forwards, blink-caret .75s step-end 3.8s infinite, blink-end 0s linear 7.55s forwards;
         }
       }
     }
@@ -346,7 +347,7 @@
 }
 @keyframes typing-desc {
   from { width: 0; }
-  to { width: 11em; }
+  to { width: 9em; }
 }
 @keyframes blink-caret {
   from, to { box-shadow: 8px 0 0 0 transparent; }
@@ -372,6 +373,9 @@
       h1 {
         line-height: 56px;
         font-size: 48px;
+        &.about-desc {
+          font-size: 42px;
+        }
       }
       h2 {
         line-height: 32px;
@@ -419,6 +423,9 @@
       h1 {
         line-height: 64px;
         font-size: 56px;
+        &.about-desc {
+          font-size: 48px;
+        }
       }
       h2 {
         line-height: 36px;

@@ -6,7 +6,7 @@ titleTemplate: 唯知笔记
 about:
   title: 唯知笔记
   logo: head.png
-  desc: 一个有趣的知识分享网站
+  desc: 高效的知识分享网站
   tagline: 知之为知之，不知为不知
   links:
     - title: 前端笔记
