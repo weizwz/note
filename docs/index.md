@@ -1,5 +1,6 @@
 ---
 layout: weiz-home
+layoutClass: home
 title: 唯知笔记
 titleTemplate: 唯知笔记
 

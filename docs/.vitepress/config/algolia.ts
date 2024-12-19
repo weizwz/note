@@ -4,11 +4,11 @@ export const algolia: DefaultTheme.AlgoliaSearchOptions = {
   appId: "GBWJJLY4HS",
   apiKey: "1243b9ada421facc13af1de3b0ed335f",
   indexName: 'weizwz',
-  placeholder: '搜索',
+  placeholder: '搜索文档',
   translations: {
     button: {
-      buttonText: '搜索',
-      buttonAriaLabel: '搜索'
+      buttonText: '搜索文档',
+      buttonAriaLabel: '搜索文档'
     },
     modal: {
       searchBox: {

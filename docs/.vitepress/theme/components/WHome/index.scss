@@ -2,11 +2,12 @@
   max-width: 1152px;
   margin: 0 auto;
 }
+
 /**
 * 标题模块
 * -------------------------------------------------------------------------- */
 #about {
-  padding: calc(var(--vp-layout-top-height, 0px) + 54px) 48px 54px;
+  padding: calc(var(--vp-layout-top-height, 0px) + 64px) 64px 64px;
   .container-left {
     order: 2;
     margin-top: 30px;
@@ -51,7 +52,7 @@
     }
   }
   .about-nav {
-    margin-top: 20px;
+    padding-top: 32px;
     .list-inline {
       display: flex;
       flex-wrap: wrap;
@@ -162,10 +163,11 @@
     text-align: center;
     line-height: 44px;
     color: white;
-    // box-shadow: 1px 1px 10px -1px rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 1px 10px -1px rgba(0, 0, 0, 0.2);
     transition: var(--weiz-transition);
     &:hover {
       border-color: var(--weiz-primary-color);
+      backdrop-filter: blur(15px);
     }
   }
 }
@@ -174,7 +176,7 @@
 * 文章模块
 * -------------------------------------------------------------------------- */
 #post {
-  padding: var(--vp-layout-top-height, 0px) 48px 24px;
+  padding: var(--vp-layout-top-height, 0) 48px 44px;
   .el-col {
     margin-bottom: 20px;
   }
@@ -282,8 +284,8 @@
 /**
 * 技能模块
 * -------------------------------------------------------------------------- */
-#skill {
-  padding: var(--vp-layout-top-height, 0px) 0;
+#tag {
+  padding: var(--vp-layout-top-height, 0) 0 44px;
   .swiper {
     position: relative;
     overflow: hidden;
@@ -410,9 +412,6 @@
     .container-right {
       order: 2;
       justify-content: end;
-    }
-    .hero-avatar img {
-      max-height: 240px;
     }
   }
 }
