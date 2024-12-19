@@ -85,6 +85,25 @@
   --weiz-block-danger-bg: rgba(var(--weiz-block-danger-rgb), .1);
 }
 
+/* 徽章 */
+:root {
+  --vp-badge-info-border: var(--weiz-block-note);
+  --vp-badge-info-text: var(--weiz-block-note);
+  --vp-badge-info-bg: var(--weiz-block-note-bg);
+
+  --vp-badge-tip-border: var(--weiz-block-tip);
+  --vp-badge-tip-text: var(--weiz-block-tip);
+  --vp-badge-tip-bg: var(--weiz-block-tip-bg);
+
+  --vp-badge-warning-border: var(--weiz-block-warning);
+  --vp-badge-warning-text: var(--weiz-block-warning);
+  --vp-badge-warning-bg: var(--weiz-block-warning-bg);
+
+  --vp-badge-danger-border: var(--weiz-block-danger);
+  --vp-badge-danger-text: var(--weiz-block-danger);
+  --vp-badge-danger-bg: var(--weiz-block-danger-bg);
+}
+
 /* 滚动条 */
 ::-webkit-scrollbar {
   width: 6px;

@@ -39,9 +39,18 @@ export default async ({ mode }) => {
       image: {
         lazyLoading: true
       },
-      codeCopyButtonTitle: '复制',
+      codeCopyButtonTitle: '复制代码',
       codeTransformers: [
-        transformerTwoslash() 
+        // 使用 `!!code` 和 `<!---@include` 防止转换，演示代码用
+        {
+          postprocess(code) {
+            let _code = code.replace(/\[\!\!code/g, '[!code')
+            // 直接替换被浏览器阻止，避免标签注入
+            _code = _code.replace(/!---@include/g, '!--@include')
+            return _code
+          }
+        },
+        transformerTwoslash(),
       ],
       // 对markdown中的内容进行替换或者批量处理
       config: (md) => {
@@ -59,7 +68,7 @@ export default async ({ mode }) => {
           //   let defaultContent = defaultRender.apply(md, args)
           //   // 替换内容
           //   defaultContent = defaultContent
-          //         .replace(/NOTE/g, '提醒')
+          //         .replace(/<\!---@include:/g, '<!--@include:')
           //   // 返回渲染的内容
           //   return defaultContent
           // }

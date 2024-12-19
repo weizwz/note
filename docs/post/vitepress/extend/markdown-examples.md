@@ -26,13 +26,14 @@ export default defineConfig({
       image: {
         lazyLoading: true
       },
+      // 代码框内复制按钮的 title 提示
+      codeCopyButtonTitle: '复制代码',
   },
 })
 ```
 :::
 
 ### 标题锚点 {#title-link}
-
 标题会自动应用当前标题文字作为锚点，也支持自定义锚点，格式为 `标题+空格+{#自定义锚点}`
 ```md
 ## 标题锚点 {#title-link}
@@ -44,13 +45,92 @@ export default defineConfig({
 
 [点击我跳转到基本配置](#基本配置)
 
-
-### 引用信息
+### 网页链接
+网页链接的基本格式为 `[链接名称](链接url)`，而 vitepress 对网页链接做了特殊处理：
+内部链接将转换为单页导航的路由链接，外部链接带有 `target="_blank" rel="noreferrer"`。示例如下
 
 ```md
-> 这是一个引用 `VitePress`
+[跳到当前页的网页链接](/vitepress/extend/markdown-examples#网页链接)
+
+[新打开网页-唯知笔记](https://weizwz.com/note/)
 ```
-> 这是一个引用 `VitePress`
+[跳到当前页的网页链接](/vitepress/extend/markdown-examples#网页链接)
+
+[新打开网页-唯知笔记](https://weizwz.com/note/)
+
+### 图片引用
+图片引用的基本格式 `![图片说明文字](图片路径)`，这里的图片路径可以使用`相对位置/绝对位置/在线地址`。
+如果你的图片文件放置在 `public` 目录下，那么可以省略 `public` 这一层。详情说明见 [vitepress - public 目录](https://vitepress.dev/zh/guide/asset-handling#the-public-directory)
+
+当前引用的示例图片所在位置
+
+```md
+.
+├─ docs
+│  ├─ .vitepress
+│  │  └─ config.ts
+│  ├─ public
+│  │  └─ logo.png     <------------------- LOGO位置
+│  ├─ markdown.md
+│  └─ post
+│     └─vitepress
+│        └─ extend
+│           └─ markdown-examples.md    <-- 当前文档位置
+│ 
+└─ package.json
+```
+
+图片引用方法
+
+```md
+相对位置，实际为 `../../../public/logo.png`，这里省略了 `public/`
+![logo](../../../logo.png)
+绝对位置
+![logo](/logo.png)
+在线地址
+![logo](https://weizwz.com/note/logo.png)
+```
+
+相对位置，实际为 `../../../public/logo.png`，这里省略了 `public/`
+![logo](/logo.png)
+绝对位置
+![logo](../../../logo.png)
+在线地址
+![logo](https://weizwz.com/note/logo.png)
+
+### 表格语法
+
+使用 `table` 标签，或者如下语法。示例中竖线尽量对齐是为了方便我们书写和辨认，非必须要求。
+
+```md
+| 默认居左对齐 | 居中对齐 | 居右对齐 |
+| ---------- | :-----: | -----: |
+| 内容1       | 内容2   | 内容3   |
+| 内容4       | 内容5   | 内容6   |
+```
+
+| 默认居左对齐 | 居中对齐 | 居右对齐 |
+| ---------- | :-----: | -----: |
+| 内容1       | 内容2   | 内容3   |
+| 内容4       | 内容5   | 内容6   |
+
+### Emoji表情
+
+vitepress 内置了常用的表情，供我们使用。查看所有 [vitepress 支持的表情](https://github.com/markdown-it/markdown-it-emoji/blob/master/lib/data/full.mjs)，或者查看 [表情包大全](https://www.emojiall.com/zh-hans)
+
+```md
+:cn: :eight: :seven:
+```
+:cn: :eight: :seven:
+
+### 当前目录
+
+```md
+[[toc]]
+```
+::: details 点我查看当前目录
+[[toc]]
+:::
 
 ### 折叠语法
 
@@ -65,7 +145,36 @@ export default defineConfig({
   Markdown默认折叠语法，Vitepress可以使用容器折叠语法，更加美观
 </details>
 
-## 容器
+## 容器使用
+
+### 徽章组件
+
+使用徽章可以向标题添加状态
+
+```md
+VitePress <Badge type="info" text="default" />
+
+VitePress <Badge type="tip" text="^1.5.0" />
+
+VitePress <Badge type="warning" text="beta" />
+
+VitePress <Badge type="danger" text="caution" />
+```
+
+VitePress <Badge type="info" text="default" />
+
+VitePress <Badge type="tip" text="^1.5.0" />
+
+VitePress <Badge type="warning" text="beta" />
+
+VitePress <Badge type="danger" text="caution" />
+
+### 引用块
+
+```md
+> 这是一个引用 `VitePress`
+```
+> 这是一个引用 `VitePress`
 
 ### 折叠容器
 
@@ -147,60 +256,398 @@ export default defineConfig({
 > 行为可能带来的负面影响。
 
 
-## 代码块
+## 代码高亮
 
-### 代码高亮
+### code标识
+
+使用 code标识 可以对单个 `代码单词` 或者 `专业名词` 进行标注，以便高亮显示。其语法是，使用 `` 或者 `<code>` 标签
+
+```md
+`vitepress` 高亮显示
+<code>vitepress</code> 高亮显示
+```
+`vitepress` 高亮显示
+<code>vitepress</code> 高亮显示
+
+### 代码块
+
+VitePress 使用 [Shiki](https://github.com/shikijs/shiki) 在 Markdown 代码块中使用彩色文本实现语法高亮。`Shiki` 支持多种编程语言。需要做的就是将有效的语言别名附加到代码块的开头：
 
 ````md
-```js{4}
+```js
 export default {
   data () {
     return {
-      msg: 'Highlighted!'
+      title: '唯知笔记'
     }
   }
 }
 ```
 ````
 
-```js{4}
+```js
 export default {
   data () {
     return {
-      msg: 'Highlighted!'
+      title: '唯知笔记'
     }
   }
 }
 ```
+
+### 行高亮
+
+在代码块的语言名词之后，添加 `{n}`，来高亮某一行，连续行用 `-` ，不连续行用 `,`
+
+或者在某一行后面添加 `// [!code highlight]` 注释实现行高亮。
+
+````md
+```js{4-5}
+export default {
+  data () {
+    return {
+      title: '唯知笔记',
+      desc: '高效的知识分享网站',
+      tagline: '知之为知之，不知为不知' //  [!!code highlight]
+    }
+  }
+}
+```
+````
+
+
+```js{4-5}
+export default {
+  data () {
+    return {
+      title: '唯知笔记',
+      desc: '高效的知识分享网站',
+      tagline: '知之为知之，不知为不知' //  [!code highlight]
+    }
+  }
+}
+```
+
+### 行聚焦
+
+在某一行上添加 `// [!code focus]` 注释将聚焦它并模糊代码的其他部分。
+
+此外，可以使用 `// [!code focus:<lines>]` 定义要聚焦的行数。
+
+````md
+```js
+export default {
+  data () {
+    return {
+      title: '唯知笔记', // [!!code focus:2]
+      desc: '高效的知识分享网站',
+      tagline: '知之为知之，不知为不知'
+    }
+  }
+}
+```
+````
+
+```js
+export default {
+  data () {
+    return {
+      title: '唯知笔记', // [!code focus:2]
+      desc: '高效的知识分享网站',
+      tagline: '知之为知之，不知为不知'
+    }
+  }
+}
+```
+
+### diff差异
+
+在某一行添加 `// [!code --]` 或 `// [!code ++]` 注释将会为该行创建 `diff`，同时保留代码块的颜色。
+
+````md
+```js
+export default {
+  data () {
+    return {
+      title: '唯知笔记',
+      desc: '一个有趣的的知识分享网站', // [!!code --]
+      desc: '高效的知识分享网站', // [!!code ++]
+    }
+  }
+}
+```
+````
+
+
+```js
+export default {
+  data () {
+    return {
+      title: '唯知笔记',
+      desc: '一个有趣的的知识分享网站', // [!code --]
+      desc: '高效的知识分享网站', // [!code ++]
+    }
+  }
+}
+```
+
+### 错误和告警
+在某一行添加 `// [!code warning]` 或 `// [!code error]` 注释将会为该行相应的着色
+
+````md
+```js
+export default {
+  data () {
+    return {
+      error: 'error', // [!!code error]
+      warning: 'warning', // [!!code warning]
+    }
+  }
+}
+```
+````
+
+```js
+export default {
+  data () {
+    return {
+      error: 'error', // [!code error]
+      warning: 'warning', // [!code warning]
+    }
+  }
+}
+```
+
+### 代码导入
+
+vitepress 支持从现有文件中导入代码，语法：`<<< 文件路径`。同时也支持行高亮 `<<< 文件路径{行号}`。文件路径可以是相对路径，也可以是 `@/` 开头的以根目录为起点的路径
+
+当前引入的示例文件所处位置
+
+```md
+.
+├─ docs
+│  └─ post
+│     └─vitepress
+│        └─ extend
+│           └─ markdown-examples.md    <-- 当前文档位置
+│           └─ markdown-examples.vue   <-- 当前引用的文件位置
+│ 
+└─ package.json
+```
+
+导入语法
+
+```md
+<<< ./markdown-examples.vue{2}
+或者
+<<< @/post/vitepress/extend/markdown-examples.vue{2}
+```
+
+导入结果展示 (同时也是导入的文件内容)
+
+<<< @/post/vitepress/extend/markdown-examples.vue{2}
+
+也可以使用 [VS Code region](https://code.visualstudio.com/docs/editor/codebasics#_folding) 来只包含代码文件的相应部分。可以在文件目录后面的 # 符号后提供一个自定义的区域名。
+
+> [!NOTE] 提示
+> 这里说一下 `VS Code region` 要求的代码片段语法：`// #region` 为开头，`// #endregion` 为结尾，后面可以跟上名称来区分不同的代码片段。如上 `markdown-examples.vue` 中示例
+
+导入语法
+
+```md
+<<< ./markdown-examples.vue#text{2}
+
+```
+导入结果展示
+
+<<< ./markdown-examples.vue#text{2}
+
+### 代码嵌套
+
+可以使用更多的 反引号```` 包围对应的代码，来展示我们想要表达的代码书写规则
+
+`````md
+````md
+```js
+export default {
+  data () {
+    return {
+      title: '唯知笔记'
+    }
+  }
+}
+```
+````
+`````
+
+结果展示
+
+````md
+```js
+export default {
+  data () {
+    return {
+      title: '唯知笔记'
+    }
+  }
+}
+```
+````
 
 ### 代码块组
 
 ````md
 ::: code-group
-
 ```sh [pnpm]
 #查询pnpm版本
 pnpm -v
 ```
-
 ```sh [yarn]
 #查询yarn版本
 yarn -v
 ```
+:::
+````
+结果展示
 
+::: code-group
+```sh [pnpm]
+#查询pnpm版本
+pnpm -v
+```
+```sh [yarn]
+#查询yarn版本
+yarn -v
+```
+:::
+
+### 代码标题
+
+利用代码块组的语法和效果，我们也可以为单个代码块显示代码块标题或者代码文件名称及文件路径
+````md
+::: code-group
+```vue [post/vitepress/extend/markdown-examples.vue]
+<template>
+  <div>{{ text }}</div>
+</template>
+```
 :::
 ````
 
+结果展示
+
 ::: code-group
-
-```sh [pnpm]
-#查询pnpm版本
-pnpm -v
+```vue [post/vitepress/extend/markdown-examples.vue]
+<template>
+  <div>{{ text }}</div>
+</template>
 ```
-
-```sh [yarn]
-#查询yarn版本
-yarn -v
-```
-
 :::
+
+
+## 其他用法
+
+### md文件嵌套
+可以使用 `<!--@include: markdown文件路径-->`，在一个 markdown 文件中嵌套另一个 markdown 文件的内容，`markdown文件路径` 可以是相对路径，也可以是 ` @/` 开头的以根目录为起点的路径
+
+当前引入的示例文件所处位置
+
+```md
+.
+├─ docs
+│  └─ post
+│     └─vitepress
+│        └─ extend
+│           └─ markdown-examples.md        <-- 当前文档位置
+│           └─ markdown-examples-demo.md   <-- 当前嵌套的markdown文件位置
+│ 
+└─ package.json
+```
+嵌套语法
+
+
+```md
+<!---@include: ./markdown-examples-demo.md-->
+```
+
+嵌套结果
+
+<!--@include: ./markdown-examples-demo.md-->
+
+### 数学方程
+
+现在这是可选的。要启用它，需要安装 `markdown-it-mathjax3`，在配置文件中设置 `markdown.math` 为 `true`
+
+```sh
+pnpm add -D markdown-it-mathjax3
+```
+
+::: code-group
+```ts [.vitepress/config.ts]
+export default {
+  markdown: {
+    math: true
+  }
+}
+```
+:::
+
+### 高级配置
+
+在配置文件中设置 `codeTransformers` 来避免 `markdown-it` 渲染我们不想渲染的某些代码，或者使用 `config` 来对 markdown 中的内容进行替换或者批量处理
+
+查看 [markdown 可配置的字段](https://github.com/vuejs/vitepress/blob/main/src/node/markdown/markdown.ts)
+
+::: code-group
+```ts [.vitepress/config.ts]
+// https://shiki-zh-docs.vercel.app/packages/vitepress
+import { transformerTwoslash } from '@shikijs/vitepress-twoslash'
+
+export default {
+  markdown: {
+    codeTransformers: [
+      // 使用 `!!code` 防止转换，演示代码用
+      {
+        postprocess(code) {
+          return code.replace(/\[\!\!code/g, '[!code')
+        }
+      }
+      // 引入此组件来显示代码中的类型
+      transformerTwoslash(),
+    ],
+    // 对markdown中的内容进行替换或者批量处理
+    config: (md) => {
+      // 创建 markdown-it 插件
+      md.use((md) => {
+        // 标题时间和文字统计组件(<weiz-title-meta />)插入h1标题下
+        md.renderer.rules.heading_close = (tokens, idx, options, env, slf) => {
+          let htmlResult = slf.renderToken(tokens, idx, options);
+          if (tokens[idx].tag === 'h1') htmlResult += `<weiz-title-meta />`; 
+          return htmlResult;
+        }
+        // 内容批量替换
+        const defaultRender = md.render
+        md.render = function (...args) {
+          // 调用原始渲染
+          let defaultContent = defaultRender.apply(md, args)
+          // 替换内容
+          defaultContent = defaultContent.replace(/mlgb/g, '***')
+          // 返回渲染的内容
+          return defaultContent
+        }
+      })
+    }
+  }
+}
+```
+:::
+
+
+
+
+<style lang="scss" scoped>
+img {
+  width: 100px;
+}
+</style>

@@ -7,38 +7,36 @@
 </template>
 
 <script setup>
-import { onBeforeUnmount, onMounted, ref } from "vue";
+import { onBeforeUnmount, onMounted, ref } from 'vue'
 
 // 是否显示返回顶部
-const showBackTop = ref(false);
+const showBackTop = ref(false)
 
 function scrollToTop() {
   window.scrollTo({
     top: 0,
-    behavior: "smooth",
-  });
+    behavior: 'smooth'
+  })
 }
 
 // 节流
 function throttle(fn, delay = 100) {
-  let lastTime = 0;
+  let lastTime = 0
   return function () {
-    let nowTime = +new Date();
+    let nowTime = +new Date()
     if (nowTime - lastTime > delay) {
-      fn.apply(this, arguments);
-      lastTime = nowTime;
+      fn.apply(this, arguments)
+      lastTime = nowTime
     }
-  };
+  }
 }
-const onScroll = throttle(
-  () => (showBackTop.value = Boolean(window.scrollY > 100))
-);
+const onScroll = throttle(() => (showBackTop.value = Boolean(window.scrollY > 100)))
 
 // 监听滚动事件
-onMounted(() => window.addEventListener("scroll", onScroll));
+onMounted(() => window.addEventListener('scroll', onScroll))
 
 // 移除监听事件
-onBeforeUnmount(() => window.removeEventListener("scroll", onScroll));
+onBeforeUnmount(() => window.removeEventListener('scroll', onScroll))
 </script>
 
 <style lang="css" scoped>
@@ -51,7 +49,7 @@ onBeforeUnmount(() => window.removeEventListener("scroll", onScroll));
   width: 40px;
   height: 40px;
   &:hover {
-  opacity: .8;
+    opacity: 0.8;
   }
 }
 
@@ -64,7 +62,7 @@ onBeforeUnmount(() => window.removeEventListener("scroll", onScroll));
     display: none;
   }
 }
-@media (min-width: 768px) { 
+@media (min-width: 768px) {
   .vitepress-backTop-main {
     right: 16px;
   }
