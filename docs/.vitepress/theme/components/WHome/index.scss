@@ -7,7 +7,7 @@
 * 标题模块
 * -------------------------------------------------------------------------- */
 #about {
-  padding: calc(var(--vp-layout-top-height, 0px) + 64px) 64px 64px;
+  padding: calc(var(--vp-layout-top-height, 0px) + 64px) 48px 64px;
   .container-left {
     order: 2;
     margin-top: 30px;
@@ -176,7 +176,7 @@
 * 文章模块
 * -------------------------------------------------------------------------- */
 #post {
-  padding: var(--vp-layout-top-height, 0) 48px 44px;
+  padding: var(--vp-layout-top-height, 0) 48px 24px;
   .el-col {
     margin-bottom: 20px;
   }
@@ -282,10 +282,10 @@
 }
 
 /**
-* 技能模块
+* 标签模块
 * -------------------------------------------------------------------------- */
 #tag {
-  padding: var(--vp-layout-top-height, 0) 0 44px;
+  padding: var(--vp-layout-top-height, 0) 0 24px;
   .swiper {
     position: relative;
     overflow: hidden;
@@ -335,8 +335,13 @@
     border-color: var(--vp-c-gray-1);
     background: var(--vp-c-gray-1);
   }
-  #post .statistic .post-container .number::after {
-    background-image: linear-gradient(0deg, var(--vp-c-gray-1) 0, transparent 100%);
+  #post .statistic .post-container .number {
+    &::after {
+      background-image: linear-gradient(0deg, var(--vp-c-gray-1) 0, transparent 100%);
+    }
+    &:first-child::after {
+      background-image: linear-gradient(0deg, transparent 30%, var(--vp-c-gray-1) 100%);
+    }
   }
 }
 
