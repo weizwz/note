@@ -83,18 +83,18 @@ export default defineConfig({
 图片引用方法
 
 ```md
-相对位置，实际为 `../../../public/logo.png`，这里省略了 `public/`
-![logo](../../../logo.png)
-绝对位置
+相对位置，省略 public/ 后构建报错，本地正常，这里暂时保留
+![logo](../../../public/logo.png)
+绝对位置，省略 /public
 ![logo](/logo.png)
 在线地址
 ![logo](https://weizwz.com/note/logo.png)
 ```
 
-相对位置，实际为 `../../../public/logo.png`，这里省略了 `public/`
+相对位置，省略 /public 后构建报错，本地正常，这里暂时保留
+![logo](../../../public/logo.png)
+绝对位置，省略 /public
 ![logo](/logo.png)
-绝对位置
-![logo](../../../logo.png)
 在线地址
 ![logo](https://weizwz.com/note/logo.png)
 
