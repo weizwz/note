@@ -98,6 +98,7 @@ const aboutData = fm.value.about as HomeAbout
 let postData = ref<HomePost[]>([])
 const skills = fm.value.skills.split(',')
 const pv = ref('loading')
+const uv = ref('loading')
 
 const postMerge = () => {
   const postLength = 3
@@ -116,13 +117,13 @@ const formatNumber = (num) => {
   }
 }
 
-const uv = ref('loading')
 let timeoutUV = 0
 const getUV = () => {
   if (timeoutUV) clearTimeout(timeoutUV)
   timeoutUV = window.setTimeout(() => {
     const $UV = document.querySelector("#busuanzi_value_site_uv")
-    if ($UV) {
+    const text = $UV?.innerHTML
+    if ($UV && text) {
       const text = $UV.innerHTML
       uv.value = formatNumber(text)
     } else {
