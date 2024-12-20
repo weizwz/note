@@ -95,6 +95,9 @@ export default createContentLoader(
             .slice(0, 200),
           tags: _tags
         }))
+        // 过滤掉示例文档/非正式文档，以 -demo 为结尾
+        const regDemo = new RegExp(/-demo$/);
+        if (regDemo.test(link)) return
         promises.push(task)
       })
 
