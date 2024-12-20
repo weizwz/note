@@ -171,21 +171,21 @@ $icons: (
   }
   // 生成对应 class name
   #{str-replace($name, '--', '.')} {
-    content: #{'var('+ #{$name} + ')'} !important;
+    content: #{'var('+ #{$name} + ')'};
   };
   @if $main {
     #{str-replace($name, '--', '.') + '-main'} {
-      content: #{'var('+ #{$name} + '-main)'} !important;
+      content: #{'var('+ #{$name} + '-main)'};
     };
   }
   @if $white {
     #{str-replace($name, '--', '.') + '-white'} {
-      content: #{'var('+ #{$name} + '-white)'} !important;
+      content: #{'var('+ #{$name} + '-white)'};
     };
   }
   @if $gray {
     #{str-replace($name, '--', '.') + '-gray'} {
-      content: #{'var('+ #{$name} + '-gray)'} !important;
+      content: #{'var('+ #{$name} + '-gray)'};
     };
   }
 }

@@ -1,1 +1,1 @@
-这是另一个 `markdown 文件` 的内容
+当前非独立文档，仅作为 [markdown 示例](/vitepress/extend/markdown-examples#md文件嵌套) 文档的补充示例而出现
