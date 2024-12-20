@@ -77,6 +77,13 @@ export const nav: DefaultTheme.Config['nav'] = [
         ]
       },
       {
+        text: '博客管理',
+        items: [
+          { text: '域名证书', link: 'domain/third-level-domain.md' },
+          { text: '图床资源', link: 'domain/third-level-domain.md' },
+        ]
+      },
+      {
         text: 'Vitepress',
         items: [
           { text: '基础配置', link: 'vitepress/basic/api-examples.md' },
@@ -89,13 +96,6 @@ export const nav: DefaultTheme.Config['nav'] = [
         items: [
           { text: '基础配置', link: 'vitepress/basic/api-examples.md' },
           { text: '进阶用法', link: 'vitepress/extend/markdown-examples.md' },
-        ]
-      },
-      {
-        items: [
-          { text: '服务器站点', link: 'vitepress/basic/api-examples.md' },
-          { text: '域名证书', link: 'vitepress/basic/api-examples.md' },
-          { text: '图床使用', link: 'vitepress/extend/markdown-examples.md' },
         ]
       },
     ]

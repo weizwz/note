@@ -25,5 +25,13 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
         },
       ]
     }
+  ],
+  '/domain/': [
+    {
+      text: '域名管理',
+      items: [
+        { text: '给网站设置三级域名', link: 'domain/third-level-domain.md' }
+      ]
+    }
   ]
 }
