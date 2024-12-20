@@ -4,6 +4,8 @@ export const createHead = (base: string) => {
   return [
     ['link', { rel: 'icon', href: base + 'favicon.ico' }],
     ['link', { rel: 'icon', type: 'image/png', href: base + 'logo.png' }],
+    ['meta', { property: 'msvalidate.01', content: '052AEF55670B1059AC662C78C693AED9' }],
+    ['meta', { property: 'google-site-verification', content: 'h5ZDnqWDDdodHi5p5KY3IzNtALfigZTMXUZv1TRcSf0' }],
     ['meta', { property: 'referrer', content: 'no-referrer-when-downgrade' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:locale', content: 'zh' }],

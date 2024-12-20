@@ -130,7 +130,7 @@ export default async ({ mode }) => {
     },
     // 站点地图
     sitemap: {
-      hostname: 'https://weizwz.com'
+      hostname: 'https://note.weizwz.com'
     },
     vite: {
       plugins: [MarkdownPreview()],
