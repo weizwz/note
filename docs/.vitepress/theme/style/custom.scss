@@ -17,7 +17,6 @@
   }
   /* 搜索框透明 */
   .DocSearch-Button {
-    background-color: rgba(245,245,245, 0.6);
     backdrop-filter: blur(10px);
   }
   /* 文档页侧边栏顶部透明 */
@@ -36,5 +35,11 @@
   .VPLocalNav {
     background-color: rgba(255, 255, 255, 0);
     backdrop-filter: blur(10px);
+  }
+}
+
+@media (min-width: 768px) {
+  .DocSearch-Button {
+    background-color: rgba(245,245,245, 0.6);
   }
 }

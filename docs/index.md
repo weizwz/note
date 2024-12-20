@@ -6,7 +6,7 @@ titleTemplate: 唯知笔记
 
 about:
   title: 唯知笔记
-  logo: head.png
+  logo: https://www.helloimg.com/i/2024/12/03/674efd108c4c8.png
   desc: 高效的知识分享网站
   tagline: 知之为知之，不知为不知
   links:

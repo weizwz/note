@@ -25,18 +25,18 @@
         </el-col>
         <el-col :xs="24" :sm="8" :md="6" class="container-right">
           <div class="hero-avatar">
-            <img :src="withBase(aboutData.logo)" alt="head-avatar" />
+            <img :src="aboutData.logo.indexOf('http') === 0 ? aboutData.logo : withBase(aboutData.logo)" alt="head-avatar" />
           </div>
           <div class="hero-social">
             <ul>
               <li class="hero-social-item">
-                <a class="social" href="https://github.com/weizwz" target="_blank"><i class="weiz-icon weiz-icon-github" /></a>
+                <a class="social" href="https://github.com/weizwz" target="_blank"><i class="weiz-icon weiz-icon-github-main" /></a>
               </li>
               <li class="hero-social-item">
-                <a class="social" href="https://gitee.com/weizwz" target="_blank"><i class="weiz-icon weiz-icon-gitee" /></a>
+                <a class="social" href="https://gitee.com/weizwz" target="_blank"><i class="weiz-icon weiz-icon-gitee-main" /></a>
               </li>
               <li class="hero-social-item">
-                <a class="social" href="https://www.cnblogs.com/weizwz" target="_blank"><i class="weiz-icon weiz-icon-cnblog" /></a>
+                <a class="social" href="https://www.cnblogs.com/weizwz" target="_blank"><i class="weiz-icon weiz-icon-cnblog-main" /></a>
               </li>
             </ul>
           </div>
