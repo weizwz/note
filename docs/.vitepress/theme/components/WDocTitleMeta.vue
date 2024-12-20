@@ -10,10 +10,10 @@
         <span>总字数 {{ wordCount }}</span>
       </div>
       <!-- 由于卜算子对单页面统计不正确，先搁置 -->
-      <!-- <div class="reader">
+      <div class="reader">
         <i class="weiz-icon weiz-icon-eye-gray"></i>
         <span>阅读量 <span id="busuanzi_value_page_pv"></span></span>
-      </div> -->
+      </div>
     </div>
   </div>
 </template>
