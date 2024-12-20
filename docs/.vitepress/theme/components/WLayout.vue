@@ -16,10 +16,7 @@ toggleDark(isDark) //实现切换主题过渡动画
     <template #doc-footer-before>
       <WDocPublic />
     </template>
-    <template #doc-after>
-      <WBackToTop />
-    </template>
-    <template #aside-bottom>
+    <template #doc-bottom>
       <WBackToTop />
     </template>
     <template #layout-bottom>

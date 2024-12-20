@@ -43,28 +43,44 @@ onBeforeUnmount(() => window.removeEventListener('scroll', onScroll))
 .vitepress-backTop-main {
   position: fixed;
   z-index: 1111;
-  bottom: 32px;
-  right: 10px;
+  bottom: 42px;
+  right: 0;
   cursor: pointer;
   width: 40px;
   height: 40px;
   &:hover {
     opacity: 0.8;
   }
+  --center-position: calc(32px - 40px / 2);
 }
 
-@media (min-width: 1280px) {
-  .vitepress-backTop-main {
-    position: static;
-    margin-left: 20px;
-  }
-  .content .vitepress-backTop-main {
-    display: none;
-  }
-}
 @media (min-width: 768px) {
   .vitepress-backTop-main {
-    right: 16px;
+    right: 8px;
+  }
+}
+@media (min-width: 960px) {
+  .vitepress-backTop-main {
+    right: calc((100vw - 752px) / 2 - 40px);
+  }
+  .has-sidebar.has-aside  .vitepress-backTop-main {
+    right: var(--center-position);
+  }
+}
+@media (min-width: 1280px) {
+  .has-aside .vitepress-backTop-main {
+    right: calc(var(--center-position) + (100vw - 992px) / 2 + 224px);
+  }
+  .has-sidebar.has-aside .vitepress-backTop-main {
+    right: calc(var(--center-position) + 256px);
+  }
+}
+@media (min-width: 1440px) {
+  .has-aside .vitepress-backTop-main {
+    right: calc(var(--center-position) + (100vw - 1104px) / 2 + 256px);
+  }
+  .has-sidebar.has-aside .vitepress-backTop-main {
+    right: calc(var(--center-position) + 256px + (100vw - var(--vp-layout-max-width)) / 2);
   }
 }
 </style>
