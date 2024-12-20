@@ -9,7 +9,7 @@ export const createHead = (base: string) => {
     ['meta', { property: 'og:locale', content: 'zh' }],
     ['meta', { property: 'og:title', content: '唯知笔记 | 一个知识分享网站' }],
     ['meta', { property: 'og:site_name', content: '唯知笔记' }],
-    ['meta', { property: 'og:url', content: 'https://weizwz.com/note/' }],
+    ['meta', { property: 'og:url', content: 'https://note.weizwz.com/' }],
     // [
     //   'script',
     //   {},

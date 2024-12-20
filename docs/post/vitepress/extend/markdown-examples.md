@@ -53,13 +53,13 @@ export default defineConfig({
 ```md
 [跳到当前页的网页链接](/vitepress/extend/markdown-examples#网页链接)
 
-[新打开网页-唯知笔记](https://weizwz.com/note/)
+[新打开网页-唯知笔记](https://note.weizwz.com/)
 ```
 **结果展示**
 
 [跳到当前页的网页链接](/vitepress/extend/markdown-examples#网页链接)
 
-[新打开网页-唯知笔记](https://weizwz.com/note/)
+[新打开网页-唯知笔记](https://note.weizwz.com/)
 
 ### 图片引用
 图片引用的基本格式 `![图片说明文字](图片路径)`，这里的图片路径可以使用`相对位置/绝对位置/在线地址`。
@@ -92,7 +92,7 @@ export default defineConfig({
 绝对位置，应省略 /public
 ![logo](/logo.png)
 在线地址
-![logo](https://weizwz.com/note/logo.png)
+![logo](https://note.weizwz.com/logo.png)
 ```
 **结果展示**
 
@@ -101,7 +101,7 @@ export default defineConfig({
 绝对位置，应省略 /public
 ![logo](/logo.png)
 在线地址
-![logo](https://weizwz.com/note/logo.png)
+![logo](https://note.weizwz.com/logo.png)
 
 ### 表格语法
 
