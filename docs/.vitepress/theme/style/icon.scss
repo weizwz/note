@@ -92,10 +92,10 @@
   background-color: var(--weiz-icon-color);
   width: 16px;
   height: 16px;
-  -webkit-mask-image: var(--url);
-  mask-image: var(--url);
-  -webkit-mask-size: cover;
+  mask: var(--url) no-repeat center center;
+  -webkit-mask: var(--url) no-repeat center center;
   mask-size: cover;
+  -webkit-mask-size: cover;
 }
 // 颜色
 .weiz-icon.main {
