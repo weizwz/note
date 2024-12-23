@@ -1,7 +1,7 @@
 <template>
   <Transition name="fade">
     <div v-show="showBackTop" class="vitepress-backTop-main" title="返回顶部" @click="scrollToTop()">
-      <i class="weiz-icon xxl weiz-icon-backTop-main" />
+      <i class="weiz-icon xxl weiz-icon-backTop main" />
     </div>
   </Transition>
 </template>

@@ -30,13 +30,13 @@
           <div class="hero-social">
             <ul>
               <li class="hero-social-item">
-                <a class="social" href="https://github.com/weizwz" target="_blank"><i class="weiz-icon weiz-icon-github-main" /></a>
+                <a class="social" href="https://github.com/weizwz" target="_blank"><i class="weiz-icon weiz-icon-github main" /></a>
               </li>
               <li class="hero-social-item">
-                <a class="social" href="https://gitee.com/weizwz" target="_blank"><i class="weiz-icon weiz-icon-gitee-main" /></a>
+                <a class="social" href="https://gitee.com/weizwz" target="_blank"><i class="weiz-icon weiz-icon-gitee main" /></a>
               </li>
               <li class="hero-social-item">
-                <a class="social" href="https://www.cnblogs.com/weizwz" target="_blank"><i class="weiz-icon weiz-icon-cnblog-main" /></a>
+                <a class="social" href="https://www.cnblogs.com/weizwz" target="_blank"><i class="weiz-icon weiz-icon-cnblog main" /></a>
               </li>
             </ul>
           </div>

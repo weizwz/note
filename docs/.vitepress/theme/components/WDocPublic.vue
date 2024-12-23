@@ -2,19 +2,19 @@
   <div class="weiz-public">
     <div class="copyright">
       <div class="copyright__author">
-        <span class="copyright-meta"> <i class="weiz-icon weiz-icon-user-main"></i>文章作者: </span>
+        <span class="copyright-meta"> <i class="weiz-icon weiz-icon-user main"></i>文章作者: </span>
         <span class="copyright-info">
           <a :href="siteHref">weizwz</a>
         </span>
       </div>
       <div class="copyright__type">
-        <span class="copyright-meta"> <i class="weiz-icon weiz-icon-link-main"></i>文章链接: </span>
+        <span class="copyright-meta"> <i class="weiz-icon weiz-icon-link main"></i>文章链接: </span>
         <span class="copyright-info">
           <a :href="postHref">{{ postHref }}</a>
         </span>
       </div>
       <div class="copyright__notice">
-        <span class="copyright-meta"> <i class="weiz-icon weiz-icon-cc-main"></i>版权声明: </span>
+        <span class="copyright-meta"> <i class="weiz-icon weiz-icon-cc main"></i>版权声明: </span>
         <span class="copyright-info">
           本站文章除特别声明外，均采用
           <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">BY-NC-SA 4.0</a>
@@ -22,6 +22,7 @@
           >！
         </span>
       </div>
+      <i class="copyright-symbol weiz-icon weiz-icon-public main"></i>
     </div>
   </div>
   <div class="post-tags">
@@ -68,13 +69,10 @@ onMounted(() => {
     border: solid 1px var(--vp-c-divider);
     border-radius: var(--weiz-border-radius);
     transition: all .2s;
-    &::before {
-      content: var(--weiz-icon-public-main);
-      display: inline-block;
+    .copyright-symbol {
       position: absolute;
       top: 6px;
       right: 6px;
-      color: currentColor;
       width: 20px;
       height: 20px;
     }
