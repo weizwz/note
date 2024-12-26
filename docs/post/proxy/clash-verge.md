@@ -2,8 +2,8 @@
 title: Clash Verge 使用记录
 description: Clash Verge 使用记录，包括下载、协议以及常见问题
 tags:
-  - proxy
   - github
+  - proxy
   - npm
   - git
 ---

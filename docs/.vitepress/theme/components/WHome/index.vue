@@ -56,7 +56,7 @@
           </div>
           <a v-else class="post-card" :href="item.url">
             <div class="post-container">
-              <div :class="'weiz-icon xxl weiz-icon-post ' + (item.tags ? 'weiz-icon-' + item.tags.reverse().join(' weiz-icon-') : '')" />
+              <div :class="'weiz-icon xxl weiz-icon-post ' + (item.tags ? 'weiz-icon-' + item.tags[0] : '')" />
               <div class="title">{{ item.title }}</div>
               <div class="desc">{{ item.abstract }}</div>
             </div>

@@ -105,7 +105,7 @@ tags:
 
 ## 应用
 
-```htm
+```html
 <i class="weiz-icon l weiz-icon-web white"></i>
 ```
 
