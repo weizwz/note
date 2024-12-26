@@ -41,5 +41,13 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
         { text: '给网站设置三级域名', link: 'domain/third-level-domain.md' }
       ]
     }
+  ],
+  '/proxy/': [
+    {
+      text: '代理工具',
+      items: [
+        { text: 'Clash Verge 使用记录', link: 'proxy/clash-verge.md' }
+      ]
+    }
   ]
 }
