@@ -8,7 +8,7 @@ export const nav: DefaultTheme.Config['nav'] = [
       {
         items: [
           { text: 'HTML 基础知识', link: 'vitepress/extend/markdown-examples.md' },
-          { text: 'CSS 常用语法', link: 'vitepress/extend/markdown-examples.md' },
+          { text: 'CSS 基础知识', link: 'vitepress/extend/markdown-examples.md' },
           { text: 'JS 基础知识', link: 'vitepress/basic/api-examples.md' },
           { text: 'ES6 常用语法', link: 'vitepress/extend/markdown-examples.md' },
           { text: '浏览器 相关知识', link: 'vitepress/extend/markdown-examples.md' },

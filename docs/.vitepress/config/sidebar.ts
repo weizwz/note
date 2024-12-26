@@ -28,9 +28,19 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
   ],
   '/css/': [
     {
-      text: '实战特效',
+      text: 'CSS',
       items: [
-        { text: '巧用mask属性创建一个纯CSS图标库', link: 'css/apply/mask-svg-icon.md' }
+        {
+          text: '基础知识',
+          items: [
+          ]
+        },
+        {
+          text: '实战特效',
+          items: [
+            { text: '巧用mask属性创建一个纯CSS图标库', link: 'css/apply/mask-svg-icon.md' }
+          ]
+        },
       ]
     }
   ],
