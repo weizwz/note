@@ -59,5 +59,13 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
         { text: 'Clash Verge 使用记录', link: 'proxy/clash-verge.md' }
       ]
     }
+  ],
+  '/element/': [
+    {
+      text: 'Element UI',
+      items: [
+        { text: '巧用 Element 自适应布局', link: 'element/responsive-layout.md' }
+      ]
+    }
   ]
 }
