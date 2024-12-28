@@ -20,10 +20,12 @@ const getFileTimes = (fileName, cwd) => {
 }
 
 const addTime = (code, path) => {
-  const { firstCommit, lastUpdated } = getFileTimes(path, process.cwd())
-
   let addTime = `---\n`
+  if (!code.match(/---\n([\s\S]*?)\n---/)) return code
+
+  const { firstCommit, lastUpdated } = getFileTimes(path, process.cwd())
   const frontmatter = code.match(/---\n([\s\S]*?)\n---/)[1]
+  
   if (frontmatter.indexOf('firstCommit:') === -1) {
     addTime += `firstCommit: ${firstCommit}\n`
   }
