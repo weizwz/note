@@ -35,7 +35,6 @@
   display: flex;
   flex-direction: column-reverse;
   position: relative;
-  z-index: 111;
   .site {
     display: flex;
     justify-content: center;

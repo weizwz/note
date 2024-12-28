@@ -21,7 +21,7 @@
           <div class="posts-wrapper">
             <el-row v-for="(item, index) of posts" :key="index" class="post" :gutter="20">
               <el-col :xs="24" :sm="4" :md="3" class="post-date">
-                <span class="post-date">{{ item.dateText[1] }}</span>
+                <span class="post-date">{{ item.dateText[0] }}</span>
               </el-col>
               <el-col :xs="24" :sm="20" :md="21" class="post-details">
                 <a :href="'../' + item.url">

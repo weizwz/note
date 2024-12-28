@@ -64,7 +64,7 @@ export default createContentLoader(
           .filter((item) => item)
           .join(sep)
         // https://vitepress.dev/zh/guide/getting-started#file-structure
-        // 如果你的文档在doc目录下，路径开头需要拼接 docs/ ，末尾需要拼接 .md
+        // 如果你的文档在docs目录下，路径开头需要拼接 docs/ ，末尾需要拼接 .md
         const task = getGitTimestamp('docs/' + link.replace(/.html/, '') + '.md').then((date) => ({
           title,
           url: link.replace(/post\//, ''), // 由于使用了rewrites重定向，这里也对url作处理
@@ -103,9 +103,9 @@ export default createContentLoader(
 
       const pages = await Promise.all(promises)
       // 发布时间降序排列
-      // const posts = pages.sort((a, b) => b.date[0] - a.date[0]);
+      posts = pages.sort((a, b) => b.date[0] - a.date[0]);
       // 更新时间降序排列
-      posts = pages.sort((a, b) => b.date[1] - a.date[1])
+      // posts = pages.sort((a, b) => b.date[1] - a.date[1])
 
       // 根据年份排列
       posts.forEach((item) => {
