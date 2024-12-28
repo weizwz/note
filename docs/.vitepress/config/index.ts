@@ -7,6 +7,7 @@ import { footer } from './footer'
 import MarkdownPreview from 'vite-plugin-markdown-preview'
 // https://shiki-zh-docs.vercel.app/packages/vitepress
 import { transformerTwoslash } from '@shikijs/vitepress-twoslash'
+import addTime from './addTime'
 
 // https://github.com/vuejs/vitepress/discussions/3533
 export default async ({ mode }) => {
@@ -59,19 +60,24 @@ export default async ({ mode }) => {
           // 组件插入h1标题下
           md.renderer.rules.heading_close = (tokens, idx, options, env, slf) => {
             let htmlResult = slf.renderToken(tokens, idx, options);
+
             if (tokens[idx].tag === 'h1') htmlResult += `<weiz-title-meta />`; 
             return htmlResult;
           }
-          // const defaultRender = md.render
-          // md.render = function (...args) {
-          //   // 调用原始渲染
-          //   let defaultContent = defaultRender.apply(md, args)
-          //   // 替换内容
-          //   defaultContent = defaultContent
-          //         .replace(/<\!---@include:/g, '<!--@include:')
-          //   // 返回渲染的内容
-          //   return defaultContent
-          // }
+          const defaultRender = md.render
+          md.render = function (...args) {
+            // 对原生内容做处理，增加创建时间和更新时间
+            args[0] = addTime(args[0], args[1].realPath)
+            
+            // 调用原始渲染
+            let defaultContent = defaultRender.apply(md, args)
+            // 替换内容
+            
+            // defaultContent = defaultContent
+            //       .replace(/<\!---@include:/g, '<!--@include:')
+            // 返回渲染的内容
+            return defaultContent
+          }
         })
       }
     },

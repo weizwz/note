@@ -32,7 +32,7 @@ export { data }
 // https://vitepress.dev/zh/guide/data-loading#createcontentloader
 export default createContentLoader(
   [
-    'post/**/*.md' // 也可用过滤 "!(.vitepress|public|pages)/**/!(index|README).md",
+    'post/**/!(*-demo).md' // 也可用过滤 "!(.vitepress|public|pages)/**/!(index|README).md", 过滤掉示例文档/非正式文档，以 -demo 为结尾
   ],
   {
     // 包含原始 markdown 源
@@ -57,7 +57,10 @@ export default createContentLoader(
           }
         }
         let _tags = frontmatter?.tags
-
+        // 获取手动设置的更新时间
+        const createdDate = frontmatter?.firstCommit ? +new Date(frontmatter.firstCommit) : ''
+        const updatedDate = frontmatter?.lastUpdated ? +new Date(frontmatter.lastUpdated) : ''
+        
         // 链接去掉项目名
         const link = normalize(url)
           .split(sep)
@@ -68,8 +71,9 @@ export default createContentLoader(
         const task = getGitTimestamp('docs/' + link.replace(/.html/, '') + '.md').then((date) => ({
           title,
           url: link.replace(/post\//, ''), // 由于使用了rewrites重定向，这里也对url作处理
-          date, // 更新时间
-          dateText: [new Date(date[0]).toLocaleDateString(), new Date(date[1]).toLocaleDateString()],
+          date: [createdDate || date[0], updatedDate || date[1]], // 更新时间
+          dateText: [createdDate ? new Date(createdDate).toLocaleDateString() : new Date(date[0]).toLocaleDateString(), 
+            updatedDate ? new Date(updatedDate).toLocaleDateString() : new Date(date[1]).toLocaleDateString()],
           abstract: src
             // 去除html标签
             ?.replace(/<[^>]+?>/g, '')
@@ -95,9 +99,6 @@ export default createContentLoader(
             .slice(0, 200),
           tags: _tags
         }))
-        // 过滤掉示例文档/非正式文档，以 -demo 为结尾
-        const regDemo = new RegExp(/-demo$/);
-        if (regDemo.test(link)) return
         promises.push(task)
       })
 

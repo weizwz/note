@@ -1,18 +1,21 @@
 <template>
   <div class="weiz-title-meta">
     <div class="tags">
-      <div class="updated">
-        <i class="weiz-icon weiz-icon-updated gray"/>
-        <span>更新于 {{ date }}</span>
+      <div class="created" title="发表时间">
+        <i class="weiz-icon weiz-icon-created gray" />
+        <span> {{ firstCommit }}</span>
       </div>
-      <div class="word">
-        <i class="weiz-icon weiz-icon-word gray"/>
-        <span>总字数 {{ wordCount }}</span>
+      <div class="updated" title="更新时间">
+        <i class="weiz-icon weiz-icon-updated gray" />
+        <span> {{ lastUpdated }}</span>
       </div>
-      <!-- 由于卜算子对单页面统计不正确，先搁置 -->
-      <div class="reader">
-        <i class="weiz-icon weiz-icon-eye gray"></i>
-        <span>阅读量 <span id="busuanzi_value_page_pv"></span></span>
+      <div class="word" title="字数统计">
+        <i class="weiz-icon weiz-icon-word gray" />
+        <span> {{ wordCount }}</span>
+      </div>
+      <div class="reader" title="阅读次数">
+        <i class="weiz-icon weiz-icon-user gray"></i>
+        <span> <span id="busuanzi_value_page_pv"></span></span>
       </div>
     </div>
   </div>
@@ -23,12 +26,16 @@ import { useData } from 'vitepress'
 import { ref, onMounted } from 'vue'
 import { countWord } from '../utils/tools'
 
-const { page } = useData()
-const wordCount = ref(0)
-const date = ref('')
+const { frontmatter } = useData()
+const wordCount = ref('')
+const firstCommit = ref('')
+const lastUpdated = ref('')
 
 onMounted(() => {
-  date.value = (new Date(page.value.lastUpdated!)).toLocaleDateString()
+  console.log(frontmatter.value)
+
+  firstCommit.value = new Date(frontmatter.value.firstCommit!).toLocaleDateString()
+  lastUpdated.value = new Date(frontmatter.value.lastUpdated!).toLocaleDateString()
   const docDomContainer = window.document.querySelector('#VPContent')
   const words = docDomContainer?.querySelector('.content-container .main')?.textContent || ''
   wordCount.value = countWord(words)
@@ -39,7 +46,8 @@ onMounted(() => {
 .weiz-title-meta {
   .tags {
     display: flex;
-    margin-top: 10px;
+    flex-wrap: wrap;
+    margin-top: 6px;
     color: var(--vp-c-text-2);
     font-weight: 500;
     line-height: 18px;
@@ -47,7 +55,8 @@ onMounted(() => {
     > div {
       display: flex;
       align-items: center;
-      margin-right: 10px;
+      margin-top: 10px;
+      margin-right: 16px;
       &:last-child {
         margin-right: 0;
       }
