@@ -32,8 +32,6 @@ const firstCommit = ref('')
 const lastUpdated = ref('')
 
 onMounted(() => {
-  console.log(frontmatter.value)
-
   firstCommit.value = new Date(frontmatter.value.firstCommit!).toLocaleDateString()
   lastUpdated.value = new Date(frontmatter.value.lastUpdated!).toLocaleDateString()
   const docDomContainer = window.document.querySelector('#VPContent')
