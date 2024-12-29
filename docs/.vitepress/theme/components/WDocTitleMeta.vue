@@ -78,7 +78,7 @@ onMounted(() => {
       display: flex;
       align-items: center;
       margin-top: 10px;
-      margin-right: 16px;
+      margin-right: 6px;
       &:last-child {
         margin-right: 0;
       }
@@ -86,6 +86,12 @@ onMounted(() => {
   }
   .weiz-icon {
     margin-right: 2px;
+  }
+}
+
+@media (min-width: 768px) {
+  .weiz-title-meta .tags > div {
+    margin-right: 16px;
   }
 }
 </style>
