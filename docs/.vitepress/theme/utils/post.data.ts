@@ -2,6 +2,7 @@ import { createContentLoader } from 'vitepress'
 import { basename, extname, sep, normalize } from 'path'
 import { spawn } from 'child_process'
 import { statSync } from 'fs'
+import { DateTimeFormatOptions } from 'intl'
 
 export interface Post {
   title: string // 标题
@@ -60,7 +61,13 @@ export default createContentLoader(
         // 获取手动设置的更新时间
         const createdDate = frontmatter?.firstCommit ? +new Date(frontmatter.firstCommit) : ''
         const updatedDate = frontmatter?.lastUpdated ? +new Date(frontmatter.lastUpdated) : ''
-        
+
+        const dateOption: DateTimeFormatOptions = {
+          day: '2-digit',
+          month: '2-digit',
+          year: 'numeric'
+        }
+
         // 链接去掉项目名
         const link = normalize(url)
           .split(sep)
@@ -72,8 +79,14 @@ export default createContentLoader(
           title,
           url: link.replace(/post\//, ''), // 由于使用了rewrites重定向，这里也对url作处理
           date: [createdDate || date[0], updatedDate || date[1]], // 更新时间
-          dateText: [createdDate ? new Date(createdDate).toLocaleDateString() : new Date(date[0]).toLocaleDateString(), 
-            updatedDate ? new Date(updatedDate).toLocaleDateString() : new Date(date[1]).toLocaleDateString()],
+          dateText: [
+            createdDate
+              ? new Date(createdDate).toLocaleDateString('zh', dateOption)
+              : new Date(date[0]).toLocaleDateString('zh', dateOption),
+            updatedDate
+              ? new Date(updatedDate).toLocaleDateString('zh', dateOption)
+              : new Date(date[1]).toLocaleDateString('zh', dateOption)
+          ],
           abstract: src
             // 去除html标签
             ?.replace(/<[^>]+?>/g, '')
@@ -104,7 +117,7 @@ export default createContentLoader(
 
       const pages = await Promise.all(promises)
       // 发布时间降序排列
-      posts = pages.sort((a, b) => b.date[0] - a.date[0]);
+      posts = pages.sort((a, b) => b.date[0] - a.date[0])
       // 更新时间降序排列
       // posts = pages.sort((a, b) => b.date[1] - a.date[1])
 

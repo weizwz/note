@@ -1,21 +1,21 @@
 <template>
   <div class="weiz-title-meta">
     <div class="tags">
-      <div class="created" title="发表时间">
+      <div class="created" title="发表于">
         <i class="weiz-icon weiz-icon-created gray" />
-        <span> {{ firstCommit }}</span>
+        <span>发表于 {{ firstCommit }}</span>
       </div>
-      <div class="updated" title="更新时间">
+      <div class="updated" title="更新于">
         <i class="weiz-icon weiz-icon-updated gray" />
-        <span> {{ lastUpdated }}</span>
+        <span>更新于 {{ lastUpdated }}</span>
       </div>
-      <div class="word" title="字数统计">
+      <div class="word" title="字数总计">
         <i class="weiz-icon weiz-icon-word gray" />
-        <span> {{ wordCount }}</span>
+        <span>字数总计 {{ wordCount }}</span>
       </div>
-      <div class="reader" title="阅读次数">
+      <div class="reader" title="阅读量">
         <i class="weiz-icon weiz-icon-user gray"></i>
-        <span> <span id="busuanzi_value_page_pv"></span></span>
+        <span>阅读量 {{ pv }}<span id="busuanzi_value_page_pv" style="display: none" /></span>
       </div>
     </div>
   </div>
@@ -24,19 +24,43 @@
 <script setup lang="ts">
 import { useData } from 'vitepress'
 import { ref, onMounted } from 'vue'
-import { countWord } from '../utils/tools'
+import { countWord, countTransK } from '../utils/tools'
 
 const { frontmatter } = useData()
 const wordCount = ref('')
 const firstCommit = ref('')
 const lastUpdated = ref('')
+const pv = ref('')
+
+let timeoutPV = 0
+const getPV = () => {
+  if (timeoutPV) clearTimeout(timeoutPV)
+  timeoutPV = window.setTimeout(() => {
+    const $PV = document.querySelector('#busuanzi_value_page_pv')
+    const text = $PV?.innerHTML
+    if ($PV && text) {
+      pv.value = countTransK(parseInt(text))
+    } else {
+      getPV()
+    }
+  }, 500)
+}
 
 onMounted(() => {
-  firstCommit.value = new Date(frontmatter.value.firstCommit!).toLocaleDateString()
-  lastUpdated.value = new Date(frontmatter.value.lastUpdated!).toLocaleDateString()
+  firstCommit.value = new Date(frontmatter.value.firstCommit!).toLocaleDateString('zh', {
+    day: '2-digit',
+    month: '2-digit',
+    year: 'numeric'
+  })
+  lastUpdated.value = new Date(frontmatter.value.lastUpdated!).toLocaleDateString('zh', {
+    day: '2-digit',
+    month: '2-digit',
+    year: 'numeric'
+  })
   const docDomContainer = window.document.querySelector('#VPContent')
   const words = docDomContainer?.querySelector('.content-container .main')?.textContent || ''
   wordCount.value = countWord(words)
+  getPV()
 })
 </script>
 

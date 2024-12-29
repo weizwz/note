@@ -5,7 +5,7 @@ const pattern =
  * @param data 字符串
  * @returns 字符串长度
  */
-export function countWord(data: string) {
+export const countWord = (data: string) => {
   const m = data.match(pattern)
   let count = 0
   if (!m) {
@@ -18,6 +18,13 @@ export function countWord(data: string) {
       count += 1
     }
   }
+  return countTransK(count)
+}
+
+/**
+ * 数字转化为 n + k 的形式
+ */
+export const countTransK = (count: number) => {
   if (count >= 1000) {
     return (count / 1000).toFixed(1) + 'K';
   } else {
