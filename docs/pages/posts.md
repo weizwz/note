@@ -1,4 +1,4 @@
 ---
 layout: weiz-post
-title: 文章
+title: 所有文章
 ---

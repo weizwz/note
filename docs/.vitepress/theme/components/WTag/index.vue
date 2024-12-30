@@ -3,7 +3,7 @@
     <div class="vp-doc">
       <div class="container">
         <div id="tags">
-          <h1>标签</h1>
+          <h1>标签列表</h1>
           <div class="tags-wrapper">
             <div
               v-for="(item, index) of tagsText"
