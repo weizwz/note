@@ -99,7 +99,8 @@ const postMerge = () => {
   const fmLength = fm.value.post ? fm.value.post.length : 0
   postData.value = fm.value.post && fmLength >= postLength ? fm.value.post : (() => {
     const newPosts = data.posts.slice(0, postLength - fmLength)
-    return newPosts.concat(fm.value.post || []) as unknown as HomePost
+    const mdPosts = fm.value.post || []
+    return mdPosts.concat(newPosts) as unknown as HomePost
   })()
 }
 
