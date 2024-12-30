@@ -10,13 +10,7 @@
             <h3>{{ year }}</h3>
             <el-row class="container-row" :gutter="20">
               <el-col v-for="item of metaPost[year]" :key="item.url" :xs="24" :sm="12" :md="6">
-                <a class="post-card" :href="'../'+ item.url">
-                  <div class="post-container">
-                    <div :class="'weiz-icon xxl weiz-icon-post ' + (item.tags ? 'weiz-icon-' + item.tags[0] : '')" />
-                    <div class="title">{{ item.title }}</div>
-                    <div class="desc">{{ item.abstract }}</div>
-                  </div>
-                </a>
+                <weiz-post-card :post="Object.assign({baseUrl: '../'}, item)"/>
               </el-col>
             </el-row>
           </div>

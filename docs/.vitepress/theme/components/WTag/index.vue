@@ -19,15 +19,9 @@
         <div id="posts">
           <h1><i class="weiz-icon l weiz-icon-post-fill"/>文章列表</h1>
           <div class="posts-wrapper">
-            <el-row v-for="(item, index) of posts" :key="index" class="post" :gutter="20">
-              <el-col :xs="24" :sm="4" :md="3" class="post-date">
-                <span class="post-date">{{ item.dateText[0] }}</span>
-              </el-col>
-              <el-col :xs="24" :sm="20" :md="21" class="post-details">
-                <a :href="'../' + item.url">
-                  <span class="post-title">{{ item.title }}</span>
-                  <span class="post-abstract">摘要：{{ item.abstract }}</span>
-                </a>
+            <el-row class="container-row" :gutter="20">
+              <el-col v-for="item of posts" :key="item.url" :xs="24" :sm="12" :md="6">
+                <weiz-post-card :post="Object.assign({baseUrl: '../'}, item)"/>
               </el-col>
             </el-row>
           </div>

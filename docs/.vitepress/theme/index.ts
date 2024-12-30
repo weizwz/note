@@ -5,6 +5,7 @@ import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
 import './style/index.scss'
 import WLayout from './components/WLayout.vue'
+import WPostCard from './components/WPostCard.vue'
 import WHome from './components/WHome/index.vue'
 import WTag from './components/WTag/index.vue'
 import WPost from './components/WPost/index.vue'
@@ -28,6 +29,7 @@ export default {
     return h(WLayout, props)
   },
   enhanceApp({ app, router }: EnhanceAppContext) {
+    app.component('weiz-post-card', WPostCard)
     app.component('weiz-home', WHome)
     app.component('weiz-tag', WTag)
     app.component('weiz-post', WPost)
