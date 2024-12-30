@@ -2,7 +2,6 @@ import { createContentLoader } from 'vitepress'
 import { basename, extname, sep, normalize } from 'path'
 import { spawn } from 'child_process'
 import { statSync } from 'fs'
-import { DateTimeFormatOptions } from 'intl'
 
 export interface Post {
   title: string // 标题
@@ -62,11 +61,11 @@ export default createContentLoader(
         const createdDate = frontmatter?.firstCommit ? +new Date(frontmatter.firstCommit) : ''
         const updatedDate = frontmatter?.lastUpdated ? +new Date(frontmatter.lastUpdated) : ''
 
-        const dateOption: DateTimeFormatOptions = {
+        const dateOption = new Intl.DateTimeFormat('zh', {
           day: '2-digit',
           month: '2-digit',
           year: 'numeric'
-        }
+        });
 
         // 链接去掉项目名
         const link = normalize(url)
@@ -81,11 +80,11 @@ export default createContentLoader(
           date: [createdDate || date[0], updatedDate || date[1]], // 更新时间
           dateText: [
             createdDate
-              ? new Date(createdDate).toLocaleDateString('zh', dateOption)
-              : new Date(date[0]).toLocaleDateString('zh', dateOption),
+              ? dateOption.format(createdDate)
+              : dateOption.format(date[0]),
             updatedDate
-              ? new Date(updatedDate).toLocaleDateString('zh', dateOption)
-              : new Date(date[1]).toLocaleDateString('zh', dateOption)
+              ? dateOption.format(updatedDate)
+              : dateOption.format(date[1]),
           ],
           abstract: src
             // 去除html标签
@@ -123,7 +122,7 @@ export default createContentLoader(
 
       // 根据年份排列
       posts.forEach((item) => {
-        const year = new Date(item.date[1]).getFullYear()
+        const year = new Date(item.date[0]).getFullYear()
         if (!years[year]) {
           years[year] = []
         }

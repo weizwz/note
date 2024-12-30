@@ -1,6 +1,7 @@
 ---
 layout: doc
 title: 更新日志页
+sidebar: false
 ---
 
 # 更新日志

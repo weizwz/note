@@ -2,6 +2,17 @@ import type { DefaultTheme } from 'vitepress'
 
 export const nav: DefaultTheme.Config['nav'] = [
   { text: '首页', link: '/' },
+  { text: '站内导航', 
+    items: [
+      {
+        items: [
+          { text: '全部文章', link: 'pages/posts.md' },
+          { text: '标签列表', link: 'pages/tags.md' },
+          { text: '更新日志', link: 'pages/logs.md' },
+        ]
+      },
+    ] 
+  },
   {
     text: '前端笔记',
     items: [
@@ -69,13 +80,6 @@ export const nav: DefaultTheme.Config['nav'] = [
   {
     text: '博客文档',
     items: [
-      {
-        text: '站内导航',
-        items: [
-          { text: '文章标签', link: 'pages/tags.md' },
-          { text: '更新日志', link: 'pages/logs.md' },
-        ]
-      },
       {
         text: '博客管理',
         items: [
