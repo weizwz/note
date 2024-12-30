@@ -1,5 +1,5 @@
 <template>
-  <a class="post-card" :href="props.post?.baseUrl || '' + props.post.url">
+  <a class="post-card" :href="(props.post?.baseUrl || '') + props.post.url">
     <div class="post-container">
       <div :class="'weiz-icon xxl weiz-icon-post ' + (props.post.tags ? 'weiz-icon-' + props.post.tags[0] : '')" />
       <div class="title">{{ props.post.title }}</div>
