@@ -2,7 +2,7 @@
 title: 给网站设置三级域名
 description: 给网站设置三级域名，适用于使用 `Github Pages` 部署的网站，域名平台不限，可以是腾讯云，也可以是阿里云
 tags: 
- - domain
+ - site
  - github
 ---
 
