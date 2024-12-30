@@ -52,7 +52,7 @@ export const nav: DefaultTheme.Config['nav'] = [
       {
         items: [
           { text: 'JS 常用方法', link: 'vitepress/extend/markdown-examples.md' },
-          { text: 'CSS 实战特效', link: 'css/apply/mask-svg-icon.md' },
+          { text: 'CSS 实战特效', link: 'css/apply/icon-label-shields.md' },
           { text: '开发常用功能', link: 'vitepress/extend/markdown-examples.md' },
           { text: 'Element 使用', link: 'element/responsive-layout.md' },
         ]
@@ -98,8 +98,8 @@ export const nav: DefaultTheme.Config['nav'] = [
       {
         text: 'Hexo框架',
         items: [
-          { text: '基础配置', link: 'vitepress/basic/api-examples.md' },
-          { text: '进阶用法', link: 'vitepress/extend/markdown-examples.md' },
+          { text: '基础配置', link: '/hexo/basic/hexo-github-blog.md' },
+          { text: '进阶用法', link: '/hexo/extend/hexo-butterfly-recommend.md' },
         ]
       },
     ]
