@@ -29,7 +29,7 @@ const props = defineProps<{ post: PostCard }>()
   color: var(--vp-c-brand-1);
   transition: var(--weiz-transition);
   &:not(.statistic):hover {
-    color: var(--weiz-primary-color-light-1);
+    color: var(--vp-c-brand-1);
     border-color: var(--weiz-primary-color);
     box-shadow: 0 0.5em 0.5em -0.2em var(--weiz-primary-color);
     transform: translateY(-0.5em);
@@ -53,7 +53,6 @@ const props = defineProps<{ post: PostCard }>()
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    transition: .4s;
   }
   .desc {
     padding-top: 8px;

@@ -56,7 +56,7 @@
           </div>
           <weiz-post-card v-else :post="item"/>
         </el-col>
-        <el-col :xs="24" :sm="12" :md="6">
+        <el-col class="statistic-wrapper" :xs="24" :sm="12" :md="6">
           <div class="post-card statistic">
             <div class="post-container">
               <div class="number">{{ uv }}</div>
@@ -66,6 +66,12 @@
               <div class="number">{{ pv }}</div>
             </div>
           </div>
+          <a class="post-more" href="pages/posts">
+            <div class="post-more-container">
+              <span>查看更多</span>
+              <span><i class="weiz-icon xxxl white weiz-icon-arrow-right"></i></span>
+            </div>
+          </a>
         </el-col>
       </el-row>
     </div>
