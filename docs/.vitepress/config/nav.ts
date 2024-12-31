@@ -24,7 +24,7 @@ export const nav: DefaultTheme.Config['nav'] = [
           { text: 'ES6 常用语法', link: 'vitepress/extend/markdown-examples.md' },
           { text: '浏览器 相关知识', link: 'vitepress/extend/markdown-examples.md' },
           { text: 'TS 常用语法', link: 'vitepress/extend/markdown-examples.md' },
-          { text: 'Nodejs 常用知识', link: 'vitepress/extend/markdown-examples.md' },
+          { text: 'Nodejs 常用知识', link: '/nodejs/problem/error-log.md' },
         ]
       },
       {
@@ -60,12 +60,12 @@ export const nav: DefaultTheme.Config['nav'] = [
       {
         items: [
           { text: 'Clash 配置', link: 'proxy/clash-verge.md' },
-          { text: 'Nodejs 配置', link: 'vitepress/basic/api-examples.md' },
-          { text: '终端 配置', link: 'vitepress/extend/markdown-examples.md' },
-          { text: 'Git 配置', link: 'vitepress/basic/api-examples.md' },
-          { text: 'Edge 浏览器', link: 'vitepress/extend/markdown-examples.md' },
+          { text: 'Nodejs 相关', link: '/nodejs/problem/error-log.md' },
+          { text: '终端 相关', link: 'vitepress/extend/markdown-examples.md' },
+          { text: 'Git 相关', link: 'vitepress/basic/api-examples.md' },
+          { text: '浏览器相关', link: 'vitepress/extend/markdown-examples.md' },
           { text: 'Nginx 代理', link: 'vitepress/extend/markdown-examples.md' },
-          { text: 'Linux 常用命令', link: 'vitepress/extend/markdown-examples.md' },
+          { text: 'Linux 相关', link: 'vitepress/extend/markdown-examples.md' },
         ]
       },
       {

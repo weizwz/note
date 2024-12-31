@@ -48,6 +48,24 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       ]
     }
   ],
+  '/nodejs/': [
+    {
+      text: 'Nodejs',
+      items: [
+        {
+          text: '常用知识',
+          items: [
+          ]
+        },
+        {
+          text: '常见问题',
+          items: [
+            { text: 'Nodejs报错记录', link: '/nodejs/problem/error-log.md' },
+          ]
+        },
+      ]
+    }
+  ],
   '/css/': [
     {
       text: 'CSS',
