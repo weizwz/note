@@ -1,7 +1,7 @@
 <template>
   <Transition name="fade">
     <div v-show="showBackTop" class="vitepress-backTop-main" title="返回顶部" @click="scrollToTop()">
-      <i class="weiz-icon xxl weiz-icon-backTop main" />
+      <i class="weiz-icon weiz-icon-backTop xxl main" />
     </div>
   </Transition>
 </template>
@@ -43,11 +43,14 @@ onBeforeUnmount(() => window.removeEventListener('scroll', onScroll))
 .vitepress-backTop-main {
   position: fixed;
   z-index: 1111;
-  bottom: 42px;
+  bottom: 100px;
   right: 0;
   cursor: pointer;
   width: 40px;
   height: 40px;
+  border-radius: 50%;
+  box-shadow: 0 0.5em 0.5em -0.25em var(--weiz-primary-color);
+  transition: var(--weiz-transition);
   &:hover {
     opacity: 0.8;
   }

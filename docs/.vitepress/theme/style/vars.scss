@@ -4,9 +4,6 @@
   --weiz-primary-color-rgb: 64,158,255;
   --weiz-primary-color-dark: rgb(51.2, 126.4, 204);
   --weiz-font-size: 14px;
-
-  // position z-index
-  --weiz-index-footer: 10;
   
   --weiz-primary-color-light-1: rgb(121.3, 187.1, 255);
   --weiz-primary-color-light-2: rgb(159.5, 206.5, 255);
@@ -28,6 +25,9 @@
   // border
   --weiz-border-color: #dcdfe6;
   --weiz-border-radius: 8px;
+
+  // position z-index
+  --weiz-index-footer: 10;
 
   // 默认动画
   --weiz-transition: all 0.2s;
