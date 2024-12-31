@@ -1,6 +1,6 @@
 ---
 title: Clash Verge 使用记录
-description: Clash Verge 使用记录，包括下载、协议以及常见问题
+description: 这篇文章介绍了Clash Verge的使用方法。Clash Verge是一个基于Clash Meta内核的GUI代理工具，支持多种操作系统和代理协议。文章详细讲解了安装、配置和常见问题的解决方法
 firstCommit: 2022-11-22 23:11:47+8:00
 lastUpdated: 2024-06-06 23:38:19+8:00
 tags:

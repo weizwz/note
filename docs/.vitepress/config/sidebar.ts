@@ -84,7 +84,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
         {
           text: '日常应用',
           items: [
-            { text: 'Vue多界面开发', link: 'vuejs/apply/vue-multi-page-dev.md' },
+            { text: 'Vue多界面开发', link: '/vuejs/apply/vue-multi-page-dev.md' },
           ]
         },
       ]
