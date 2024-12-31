@@ -20,11 +20,11 @@ export const nav: DefaultTheme.Config['nav'] = [
         items: [
           { text: 'HTML 基础知识', link: 'vitepress/extend/markdown-examples.md' },
           { text: 'CSS 基础知识', link: 'vitepress/extend/markdown-examples.md' },
-          { text: 'JS 基础知识', link: 'vitepress/basic/api-examples.md' },
+          { text: 'JS 基础知识', link: 'js/apply/compare-number.md' },
           { text: 'ES6 常用语法', link: 'vitepress/extend/markdown-examples.md' },
           { text: '浏览器 相关知识', link: 'vitepress/extend/markdown-examples.md' },
           { text: 'TS 常用语法', link: 'vitepress/extend/markdown-examples.md' },
-          { text: 'Nodejs 常用知识', link: '/nodejs/problem/error-log.md' },
+          { text: 'Nodejs 常用知识', link: 'nodejs/problem/error-log.md' },
         ]
       },
       {
@@ -37,7 +37,7 @@ export const nav: DefaultTheme.Config['nav'] = [
       },
       {
         items: [
-          { text: 'Vue.js', link: 'vitepress/extend/markdown-examples.md' },
+          { text: 'Vue.js', link: '/vuejs/basic/vue-mvvm-binding.md' },
           { text: 'React', link: 'vitepress/extend/markdown-examples.md' },
           { text: 'uni-app', link: 'vitepress/extend/markdown-examples.md' },
           { text: 'Vite', link: 'vitepress/extend/markdown-examples.md' },
@@ -51,15 +51,15 @@ export const nav: DefaultTheme.Config['nav'] = [
     items: [
       {
         items: [
-          { text: 'JS 常用方法', link: 'vitepress/extend/markdown-examples.md' },
-          { text: 'CSS 实战特效', link: 'css/apply/icon-label-shields.md' },
+          { text: 'JS 常用方法', link: '/js/apply/compare-number.md' },
+          { text: 'CSS 实战特效', link: '/css/apply/icon-label-shields.md' },
           { text: '开发常用功能', link: 'vitepress/extend/markdown-examples.md' },
-          { text: 'Element 使用', link: 'element/responsive-layout.md' },
+          { text: 'Element 使用', link: '/element/responsive-layout.md' },
         ]
       },
       {
         items: [
-          { text: 'Clash 配置', link: 'proxy/clash-verge.md' },
+          { text: 'Clash 配置', link: '/proxy/clash-verge.md' },
           { text: 'Nodejs 相关', link: '/nodejs/problem/error-log.md' },
           { text: '终端 相关', link: 'vitepress/extend/markdown-examples.md' },
           { text: 'Git 相关', link: 'vitepress/basic/api-examples.md' },
@@ -83,16 +83,16 @@ export const nav: DefaultTheme.Config['nav'] = [
       {
         text: '网站管理',
         items: [
-          { text: '域名证书', link: 'site/third-level-domain' },
+          { text: '域名证书', link: '/site/third-level-domain' },
           { text: '图床资源', link: 'site/third-level-domain' },
         ]
       },
       {
         text: 'Vitepress',
         items: [
-          { text: '基础配置', link: 'vitepress/basic/api-examples.md' },
-          { text: '进阶用法', link: 'vitepress/extend/markdown-examples.md' },
-          { text: '常见问题', link: 'vitepress/problem/error-mismatches.md' },
+          { text: '基础配置', link: '/vitepress/basic/api-examples.md' },
+          { text: '进阶用法', link: '/vitepress/extend/markdown-examples.md' },
+          { text: '常见问题', link: '/vitepress/problem/error-mismatches.md' },
         ]
       },
       {

@@ -66,6 +66,42 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       ]
     }
   ],
+  '/vuejs/': [
+    {
+      text: 'Vuejs',
+      items: [
+        {
+          text: '基础知识',
+          items: [
+            { text: 'Vue双向绑定原理', link: '/vuejs/basic/vue-mvvm-binding.md' },
+          ]
+        },
+        {
+          text: '日常使用',
+          items: [
+          ]
+        },
+      ]
+    }
+  ],
+  '/js/': [
+    {
+      text: 'JS',
+      items: [
+        {
+          text: '基础知识',
+          items: [
+          ]
+        },
+        {
+          text: '常用方法',
+          items: [
+            { text: 'JS比较数值大小', link: '/js/apply/compare-number.md' },
+          ]
+        },
+      ]
+    }
+  ],
   '/css/': [
     {
       text: 'CSS',
