@@ -1,5 +1,5 @@
 ---
-title: Hexo常用命令和优化指南
+title: Hexo 常用命令和优化指南
 description: 本文记录了Hexo常用的一些命令以及对博客优化的部分方案
 firstCommit: 2022-09-15 11:55:23+8:00
 lastUpdated: 2024-03-15 10:39:35+8:00
@@ -8,7 +8,7 @@ tags:
   - markdown
   - vscode
 ---
-# Hexo常用命令和优化指南
+# Hexo 常用命令和优化指南
 
 >之前博客使用的是 `Hexo`框架 + `Butterfly`主题。本文记录了一些使用过程中常用的命令和对博客进行优化的方案 💕
 

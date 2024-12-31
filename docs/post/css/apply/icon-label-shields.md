@@ -1,5 +1,5 @@
 ---
-title: Github项目徽标
+title: Github 项目徽标
 description: 本文介绍了Github项目徽标的详细使用方法，并对在hexo和github上的应用做出了示例
 firstCommit: 2023-12-06 19:49:11+8:00
 lastUpdated: 2023-12-14 17:23:10+8:00
@@ -10,7 +10,7 @@ tags:
   - hexo
 ---
 
-# Github项目徽标
+# Github 项目徽标
 
 >[shields.io](https://shields.io/) 上提供了各种漂亮的徽标，支持文字、颜色、图标以及各种动静态数据
 

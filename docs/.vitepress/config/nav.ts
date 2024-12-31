@@ -11,6 +11,13 @@ export const nav: DefaultTheme.Config['nav'] = [
           { text: '更新日志', link: 'pages/logs.md' },
         ]
       },
+      {
+        text: '推荐文章',
+        items: [
+          { text: 'Clash 使用', link: 'proxy/clash-verge.md' },
+          { text: 'Markdown 示例', link: 'vitepress/extend/markdown-examples' },
+        ]
+      },
     ] 
   },
   {
@@ -51,9 +58,9 @@ export const nav: DefaultTheme.Config['nav'] = [
     items: [
       {
         items: [
-          { text: 'JS 常用方法', link: '/js/apply/compare-number.md' },
-          { text: 'CSS 实战特效', link: '/css/apply/icon-label-shields.md' },
-          { text: '开发常用功能', link: 'vitepress/extend/markdown-examples.md' },
+          { text: 'JS 日常应用', link: '/js/apply/compare-number.md' },
+          { text: 'CSS 实用特效', link: '/css/apply/icon-label-shields.md' },
+          { text: '开发常用模块', link: 'vitepress/extend/markdown-examples.md' },
           { text: 'Element 使用', link: '/element/responsive-layout.md' },
         ]
       },

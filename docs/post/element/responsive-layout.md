@@ -1,5 +1,5 @@
 ---
-title: 巧用Element自适应布局
+title: 巧用 Element 自适应布局
 description: 本文介绍了Element自适应布局范围，并给出了一些示例
 tags: 
  - element

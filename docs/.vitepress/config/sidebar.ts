@@ -53,7 +53,12 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       text: 'Nodejs',
       items: [
         {
-          text: '常用知识',
+          text: '基础知识',
+          items: [
+          ]
+        },
+        {
+          text: '日常应用',
           items: [
           ]
         },
@@ -77,8 +82,9 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
           ]
         },
         {
-          text: '日常使用',
+          text: '日常应用',
           items: [
+            { text: 'Vue多界面开发', link: 'vuejs/apply/vue-multi-page-dev.md' },
           ]
         },
       ]
@@ -94,7 +100,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
           ]
         },
         {
-          text: '常用方法',
+          text: '日常应用',
           items: [
             { text: 'JS比较数值大小', link: '/js/apply/compare-number.md' },
           ]
@@ -112,7 +118,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
           ]
         },
         {
-          text: '实战特效',
+          text: '实用特效',
           items: [
             { text: 'Github项目徽标', link: '/css/apply/icon-label-shields.md' },
             { text: 'mask创建纯CSS图标库', link: '/css/apply/mask-svg-icon.md' },

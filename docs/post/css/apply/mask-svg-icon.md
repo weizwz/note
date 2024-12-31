@@ -1,12 +1,12 @@
 ---
-title: 巧用mask属性创建一个纯CSS图标库
+title: 巧用 mask 属性创建一个纯 CSS 图标库
 description: 本文讲述了如何利用mask和svg来创建一个高清图标库：仅通过class name就可控制图标大小和颜色
 tags: 
  - css
  - svg
 ---
 
-# 巧用mask属性创建一个纯CSS图标库
+# 巧用 mask 属性创建一个纯 CSS 图标库
 
 > [!NOTE] 简介
 >[`mask`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/mask) 是CSS中的一个属性，它允许开发者在元素上设置图像作为遮罩层。这个属性的强大之处，在于它可以接受多种类型的值，包括关键字值、图像值、渐变色，甚至可以设置多个属性值。
