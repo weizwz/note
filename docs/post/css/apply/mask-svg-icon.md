@@ -8,11 +8,11 @@ tags:
 
 # 巧用mask属性创建一个纯CSS图标库
 
-## 说明
-
-> [`mask`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/mask) 是CSS中的一个属性，它允许开发者在元素上设置图像作为遮罩层。这个属性的强大之处，在于它可以接受多种类型的值，包括关键字值、图像值、渐变色，甚至可以设置多个属性值。
+> [!NOTE] 简介
+>[`mask`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/mask) 是CSS中的一个属性，它允许开发者在元素上设置图像作为遮罩层。这个属性的强大之处，在于它可以接受多种类型的值，包括关键字值、图像值、渐变色，甚至可以设置多个属性值。
 >
-> [`SVG`](https://developer.mozilla.org/zh-CN/docs/Web/SVG)（Scalable Vector Graphics，可缩放矢量图形）是一种基于 XML 的图像格式，用于定义二维图形。与传统的位图图像（如 PNG 和 JPG）不同，SVG 图像是矢量图形，可以在任何尺寸下保持清晰度，不会失真。
+>[`SVG`](https://developer.mozilla.org/zh-CN/docs/Web/SVG)（Scalable Vector Graphics，可缩放矢量图形）是一种基于 XML 的图像格式，用于定义二维图形。与传统的位图图像（如 PNG 和 JPG）不同，SVG 图像是矢量图形，可以在任何尺寸下保持清晰度，不会失真。
+
 
 我们将 SVG 代码转换为 `data URI`，然后在 CSS 中使用，这样我们可以避免多个 HTTP 请求；另一方面，我们使用 `mask` 来设置 SVG 来作为元素蒙版的图像，然后通过设置元素的 `background-color` 就可以控制 SVG 显示的颜色。
 

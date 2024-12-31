@@ -12,7 +12,7 @@ tags:
 
 # Github项目徽标
 
->[shields.io](https://shields.io/)上提供了各种漂亮的徽标，支持文字、颜色、图标以及各种动静态数据
+>[shields.io](https://shields.io/) 上提供了各种漂亮的徽标，支持文字、颜色、图标以及各种动静态数据
 
 ## 效果展示
 [![image](https://img.shields.io/badge/Hello%20word-8A2BE2?style=for-the-badge)](https://img.shields.io/badge/Hello%20word-8A2BE2?style=for-the-badge)

@@ -5,6 +5,9 @@
   --weiz-primary-color-dark: rgb(51.2, 126.4, 204);
   --weiz-font-size: 14px;
 
+  // position z-index
+  --weiz-index-footer: 10;
+  
   --weiz-primary-color-light-1: rgb(121.3, 187.1, 255);
   --weiz-primary-color-light-2: rgb(159.5, 206.5, 255);
   --weiz-primary-color-light-3: rgb(197.7, 225.9, 255);
@@ -122,6 +125,12 @@
 ::-moz-selection {
   color: var(--vp-c-white);
   background-color: var(--weiz-primary-color);
+}
+
+@media (min-width: 960px) {
+  :root {
+    --weiz-index-footer: 30;
+  }
 }
 
 /**

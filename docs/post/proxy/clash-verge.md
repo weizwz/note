@@ -12,8 +12,9 @@ tags:
 
 # Clash Verge 使用记录
 
-## 简介
-`Clash Verge` 是代理工具 `Clash Meta` 内核的GUI图形客户端，支持Windows、Linux、macOS系统，分流规则功能强大且支持多种代理协议，如V2Ray、Trojan、Shadowsocks(R)、Socks等协议。详情可查看 ~~[clash-verge](https://github.com/zzzgydi/clash-verge)~~ ，2023年作者删库后又有其他开发者进行接力，当前可用地址 [clash-verge-rev](https://github.com/wonfen/clash-verge-rev) ，本人在用的 [协议](https://go.invitevp.com/#/register?code=I0XEXPg5)，可先免费试用。
+>`Clash Verge` 是代理工具 `Clash Meta` 内核的GUI图形客户端，支持Windows、Linux、macOS系统，分流规则功能强大且支持多种代理协议，如V2Ray、Trojan、Shadowsocks(R)、Socks等协议。
+
+`Clash Verge` 更多详情可查看 ~~[clash-verge](https://github.com/zzzgydi/clash-verge)~~ ，2023年作者删库后又有其他开发者fork后继续开发，当前可用地址 [clash-verge-rev](https://github.com/wonfen/clash-verge-rev) ，本人在用的 [协议](https://go.invitevp.com/#/register?code=I0XEXPg5)，可先免费试用。
 
 ## 下载
 建议到 [github官方库](https://github.com/wonfen/clash-verge-rev) 下载。

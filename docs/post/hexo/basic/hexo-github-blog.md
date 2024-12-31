@@ -10,10 +10,14 @@ tags:
 
 # GitHub + Hexo 搭建个人博客网站
 
-## 一、准备工作
-### 1. `GitHub` + `Hexo` 的优势
-`Hexo` 提供现成的模板和模块；`github` 的 `pages` 功能提供免费的服务器，零成本搭建属于自己的博客。
-### 2. 需要了解的网站
+>`GitHub Pages` 提供免费的静态网站托管服务，无需支付额外费用。
+>
+>`Hexo` 生成的静态文件可以直接部署到 `GitHub Pages`，过程简单快捷。
+
+使用 `GitHub + Hexo` 可以零成本且快速搭建属于自己的博客
+
+## 一、提前了解
+
 + [github](https://github.com/)，开源代码托管网站，需要我们去注册一个账号。
 + [hexo](https://hexo.io/zh-cn/docs/)，一个快速、简洁且高效的博客框架，需要我们去提前了解一些搭建文档。
 + [git](https://git-scm.com/)，本地安装 `git` 工具，实现代码提交和推送。
