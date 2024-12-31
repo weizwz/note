@@ -248,7 +248,7 @@
     top: 0;
     left: 10px;
     border-radius: 12px;
-    color: var(--weiz-primary-color);
+    color: white;
     font-size: 16px;
     font-weight: 600;
     background: var(--vp-c-bg-soft);
@@ -277,6 +277,10 @@
     .post-more {
       opacity: 1;
       border-color: var(--weiz-primary-color);
+      background: rgba(255, 255, 255, 0);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      backface-visibility: hidden;
       box-shadow: 0 0.5em 0.5em -0.2em var(--weiz-primary-color);
       transform: translateY(-0.5em);
       .post-more-container {

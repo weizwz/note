@@ -20,7 +20,7 @@ tags:
 ![image](https://www.helloimg.com/i/2024/12/30/6772c2056df68.png)
 
 ### 龙年动画详解
-想要做自定义修改的或者其他地方集成的，可参考此文档 [你想要的龙年特效来了](https://note.weizwz.com/css/apply/loong-effects)
+想要做自定义修改的或者其他地方集成的，可参考此文档 [你想要的龙年特效来了](/css/apply/loong-effects)
 
 ### 配置说明
 

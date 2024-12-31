@@ -69,7 +69,7 @@
           <a class="post-more" href="pages/posts">
             <div class="post-more-container">
               <span>查看更多</span>
-              <span><i class="weiz-icon xxxl weiz-icon-arrow-right"></i></span>
+              <span><i class="weiz-icon weiz-icon-arrow-right xxxl white"></i></span>
             </div>
           </a>
         </el-col>

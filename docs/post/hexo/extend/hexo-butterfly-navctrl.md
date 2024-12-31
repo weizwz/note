@@ -69,7 +69,7 @@ window.navctrl.toRandomPost()
 
 ## 其他问题
 ### 1. 图标
-参考 [hexo-butterfly-recommend使用说明](https://note.weizwz.com/hexo/extend/hexo-butterfly-recommend) 里的 `图标问题`，都是一样的
+参考 [hexo-butterfly-recommend使用说明](/hexo/extend/hexo-butterfly-recommend#_1-图标问题) 里的 `图标问题`，都是一样的
 ### 2. 样式问题
 如果有样式兼容问题，您可以自行引入 `css` 文件，强行覆盖即可。
 ### 3. 黑暗切换动画的原理

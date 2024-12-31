@@ -81,7 +81,7 @@ export const nav: DefaultTheme.Config['nav'] = [
     text: '博客文档',
     items: [
       {
-        text: '站点管理',
+        text: '网站管理',
         items: [
           { text: '域名证书', link: 'site/third-level-domain' },
           { text: '图床资源', link: 'site/third-level-domain' },

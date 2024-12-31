@@ -34,7 +34,8 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
           text: '基础配置',
           items: [
             { text: 'GitHub+Hexo搭建博客', link: '/hexo/basic/hexo-github-blog.md' },
-            { text: '博客升级Hexo版本记录', link: '/hexo/basic/hexo-update.md' }
+            { text: '博客升级Hexo版本记录', link: '/hexo/basic/hexo-update.md' },
+            { text: 'Hexo命令和优化指南', link: '/hexo/basic/hexo-command-better.md' },
           ]
         },
         {
@@ -69,9 +70,9 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
   ],
   '/site/': [
     {
-      text: '站点管理',
+      text: '网站管理',
       items: [
-        { text: '网站设置三级域名', link: '/domain/third-level-domain.md' }
+        { text: '网站设置三级域名', link: '/site/third-level-domain.md' }
       ]
     }
   ],
