@@ -1,15 +1,15 @@
 ---
-title: Hydration completed but contains mismatches
-description: 控制台报错 Hydration completed but contains mismatches 的描述和解决办法
+title: 渲染报错 Hydration completed but contains mismatches
+description: 本文介绍了 Vitepress 在渲染时报错：Hydration completed but contains mismatches，并对此错误做了介绍和解决办法
 tags: 
  - vitepress
  - ssr
  - vue
 ---
 
-# Hydration completed but contains mismatches
+# 渲染报错 Hydration completed but contains mismatches
 
-`vitepress` 项目部署到线上后，控制台出现报错 `Hydration completed but contains mismatches`，但是本地没有出现这个问题。
+>`vitepress` 项目部署到线上后，浏览器控制台出现报错 `Hydration completed but contains mismatches`，但是本地没有出现这个问题。
 
 ## 问题分析
 

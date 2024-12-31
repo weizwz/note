@@ -1,5 +1,5 @@
 ---
-title: hexo-butterfly-recommend使用说明
+title: hexo-butterfly-recommend 使用说明
 description: 本文是 hexo插件 hexo-butterfly-recommend 的说明文档
 firstCommit: 2023-11-22 16:34:55+8:00
 lastUpdated: 2024-02-01 19:12:14+8:00
@@ -8,7 +8,7 @@ tags:
   - npm
 ---
 
-# hexo-butterfly-recommend使用说明
+# hexo-butterfly-recommend 使用说明
 
 > [hexo-butterfly-recommend](https://github.com/weizwz/hexo-butterfly-recommend) 是基于 [hexo-theme-butterfly](https://github.com/jerryc127/hexo-theme-butterfly) 主题的扩展插件，主要给博客首页添加导航和推荐功能
 

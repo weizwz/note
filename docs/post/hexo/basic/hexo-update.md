@@ -1,6 +1,6 @@
 ---
-title: 博客升级 - hexo记录
-description: 本文记录了 hexo 升级的详细步骤和注意事项
+title: 博客升级Hexo版本记录
+description: 本文记录了已经使用hexo构建的博客，如何升级hexo版本的详细步骤和注意事项
 firstCommit: 2023-11-25 10:05:41+8:00
 lastUpdated: 2023-11-25 10:05:41+8:00
 tags: 
@@ -8,7 +8,7 @@ tags:
   - npm
 ---
 
-# 博客升级 - hexo记录
+# 博客升级Hexo版本记录
 
 >近日刚看到 `hexo-theme-butterfly` 升级到 `4.11.0` 版本了，更新文档里说明已支持 `hexo7.0.0`，于是升级作此记录
 

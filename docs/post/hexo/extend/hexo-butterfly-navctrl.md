@@ -16,7 +16,7 @@ tags:
 
 ## 效果展示
 动图太大，加载不易，如果你想体验效果，也可直接点击导航栏右侧的 `显示模式切` 换按钮
-![image](https://www.helloimg.com/i/2024/11/23/67419ab019579.gif)
+![image](https://www.helloimg.com/i/2024/12/31/6772c8ef052f0.gif)
 
 
 ## 安装
