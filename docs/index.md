@@ -7,7 +7,7 @@ titleTemplate: 唯知笔记
 about:
   title: 唯知笔记
   logo: https://www.helloimg.com/i/2024/12/03/674efd108c4c8.png
-  desc: 分享前端知识与时光
+  desc: 分享编码世界与感悟
   tagline: 原博客(weizwz.com)内容搬迁中……
   links:
     - title: 前端笔记
