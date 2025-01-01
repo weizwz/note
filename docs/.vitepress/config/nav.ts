@@ -1,8 +1,7 @@
 import type { DefaultTheme } from 'vitepress'
 
 export const nav: DefaultTheme.Config['nav'] = [
-  { text: '首页', link: '/' },
-  { text: '站内导航', 
+  { text: '目录导航', 
     items: [
       {
         items: [
@@ -14,8 +13,9 @@ export const nav: DefaultTheme.Config['nav'] = [
       {
         text: '推荐文章',
         items: [
-          { text: 'Clash 使用', link: 'proxy/clash-verge.md' },
+          { text: 'Git 使用记录', link: 'git/use-log.md' },
           { text: 'Markdown 示例', link: 'vitepress/extend/markdown-examples' },
+          { text: 'Clash Verge 使用', link: 'proxy/clash-verge.md' },
         ]
       },
     ] 

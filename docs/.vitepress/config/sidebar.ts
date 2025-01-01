@@ -128,6 +128,14 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       ]
     }
   ],
+  '/git/': [
+    {
+      text: 'Git',
+      items: [
+        { text: 'Git使用记录', link: '/git/use-log.md' }
+      ]
+    }
+  ],
   '/site/': [
     {
       text: '网站管理',
