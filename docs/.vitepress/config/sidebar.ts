@@ -60,6 +60,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
         {
           text: '日常应用',
           items: [
+            { text: 'pnpm配置', link: '/nodejs/apply/pnpm-setting.md' },
           ]
         },
         {
@@ -123,6 +124,42 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
             { text: 'Github项目徽标', link: '/css/apply/icon-label-shields.md' },
             { text: 'mask创建纯CSS图标库', link: '/css/apply/mask-svg-icon.md' },
             { text: '龙年特效', link: '/css/apply/loong-effects.md' },
+          ]
+        },
+      ]
+    }
+  ],
+  '/resource/': [
+    {
+      text: '资源分享',
+      items: [
+        {
+          text: '开源字体',
+          items: [
+            { text: '开源字体整理', link: '/resource/font/open-source-font.md' },
+          ]
+        },
+        {
+          text: '图片图标',
+          items: [
+          ]
+        },
+      ]
+    }
+  ],
+  '/browser/': [
+    {
+      text: '浏览器',
+      items: [
+        {
+          text: '相关知识',
+          items: [
+          ]
+        },
+        {
+          text: '配置和优化',
+          items: [
+            { text: '浏览器插件分享', link: '/browser/apply/browser-plugin.md' },
           ]
         },
       ]

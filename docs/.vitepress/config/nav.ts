@@ -31,7 +31,7 @@ export const nav: DefaultTheme.Config['nav'] = [
           { text: 'ES6 常用语法', link: 'vitepress/extend/markdown-examples.md' },
           { text: '浏览器 相关知识', link: 'vitepress/extend/markdown-examples.md' },
           { text: 'TS 常用语法', link: 'vitepress/extend/markdown-examples.md' },
-          { text: 'Nodejs 常用知识', link: 'nodejs/problem/error-log.md' },
+          { text: 'Nodejs 基础知识', link: 'nodejs/problem/error-log.md' },
         ]
       },
       {
@@ -67,10 +67,10 @@ export const nav: DefaultTheme.Config['nav'] = [
       {
         items: [
           { text: 'Clash 配置', link: '/proxy/clash-verge.md' },
-          { text: 'Nodejs 相关', link: '/nodejs/problem/error-log.md' },
+          { text: 'Nodejs 相关', link: '/nodejs/apply/pnpm-setting.md' },
           { text: '终端 相关', link: 'vitepress/extend/markdown-examples.md' },
           { text: 'Git 相关', link: 'vitepress/basic/api-examples.md' },
-          { text: '浏览器相关', link: 'vitepress/extend/markdown-examples.md' },
+          { text: '浏览器相关', link: '/browser/apply/browser-plugin.md' },
           { text: 'Nginx 代理', link: 'vitepress/extend/markdown-examples.md' },
           { text: 'Linux 相关', link: 'vitepress/extend/markdown-examples.md' },
         ]
@@ -116,7 +116,7 @@ export const nav: DefaultTheme.Config['nav'] = [
     items: [
       {
         items: [
-          { text: '开源字体分享', link: 'vitepress/basic/api-examples.md' },
+          { text: '开源字体分享', link: '/resource/font/open-source-font.md' },
           { text: '图标图片网站', link: 'vitepress/extend/markdown-examples.md' },
           { text: '其他设计网站', link: 'vitepress/extend/markdown-examples.md' },
         ]
