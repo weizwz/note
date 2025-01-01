@@ -43,6 +43,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
           items: [
             { text: '首页插件recommend', link: '/hexo/extend/hexo-butterfly-recommend.md' },
             { text: '导航插件navctrl', link: '/hexo/extend/hexo-butterfly-navctrl.md' },
+            { text: 'Hexo博客新年主题', link: '/hexo/extend/new-year-theme.md' },
           ]
         }
       ]
