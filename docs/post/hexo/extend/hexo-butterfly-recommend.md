@@ -1,6 +1,6 @@
 ---
 title: hexo-butterfly-recommend 使用说明
-description: 本文是 hexo插件 hexo-butterfly-recommend 的说明文档
+description: 这篇文章介绍了Hexo主题Butterfly的推荐组件扩展 hexo-butterfly-recommend。内容包括如何安装和配置此组件，以提升博客的功能和美观度。通过使用此组件，用户可以在博客首页添加滚动Banner、文章推荐卡片等，增强用户体验
 firstCommit: 2023-11-22 16:34:55+8:00
 lastUpdated: 2024-02-01 19:12:14+8:00
 tags:
@@ -20,6 +20,7 @@ tags:
 ![image](https://www.helloimg.com/i/2024/12/30/6772c2056df68.png)
 
 ### 龙年动画详解
+
 想要做自定义修改的或者其他地方集成的，可参考此文档 [你想要的龙年特效来了](/css/apply/loong-effects)
 
 ### 配置说明
@@ -243,10 +244,12 @@ recommend:
 ## 更新日志
 
 ### 1.1.2 bug修复
+
 - 修复文字卡片自定义渐变色未生效
 - 修复暗色模式下龙的背景黑色显示的问题
 
 ### 1.1.1 龙年特效优化
+
 - 优化云朵流动动画
 - 优化小屏端首个推荐页的展示
 - 修复龙特效在移动端遮挡导航栏的bug

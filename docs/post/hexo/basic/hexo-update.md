@@ -1,32 +1,37 @@
 ---
 title: 博客升级 Hexo 版本记录
-description: 本文记录了已经使用hexo构建的博客，如何升级hexo版本的详细步骤和注意事项
+description: 这篇文章记录了Hexo博客的升级过程。内容包括如何检查当前版本、安装必要的工具、更新依赖项以及解决常见问题。通过这些步骤，用户可以顺利将Hexo博客升级到最新版本，确保博客的稳定性和安全性
 firstCommit: 2023-11-25 10:05:41+8:00
 lastUpdated: 2023-11-25 10:05:41+8:00
-tags: 
+tags:
   - hexo
   - npm
 ---
 
 # 博客升级 Hexo 版本记录
 
->近日刚看到 `hexo-theme-butterfly` 升级到 `4.11.0` 版本了，更新文档里说明已支持 `hexo7.0.0`，于是升级作此记录
+> 近日刚看到 `hexo-theme-butterfly` 升级到 `4.11.0` 版本了，更新文档里说明已支持 `hexo7.0.0`，于是升级作此记录
 
 ## 1. 定位到hexo博客根目录下, 运行 `hexo -v`, 查看当前版本
+
 ```sh
-PS D:\workspace\blog\github-blog> hexo -v    
+PS D:\workspace\blog\github-blog> hexo -v
 INFO  Validating config
 hexo: 6.3.0
 ```
+
 ## 2. `npm i hexo-cli -g`, 全局安装 hexo-cli
+
 ```sh
-PS D:\workspace\blog\github-blog> hexo -v    
+PS D:\workspace\blog\github-blog> hexo -v
 INFO  Validating config
 INFO
 # ……
 hexo: 6.3.0
 ```
+
 ## 3. `npm install -g npm-check`, 安装 npm-check，若已安装可以跳过
+
 ```sh
 PS D:\workspace\blog\github-blog> npm install -g npm-check
 
@@ -39,9 +44,11 @@ To address all issues (including breaking changes), run:
 
 Run `npm audit` for details.
 ```
+
 ## 4. `npm-check`, 检查系统插件是否需要升级
+
 ```sh
-PS D:\workspace\blog\github-blog> npm-check        
+PS D:\workspace\blog\github-blog> npm-check
 
 hexo                                😎  MAJOR UP  Major update available. https://hexo.io/
                                                  npm install hexo@7.0.0 --save to go from 6.3.0 to 7.0.0
@@ -65,8 +72,11 @@ hexo-algoliasearch                  😎  MAJOR UP  Major update available. http
                                                  To remove this package: npm uninstall hexo-algoliasearch --save
 # 后续省略……
 ```
+
 可以看到，所以依赖项最新版本都已列出，并且给出了升级命令。
+
 ## 5. `npm install -g npm-upgrade`, 安装 npm-upgrade，若已安装可以跳过
+
 ```sh
 PS D:\workspace\blog\github-blog> npm install -g npm-upgrade
 npm WARN deprecated har-validator@5.1.5: this library is no longer supported
@@ -85,7 +95,9 @@ To address all issues (including breaking changes), run:
 
 Run `npm audit` for details.
 ```
+
 ## 6. `npm-upgrade`, 更新 package.json
+
 ```sh
 PS D:\workspace\blog\github-blog> npm-upgrade
 Checking for outdated production, optional, development, peer and bundled dependencies for "D:\workspace\blog\github-blog\package.json"...
@@ -105,8 +117,10 @@ New versions of active modules available:
 #此处省略……
 ? Update package.json? Yes
 ```
+
 所有升级项已列出，需要输入回车，最后一项 `Update package.json` 需要输入 `y` 或 `yes`, 然后回车。
 此时可以看到 `package.json` 里所有依赖项都已升级，但是 `hexo` 的版本还是 `6.3.0`。
+
 ```json
   "hexo": {
     "version": "6.3.0"
@@ -115,7 +129,9 @@ New versions of active modules available:
     "hexo": "^7.0.0",
   }
 ```
+
 ## 7. `npm update --save`，升级系统项
+
 ```sh
 PS D:\workspace\blog\github-blog> npm update --save
 npm WARN cli npm v10.2.4 does not support Node.js v16.20.2. This version of npm supports the following node versions: `^18.17.0 || >=20.5.0`. You can find the latest version at https://nodejs.org/.
@@ -143,20 +159,23 @@ Run `npm audit` for details.
 ```
 
 ## 8. 查看package.json, hexo 的版本由 6.3.0 已变成 7.0.0
-运行 `hexo -v` 再次查看： 
+
+运行 `hexo -v` 再次查看：
+
 ```sh
 PS D:\workspace\blog\github-blog> hexo version
 INFO  Validating config
-INFO  
+INFO
 # ……
 hexo: 7.0.0
 ```
 
 ## 9. `npm update hexo-theme-butterfly --save`, 升级主题，运行 `hexo server`，查看你的博客
+
 ```sh
-PS D:\workspace\blog\github-blog> hexo server 
+PS D:\workspace\blog\github-blog> hexo server
 INFO  Validating config
-INFO  
+INFO
   ===================================================================
       #####  #    # ##### ##### ###### #####  ###### #      #   #
       #    # #    #   #     #   #      #    # #      #       # #

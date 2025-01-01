@@ -9,7 +9,7 @@ tags:
 
 # JS 比较数值大小
 
->在前端开发中，比较数值大小是一个常见且重要的操作。无论是在处理数组数据还是在实现复杂算法时，掌握多种比较数值的方法都能提高代码的效率和可读性。
+> 在前端开发中，比较数值大小是一个常见且重要的操作。无论是在处理数组数据还是在实现复杂算法时，掌握多种比较数值的方法都能提高代码的效率和可读性。
 
 本文将详细介绍几种在 JavaScript 中常用的数值比较方法，并通过代码示例帮助读者更好地理解和应用这些技巧。
 
@@ -25,17 +25,18 @@ for (let i = 0; i < numbers.length; i++) {
   if (numbers[i] > max) max = numbers[i]
 }
 ```
+
 > [!NOTE] Infinity
 >
->1. 概述
+> 1.  概述
 >
->    全局属性 `Infinity` 是一个数值，表示无穷大。
+>     全局属性 `Infinity` 是一个数值，表示无穷大。
 >
->2. 说明
+> 2.  说明
 >
->   - `Infinity` 的初始值是 `Number.POSITIVE_INFINITY`。
->   - `Infinity`（正无穷大）大于任何值。
->   - 在 ECMAScript 5 的规范中， `Infinity` 是只读的。
+> - `Infinity` 的初始值是 `Number.POSITIVE_INFINITY`。
+> - `Infinity`（正无穷大）大于任何值。
+> - 在 ECMAScript 5 的规范中， `Infinity` 是只读的。
 
 3. 示例
 
@@ -80,19 +81,20 @@ Math.max(-10, 20) //  20
 const numbers = [5, 6, 2, 3, 7]
 let maxNum = Math.max(...numbers)
 ```
+
 > [!NOTE] 展开语法/扩展运算符 ...
-> 
->1. 概述
 >
->    展开语法 (Spread syntax), 可以在函数调用/数组构造时，将数组表达式或者 string 在语法层面展开；还可以在构造字面量对象时，将对象表达式按 key-value 的方式展开。(字面量一般指 `[1, 2, 3]` 或者 `{name: "mdn"}` 这种简洁的构造方式)。
+> 1.  概述
 >
->2. 语法
+>     展开语法 (Spread syntax), 可以在函数调用/数组构造时，将数组表达式或者 string 在语法层面展开；还可以在构造字面量对象时，将对象表达式按 key-value 的方式展开。(字面量一般指 `[1, 2, 3]` 或者 `{name: "mdn"}` 这种简洁的构造方式)。
 >
->- 函数调用：`myFunction(...iterableObj)`;
->- 字面量数组构造或字符串：`[...iterableObj, '4', ...'hello', 6]`;
->- 构造字面量对象时，进行克隆或者属性拷贝：`let objClone = { ...obj }`;
+> 2.  语法
 >
->展开语法和 `Object.assign()` 行为一致，执行的都是浅拷贝 (只遍历一层)。
+> - 函数调用：`myFunction(...iterableObj)`;
+> - 字面量数组构造或字符串：`[...iterableObj, '4', ...'hello', 6]`;
+> - 构造字面量对象时，进行克隆或者属性拷贝：`let objClone = { ...obj }`;
+>
+> 展开语法和 `Object.assign()` 行为一致，执行的都是浅拷贝 (只遍历一层)。
 
 ## 三、`Function.prototype.apply()`
 
@@ -142,26 +144,26 @@ console.log(myInstance.property1) // logs 'Hello world!'
 console.log(myInstance instanceof MyConstructor) // logs 'true'
 console.log(myInstance.constructor) // logs 'MyConstructor'
 ```
+
 > [!NOTE] Object.prototype.constructor
-> 
->1. 概述
+>
+> 1.  概述
 >     constructor 属性返回 Object 的构造函数（用于创建实例对象）。此属性的值是对函数本身的引用，而不是一个包含函数名称的字符串。
+> 2.  说明
 >
->2. 说明
+>     所有对象（使用 Object.create(null) 创建的对象除外）都具有 constructor 属性。
+>     在没有显式使用构造函数的情况下，创建的对象（例如对象和数组文本）将具有 constructor 属性，这个属性指向该对象的基本对象构造函数类型。
 >
->    所有对象（使用 Object.create(null) 创建的对象除外）都具有 constructor 属性。
->    在没有显式使用构造函数的情况下，创建的对象（例如对象和数组文本）将具有 constructor 属性，这个属性指向该对象的基本对象构造函数类型。
+> 示例：
 >
->示例：
->
->```js
->const o = {}
->o.constructor === Object // true
->const a = new Array()
->a.constructor === Array // true
->const n = new Number(3)
->n.constructor === Number // true
->```
+> ```js
+> const o = {}
+> o.constructor === Object // true
+> const a = new Array()
+> a.constructor === Array // true
+> const n = new Number(3)
+> n.constructor === Number // true
+> ```
 
 3. 使用
 
