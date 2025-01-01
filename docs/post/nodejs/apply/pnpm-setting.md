@@ -6,7 +6,6 @@ lastUpdated: 2022-12-03 20:32:09+8:00
 tags:
  - nodejs
  - pnpm
- - npm
 ---
 
 # pnpm 配置
