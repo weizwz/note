@@ -186,6 +186,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
         {
           text: '系统配置', 
           items: [
+            { text: '开发环境备份', link: '/windows/setting/dev-env-back.md' },
             { text: '配置linux命令', link: '/windows/setting/cygwin-to-linux-command.md' },
           ]
         },
