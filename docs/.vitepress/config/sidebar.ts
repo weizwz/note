@@ -89,6 +89,18 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
             { text: 'Vue多界面开发', link: '/vuejs/apply/vue-multi-page-dev.md' },
           ]
         },
+        {
+          text: '项目搭建',
+          items: [
+            { text: 'Vite4搭建1-初始化', link: '/vuejs/apply/project-building-vite-ts-1.md' },
+            { text: 'Vite4搭建2-TS配置', link: '/vuejs/apply/project-building-vite-ts-2.md' },
+            { text: 'Vite4搭建3-Vite配置', link: '/vuejs/apply/project-building-vite-ts-3.md' },
+            { text: 'Vite4搭建4-代码规范', link: '/vuejs/apply/project-building-vite-ts-4.md' },
+            { text: 'Vite4搭建5-路由', link: '/vuejs/apply/project-building-vite-ts-5.md' },
+            { text: 'Vite4搭建6-状态管理', link: '/vuejs/apply/project-building-vite-ts-6.md' },
+            { text: 'Vite4搭建6-请求封装', link: '/vuejs/apply/project-building-vite-ts-7.md' },
+          ]
+        },
       ]
     }
   ],
