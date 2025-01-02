@@ -4,9 +4,9 @@ description: 这篇文章介绍了如何配置 tsconfig.json 和 tsconfig.node.j
 firstCommit: 2023-11-09 19:08:02+8:00
 lastUpdated: 2023-11-09 19:08:02+8:00
 tags:
+  - ts
   - vue
   - vite
-  - ts
 ---
 
 # Vite4+Typescript+Vue3+Pinia 从零搭建(2) - TS配置

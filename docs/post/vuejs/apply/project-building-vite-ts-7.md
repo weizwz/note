@@ -5,9 +5,9 @@ firstCommit: 2023-12-19 17:37:23+8:00
 lastUpdated: 2023-12-19 17:37:23+8:00
 tags:
   - vue
+  - axios
   - vite
   - ts
-  - axios
 ---
 
 # Vite4+Typescript+Vue3+Pinia 从零搭建(7) - request封装

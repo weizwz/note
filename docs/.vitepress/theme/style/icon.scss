@@ -40,6 +40,9 @@
 .weiz-icon-js {
   --url: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5'%3E%3Crect width='16.5' height='16.5' x='3.75' y='3.75' rx='2'/%3E%3Cpath d='M11.5 11.25v5a1 1 0 0 1-1 1H9m8.25-6h-2a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1h-2'/%3E%3C/g%3E%3C/svg%3E");
 }
+.weiz-icon-ts {
+  --url: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5'%3E%3Crect width='16.5' height='16.5' x='3.75' y='3.75' rx='2'/%3E%3Cpath d='M17.25 11.25h-2a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1h-2m-4.75-6v6m-2-6h4'/%3E%3C/g%3E%3C/svg%3E");
+}
 .weiz-icon-nodejs {
   --url: url(https://api.iconify.design/la/node.svg?color=%23000);
 }
@@ -51,6 +54,9 @@
 }
 .weiz-icon-blog {
   --url: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'%3E%3Cpath d='M8 21h8a5 5 0 0 0 5-5v-3a3 3 0 0 0-3-3h-1V8a5 5 0 0 0-5-5H8a5 5 0 0 0-5 5v8a5 5 0 0 0 5 5'/%3E%3Cpath d='M7 8.5A1.5 1.5 0 0 1 8.5 7h3A1.5 1.5 0 0 1 13 8.5v0a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 7 8.5m0 7A1.5 1.5 0 0 1 8.5 14h7a1.5 1.5 0 0 1 1.5 1.5v0a1.5 1.5 0 0 1-1.5 1.5h-7A1.5 1.5 0 0 1 7 15.5'/%3E%3C/g%3E%3C/svg%3E");
+}
+.weiz-icon-vite {
+  --url: url(https://api.iconify.design/lineicons/vite.svg?color=%23000);
 }
 .weiz-icon-vitepress {
   --url: url(https://api.iconify.design/simple-icons/vitepress.svg?color=%23000);
@@ -108,6 +114,9 @@
 }
 .weiz-icon-command {
   --url: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6.75 7.5l3 2.25l-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25'/%3E%3C/svg%3E");
+}
+.weiz-icon-echarts {
+  --url: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 4v15a1 1 0 0 0 1 1h15M8 16l2.5-5.5l3 3L17.273 7L20 9.667'/%3E%3C/svg%3E");
 }
 
 // 文章标题扩展信息
