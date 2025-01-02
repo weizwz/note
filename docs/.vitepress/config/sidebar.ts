@@ -214,6 +214,24 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       ]
     }
   ],
+  '/macos/': [
+    {
+      text: 'MacOS系统',
+      items: [
+        {
+          text: '系统配置', 
+          items: [
+            { text: '原生终端美化', link: '/macos/setting/mac-terminal-beautify.md' },
+          ]
+        },
+        {
+          text: '应用推荐',
+          items: [
+          ]
+        },
+      ]
+    }
+  ],
   '/mobile/': [
     {
       text: '移动端开发',

@@ -125,7 +125,7 @@ export const nav: DefaultTheme.Config['nav'] = [
         items: [
           { text: '应用分享', link: '/app/network/clash-verge.md' },
           { text: 'Windows', link: '/windows/setting/terminal-beautify.md' },
-          { text: 'MacOS', link: 'vitepress/extend/markdown-examples.md' },
+          { text: 'MacOS', link: '/macos/setting/mac-terminal-beautify.md' },
         ]
       },
     ]
