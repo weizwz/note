@@ -222,6 +222,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
           text: '系统配置', 
           items: [
             { text: '原生终端美化', link: '/macos/setting/mac-terminal-beautify.md' },
+            { text: '黑苹果记录', link: '/macos/setting/black-apple-log.md' },
           ]
         },
         {
