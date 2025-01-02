@@ -27,7 +27,7 @@ tags:
 
 新标签页插件，图标描述大小支持自定义，壁纸支持自定义或者官方库自动切换，超多自定义功能满足你的需求，同时支持云同步，可以跨浏览器同步你的标签页。
 
-![images](https://www.helloimg.com/i/2025/01/01/6774b09dd0494.png)
+![images](https://www.helloimg.com/i/2025/01/02/67764acf0a323.jpg)
 
 > [edge浏览器插件地址](https://microsoftedge.microsoft.com/addons/detail/monknow-%E6%96%B0%E6%A0%87%E7%AD%BE%E9%A1%B5-%E4%B8%AA%E6%80%A7%E5%8C%96%E9%9D%A2%E6%9D%BF/ekpbeboofmnpohcmdnfkhjameokgffde)
 >
@@ -47,9 +47,9 @@ tags:
 
 Stylus 是一个调整网页外观的用户样式管理器。如下图，我主要用来解除CSDN登录不能复制的限制，当然你也可以美化其他界面，甚至达到去除广告的效果。
 
-![images](https://www.helloimg.com/i/2025/01/01/6774b0826ba64.png)
+![images](https://www.helloimg.com/i/2025/01/02/67764cdbd04d3.jpg)
 
-需要做的操作，点击浏览器插件图标，新建样式。这需要你懂一点点css知识，譬如说解除不能选择：`   user-select: none;`改为 `    user-select: inherit;`
+需要做的操作，点击浏览器插件图标，新建样式。这需要你懂一点点css知识，譬如说解除不能选择：`user-select: none;` 改为 `user-select: inherit;`
 
 ![images](https://www.helloimg.com/i/2025/01/01/6774b05c71d4e.png)
 

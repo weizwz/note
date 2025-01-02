@@ -197,6 +197,25 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       ]
     }
   ],
+  '/mobile/': [
+    {
+      text: '移动端开发',
+      items: [
+        {
+          text: 'uni-app',
+          items: [
+          ]
+        },
+        {
+          text: 'oppo手机', 
+          items: [
+            { text: 'oppo组件开发调试', link: '/mobile/oppo/oppo-component-debugging.md' },
+            { text: 'oppo组件自适应', link: '/mobile/oppo/oppo-component-auto.md' },
+          ]
+        },
+      ]
+    }
+  ],
   '/git/': [
     {
       text: 'Git',

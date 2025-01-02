@@ -5,8 +5,8 @@ firstCommit: 2023-09-22 20:13:00+8:00
 lastUpdated: 2023-12-07 17:23:15+8:00
 tags:
   - windows
-  - 工具
-  - cmd
+  - command
+  - tools
 ---
 
 # Cygwin，在windows中使用linux命令

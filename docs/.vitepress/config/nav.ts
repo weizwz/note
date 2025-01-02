@@ -29,7 +29,7 @@ export const nav: DefaultTheme.Config['nav'] = [
           { text: 'CSS 基础知识', link: 'vitepress/extend/markdown-examples.md' },
           { text: 'JS 基础知识', link: 'js/apply/compare-number.md' },
           { text: 'ES6 常用语法', link: 'vitepress/extend/markdown-examples.md' },
-          { text: '浏览器 相关知识', link: 'vitepress/extend/markdown-examples.md' },
+          { text: '浏览器相关知识', link: 'vitepress/extend/markdown-examples.md' },
           { text: 'TS 常用语法', link: 'vitepress/extend/markdown-examples.md' },
           { text: 'Nodejs 基础知识', link: 'nodejs/problem/error-log.md' },
         ]
