@@ -1,6 +1,7 @@
 ---
 title: Markdown 示例
-description: Markdown 使用说明文档
+description: 本文展示了 VitePress 提供的内置 Markdown 扩展功能，包括代码块行号显示、图片懒加载、标题锚点、网页链接、图片引用、表格语法、Emoji 表情、折叠语法、容器使用、代码高亮、代码导入、代码嵌套等配置和使用方法
+lastUpdated: 2024-12-20 15:11:32+8:00
 tags:
   - markdown
   - vitepress

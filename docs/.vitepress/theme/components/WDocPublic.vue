@@ -65,7 +65,6 @@ onMounted(() => {
   .copyright {
     position: relative;
     padding: 10px 16px;
-    margin-bottom: 10px;
     border: solid 1px var(--vp-c-divider);
     border-radius: var(--weiz-border-radius);
     transition: all .2s;

@@ -57,10 +57,11 @@ export default createContentLoader(
           }
         }
         let _tags = frontmatter?.tags
+        let abstract = frontmatter?.description
         // 获取手动设置的更新时间
         const createdDate = frontmatter?.firstCommit ? +new Date(frontmatter.firstCommit) : ''
         const updatedDate = frontmatter?.lastUpdated ? +new Date(frontmatter.lastUpdated) : ''
-
+        // 日期格式
         const dateOption = new Intl.DateTimeFormat('zh', {
           day: '2-digit',
           month: '2-digit',
@@ -86,7 +87,7 @@ export default createContentLoader(
               ? dateOption.format(updatedDate)
               : dateOption.format(date[1]),
           ],
-          abstract: src
+          abstract: abstract || src
             // 去除html标签
             ?.replace(/<[^>]+?>/g, '')
             // 去除frontmatter

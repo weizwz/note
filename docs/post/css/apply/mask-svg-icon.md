@@ -1,18 +1,19 @@
 ---
 title: 巧用 mask 属性创建一个纯 CSS 图标库
-description: 本文讲述了如何利用mask和svg来创建一个高清图标库：仅通过class name就可控制图标大小和颜色
-tags: 
- - css
- - svg
+description: 本文介绍了如何使用CSS的mask属性和SVG图像创建一个纯CSS图标库。通过将SVG图标转换为data URI并在CSS中使用mask属性，可以实现图标的颜色和尺寸控制。文章详细讲解了图标库的创建步骤，包括SVG图标的定义、公共样式设置、多种颜色和尺寸的应用
+lastUpdated: 2024-12-31 18:24:53+8:00
+tags:
+  - css
+  - svg
+  - icon
 ---
 
 # 巧用 mask 属性创建一个纯 CSS 图标库
 
 > [!NOTE] 简介
->[`mask`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/mask) 是CSS中的一个属性，它允许开发者在元素上设置图像作为遮罩层。这个属性的强大之处，在于它可以接受多种类型的值，包括关键字值、图像值、渐变色，甚至可以设置多个属性值。
+> [`mask`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/mask) 是CSS中的一个属性，它允许开发者在元素上设置图像作为遮罩层。这个属性的强大之处，在于它可以接受多种类型的值，包括关键字值、图像值、渐变色，甚至可以设置多个属性值。
 >
->[`SVG`](https://developer.mozilla.org/zh-CN/docs/Web/SVG)（Scalable Vector Graphics，可缩放矢量图形）是一种基于 XML 的图像格式，用于定义二维图形。与传统的位图图像（如 PNG 和 JPG）不同，SVG 图像是矢量图形，可以在任何尺寸下保持清晰度，不会失真。
-
+> [`SVG`](https://developer.mozilla.org/zh-CN/docs/Web/SVG)（Scalable Vector Graphics，可缩放矢量图形）是一种基于 XML 的图像格式，用于定义二维图形。与传统的位图图像（如 PNG 和 JPG）不同，SVG 图像是矢量图形，可以在任何尺寸下保持清晰度，不会失真。
 
 我们将 SVG 代码转换为 `data URI`，然后在 CSS 中使用，这样我们可以避免多个 HTTP 请求；另一方面，我们使用 `mask` 来设置 SVG 来作为元素蒙版的图像，然后通过设置元素的 `background-color` 就可以控制 SVG 显示的颜色。
 
@@ -43,7 +44,7 @@ tags:
 
 ```css
 :root {
-  --weiz-icon-color: #3C3C43;
+  --weiz-icon-color: #3c3c43;
 }
 .weiz-icon {
   display: inline-block;
@@ -64,16 +65,16 @@ tags:
   --weiz-icon-color: var(--weiz-primary-color);
 }
 .weiz-icon.white {
-  --weiz-icon-color: #FFFFFF;
+  --weiz-icon-color: #ffffff;
 }
 .weiz-icon.gray {
-  --weiz-icon-color: #3C3C43C7;
+  --weiz-icon-color: #3c3c43c7;
 }
 /* 暗黑模式下自动适应 */
 .dark {
-  --weiz-icon-color: #FFFFF5DB;
+  --weiz-icon-color: #fffff5db;
   .weiz-icon.gray {
-    --weiz-icon-color: #EBEBF599;
+    --weiz-icon-color: #ebebf599;
   }
 }
 ```
@@ -106,7 +107,7 @@ tags:
 ## 应用
 
 ```html
-<i class="weiz-icon l weiz-icon-web white"></i>
+<i class="weiz-icon weiz-icon-web l white"></i>
 ```
 
 效果如图：
@@ -114,7 +115,6 @@ tags:
 ![纯CSS图标库效果演示](https://www.helloimg.com/i/2024/12/23/676973df31305.png)
 
 真实案例请查看：[唯知笔记](https://note.weizwz.com/)
-
 
 ## 扩展
 
