@@ -46,7 +46,7 @@ export const nav: DefaultTheme.Config['nav'] = [
         items: [
           { text: 'Vue.js', link: '/vuejs/basic/vue-mvvm-binding.md' },
           { text: 'React', link: 'vitepress/extend/markdown-examples.md' },
-          { text: 'uni-app', link: 'vitepress/extend/markdown-examples.md' },
+          { text: 'uni-app', link: '/mobile/uniapp/project-building-uniapp-vue3.md' },
           { text: 'Vite', link: 'vitepress/extend/markdown-examples.md' },
           { text: '其他库', link: 'vitepress/extend/markdown-examples.md' },
         ]

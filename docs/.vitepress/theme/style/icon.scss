@@ -118,6 +118,9 @@
 .weiz-icon-echarts {
   --url: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 4v15a1 1 0 0 0 1 1h15M8 16l2.5-5.5l3 3L17.273 7L20 9.667'/%3E%3C/svg%3E");
 }
+.weiz-icon-uni-app {
+  --url: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5'%3E%3Cpath d='M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0'/%3E%3Cpath d='M9 8v6a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2V8'/%3E%3C/g%3E%3C/svg%3E");
+}
 
 // 文章标题扩展信息
 .weiz-icon-created {

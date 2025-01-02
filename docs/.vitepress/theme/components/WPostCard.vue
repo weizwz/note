@@ -9,7 +9,6 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps } from 'vue'
 import { Post } from '../utils/post.data'
 
 export interface PostCard extends Post {

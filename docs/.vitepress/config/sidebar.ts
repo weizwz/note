@@ -36,6 +36,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
             { text: 'GitHub+Hexo搭建博客', link: '/hexo/basic/hexo-github-blog.md' },
             { text: '博客升级Hexo版本记录', link: '/hexo/basic/hexo-update.md' },
             { text: 'Hexo命令和优化指南', link: '/hexo/basic/hexo-command-better.md' },
+            { text: 'Hexo常用标签/语法', link: '/hexo/basic/hexo-markdown.md' },
           ]
         },
         {
@@ -220,6 +221,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
         {
           text: 'uni-app',
           items: [
+            { text: 'uniapp+vue3项目搭建', link: '/mobile/uniapp/project-building-uniapp-vue3.md' },
           ]
         },
         {
