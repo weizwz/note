@@ -15,7 +15,7 @@ export const nav: DefaultTheme.Config['nav'] = [
         items: [
           { text: 'Git 使用记录', link: 'git/use-log.md' },
           { text: 'Markdown 示例', link: 'vitepress/extend/markdown-examples' },
-          { text: 'Clash Verge 使用', link: 'proxy/clash-verge.md' },
+          { text: 'Clash Verge 使用', link: 'app/network/clash-verge.md' },
         ]
       },
     ] 

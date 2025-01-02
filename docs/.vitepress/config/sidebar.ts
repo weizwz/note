@@ -243,6 +243,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
         {
           text: '图像应用', 
           items: [
+            { text: '截图工具pixpin', link: '/app/image/screenshot-pixpin.md' },
           ]
         },
       ]
