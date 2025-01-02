@@ -179,6 +179,24 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       ]
     }
   ],
+  '/windows/': [
+    {
+      text: 'windows系统',
+      items: [
+        {
+          text: '系统配置', 
+          items: [
+            { text: '配置linux命令', link: '/windows/setting/cygwin-to-linux-command.md' },
+          ]
+        },
+        {
+          text: '软件推荐',
+          items: [
+          ]
+        },
+      ]
+    }
+  ],
   '/git/': [
     {
       text: 'Git',
@@ -210,5 +228,13 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
         { text: 'Element自适应布局', link: '/element/responsive-layout.md' }
       ]
     }
-  ]
+  ],
+  '/ai/': [
+    {
+      text: 'AI应用',
+      items: [
+        { text: 'AI本地作画', link: 'ai/ai-local-painting.md' }
+      ]
+    }
+  ],
 }

@@ -1,7 +1,7 @@
 import type { DefaultTheme } from 'vitepress'
 
 export const nav: DefaultTheme.Config['nav'] = [
-  { text: '目录导航', 
+  { text: '站内导航', 
     items: [
       {
         items: [
@@ -116,17 +116,16 @@ export const nav: DefaultTheme.Config['nav'] = [
     items: [
       {
         items: [
-          { text: '开源字体分享', link: '/resource/font/open-source-font.md' },
-          { text: '图标图片网站', link: 'vitepress/extend/markdown-examples.md' },
-          { text: '其他设计网站', link: 'vitepress/extend/markdown-examples.md' },
+          { text: '开源字体', link: '/resource/font/open-source-font.md' },
+          { text: '图标图片', link: 'vitepress/extend/markdown-examples.md' },
+          { text: '其他资源', link: 'vitepress/extend/markdown-examples.md' },
         ]
       },
       {
         items: [
           { text: '跨平台软件', link: 'vitepress/basic/api-examples.md' },
-          { text: 'Windows软件', link: 'vitepress/basic/api-examples.md' },
-          { text: 'MacOS软件', link: 'vitepress/extend/markdown-examples.md' },
-          { text: '软件下载平台', link: 'vitepress/extend/markdown-examples.md' },
+          { text: 'Windows系统', link: 'windows/setting/cygwin-to-linux-command.md' },
+          { text: 'MacOS系统', link: 'vitepress/extend/markdown-examples.md' },
         ]
       },
     ]
@@ -148,7 +147,7 @@ export const nav: DefaultTheme.Config['nav'] = [
           { text: '趣味动画', link: 'https://weizwz.com/fun-animation/' },
           { text: '大屏演示', link: 'https://weizwz.com/vite-vue3-charts/#/' },
           { text: 'vue3模版', link: 'https://weizwz.com/weiz-vue3-ts/' },
-          { text: '其他开源项目', link: 'vitepress/extend/markdown-examples.md' },
+          { text: '其他项目', link: 'vitepress/extend/markdown-examples.md' },
         ]
       }
     ]
