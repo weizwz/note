@@ -65,8 +65,8 @@ post:
 
 `移动端`
 
-<image style="display: inline-block; width: 45%; margin-right: 10%;" src="https://www.helloimg.com/i/2024/12/30/6772c25c7d4a8.png" alt="移动端效果图片1"/>
-<image style="display: inline-block; width: 45%" src="https://www.helloimg.com/i/2024/12/30/6772c25c52b01.png" alt="移动端效果图片2"/>
+<image style="display: inline-block; margin-right: 10%;" src="https://www.helloimg.com/i/2024/12/30/6772c25c7d4a8.png" alt="移动端效果图片1"/>
+<image style="display: inline-block;" src="https://www.helloimg.com/i/2024/12/30/6772c25c52b01.png" alt="移动端效果图片2"/>
 
 ## 安装
 

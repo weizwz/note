@@ -1,4 +1,67 @@
 /**
+* 界面布局
+* -------------------------------------------------------------------------- */
+footer.VPFooter {
+  display: none;
+}
+
+/**
+* 界面元素/组件
+* -------------------------------------------------------------------------- */
+body {
+  font-size: var(--weiz-font-size);
+}
+
+pre:not(.vp-code) {
+  font-size: var(--vp-code-font-size);
+}
+
+/* 链接 */
+.vp-doc a {
+  &:hover {
+    color: var(--weiz-primary-color-light-1);
+  }
+  &:active {
+    color: var(--weiz-primary-color-dark);
+  }
+}
+
+/* 图片 */
+.vp-doc img {
+  border-radius: var(--weiz-border-radius);
+  max-height: 420px;
+}
+
+
+/* 按钮 */
+:root {
+  --vp-button-brand-bg: var(--weiz-primary-color);
+  --vp-button-brand-hover-border: transparent;
+  --vp-button-brand-hover-bg: var(--weiz-primary-color-light-1);
+  --vp-button-brand-active-border: transparent;
+  --vp-button-brand-active-bg: var(--weiz-primary-color-dark);
+}
+
+/* 代码 */
+:root {
+  --vp-code-link-hover-color: var(--weiz-primary-color-light-1);
+}
+
+/* 搜索 */
+:root {
+  --docsearch-primary-color: var(--weiz-primary-color);
+  --docsearch-logo-color: var(--weiz-primary-color);
+}
+.cls-1, .cls-2 {
+  fill: var(--docsearch-primary-color) !important;
+}
+
+/* 编辑按钮 */
+.edit-link-button:hover {
+  color: var(--weiz-primary-color-light-1);
+}
+
+/**
 * 首页消除导航栏的下划线
 * -------------------------------------------------------------------------- */
 .weiz-home .divider,

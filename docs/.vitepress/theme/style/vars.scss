@@ -109,8 +109,8 @@
 
 /* 滚动条 */
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+  width: 8px;
+  height: 8px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -127,64 +127,14 @@
   background-color: var(--weiz-primary-color);
 }
 
+/* 代码滚动条 */
+pre::-webkit-scrollbar-thumb {
+  background-color: rgba(var(--weiz-primary-color-rgb), .2);
+}
+
+/* 页脚定位层级 */
 @media (min-width: 960px) {
   :root {
     --weiz-index-footer: 30;
   }
-}
-
-/**
-* 界面布局
-* -------------------------------------------------------------------------- */
-footer.VPFooter {
-  display: none;
-}
-
-/**
-* 界面元素/组件
-* -------------------------------------------------------------------------- */
-body {
-  font-size: var(--weiz-font-size);
-}
-
-pre:not(.vp-code) {
-  font-size: var(--vp-code-font-size);
-}
-
-/* 链接 */
-.vp-doc a {
-  &:hover {
-    color: var(--weiz-primary-color-light-1);
-  }
-  &:active {
-    color: var(--weiz-primary-color-dark);
-  }
-}
-
-/* 按钮 */
-:root {
-  --vp-button-brand-bg: var(--weiz-primary-color);
-  --vp-button-brand-hover-border: transparent;
-  --vp-button-brand-hover-bg: var(--weiz-primary-color-light-1);
-  --vp-button-brand-active-border: transparent;
-  --vp-button-brand-active-bg: var(--weiz-primary-color-dark);
-}
-
-/* 代码 */
-:root {
-  --vp-code-link-hover-color: var(--weiz-primary-color-light-1);
-}
-
-/* 搜索 */
-:root {
-  --docsearch-primary-color: var(--weiz-primary-color);
-  --docsearch-logo-color: var(--weiz-primary-color);
-}
-.cls-1, .cls-2 {
-  fill: var(--docsearch-primary-color) !important;
-}
-
-/* 编辑按钮 */
-.edit-link-button:hover {
-  color: var(--weiz-primary-color-light-1);
 }

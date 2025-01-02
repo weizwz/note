@@ -1,5 +1,5 @@
 ---
-title: VS Code 插件
+title: 自用 VSCode 插件
 description: 这篇文章介绍了作者常用的 VSCode 插件，包括 EditorConfig for VS Code（用于定义编辑器编码格式规范）、Iconify IntelliSense（图标预览插件）和 Code Spell Checker（拼写检查插件）
 firstCommit: 2023-04-25 14:06:46+8:00
 lastUpdated: 2023-12-18 11:23:12+8:00
@@ -8,9 +8,9 @@ tags:
   - icon
 ---
 
-# VS Code 插件
+# 自用 VSCode 插件
 
-> 自用 `VS Code` 插件
+> 自用 `VSCode` 插件推荐
 
 ## 1. `EditorConfig for VS Code`
 editorconfig 用来定义编辑器的编码格式规范，编辑器的行为会与 `.editorconfig` 文件中定义的一致，并且其优先级比编辑器自身的设置要高。

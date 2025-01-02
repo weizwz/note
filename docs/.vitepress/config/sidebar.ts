@@ -130,12 +130,25 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       ]
     }
   ],
+  '/editor/': [
+    {
+      text: '开发工具',
+      items: [
+        {
+          text: 'VSCode',
+          items: [
+            { text: '自用 VSCode 插件', link: '/editor/vscode/vscode-self-plugin.md' },
+          ]
+        },
+      ]
+    }
+  ],
   '/resource/': [
     {
       text: '资源分享',
       items: [
         {
-          text: '开源字体',
+          text: '字体',
           items: [
             { text: '开源字体整理', link: '/resource/font/open-source-font.md' },
           ]

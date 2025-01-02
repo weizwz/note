@@ -77,7 +77,7 @@ export const nav: DefaultTheme.Config['nav'] = [
       },
       {
         items: [
-          { text: 'vscode 配置', link: 'vitepress/basic/api-examples.md' },
+          { text: 'VSCode 配置', link: '/editor/vscode/vscode-self-plugin.md' },
           { text: '微信开发者工具', link: 'vitepress/extend/markdown-examples.md' },
           { text: '其他开发软件', link: 'vitepress/extend/markdown-examples.md' },
         ]
