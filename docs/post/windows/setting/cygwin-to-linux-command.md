@@ -6,7 +6,7 @@ lastUpdated: 2023-12-07 17:23:15+8:00
 tags:
   - windows
   - command
-  - tools
+  - app
 ---
 
 # Cygwin，在windows中使用linux命令

@@ -60,18 +60,18 @@ export const nav: DefaultTheme.Config['nav'] = [
         items: [
           { text: 'JS 日常应用', link: '/js/apply/compare-number.md' },
           { text: 'CSS 实用特效', link: '/css/apply/icon-label-shields.md' },
-          { text: '开发常用模块', link: 'vitepress/extend/markdown-examples.md' },
           { text: 'Element 使用', link: '/element/responsive-layout.md' },
+          { text: '前端常见问题', link: 'vitepress/extend/markdown-examples.md' },
         ]
       },
       {
         items: [
-          { text: 'Clash 配置', link: '/proxy/clash-verge.md' },
+          { text: 'Clash 配置', link: '/app/network/clash-verge.md' },
           { text: 'Nodejs 相关', link: '/nodejs/apply/pnpm-setting.md' },
           { text: '终端 相关', link: 'vitepress/extend/markdown-examples.md' },
           { text: 'Git 相关', link: 'vitepress/basic/api-examples.md' },
           { text: '浏览器相关', link: '/browser/apply/browser-plugin.md' },
-          { text: 'Nginx 代理', link: 'vitepress/extend/markdown-examples.md' },
+          { text: 'Nginx 代理', link: '/nginx/nginx-web-cross-domain.md' },
           { text: 'Linux 相关', link: 'vitepress/extend/markdown-examples.md' },
         ]
       },
@@ -123,9 +123,9 @@ export const nav: DefaultTheme.Config['nav'] = [
       },
       {
         items: [
-          { text: '跨平台软件', link: 'vitepress/basic/api-examples.md' },
-          { text: 'Windows系统', link: 'windows/setting/cygwin-to-linux-command.md' },
-          { text: 'MacOS系统', link: 'vitepress/extend/markdown-examples.md' },
+          { text: '应用分享', link: '/app/network/clash-verge.md' },
+          { text: 'Windows', link: 'windows/setting/cygwin-to-linux-command.md' },
+          { text: 'MacOS', link: 'vitepress/extend/markdown-examples.md' },
         ]
       },
     ]

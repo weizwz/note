@@ -94,8 +94,15 @@
 .weiz-icon-oppo {
   --url: url(https://api.iconify.design/simple-icons/oppo.svg?color=%23000);
 }
-
-
+.weiz-icon-nginx {
+  --url: url(https://api.iconify.design/devicon/nginx.svg?color=%23000);
+}
+.weiz-icon-app {
+  --url: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23000' d='M28 10h-6v14h2v-4h4a2.003 2.003 0 0 0 2-2v-6a2 2 0 0 0-2-2m-4 8v-6h4v6zm-6-8h-6v14h2v-4h4a2.003 2.003 0 0 0 2-2v-6a2 2 0 0 0-2-2m-4 8v-6h4v6zm-6-8H3v2h5v2H4a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h6v-8a2 2 0 0 0-2-2m0 8H4v-2h4z'/%3E%3C/svg%3E");
+}
+.weiz-icon-proxy {
+  --url: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M12 20h.012M8.25 17c2-2 5.5-2 7.5 0m2.75-3c-3.768-3.333-9-3.333-13 0M2 11c3.158-2.667 6.579-4 10-4m3 .5s1 0 2 2c0 0 2.477-3.9 5-5.5' color='%23000'/%3E%3C/svg%3E");
+}
 
 // 文章标题扩展信息
 .weiz-icon-created {

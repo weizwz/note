@@ -181,7 +181,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
   ],
   '/windows/': [
     {
-      text: 'windows系统',
+      text: 'Windows系统',
       items: [
         {
           text: '系统配置', 
@@ -190,7 +190,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
           ]
         },
         {
-          text: '软件推荐',
+          text: '应用推荐',
           items: [
           ]
         },
@@ -216,6 +216,24 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       ]
     }
   ],
+  '/app/': [
+    {
+      text: '应用分享',
+      items: [
+        {
+          text: '网络应用',
+          items: [
+            { text: 'Clash Verge', link: '/app/network/clash-verge.md' },
+          ]
+        },
+        {
+          text: '图像应用', 
+          items: [
+          ]
+        },
+      ]
+    }
+  ],
   '/git/': [
     {
       text: 'Git',
@@ -232,11 +250,11 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       ]
     }
   ],
-  '/proxy/': [
+  '/nginx/': [
     {
-      text: '代理工具',
+      text: 'Nginx',
       items: [
-        { text: 'Clash Verge', link: '/proxy/clash-verge.md' }
+        { text: 'Nginx解决跨域访问', link: '/nginx/nginx-web-cross-domain.md' },
       ]
     }
   ],
