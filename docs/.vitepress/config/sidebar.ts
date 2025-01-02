@@ -98,7 +98,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
             { text: 'Vite4搭建4-代码规范', link: '/vuejs/apply/project-building-vite-ts-4.md' },
             { text: 'Vite4搭建5-路由', link: '/vuejs/apply/project-building-vite-ts-5.md' },
             { text: 'Vite4搭建6-状态管理', link: '/vuejs/apply/project-building-vite-ts-6.md' },
-            { text: 'Vite4搭建6-请求封装', link: '/vuejs/apply/project-building-vite-ts-7.md' },
+            { text: 'Vite4搭建7-请求封装', link: '/vuejs/apply/project-building-vite-ts-7.md' },
           ]
         },
       ]
@@ -117,6 +117,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
           text: '日常应用',
           items: [
             { text: 'JS比较数值大小', link: '/js/apply/compare-number.md' },
+            { text: 'JS判断点是否在线段上', link: '/js/apply/point-in-line.md' },
           ]
         },
       ]
