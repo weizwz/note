@@ -4,10 +4,10 @@ description: 本文介绍了如何使用 Vite4、Typescript、Vue3 和 Pinia 从
 firstCommit: 2023-11-09 17:03:24+8:00
 lastUpdated: 2023-11-09 17:03:24+8:00
 tags:
-  - vue
-  - vite
-  - typescript  
-  - vscode
+  - Vue.js
+  - Vite
+  - TypeScript  
+  - VSCode
 ---
 
 # Vite4+Typescript+Vue3+Pinia 从零搭建(1) - 项目初始化

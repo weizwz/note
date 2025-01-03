@@ -4,7 +4,7 @@ description: 这篇文章介绍了如何配置pnpm，包括安装pnpm、设置�
 firstCommit: 2022-12-03 20:32:09+8:00
 lastUpdated: 2022-12-03 20:32:09+8:00
 tags:
- - nodejs
+ - Node.js
  - pnpm
 ---
 

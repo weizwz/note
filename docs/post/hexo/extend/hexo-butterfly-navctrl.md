@@ -4,7 +4,7 @@ description: 这篇文章介绍了Hexo主题Butterfly的导航栏控制插件hex
 firstCommit: 2023-12-15 16:42:25+8:00
 lastUpdated: 2023-12-19 17:23:54+8:00
 tags:
-  - hexo
+  - Hexo
   - npm
 ---
 

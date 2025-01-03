@@ -4,10 +4,10 @@ description: 本文介绍了如何在 vite5 + vue3 + ts 项目中正确使用 ec
 firstCommit: 2023-12-28 20:35:25+8:00
 lastUpdated: 2023-12-28 20:35:25+8:00
 tags:
-  - echarts
-  - vue
-  - vite
-  - typescript
+  - ECharts
+  - Vue.js
+  - Vite
+  - TypeScript
   - map
 ---
 

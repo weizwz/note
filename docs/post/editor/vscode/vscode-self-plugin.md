@@ -4,7 +4,7 @@ description: 这篇文章介绍了作者常用的 VSCode 插件，包括 EditorC
 firstCommit: 2023-04-25 14:06:46+8:00
 lastUpdated: 2023-12-18 11:23:12+8:00
 tags:
-  - vscode
+  - VSCode
   - icon
 ---
 

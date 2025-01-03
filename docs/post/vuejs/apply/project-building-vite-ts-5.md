@@ -4,9 +4,9 @@ description: 这篇文章介绍了如何使用 Vite4、Typescript、Vue3 和 Pin
 firstCommit: 2023-11-29 21:33:04+8:00
 lastUpdated: 2023-11-29 21:33:04+8:00
 tags:
-  - vue
-  - vite
-  - typescript
+  - Vue.js
+  - Vite
+  - TypeScript
   - router
 ---
 

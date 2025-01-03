@@ -6,9 +6,9 @@ lastUpdated: 2023-10-21 15:35:35+8:00
 tags:
   - nginx
   - proxy
-  - vite
-  - vue
-  - nodejs
+  - Vite
+  - Vue.js
+  - Node.js
 ---
 
 # nginx配置解决跨域访问

@@ -4,7 +4,7 @@ description: 这篇文章介绍了Hexo主题Butterfly的推荐组件扩展 hexo-
 firstCommit: 2023-11-22 16:34:55+8:00
 lastUpdated: 2024-02-01 19:12:14+8:00
 tags:
-  - hexo
+  - Hexo
   - npm
 ---
 

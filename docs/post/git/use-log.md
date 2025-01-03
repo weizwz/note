@@ -4,8 +4,8 @@ description: 这篇文章详细介绍了Git的使用方法，包括初始化配�
 firstCommit: 2022-11-25 11:25:44+8:00
 lastUpdated: 2024-03-15 11:32:42+8:00
 tags:
-  - git
-  - github
+  - Git
+  - Github
   - proxy
 ---
 

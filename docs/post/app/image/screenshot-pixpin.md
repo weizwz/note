@@ -5,7 +5,7 @@ firstCommit: 2023-11-29 16:13:08+8:00
 lastUpdated: 2023-11-29 16:13:08+8:00
 tags:
   - image
-  - tools
+  - APP
 ---
 
 # PixPin - 新截图工具

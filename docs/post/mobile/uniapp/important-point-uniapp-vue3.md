@@ -5,8 +5,8 @@ firstCommit: 2024-02-01 19:34:18+8:00
 lastUpdated: 2024-02-06 22:14:03+8:00
 tags:
   - uni-app
-  - vue
-  - typescript
+  - Vue.js
+  - TypeScript
 ---
 
 # uni-app+vue3有哪些问题

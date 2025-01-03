@@ -4,9 +4,9 @@ description: 这篇文章详细介绍了Hexo的常用命令，包括初始化网
 firstCommit: 2022-09-15 11:55:23+8:00
 lastUpdated: 2024-03-15 10:39:35+8:00
 tags:
-  - hexo
-  - markdown
-  - vscode
+  - Hexo
+  - Markdown
+  - VSCode
 ---
 
 # Hexo 常用命令和优化指南

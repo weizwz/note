@@ -5,10 +5,10 @@ firstCommit: 2022-11-22 23:11:47+8:00
 lastUpdated: 2024-06-06 23:38:19+8:00
 tags:
   - proxy
-  - app
-  - github
+  - APP
+  - Github
   - npm
-  - git
+  - Git
 ---
 
 # Clash Verge 使用记录

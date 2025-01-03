@@ -4,7 +4,7 @@ description: 本文记录了作者在使用黑苹果过程中遇到的问题及�
 firstCommit: 2024-01-29 15:50:30+8:00
 lastUpdated: 2024-01-29 16:16:29+8:00
 tags:
-  - macos
+  - MacOS
 ---
 
 # mac 自用黑苹果问题记录

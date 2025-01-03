@@ -4,10 +4,10 @@ description: 这篇文章介绍了使用 Vite4、Typescript、Vue3 和 Pinia 从
 firstCommit: 2023-12-19 17:37:23+8:00
 lastUpdated: 2023-12-19 17:37:23+8:00
 tags:
-  - vue
-  - axios
-  - vite
-  - typescript
+  - Vue.js
+  - Axios
+  - Vite
+  - TypeScript
 ---
 
 # Vite4+Typescript+Vue3+Pinia 从零搭建(7) - request封装

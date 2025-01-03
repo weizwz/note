@@ -4,8 +4,8 @@ description: 这篇文章介绍了如何通过修改Hexo和Butterfly主题的配
 firstCommit: 2023-01-10 20:37:59+8:00
 lastUpdated: 2023-01-11 21:23:09+8:00
 tags:
-  - hexo
-  - css
+  - Hexo
+  - CSS
 ---
 
 # 让你的博客一起过年

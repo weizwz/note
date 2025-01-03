@@ -4,9 +4,9 @@ description: 这篇文章介绍了OPPO主题组件开发中的自适应内容实
 firstCommit: 2023-10-08 14:03:00+8:00
 lastUpdated: 2023-10-08 14:03:00+8:00
 tags:
-  - oppo
+  - OPPO
   - mobile
-  - windows
+  - Windows
 ---
 
 # OPPO主题组件开发 - 组件内容自适应

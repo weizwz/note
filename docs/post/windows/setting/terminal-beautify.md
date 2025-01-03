@@ -1,15 +1,15 @@
 ---
-title: windows cmd 终极美化
+title: Windows cmd 终极美化
 description: 本文介绍了如何美化 Windows Terminal，包括安装 Windows Terminal 和 PowerShell、安装 Nerd Fonts 字体、安装 oh-my-posh 主题、使用自定义主题以及在其他编辑器中使用这些设置。文章提供了详细的步骤和相关链接，帮助用户实现终端美化
 firstCommit: 2023-12-18 14:21:31+8:00
 lastUpdated: 2024-06-06 23:25:13+8:00
 tags:
   - command
-  - windows
+  - Windows
   - font
 ---
 
-# windows cmd 终极美化
+# Windows cmd 终极美化
 
 `Windows Terminal` 是一个现代化的终端应用程序，支持多标签页和多种命令行工具（如 PowerShell 和 WSL）。它提供了丰富的自定义选项，包括主题、字体和配色方案，借助于此应用，可以提升我们的体验和生产力
 

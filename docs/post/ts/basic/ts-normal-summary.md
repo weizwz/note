@@ -4,8 +4,8 @@ description: 本文总结了作者常用的TypeScript写法，包括基本用法
 firstCommit: 2024-02-05 20:37:54+8:00
 lastUpdated: 2024-02-06 10:23:17+8:00
 tags:
-  - typescript
-  - vue
+  - TypeScript
+  - Vue.js
 ---
 
 # 常用TS总结

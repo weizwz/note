@@ -4,9 +4,9 @@ description: 本文介绍了如何调试和预览OPPO主题组件。主要内容
 firstCommit: 2023-09-25 14:14:00+8:00
 lastUpdated: 2023-12-14 11:04:06+8:00
 tags:
-  - oppo
+  - OPPO
   - mobile
-  - windows
+  - Windows
 ---
 
 # OPPO主题组件开发 - 调试与预览

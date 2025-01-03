@@ -5,7 +5,7 @@ firstCommit: 2022-12-14 17:53:20+8:00
 lastUpdated: 2024-03-15 11:36:24+8:00
 tags:
   - font
-  - github
+  - Github
 ---
 
 # 开源字体整理

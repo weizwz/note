@@ -4,7 +4,7 @@ description: 本文详细介绍了在 JavaScript 中比较数值大小的几种�
 firstCommit: 2022-10-24 13:34:17+8:00
 lastUpdated: 2023-12-05 11:11:33+8:00
 tags:
-  - js
+  - JavaScript
 ---
 
 # JS 比较数值大小

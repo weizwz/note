@@ -4,8 +4,8 @@ description: 这篇文章记录了Hexo博客的升级过程。内容包括如何
 firstCommit: 2023-11-25 10:05:41+8:00
 lastUpdated: 2023-11-25 10:05:41+8:00
 tags:
-  - hexo
-  - npm
+  - Hexo
+  - Npm
 ---
 
 # 博客升级 Hexo 版本记录

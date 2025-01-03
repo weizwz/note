@@ -4,10 +4,10 @@ description: 本文介绍了如何在Vite4、TypeScript、Vue3和Pinia项目中�
 firstCommit: 2023-11-28 17:14:03+8:00
 lastUpdated: 2023-11-28 17:14:03+8:00
 tags:
-  - vue
-  - vite
-  - typescript
-  - vscode
+  - Vue.js
+  - Vite
+  - TypeScript
+  - VSCode
 ---
 
 # Vite4+Typescript+Vue3+Pinia 从零搭建(4) - 代码规范

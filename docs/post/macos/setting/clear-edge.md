@@ -4,7 +4,7 @@ description: 本文介绍了如何定制Mac版Edge浏览器，包括禁用更新
 firstCommit: 2024-02-03 21:03:47+8:00
 lastUpdated: 2024-02-05 11:12:32+8:00
 tags:
-  - macos
+  - MacOS
   - browser
 ---
 

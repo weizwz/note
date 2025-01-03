@@ -4,8 +4,8 @@ description: 这篇文章主要介绍了 Hexo 博客中 Markdown 语法 的使�
 firstCommit: 2024-01-02 10:50:15+8:00
 lastUpdated: 2024-01-02 16:15:56+8:00
 tags:
-  - hexo
-  - markdown
+  - Hexo
+  - Markdown
 ---
 
 # Hexo 博客常用标签/语法

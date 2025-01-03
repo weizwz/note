@@ -4,10 +4,10 @@ description: 这篇文章介绍了如何在GitHub项目中使用shields.io生成
 firstCommit: 2023-12-06 19:49:11+8:00
 lastUpdated: 2023-12-14 17:23:10+8:00
 tags:
-  - css
-  - github
-  - markdown
-  - hexo
+  - CSS
+  - Github
+  - Markdown
+  - Hexo
 ---
 
 # Github 项目徽标

@@ -4,8 +4,8 @@ description: 这篇文章介绍了如何使用GitHub和Hexo搭建个人博客网
 firstCommit: 2022-11-29 14:55:01+8:00
 lastUpdated: 2023-12-14 16:46:23+8:00
 tags:
-  - hexo
-  - github
+  - Hexo
+  - Github
 ---
 
 # GitHub + Hexo 搭建个人博客网站

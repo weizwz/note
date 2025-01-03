@@ -4,8 +4,8 @@ description: 本文介绍了如何使用JS脚本批量处理TS数据类型，包
 firstCommit: 2024-08-26 20:52:41+8:00
 lastUpdated: 2024-08-26 20:52:41+8:00
 tags:
-  - typescript
-  - js
+  - TypeScript
+  - JavaScript
 ---
 
 # JS脚本批量处理TS数据类型

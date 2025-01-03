@@ -4,7 +4,7 @@ description: 这篇文章介绍了 Vue.js中双向绑定的原理。通过数据
 firstCommit: 2022-11-17 15:13:24+8:00
 lastUpdated: 2022-11-29 18:31:16+8:00
 tags:
-  - vue
+  - Vue.js
 ---
 
 # Vue 双向绑定原理梳理

@@ -4,10 +4,10 @@ description: 这篇文章记录了作者在使用Node.js和npm过程中遇到的
 firstCommit: 2022-10-21 14:20:16+8:00
 lastUpdated: 2023-07-08 19:10:21+8:00
 tags:
-  - nodejs
+  - Node.js
   - npm
-  - vue
-  - sass
+  - Vue.js
+  - Sass
 ---
 
 # Nodejs 报错记录
