@@ -93,7 +93,6 @@ const { frontmatter: fm } = useData()
 const aboutData = fm.value.about as HomeAbout
 let postData = ref<HomePost[]>([])
 const tags = fm.value.tags ? fm.value.tags.split(',') : Object.keys(data.tags)
-console.log(tags.length);
 
 const pv = ref('loading')
 const uv = ref('loading')
