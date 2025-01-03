@@ -47,17 +47,8 @@
   <div id="post">
     <div class="container">
       <el-row class="container-row" :gutter="20">
-        <el-col v-for="(item, index) of postData" :key="index" :xs="24" :sm="12" :md="6">
-          <div v-if="item.type && item.type === 'card'" class="post-card statistic">
-            <div class="post-container">
-              <div class="number">{{ item.title }}</div>
-              <div class="desc">{{ item.abstract }}</div>
-            </div>
-          </div>
-          <weiz-post-card v-else :post="item"/>
-        </el-col>
-        <el-col class="statistic-wrapper" :xs="24" :sm="12" :md="6">
-          <div class="post-card statistic">
+        <el-col v-for="(item, index) of postData" :key="index" class="statistic-wrapper" :xs="24" :sm="12" :md="6">
+          <div v-if="item.type && item.type === 'busuanzi'" class="post-card statistic">
             <div class="post-container">
               <div class="number">{{ uv }}</div>
               <div class="desc">本站总访客<span id="busuanzi_value_site_uv" style="display: none;" /></div>
@@ -66,12 +57,13 @@
               <div class="number">{{ pv }}</div>
             </div>
           </div>
-          <a class="post-more" href="pages/posts">
+          <a v-if="item.type && item.type === 'busuanzi'" class="post-more" href="pages/posts">
             <div class="post-more-container">
               <span>查看更多</span>
               <span><i class="weiz-icon weiz-icon-arrow-right xxxl white"></i></span>
             </div>
           </a>
+          <weiz-post-card v-else :post="item"/>
         </el-col>
       </el-row>
     </div>
@@ -80,7 +72,7 @@
     <div class="swiper">
       <div class="swiper-wrapper">
         <div class="swiper-item" v-for="(item, index) of skills" :key="index">
-          <h2>{{ item }}</h2>
+          <a class="tag" :href="'pages/tags?q=' + item">{{ item }}</a>
         </div>
       </div>
     </div>
@@ -96,17 +88,24 @@ const { frontmatter: fm } = useData()
 
 const aboutData = fm.value.about as HomeAbout
 let postData = ref<HomePost[]>([])
-const skills = fm.value.skills.split(',')
+const skills = fm.value.tags ? fm.value.tags.split(',') : Object.keys(data.tags)
 const pv = ref('loading')
 const uv = ref('loading')
 
 const postMerge = () => {
-  const postLength = 3
+  const postLength = 7
   const fmLength = fm.value.post ? fm.value.post.length : 0
   postData.value = fm.value.post && fmLength >= postLength ? fm.value.post : (() => {
     const newPosts = data.posts.slice(0, postLength - fmLength)
     const mdPosts = fm.value.post || []
-    return mdPosts.concat(newPosts) as unknown as HomePost
+    let showPosts = mdPosts.concat(newPosts) as unknown as HomePost[]
+    // 第四张卡片插入卜算子统计
+    showPosts.splice(3, 0, {
+      title: '统计访问量',
+      type: 'busuanzi',
+      abstract: '统计访问量'
+    })
+    return showPosts
   })()
 }
 

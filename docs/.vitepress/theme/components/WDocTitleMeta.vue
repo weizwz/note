@@ -69,7 +69,7 @@ onMounted(() => {
   .tags {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 6px;
+    margin: 0 0 32px;
     color: var(--vp-c-text-2);
     font-weight: 500;
     line-height: 18px;

@@ -7,7 +7,7 @@
 * 标题模块
 * -------------------------------------------------------------------------- */
 #about {
-  padding: calc(var(--vp-layout-top-height, 0px) + 64px) 48px 64px;
+  padding: calc(var(--vp-layout-top-height, 0px) + 48px) 48px 48px;
   .container-left {
     order: 2;
     margin-top: 30px;
@@ -52,7 +52,7 @@
     }
   }
   .about-nav {
-    padding-top: 32px;
+    padding-top: 24px;
     .list-inline {
       display: flex;
       flex-wrap: wrap;
@@ -115,36 +115,36 @@
     justify-content: end;
     margin-right: -15px;
     img {
-      border-bottom-left-radius: 41%;
-      max-height: 262px;
+      border-bottom-left-radius: 45%;
+      max-height: 242px;
     }
     &::before {
       content: '';
       z-index: -1;
       position: absolute;
       top: -10px;
+      bottom: -10px;
       right: 15px;
       background: var(--weiz-primary-color);
       width: 100%;
-      height: calc(100% + 10px);
       border-radius: 50% 12px 12px 50%;
     }
     &::after {
       content: '';
       z-index: -2;
       position: absolute;
-      top: -25px;
+      top: -20px;
+      bottom: -20px;
       right: 30px;
       width: 100%;
-      height: calc(100% + 40px);
       border: 1px dashed var(--vp-c-gray-1);
       border-radius: 50% 12px 12px 50%;
     }
   }
   .hero-social {
     position: absolute;
-    left: 10px;
-    bottom: 3px;
+    left: 12px;
+    bottom: 12px;
     > ul {
       display: flex;
     }
@@ -178,6 +178,7 @@
   padding: var(--vp-layout-top-height, 0) 48px 24px;
   .el-col {
     margin-bottom: 20px;
+    position: relative;
   }
   .post-card {
     display: flex;
@@ -238,9 +239,6 @@
       color: white;
     }
   }
-  .statistic-wrapper {
-    position: relative;
-  }
   .post-more {
     position: absolute;
     width: calc(100% - 20px);
@@ -294,7 +292,7 @@
 * 标签模块
 * -------------------------------------------------------------------------- */
 #tag {
-  padding: var(--vp-layout-top-height, 0) 0 24px;
+  padding: var(--vp-layout-top-height, 0) 0 32px;
   .swiper {
     position: relative;
     overflow: hidden;
@@ -303,7 +301,7 @@
     position: relative;
     z-index: 1;
     display: flex;
-    animation: skill-move 485s linear 0s infinite;
+    animation: tag-move 40s linear 0s infinite;
   }
   .swiper-item {
     flex-shrink: 0;
@@ -314,14 +312,17 @@
     &:last-child {
       margin-right: 0;
     }
-    > h2 {
-      font-size: 56px;
-      line-height: 1.2;
-      font-weight: 600;
-      color: var(--vp-c-text-5);
-      -webkit-text-fill-color: transparent;
-      -webkit-text-stroke-width: 1.4px;
-      -webkit-text-stroke-color: var(--vp-c-text-5);
+  }
+  .tag {
+    font-size: 56px;
+    line-height: 1.2;
+    font-weight: 600;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1.6px;
+    -webkit-text-stroke-color: var(--vp-c-text-5);
+    transition: var(--weiz-transition-3);
+    &:hover {
+      -webkit-text-fill-color: var(--vp-c-text-5);
     }
   }
 }
@@ -373,9 +374,9 @@
   from { box-shadow: 8px 0 0 0 transparent; }
   to { box-shadow: 8px 0 0 0 transparent; }
 }
-@keyframes skill-move {
+@keyframes tag-move {
   from { transform: translate3d(0, 0, 0);}
-  to { transform: translate3d(calc(-16173.7px + 100vw), 0, 0); }
+  to { transform: translate3d(-100%, 0, 0); }
 }
 
 /**
