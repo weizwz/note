@@ -17,7 +17,7 @@
           </div>
         </div>
         <div id="posts">
-          <h1><i class="weiz-icon l weiz-icon-post-fill"/>文章列表</h1>
+          <h3><i class="weiz-icon weiz-icon-post-fill l"/>文章列表</h3>
           <div class="posts-wrapper">
             <el-row class="container-row" :gutter="20">
               <el-col v-for="item of posts" :key="item.url" :xs="24" :sm="12" :md="6">
