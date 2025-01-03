@@ -78,7 +78,7 @@ export default createContentLoader(
         const task = getGitTimestamp('docs/' + link.replace(/.html/, '') + '.md').then((date) => ({
           title,
           url: link.replace(/post\//, ''), // 由于使用了rewrites重定向，这里也对url作处理
-          date: [createdDate || date[0], updatedDate || date[1]], // 更新时间
+          date: [createdDate || date[0], updatedDate || date[1]],
           dateText: [
             createdDate
               ? dateOption.format(createdDate)
@@ -121,8 +121,11 @@ export default createContentLoader(
       // 更新时间降序排列
       // posts = pages.sort((a, b) => b.date[1] - a.date[1])
 
+      // 固定文章从最早发布日期开始，以便标签页能稳定显示
+      const fixPages = pages.sort((a, b) => a.date[0] - b.date[0])
+      
       // 根据年份排列
-      posts.forEach((item) => {
+      fixPages.forEach((item) => {
         const year = new Date(item.date[0]).getFullYear()
         if (!years[year]) {
           years[year] = []
