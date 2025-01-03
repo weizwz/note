@@ -121,17 +121,18 @@ export default createContentLoader(
       // 更新时间降序排列
       // posts = pages.sort((a, b) => b.date[1] - a.date[1])
 
-      // 固定文章从最早发布日期开始，以便标签页能稳定显示
-      const fixPages = pages.sort((a, b) => a.date[0] - b.date[0])
-      
-      // 根据年份排列
-      fixPages.forEach((item) => {
+      // 年份排列，以便显示全部文章
+      posts.forEach((item) => {
         const year = new Date(item.date[0]).getFullYear()
         if (!years[year]) {
           years[year] = []
         }
         years[year].push(item)
+      })
 
+      // 固定文章从最早发布日期开始，以便标签页能稳定显示
+      const fixPages = pages.sort((a, b) => a.date[0] - b.date[0])
+      fixPages.forEach((item) => {
         if (item.tags) {
           item.tags.forEach((tag) => {
             if (!tags[tag]) {
