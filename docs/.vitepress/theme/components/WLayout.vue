@@ -4,7 +4,7 @@ import DefaultTheme from 'vitepress/theme'
 import WBackToTop from './WBackToTop.vue' //返回顶部
 import WDocPublic from './WDocPublic.vue' //文章footer
 import WDocFooter from './WDocFooter.vue' //文章footer
-// import Comment from './Comment.vue'
+import GiscusComment from './GiscusComment.vue' // 评论模块
 const { isDark } = useData()
 
 import { toggleDark } from './WDark'
@@ -18,6 +18,9 @@ toggleDark(isDark) //实现切换主题过渡动画
     </template>
     <template #doc-bottom>
       <WBackToTop />
+    </template>
+    <template #doc-after>
+      <GiscusComment />
     </template>
     <template #layout-bottom>
       <WDocFooter />
