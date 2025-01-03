@@ -116,10 +116,6 @@ export default createContentLoader(
       })
 
       const pages = await Promise.all(promises)
-      // 发布时间降序排列
-      posts = pages.sort((a, b) => b.date[0] - a.date[0])
-      // 更新时间降序排列
-      // posts = pages.sort((a, b) => b.date[1] - a.date[1])
 
       // 年份排列，以便显示全部文章
       posts.forEach((item) => {
@@ -142,6 +138,11 @@ export default createContentLoader(
           })
         }
       })
+      
+      // 发布时间降序排列
+      posts = pages.sort((a, b) => b.date[0] - a.date[0])
+      // 更新时间降序排列
+      // posts = pages.sort((a, b) => b.date[1] - a.date[1])
 
       return {
         posts,
