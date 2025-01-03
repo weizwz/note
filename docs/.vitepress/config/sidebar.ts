@@ -173,6 +173,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
           text: 'VSCode',
           items: [
             { text: '自用 VSCode 插件', link: '/editor/vscode/vscode-self-plugin.md' },
+            { text: '接入DeepSeek V3', link: '/editor/vscode/vscode-deepseek.md' },
           ]
         },
       ]
