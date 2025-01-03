@@ -52,7 +52,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
   ],
   '/nodejs/': [
     {
-      text: 'Nodejs',
+      text: 'Node.js',
       items: [
         {
           text: '基础知识',
@@ -76,7 +76,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
   ],
   '/vuejs/': [
     {
-      text: 'Vuejs',
+      text: 'Vue.js',
       items: [
         {
           text: '基础知识',
@@ -89,6 +89,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
           items: [
             { text: 'Vue多界面开发', link: '/vuejs/apply/vue-multi-page-dev.md' },
             { text: 'Vue3中使用echarts', link: '/vuejs/apply/vue3-ts-echarts.md' },
+            { text: 'Vue3部署到GitHub', link: '/vuejs/apply/vue3-apply-github-page.md' },
           ]
         },
         {
@@ -108,7 +109,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
   ],
   '/js/': [
     {
-      text: 'JS',
+      text: 'JavaScript',
       items: [
         {
           text: '基础知识',
@@ -127,7 +128,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
   ],
   '/ts/': [
     {
-      text: 'TS',
+      text: 'TypeSCript',
       items: [
         {
           text: '基础知识',

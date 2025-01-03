@@ -39,7 +39,7 @@
       &.about-desc {
         font-size: 28px;
         span {
-          animation: typing-desc 2s steps(9, end) 3.8s forwards, blink-caret .75s step-end 3.8s infinite, blink-end 0s linear 7.55s forwards;
+          animation: typing-desc 2s steps(8, end) 3.8s forwards, blink-caret .75s step-end 3.8s infinite, blink-end 0s linear 7.55s forwards;
         }
       }
     }
@@ -363,7 +363,7 @@
 }
 @keyframes typing-desc {
   from { width: 0; }
-  to { width: 9em; }
+  to { width: 8em; }
 }
 @keyframes blink-caret {
   from, to { box-shadow: 8px 0 0 0 transparent; }
