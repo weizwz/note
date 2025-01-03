@@ -6,7 +6,7 @@ lastUpdated: 2023-11-29 21:33:04+8:00
 tags:
   - vue
   - vite
-  - ts
+  - typescript
   - router
 ---
 

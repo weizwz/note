@@ -7,7 +7,7 @@ tags:
   - vue
   - axios
   - vite
-  - ts
+  - typescript
 ---
 
 # Vite4+Typescript+Vue3+Pinia 从零搭建(7) - request封装

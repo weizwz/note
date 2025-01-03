@@ -7,7 +7,7 @@ tags:
   - echarts
   - vue
   - vite
-  - ts
+  - typescript
   - map
 ---
 

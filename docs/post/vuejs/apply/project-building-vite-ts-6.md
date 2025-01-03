@@ -6,7 +6,7 @@ lastUpdated: 2023-12-05 11:00:56+8:00
 tags:
   - vue
   - vite
-  - ts
+  - typescript
   - pina
   - cookie
 ---

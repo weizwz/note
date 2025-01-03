@@ -6,7 +6,7 @@ lastUpdated: 2024-01-05 17:45:01+8:00
 tags:
   - uni-app
   - WeChat
-  - ts
+  - typescript  
   - vue
   - vite
 ---

@@ -6,7 +6,7 @@ lastUpdated: 2023-11-09 17:03:24+8:00
 tags:
   - vue
   - vite
-  - ts
+  - typescript  
   - vscode
 ---
 

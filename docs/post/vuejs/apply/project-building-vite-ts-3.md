@@ -6,7 +6,7 @@ lastUpdated: 2023-11-14 00:18:12+8:00
 tags:
   - vite
   - vue
-  - ts
+  - typescript
 ---
 
 # Vite4+Typescript+Vue3+Pinia 从零搭建(3) - Vite配置

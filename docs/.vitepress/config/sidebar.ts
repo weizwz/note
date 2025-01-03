@@ -125,6 +125,25 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       ]
     }
   ],
+  '/ts/': [
+    {
+      text: 'TS',
+      items: [
+        {
+          text: '基础知识',
+          items: [
+            { text: '常用TS总结', link: '/ts/basic/ts-normal-summary.md' },
+          ]
+        },
+        {
+          text: '日常应用',
+          items: [
+            { text: 'JS批量处理TS数据类型', link: '/ts/apply/js-batch-conversion-ts.md' },
+          ]
+        },
+      ]
+    }
+  ],
   '/css/': [
     {
       text: 'CSS',
@@ -223,6 +242,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
           items: [
             { text: '原生终端美化', link: '/macos/setting/mac-terminal-beautify.md' },
             { text: '黑苹果记录', link: '/macos/setting/black-apple-log.md' },
+            { text: '定制清爽Edge', link: '/macos/setting/clear-edge.md' },
           ]
         },
         {
@@ -241,6 +261,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
           text: 'uni-app',
           items: [
             { text: 'uniapp+vue3项目搭建', link: '/mobile/uniapp/project-building-uniapp-vue3.md' },
+            { text: 'uniapp+vue3问题总结', link: '/mobile/uniapp/important-point-uniapp-vue3.md' },
           ]
         },
         {
