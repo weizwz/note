@@ -71,7 +71,7 @@
   <div id="tag">
     <div class="swiper">
       <div class="swiper-wrapper">
-        <div class="swiper-container" v-for="(i, idx) of 2" :key="idx" :style="'--swiper-animation-time: ' + tags.length * 2 + 's'">
+        <div class="swiper-container" v-for="(i, idx) of 2" :key="idx" :style="'--swiper-animation-time: ' + tags.length * 5 + 's'">
           <div class="swiper-item" v-for="(item, index) of tags" :key="index">
             <a class="tag" :href="'pages/tags?q=' + item">{{ item }}</a>
           </div>
