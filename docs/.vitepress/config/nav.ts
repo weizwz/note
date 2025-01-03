@@ -5,9 +5,9 @@ export const nav: DefaultTheme.Config['nav'] = [
     items: [
       {
         items: [
-          { text: '全部文章', link: 'pages/posts.md' },
-          { text: '标签列表', link: 'pages/tags.md' },
-          { text: '更新日志', link: 'pages/logs.md' },
+          { text: '全部文章', link: '/pages/posts.md' },
+          { text: '标签列表', link: '/pages/tags.md' },
+          { text: '更新日志', link: '/pages/logs.md' },
         ]
       },
       {

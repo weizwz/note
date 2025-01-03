@@ -71,10 +71,14 @@
   <div id="tag">
     <div class="swiper">
       <div class="swiper-wrapper">
-        <div class="swiper-item" v-for="(item, index) of skills" :key="index">
-          <a class="tag" :href="'pages/tags?q=' + item">{{ item }}</a>
+        <div class="swiper-container" v-for="(i, idx) of 2" :key="idx" :style="'--swiper-animation-time: ' + tags.length * 2 + 's'">
+          <div class="swiper-item" v-for="(item, index) of tags" :key="index">
+            <a class="tag" :href="'pages/tags?q=' + item">{{ item }}</a>
+          </div>
         </div>
       </div>
+      <div class="shadow swiper-left-shadow"></div>
+      <div class="shadow swiper-right-shadow"></div>
     </div>
   </div>
 </template>
@@ -88,7 +92,9 @@ const { frontmatter: fm } = useData()
 
 const aboutData = fm.value.about as HomeAbout
 let postData = ref<HomePost[]>([])
-const skills = fm.value.tags ? fm.value.tags.split(',') : Object.keys(data.tags)
+const tags = fm.value.tags ? fm.value.tags.split(',') : Object.keys(data.tags)
+console.log(tags.length);
+
 const pv = ref('loading')
 const uv = ref('loading')
 

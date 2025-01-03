@@ -7,7 +7,7 @@
 * 标题模块
 * -------------------------------------------------------------------------- */
 #about {
-  padding: calc(var(--vp-layout-top-height, 0px) + 48px) 48px 48px;
+  padding: calc(var(--vp-layout-top-height, 0px) + 36px) 48px 48px;
   .container-left {
     order: 2;
     margin-top: 30px;
@@ -71,7 +71,7 @@
       }
       a {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
         background: var(--vp-button-alt-bg);
         border: solid 1px var(--vp-button-alt-bg);
@@ -116,7 +116,7 @@
     margin-right: -15px;
     img {
       border-bottom-left-radius: 45%;
-      max-height: 242px;
+      max-height: 235px;
     }
     &::before {
       content: '';
@@ -292,37 +292,65 @@
 * 标签模块
 * -------------------------------------------------------------------------- */
 #tag {
-  padding: var(--vp-layout-top-height, 0) 0 32px;
+  --swiper-animation-status: running;
+  padding: var(--vp-layout-top-height, 0) 0 24px;
   .swiper {
     position: relative;
     overflow: hidden;
+    .shadow {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      z-index: 1;
+      width: 10%;
+      pointer-events: none;
+    }
+    .swiper-left-shadow {
+      left: 0;
+      background: linear-gradient(to right, var(--vp-c-bg) 10%, transparent 100%);
+    }
+    .swiper-right-shadow {
+      right: 0;
+      background: linear-gradient(to right, transparent 0%, var(--vp-c-bg) 90%);
+    }
   }
   .swiper-wrapper {
-    position: relative;
-    z-index: 1;
     display: flex;
-    animation: tag-move 40s linear 0s infinite;
+    overflow: hidden;
+    --swiper-animation-time: 80s;
+    --swiper-animation-status: running;
+    &:hover {
+      --swiper-animation-status: paused;
+    }
+  }
+  .swiper-container {
+    display: flex;
+    flex-shrink: 0;
+    justify-content: space-around;
+    animation: tag-move var(--swiper-animation-time) infinite linear;
+    animation-play-state: var(--swiper-animation-status);
   }
   .swiper-item {
     flex-shrink: 0;
-    width: auto;
     height: 100%;
     position: relative;
-    margin-right: 60px;
     &:last-child {
       margin-right: 0;
     }
   }
   .tag {
-    font-size: 56px;
+    padding: 20px 30px;
+    font-size: 48px;
     line-height: 1.2;
     font-weight: 600;
     -webkit-text-fill-color: transparent;
-    -webkit-text-stroke-width: 1.6px;
-    -webkit-text-stroke-color: var(--vp-c-text-5);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--vp-c-text-4);
     transition: var(--weiz-transition-3);
     &:hover {
-      -webkit-text-fill-color: var(--vp-c-text-5);
+      -webkit-text-stroke-width: 1.6px;
+      -webkit-text-stroke-color: var(--weiz-primary-color);
+      -webkit-text-fill-color: var(--vp-c-bg-soft);
     }
   }
 }
@@ -382,6 +410,19 @@
 /**
 * 自适应
 * -------------------------------------------------------------------------- */
+@media (max-width: 420px) {
+  #about {
+    .about-nav {
+      li {
+        width: 50%;
+        &:nth-child(2n) a {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
 @media (min-width: 768px) {
   #about {
     .container-left {
