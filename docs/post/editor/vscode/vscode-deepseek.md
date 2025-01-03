@@ -9,7 +9,7 @@ tags:
 
 # VSCode 接入DeepSeek V3大模型
 
-DeepSeek V3 是一个拥有 6710 亿参数的专家混合（MoE）语言模型。最新评估表明，DeepSeek V3 已经超越了其他开源模型。重点是：国内(不需要工具)，便宜(10块钱大约500tokens)。
+DeepSeek V3 是一个拥有 6710 亿参数的专家混合（MoE）语言模型。最新评估表明，DeepSeek V3 已经超越了其他开源模型。重点是：国内(不需要工具)，便宜(10块钱大约500万tokens)。
 
 作为日常开发使用的编辑器 VSCode，直接开始接入 DeepSeek V3
 
