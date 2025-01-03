@@ -1,3 +1,6 @@
+/**
+* 黑暗模式切换动画
+* -------------------------------------------------------------------------- */
 ::view-transition-old(*) {
   animation: none;
   mix-blend-mode: normal;
@@ -13,5 +16,18 @@
   }
   to {
     clip-path: circle(100% at var(--darkX) var(--darkY));
+  }
+}
+
+/**
+* 黑暗模式下界面优化
+* -------------------------------------------------------------------------- */
+.dark {
+  img,
+  .weiz-icon {
+    filter: brightness(0.8);
+  }
+  #about .about-nav li:first-child a {
+    filter: brightness(0.8);
   }
 }
