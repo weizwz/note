@@ -1,6 +1,16 @@
 /**
 * 界面布局
 * -------------------------------------------------------------------------- */
+@media (max-width: 960px) {
+  .DocSearch-Button .DocSearch-Button-Keys,
+  .DocSearch-Button .DocSearch-Button-Placeholder {
+    display: none;
+  }
+  .VPFlyout.VPNavBarMenuGroup > button {
+    padding: 0 6px;
+  }
+}
+
 footer.VPFooter {
   display: none;
 }
