@@ -2,7 +2,6 @@
 title: Clash Verge 使用记录
 description: 这篇文章介绍了Clash Verge的使用方法。Clash Verge是一个基于Clash Meta内核的GUI代理工具，支持多种操作系统和代理协议。文章详细讲解了安装、配置和常见问题的解决方法
 firstCommit: 2022-11-22 23:11:47+8:00
-lastUpdated: 2024-06-06 23:38:19+8:00
 tags:
   - proxy
   - APP
@@ -20,11 +19,17 @@ tags:
 ## 下载
 
 建议到 [github官方库](https://github.com/wonfen/clash-verge-rev) 下载。
+
 进入页面后，点击 `tags`，然后点击 `Releases`，下拉页面找到最新版本下的 `Assets` 标签，里面含有安装包和压缩包，找到对应自己系统的安装包下载即可。
+
 ![image](https://www.helloimg.com/i/2024/12/26/676ccca167947.jpg)
+
 点击 `Show all 19 assets` 展开后，可看到所有安装包
+
 ![image](https://www.helloimg.com/i/2024/12/26/676ccca220740.jpg)
+
 如果下载较慢，建议使用加速下载，右键链接选择复制，然后粘贴地址到 [Github加速网站](https://ghproxy.com/) 进行下载
+
 ![image](https://www.helloimg.com/i/2024/12/26/676ccca04b5f5.jpg)
 
 ## 开发环境配置
@@ -85,8 +90,11 @@ export https_proxy=http://127.0.0.1:7897 http_proxy=http://127.0.0.1:7897 all_pr
 > `Clash Verge 1.2.0` 现在在关闭后可以自动关闭代理服务器了，但是在代理使用期间微软商店还是不能联网的，需要退出 `Clash Verge` 或者关闭 `系统代理` 后使用。如果你使用的是 `Clash for Windows`，则可以使用 `UWP Loopback` 解决此问题，[详情查看](https://docs.cfw.lbyczf.com/contents/ui/general.html#%E9%80%89%E9%A1%B9%E8%AF%B4%E6%98%8E)
 
 目前在本人的win11中有出现，包含微软商店秒退等现象，是由于 `Clash Verge` 自动启动了代理服务器，手动关闭即可。
+
 ![image](https://www.helloimg.com/i/2024/12/26/676ccca0c7a4d.jpg)
+
 点击 `编辑` ，手动关闭后保存，如果微软商店还不能联网，重启电脑即可。
+
 ![image](https://www.helloimg.com/i/2024/12/26/676ccca0c76ec.jpg)
 
 ### 2. 部分国内网站加载缓慢
@@ -97,11 +105,11 @@ export https_proxy=http://127.0.0.1:7897 http_proxy=http://127.0.0.1:7897 all_pr
 以 `;` 号分隔的
 
 ```
-localhost;127.*;192.168.*;10.*;172.16.*;172.17.*;172.18.*;172.19.*;172.20.*;172.21.*;172.22.*;172.23.*;172.24.*;172.25.*;172.26.*;172.27.*;172.28.*;172.29.*;172.30.*;172.31.*;bing.com;cn.bing.com;gitee.com;baidu.com;sougou.com;so.com;quark.sm.cn;huya.com;douyu.com;bilibili.com;iqiyi.com;v.qq.com;youku.com;v.baidu.com;tv.souhu.com;tv.cctv.com;mgtv.com;miguvideo.com;douyin.com;toutiao.com;kuaishou.com;music.163.com;y.qq.com;kuwo.cn;kugou.com;xiami.com;music.migu.cn;music.douban.com;zhihu.com;weibo.com;youtiao.com;12306.cn;tieba.baidu.com;jianshu.com;juejin.cn;segmentfault.com;oschina.net;blog.csdn.net;cnblogs.com;iconfont.cn;wx.qq.com;meituan.com;ctrip.com;qunar.com;jd.com;taobao.com;pinduoduo.com;suning.com;tmall.com;vip.com;gome.com.cn;mogu.com;yhd.com;consumer.huawei.com;vivo.com.cn;mi.com;opposhop.cn;pan.baidu.com;lanzou.com;aliyundrive.com;ctfile.com;weiyun.com;cloud.189.cn;email.163.com;mail.qq.com;foxmail.com;mail.10086.cn;webmail30.189.cn;mail.sina.com.cn;mail.souhu.com;mail.wo.com.cn;mail.yahoo.com;mail.aliyun.com;mail.china.com;amap.com;map.qq.com;map.baidu.com;ditu.amap.com;docs.qq.com;docs.wps.cn;note.youdao.com;yuque.com;shimo.im;doc.weiyun.com;yinxiang.com;feishu.cn;zhipin.com;lanhuapp.com;bbs.oneplus.com;cloud.tencent.com;busuanzi.ibruce.info;wei.com;helloimg.com;
+localhost;127.*;192.168.*;10.*;172.16.*;172.17.*;172.18.*;172.19.*;172.20.*;172.21.*;172.22.*;172.23.*;172.24.*;172.25.*;172.26.*;172.27.*;172.28.*;172.29.*;172.30.*;172.31.*;bing.com;cn.bing.com;gitee.com;baidu.com;sougou.com;so.com;quark.sm.cn;huya.com;douyu.com;bilibili.com;iqiyi.com;v.qq.com;youku.com;v.baidu.com;tv.souhu.com;tv.cctv.com;mgtv.com;miguvideo.com;douyin.com;toutiao.com;kuaishou.com;music.163.com;y.qq.com;kuwo.cn;kugou.com;xiami.com;music.migu.cn;music.douban.com;zhihu.com;weibo.com;youtiao.com;12306.cn;tieba.baidu.com;jianshu.com;juejin.cn;segmentfault.com;oschina.net;blog.csdn.net;cnblogs.com;iconfont.cn;wx.qq.com;meituan.com;ctrip.com;qunar.com;jd.com;taobao.com;pinduoduo.com;suning.com;tmall.com;vip.com;gome.com.cn;mogu.com;yhd.com;consumer.huawei.com;vivo.com.cn;mi.com;opposhop.cn;pan.baidu.com;lanzou.com;aliyundrive.com;ctfile.com;weiyun.com;cloud.189.cn;email.163.com;mail.qq.com;foxmail.com;mail.10086.cn;webmail30.189.cn;mail.sina.com.cn;mail.souhu.com;mail.wo.com.cn;mail.yahoo.com;mail.aliyun.com;mail.china.com;amap.com;map.qq.com;map.baidu.com;ditu.amap.com;docs.qq.com;docs.wps.cn;note.youdao.com;yuque.com;shimo.im;doc.weiyun.com;yinxiang.com;feishu.cn;zhipin.com;lanhuapp.com;bbs.oneplus.com;cloud.tencent.com;busuanzi.ibruce.info;wei.com;helloimg.com;helloimg.com;deepseek.com
 ```
 
 以 `,` 分隔的
 
 ```
-localhost,127.*,192.168.*,10.*,172.16.*,172.17.*,172.18.*,172.19.*,172.20.*,172.21.*,172.22.*,172.23.*,172.24.*,172.25.*,172.26.*,172.27.*,172.28.*,172.29.*,172.30.*,172.31.*,bing.com,cn.bing.com,gitee.com,baidu.com,sougou.com,so.com,quark.sm.cn,huya.com,douyu.com,bilibili.com,iqiyi.com,v.qq.com,youku.com,v.baidu.com,tv.souhu.com,tv.cctv.com,mgtv.com,miguvideo.com,douyin.com,toutiao.com,kuaishou.com,music.163.com,y.qq.com,kuwo.cn,kugou.com,xiami.com,music.migu.cn,music.douban.com,zhihu.com,weibo.com,youtiao.com,12306.cn,tieba.baidu.com,jianshu.com,juejin.cn,segmentfault.com,oschina.net,blog.csdn.net,cnblogs.com,iconfont.cn,wx.qq.com,meituan.com,ctrip.com,qunar.com,jd.com,taobao.com,pinduoduo.com,suning.com,tmall.com,vip.com,gome.com.cn,mogu.com,yhd.com,consumer.huawei.com,vivo.com.cn,mi.com,opposhop.cn,pan.baidu.com,lanzou.com,aliyundrive.com,ctfile.com,weiyun.com,cloud.189.cn,email.163.com,mail.qq.com,foxmail.com,mail.10086.cn,webmail30.189.cn,mail.sina.com.cn,mail.souhu.com,mail.wo.com.cn,mail.yahoo.com,mail.aliyun.com,mail.china.com,amap.com,map.qq.com,map.baidu.com,ditu.amap.com,docs.qq.com,docs.wps.cn,note.youdao.com,yuque.com,shimo.im,doc.weiyun.com,yinxiang.com,feishu.cn,zhipin.com,lanhuapp.com,bbs.oneplus.com,cloud.tencent.com,busuanzi.ibruce.info,wei.com,helloimg.com
+localhost,127.*,192.168.*,10.*,172.16.*,172.17.*,172.18.*,172.19.*,172.20.*,172.21.*,172.22.*,172.23.*,172.24.*,172.25.*,172.26.*,172.27.*,172.28.*,172.29.*,172.30.*,172.31.*,bing.com,cn.bing.com,gitee.com,baidu.com,sougou.com,so.com,quark.sm.cn,huya.com,douyu.com,bilibili.com,iqiyi.com,v.qq.com,youku.com,v.baidu.com,tv.souhu.com,tv.cctv.com,mgtv.com,miguvideo.com,douyin.com,toutiao.com,kuaishou.com,music.163.com,y.qq.com,kuwo.cn,kugou.com,xiami.com,music.migu.cn,music.douban.com,zhihu.com,weibo.com,youtiao.com,12306.cn,tieba.baidu.com,jianshu.com,juejin.cn,segmentfault.com,oschina.net,blog.csdn.net,cnblogs.com,iconfont.cn,wx.qq.com,meituan.com,ctrip.com,qunar.com,jd.com,taobao.com,pinduoduo.com,suning.com,tmall.com,vip.com,gome.com.cn,mogu.com,yhd.com,consumer.huawei.com,vivo.com.cn,mi.com,opposhop.cn,pan.baidu.com,lanzou.com,aliyundrive.com,ctfile.com,weiyun.com,cloud.189.cn,email.163.com,mail.qq.com,foxmail.com,mail.10086.cn,webmail30.189.cn,mail.sina.com.cn,mail.souhu.com,mail.wo.com.cn,mail.yahoo.com,mail.aliyun.com,mail.china.com,amap.com,map.qq.com,map.baidu.com,ditu.amap.com,docs.qq.com,docs.wps.cn,note.youdao.com,yuque.com,shimo.im,doc.weiyun.com,yinxiang.com,feishu.cn,zhipin.com,lanhuapp.com,bbs.oneplus.com,cloud.tencent.com,busuanzi.ibruce.info,wei.com,helloimg.com,helloimg.com,deepseek.com
 ```
