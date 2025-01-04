@@ -110,6 +110,7 @@
     position: relative;
   }
   .hero-avatar {
+    min-height: 220px;
     position: relative;
     display: flex;
     justify-content: end;
@@ -193,11 +194,13 @@
     }
   }
   .statistic .post-container {
-    margin: 26px 0;
+    margin: 30px 0;
     text-align: center;
     .desc {
       padding-top: 0;
-      line-height: 1;
+      line-height: 1.6;
+      font-size: 13px;
+      font-weight: 500;
       position: relative;
     }
     .desc-line {
@@ -207,33 +210,21 @@
       justify-content: center;
       align-items: center;
       > span {
-        height: 1px;
-        width: 16%;
-        background: white;
+        height: 0;
+        width: 14%;
+        border: solid 1px white;
+        border-radius: 4px;
       }
     }
     .number {
       letter-spacing: 4px;
       line-height: 1.2;
       font-weight: 700;
-      font-size: 42px;
+      font-size: 36px;
       color: white;
       -webkit-text-fill-color: transparent;
       -webkit-text-stroke-color: white;
-      -webkit-text-stroke-width: 1.6px;
-      position: relative;
-      &::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background-image: linear-gradient(0deg, var(--weiz-primary-color) 0%, transparent 70%);
-      }
-      &:first-child::after {
-        background-image: linear-gradient(0deg, transparent 30%, var(--weiz-primary-color) 100%);
-      }
+      -webkit-text-stroke-width: 1.2px;
     }
     .desc {
       color: white;
@@ -410,7 +401,7 @@
 /**
 * 自适应
 * -------------------------------------------------------------------------- */
-@media (max-width: 420px) {
+@media (max-width: 480px) {
   #about {
     .about-nav {
       li {
