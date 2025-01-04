@@ -12,19 +12,19 @@ about:
   links:
     - title: 前端笔记
       iconName: weiz-icon-web white
-      link: vitepress/basic/api-examples
+      link: ts/basic/ts-normal-summary
     - title: 编码提效
       iconName: weiz-icon-code-fill main
-      link: vitepress/basic/api-examples
+      link: css/apply/icon-label-shields
     - title: 博客文档
       iconName: weiz-icon-blog-fill main
       link: vitepress/basic/api-examples
     - title: 资源分享
       iconName: weiz-icon-resource-fill main
-      link: vitepress/basic/api-examples
+      link: resource/font/open-source-font
     - title: 杂项记录
       iconName: weiz-icon-other-fill main
-      link: vitepress/basic/api-examples
+      link: app/network/clash-verge
 
 post:
   # - title: Clash Verge 使用记录
