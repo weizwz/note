@@ -1,12 +1,12 @@
 ---
-title: 运行时 API
+title: 运行时 API - 含示例
 description: 本文介绍了 VitePress 的常用运行时 API，包括 useData、useRouter 和 withBase。这些 API 允许访问站点数据、编程导航和路径处理。示例代码展示了如何在 .md 和 .vue 文件中使用这些 API
 lastUpdated: 2024-12-12 10:44:18+8:00
 tags:
   - VitePress
 ---
 
-# 运行时 API
+# 运行时 API - 含示例
 
 此页面展示了 `VitePress` 一些常用的 `运行时 API`，它可以让你访问站点内部的应用程序数据。
 
