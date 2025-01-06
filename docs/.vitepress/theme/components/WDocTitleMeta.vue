@@ -77,7 +77,7 @@ onMounted(() => {
     > div {
       display: flex;
       align-items: center;
-      margin-top: 10px;
+      margin-top: 16px;
       margin-right: 6px;
       &:last-child {
         margin-right: 0;

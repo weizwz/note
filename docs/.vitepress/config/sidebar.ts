@@ -8,19 +8,20 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
         {
           text: '基础配置',
           items: [
-            { text: '运行时API', link: '/vitepress/basic/api-examples.md' }
+            { text: '运行时 API', link: '/vitepress/basic/api-examples.md' }
           ]
         },
         {
           text: '进阶用法',
           items: [
-            { text: 'Markdown示例', link: '/vitepress/extend/markdown-examples.md' },
+            { text: 'Markdown 示例', link: '/vitepress/extend/markdown-examples.md' },
           ]
         },
         {
           text: '常见问题',
           items: [
-            { text: '渲染报错Hydration', link: '/vitepress/problem/error-mismatches.md' },
+            { text: '渲染报错 Hydration', link: '/vitepress/problem/error-mismatches.md' },
+            { text: 'Sass API 过期告警', link: '/vitepress/problem/warning-sass-api-expired.md' },
           ]
         },
       ]
