@@ -29,7 +29,7 @@ VSCode 插件商店搜索 `Continue`，第一个下载就是
 
 ![image-20250103154714100.png](https://www.helloimg.com/i/2025/01/03/677797a8ca2ee.png)
 
-创建成功后，**记得复制这个 key 值，并保存在其他地方，因为它只会出现 1 次**。
+创建成功后，**记得复制这个 key 值，保存在其他地方，因为后面修改配置要用到，并且它只会出现 1 次**。
 
 
 
@@ -46,7 +46,8 @@ VSCode 插件商店搜索 `Continue`，第一个下载就是
       "model": "deepseek-coder",
       "provider": "deepseek",
       "contextLength": 128000,
-      "apiKey": "sk-f7f8808f7a584b3f95419242c5f30b7b",  //  [!code highlight]
+      // 替换为自己的 API Key
+      "apiKey": "xxx", //  [!code highlight]
       "title": "DeepSeek v3"
     }
   ],
