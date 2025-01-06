@@ -29,13 +29,15 @@ VSCode 插件商店搜索 `Continue`，第一个下载就是
 
 ![image-20250103154714100.png](https://www.helloimg.com/i/2025/01/03/677797a8ca2ee.png)
 
-创建成功后，记得复制这个 key 值，并保存在其他地方，因为它只会出现1次。
+创建成功后，**记得复制这个 key 值，并保存在其他地方，因为它只会出现 1 次**。
 
 
 
 ## VSCode 里配置
 
 打开左侧的 `continue` 插件图标，点击上面的 `设置按钮`，进入编辑区域添加新模型。新增内容如下：
+
+记得要替换 `apiKey` 的值要替换为刚刚注册 DeepSeek 后创建的 `API Key`
 
 ```json
 {
@@ -44,7 +46,7 @@ VSCode 插件商店搜索 `Continue`，第一个下载就是
       "model": "deepseek-coder",
       "provider": "deepseek",
       "contextLength": 128000,
-      "apiKey": "sk-f7f8808f7a584b3f95419242c5f30b7b",
+      "apiKey": "sk-f7f8808f7a584b3f95419242c5f30b7b",  //  [!code highlight]
       "title": "DeepSeek v3"
     }
   ],
@@ -55,6 +57,7 @@ VSCode 插件商店搜索 `Continue`，第一个下载就是
   },
 }
 ```
+
 
 ![image-20250103155123230.png](https://www.helloimg.com/i/2025/01/03/677797a8b35af.png)
 
