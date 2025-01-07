@@ -1,30 +1,23 @@
-import { spawnSync } from 'child_process'
-import { statSync } from 'fs'
 import { formatDate, dateToUTC8 } from '../utils/tools'
+import { getFileMetaTime, getGitTimestampSync } from '../utils/fileTime'
 
-// 读取源文件时间
-const getFileMetaTime = (filePath) => {
-  const { birthtimeMs, mtimeMs } = statSync(filePath)
-  const dateOption = formatDate(true);
-
-  return {
-    firstCommit: dateToUTC8(dateOption.format(birthtimeMs)),
-    lastUpdated: dateToUTC8(dateOption.format(mtimeMs))
-  }
-}
-
-// 读取 git 时间
-const getGitTime = (command, cwd) => {
-  const result = spawnSync('git', command, { cwd })
-  return result.stdout.toString().trim()
-}
-
+/**
+ * 获取文件git提交时间，要求格式 yyyy-mm-dd hh:mm:ss+8:00
+ * @param filePath 
+ * @param cwd 
+ * @returns 时间对象
+ */
 const getFileTimes = (filePath, cwd) => {
-  const firstCommit = dateToUTC8(getGitTime(['log', '--reverse', '--diff-filter=A', '--pretty="%ai"', filePath], cwd))
-  const lastUpdated = dateToUTC8(getGitTime(['log', '-1', '--pretty="%ai"', filePath], cwd))
+  let firstCommit = dateToUTC8(getGitTimestampSync(['log', '--reverse', '--diff-filter=A', '--pretty="%ai"', filePath], cwd))
+  let lastUpdated = dateToUTC8(getGitTimestampSync(['log', '-1', '--pretty="%ai"', filePath], cwd))
 
+  // 没有git提交时间的话获取源文件创建和修改时间
   if (!firstCommit && !lastUpdated) {
-    return getFileMetaTime(filePath)
+    const { birthtimeMs, mtimeMs } = getFileMetaTime(filePath)
+    const dateOption = formatDate(true);
+
+    firstCommit = dateToUTC8(dateOption.format(birthtimeMs))
+    lastUpdated = dateToUTC8(dateOption.format(mtimeMs))
   }
 
   return {
@@ -51,7 +44,7 @@ const addTime = (code, filePath) => {
   if (!hasLastUpdated) {
     addTime += `lastUpdated: ${lastUpdated}\n`
   }
-
+  // 获取到时间后插入文章 frontmatter 内
   return code.replace('---\n', addTime)
 }
 

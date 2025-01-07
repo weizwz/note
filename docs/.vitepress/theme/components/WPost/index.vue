@@ -21,7 +21,7 @@
 </template>
 
 <script setup lang='ts'>
-import { Year, data } from '../../utils/post.data'
+import { Year, data } from '../../../utils/post.data'
 
 const metaPost: Year = data.years
 const yearKeys = Object.keys(metaPost).reverse()

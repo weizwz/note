@@ -85,7 +85,7 @@
 <script setup lang="ts">
 import { useData, withBase } from 'vitepress'
 import { HomeAbout, HomePost } from '../../type/WHome'
-import { data } from '../../utils/post.data'
+import { data } from '../../../utils/post.data'
 import { onMounted, ref } from 'vue'
 
 const { frontmatter: fm } = useData()

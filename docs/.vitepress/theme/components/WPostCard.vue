@@ -9,7 +9,7 @@
 </template>
 
 <script setup lang="ts">
-import { Post } from '../utils/post.data'
+import { Post } from '../../utils/post.data'
 
 export interface PostCard extends Post {
   baseUrl?: string

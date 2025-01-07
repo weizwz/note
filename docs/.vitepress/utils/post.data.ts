@@ -1,7 +1,7 @@
 import { createContentLoader } from 'vitepress'
 import { basename, extname, sep, normalize } from 'path'
-import { spawn } from 'child_process'
-import { statSync } from 'fs'
+import { formatDate } from './tools'
+import { getGitTimestamp } from './fileTime'
 
 export interface Post {
   title: string // 标题
@@ -62,11 +62,7 @@ export default createContentLoader(
         const createdDate = frontmatter?.firstCommit ? +new Date(frontmatter.firstCommit) : ''
         const updatedDate = frontmatter?.lastUpdated ? +new Date(frontmatter.lastUpdated) : ''
         // 日期格式
-        const dateOption = new Intl.DateTimeFormat('zh', {
-          day: '2-digit',
-          month: '2-digit',
-          year: 'numeric'
-        });
+        const dateOption = formatDate();
 
         // 链接去掉项目名
         const link = normalize(url)
@@ -152,40 +148,3 @@ export default createContentLoader(
     }
   }
 )
-
-// 获取文件提交时间
-function getGitTimestamp(filePath: string) {
-  return new Promise<[number, number]>((resolve) => {
-    let output: number[] = []
-
-    // 开启子进程执行git log命令
-    const child = spawn('git', ['--no-pager', 'log', '--pretty="%ci"', filePath])
-
-    // 监听输出流
-    child.stdout.on('data', (d) => {
-      const data = String(d)
-        .split('\n')
-        .map((item) => +new Date(item))
-        .filter((item) => item)
-      output.push(...data)
-    })
-
-    // 输出接受后返回
-    child.on('close', () => {
-      if (output.length) {
-        // 返回[发布时间，最近更新时间]
-        resolve([+new Date(output[output.length - 1]), +new Date(output[0])])
-      } else {
-        // 没有提交记录时获取文件时间
-        const { birthtimeMs, mtimeMs } = statSync(filePath)
-        resolve([birthtimeMs, mtimeMs])
-      }
-    })
-
-    child.on('error', () => {
-      // 获取失败时使用文件时间
-      const { birthtimeMs, mtimeMs } = statSync(filePath)
-      resolve([birthtimeMs, mtimeMs])
-    })
-  })
-}

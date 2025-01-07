@@ -34,7 +34,7 @@
 <script setup lang="ts">
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 import { useRouter } from 'vitepress'
-import { Post, data } from '../../utils/post.data'
+import { Post, data } from '../../../utils/post.data'
 
 const routeData = useRouter()
 const tags = ref(data.tags)
