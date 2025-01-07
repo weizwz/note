@@ -18,11 +18,13 @@
 
 + `docs/.vitepress/theme` 存放 主题配置，以及自定义插件
 
++ `docs/.vitepress/utils` 存放 工具类，包括收集文章信息，处理日期格式等
+
 + `docs/pages` 存放博客主页面，如 全部文章、标签列表、更新日志等
 
 + `docs/post` 作为正式文档目录，其内的 `.md` 文档都将作为正式文档被渲染，除了以 '-demo.md' 结尾的文档（作为正式文档的示例文档，不会出现在文章目录）
 
-  >文档过滤方法，参见 `docs/.vitepress/theme/utils/post.data.ts`
+  >文档过滤方法，参见 `docs/.vitepress/utils/post.data.ts`
   > line 35，过滤规则
   >`post/**/!(*-demo).md`
 
