@@ -24,7 +24,7 @@
 <script setup lang="ts">
 import { useData } from 'vitepress'
 import { ref, onMounted } from 'vue'
-import { countWord, countTransK } from '../utils/tools'
+import { countWord, countTransK, formatDate } from '../../utils/tools'
 
 const { frontmatter } = useData()
 const wordCount = ref('')
@@ -47,19 +47,14 @@ const getPV = () => {
 }
 
 onMounted(() => {
-  firstCommit.value = new Date(frontmatter.value.firstCommit!).toLocaleDateString('zh', {
-    day: '2-digit',
-    month: '2-digit',
-    year: 'numeric'
-  })
-  lastUpdated.value = new Date(frontmatter.value.lastUpdated!).toLocaleDateString('zh', {
-    day: '2-digit',
-    month: '2-digit',
-    year: 'numeric'
-  })
+  const dateOption = formatDate()
+  firstCommit.value = dateOption.format(new Date(frontmatter.value.firstCommit!))
+  lastUpdated.value = dateOption.format(new Date(frontmatter.value.lastUpdated!))
+
   const docDomContainer = window.document.querySelector('#VPContent')
   const words = docDomContainer?.querySelector('.content-container .main')?.textContent || ''
   wordCount.value = countWord(words)
+  
   getPV()
 })
 </script>

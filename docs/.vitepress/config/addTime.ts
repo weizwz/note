@@ -1,23 +1,15 @@
 import { spawnSync } from 'child_process'
 import { statSync } from 'fs'
+import { formatDate, dateToUTC8 } from '../utils/tools'
 
 // 读取源文件时间
 const getFileMetaTime = (filePath) => {
   const { birthtimeMs, mtimeMs } = statSync(filePath)
-
-  const dateOption = new Intl.DateTimeFormat('zh', {
-    year: 'numeric',
-    month: '2-digit',
-    day: '2-digit',
-    hour: '2-digit',
-    minute: '2-digit',
-    second: '2-digit',
-    hour12: false 
-  });
+  const dateOption = formatDate(true);
 
   return {
-    firstCommit: dateOption.format(birthtimeMs).replace(/\//g, '-') + '+8:00',
-    lastUpdated: dateOption.format(mtimeMs).replace(/\//g, '-') + '+8:00'
+    firstCommit: dateToUTC8(dateOption.format(birthtimeMs)),
+    lastUpdated: dateToUTC8(dateOption.format(mtimeMs))
   }
 }
 
@@ -28,8 +20,8 @@ const getGitTime = (command, cwd) => {
 }
 
 const getFileTimes = (filePath, cwd) => {
-  const firstCommit = getGitTime(['log', '--reverse', '--diff-filter=A', '--pretty="%ai"', filePath], cwd).replace(' +0800', '+8:00')
-  const lastUpdated = getGitTime(['log', '-1', '--pretty="%ai"', filePath], cwd).replace(' +0800', '+8:00')
+  const firstCommit = dateToUTC8(getGitTime(['log', '--reverse', '--diff-filter=A', '--pretty="%ai"', filePath], cwd))
+  const lastUpdated = dateToUTC8(getGitTime(['log', '-1', '--pretty="%ai"', filePath], cwd))
 
   if (!firstCommit && !lastUpdated) {
     return getFileMetaTime(filePath)

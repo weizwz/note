@@ -17,23 +17,20 @@ export default async ({ mode }) => {
   return defineConfig({
     outDir: '../dist',
     base: env.VITE_APP_BASE_PATH,
-
     lang: 'zh-CN',
     title: '唯知笔记',
     titleTemplate: ':title - 唯知笔记',
-    description: '唯知笔记',
-
+    description:
+      '唯知笔记，一个分享编程世界的网站，涵盖前端知识、编码提效、博客文档、资源分享，网站分享等，包含JS、TS、CSS、Markdown、Vue.js、Node.js、Vite、Vitepress、Hexo、Git、Github、Windows、MacOS等相关知识',
     head: createHead(env.VITE_APP_BASE_PATH),
-
     lastUpdated: true,
     cleanUrls: true,
     // 路由重写
     rewrites: {
-      'post/(.*)': '(.*)',
+      'post/(.*)': '(.*)'
     },
     // 忽略死链查询
     ignoreDeadLinks: true,
-
     // https://github.com/vuejs/vitepress/blob/main/src/node/markdown/markdown.ts
     markdown: {
       lineNumbers: true,
@@ -51,7 +48,7 @@ export default async ({ mode }) => {
             return _code
           }
         },
-        transformerTwoslash(),
+        transformerTwoslash()
       ],
       // 对markdown中的内容进行替换或者批量处理
       config: (md) => {
@@ -59,20 +56,17 @@ export default async ({ mode }) => {
         md.use((md) => {
           // 组件插入h1标题下
           md.renderer.rules.heading_close = (tokens, idx, options, env, slf) => {
-            let htmlResult = slf.renderToken(tokens, idx, options);
-
-            if (tokens[idx].tag === 'h1') htmlResult += `<weiz-title-meta />`; 
-            return htmlResult;
+            let htmlResult = slf.renderToken(tokens, idx, options)
+            if (tokens[idx].tag === 'h1') htmlResult += `<weiz-title-meta />`
+            return htmlResult
           }
           const defaultRender = md.render
           md.render = function (...args) {
             // 对原生内容做处理，增加创建时间和更新时间
             args[0] = addTime(args[0], args[1].realPath)
-            
             // 调用原始渲染
             let defaultContent = defaultRender.apply(md, args)
             // 替换内容
-            
             // defaultContent = defaultContent
             //       .replace(/<\!---@include:/g, '<!--@include:')
             // 返回渲染的内容
@@ -87,9 +81,7 @@ export default async ({ mode }) => {
       logo: '/logo.png',
       // 标题隐藏 需设置为false
       siteTitle: '唯知笔记',
-
       i18nRouting: false,
-
       nav,
       sidebar,
       footer,
@@ -100,14 +92,12 @@ export default async ({ mode }) => {
         pattern: 'https://github.com/weizwz/note/edit/main/docs/:path', // 改成自己的仓库
         text: '在GitHub编辑本页'
       },
-
       // 相关文字和提示修改
       returnToTopLabel: '回到顶部', // 返回顶部文字修改(移动端)
       sidebarMenuLabel: '菜单', // 侧边菜单
       darkModeSwitchLabel: '主题',
       lightModeSwitchTitle: '切换到浅色模式',
       darkModeSwitchTitle: '切换到深色模式',
-
       // 大纲显示2-3级标题
       outline: {
         level: [2, 4],
@@ -121,13 +111,11 @@ export default async ({ mode }) => {
           timeStyle: 'medium'
         }
       },
-
       // 自定义上下页名
       docFooter: {
         prev: '上一篇',
         next: '下一篇'
       },
-
       //本地搜索
       search: {
         provider: 'algolia',
@@ -148,6 +136,6 @@ export default async ({ mode }) => {
           }
         }
       }
-    },
+    }
   })
 }
