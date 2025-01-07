@@ -1,10 +1,15 @@
 # 唯知笔记
 一个基于 `VitePress` 的知识分享网站。
 
-## 搭建
+## 搭建和基本配置
 
-参考 [VitePress快速搭建个人博客](https://lyxdream.github.io/note/vitePress-blog/index)
+参考文档
 
+[VitePress官方文档](https://vitepress.dev/zh/guide/getting-started)
+
+[yx - VitePress快速搭建个人博客](https://lyxdream.github.io/note/vitePress-blog/index)
+
+[Yiov - VitePress快速上手](https://vitepress.yiov.top/getting-started.html)
 
 ## 说明
 
@@ -38,6 +43,8 @@
 
 ### AI摘要提取
 
+#### 使用 Edge浏览器 的 Copilot：
+
 + 从之前网站迁移的文章，已有url地址：
   ```
   url，120字以内摘要，主要介绍内容，要方便各大搜索引擎抓取，不需要提及 帮助读者/开发者/用户 等内容，不需要分段
@@ -46,3 +53,10 @@
   ```
   对当前页面内容做出摘要，120字以内，主要介绍内容，要方便各大搜索引擎抓取，不需要提及 帮助读者/开发者/用户 等内容，不需要分段
   ```
+
+#### 使用 vscode 的 continue 插件：
+
+右键复制文章完整路径
+```
+对以下内容做出摘要，120字以内，主要介绍内容，要方便各大搜索引擎抓取，不需要提及 帮助读者/开发者/用户 等内容，不需要分段，读取地址 {路径}
+```
