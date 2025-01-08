@@ -25,7 +25,7 @@ import { watch } from 'vue'
 import { inBrowser, useData, useRoute } from 'vitepress'
 
 const { isDark } = useData()
-const route = useRoute();
+const route = useRoute()
 
 watch(isDark, (dark) => {
   if (!inBrowser) return

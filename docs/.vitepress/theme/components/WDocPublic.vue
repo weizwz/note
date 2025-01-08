@@ -27,7 +27,9 @@
   </div>
   <div class="post-tags">
     <div class="tags-list">
-      <a v-for="(item, index) of postTags" :key="index" :href="withBase('/pages/tags?q=' + item)" class="tag">{{ item }}</a>
+      <a v-for="(item, index) of postTags" :key="index" :href="withBase('/pages/tags?q=' + item)" class="tag">{{
+        item
+      }}</a>
     </div>
   </div>
 </template>
@@ -38,7 +40,6 @@ import { onMounted, ref, watch } from 'vue'
 
 const { site, theme, frontmatter } = useData()
 const route = useRoute()
-
 
 const siteHref = ref('')
 const postHref = ref('')
@@ -52,7 +53,7 @@ const setHref = () => {
 }
 
 watch(route, () => {
-  setHref();
+  setHref()
 })
 
 onMounted(() => {
@@ -67,7 +68,7 @@ onMounted(() => {
     padding: 10px 16px;
     border: solid 1px var(--vp-c-divider);
     border-radius: var(--weiz-border-radius);
-    transition: all .2s;
+    transition: all 0.2s;
     .copyright-symbol {
       position: absolute;
       top: 6px;

@@ -5,10 +5,11 @@ import WBackToTop from './WBackToTop.vue' //返回顶部
 import WDocPublic from './WDocPublic.vue' //文章footer
 import WDocFooter from './WDocFooter.vue' //文章footer
 import GiscusComment from './GiscusComment.vue' // 评论模块
-const { isDark } = useData()
-
 import { toggleDark } from './WDark'
-toggleDark(isDark) //实现切换主题过渡动画
+
+const { isDark } = useData()
+// 实现切换主题过渡动画
+toggleDark(isDark)
 </script>
 
 <template>

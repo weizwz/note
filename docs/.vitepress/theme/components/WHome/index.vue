@@ -25,18 +25,26 @@
         </el-col>
         <el-col :xs="24" :sm="8" :md="6" class="container-right">
           <div class="hero-avatar">
-            <img :src="aboutData.logo.indexOf('http') === 0 ? aboutData.logo : withBase(aboutData.logo)" alt="head-avatar" />
+            <img
+              :src="aboutData.logo.indexOf('http') === 0 ? aboutData.logo : withBase(aboutData.logo)"
+              alt="head-avatar" />
           </div>
           <div class="hero-social">
             <ul>
               <li class="hero-social-item">
-                <a class="social" href="https://github.com/weizwz" target="_blank"><i class="weiz-icon weiz-icon-github main" /></a>
+                <a class="social" href="https://github.com/weizwz" target="_blank"
+                  ><i class="weiz-icon weiz-icon-github main"
+                /></a>
               </li>
               <li class="hero-social-item">
-                <a class="social" href="https://gitee.com/weizwz" target="_blank"><i class="weiz-icon weiz-icon-gitee main" /></a>
+                <a class="social" href="https://gitee.com/weizwz" target="_blank"
+                  ><i class="weiz-icon weiz-icon-gitee main"
+                /></a>
               </li>
               <li class="hero-social-item">
-                <a class="social" href="https://www.cnblogs.com/weizwz" target="_blank"><i class="weiz-icon weiz-icon-cnblog main" /></a>
+                <a class="social" href="https://www.cnblogs.com/weizwz" target="_blank"
+                  ><i class="weiz-icon weiz-icon-cnblog main"
+                /></a>
               </li>
             </ul>
           </div>
@@ -51,9 +59,9 @@
           <div v-if="item.type && item.type === 'busuanzi'" class="post-card statistic">
             <div class="post-container">
               <div class="number">{{ uv }}</div>
-              <div class="desc">本站总访客<span id="busuanzi_value_site_uv" style="display: none;" /></div>
+              <div class="desc">本站总访客<span id="busuanzi_value_site_uv" style="display: none" /></div>
               <div class="desc-line"><span /></div>
-              <div class="desc">本站总访问量<span id="busuanzi_value_site_pv" style="display: none;" /></div>
+              <div class="desc">本站总访问量<span id="busuanzi_value_site_pv" style="display: none" /></div>
               <div class="number">{{ pv }}</div>
             </div>
           </div>
@@ -63,7 +71,7 @@
               <span><i class="weiz-icon weiz-icon-arrow-right xxxl white"></i></span>
             </div>
           </a>
-          <weiz-post-card v-else :post="item"/>
+          <weiz-post-card v-else :post="item" />
         </el-col>
       </el-row>
     </div>
@@ -71,7 +79,11 @@
   <div id="tag">
     <div class="swiper">
       <div class="swiper-wrapper">
-        <div class="swiper-container" v-for="(i, idx) of 2" :key="idx" :style="'--swiper-animation-time: ' + tags.length * 5 + 's'">
+        <div
+          class="swiper-container"
+          v-for="(i, idx) of 2"
+          :key="idx"
+          :style="'--swiper-animation-time: ' + tags.length * 5 + 's'">
           <div class="swiper-item" v-for="(item, index) of tags" :key="index">
             <a class="tag" :href="'pages/tags?q=' + item">{{ item }}</a>
           </div>
@@ -100,18 +112,21 @@ const uv = ref('loading')
 const postMerge = () => {
   const postLength = 7
   const fmLength = fm.value.post ? fm.value.post.length : 0
-  postData.value = fm.value.post && fmLength >= postLength ? fm.value.post : (() => {
-    const newPosts = data.posts.slice(0, postLength - fmLength)
-    const mdPosts = fm.value.post || []
-    let showPosts = mdPosts.concat(newPosts) as unknown as HomePost[]
-    // 第四张卡片插入卜算子统计
-    showPosts.splice(3, 0, {
-      title: '统计访问量',
-      type: 'busuanzi',
-      abstract: '统计访问量'
-    })
-    return showPosts
-  })()
+  postData.value =
+    fm.value.post && fmLength >= postLength
+      ? fm.value.post
+      : (() => {
+          const newPosts = data.posts.slice(0, postLength - fmLength)
+          const mdPosts = fm.value.post || []
+          let showPosts = mdPosts.concat(newPosts) as unknown as HomePost[]
+          // 第四张卡片插入卜算子统计
+          showPosts.splice(3, 0, {
+            title: '统计访问量',
+            type: 'busuanzi',
+            abstract: '统计访问量'
+          })
+          return showPosts
+        })()
 }
 
 const formatNumber = (num) => {
@@ -126,7 +141,7 @@ let timeoutUV = 0
 const getUV = () => {
   if (timeoutUV) clearTimeout(timeoutUV)
   timeoutUV = window.setTimeout(() => {
-    const $UV = document.querySelector("#busuanzi_value_site_uv")
+    const $UV = document.querySelector('#busuanzi_value_site_uv')
     const text = $UV?.innerHTML
     if ($UV && text) {
       const text = $UV.innerHTML
@@ -141,7 +156,7 @@ let timeoutPV = 0
 const getPV = () => {
   if (timeoutPV) clearTimeout(timeoutPV)
   timeoutPV = window.setTimeout(() => {
-    const $PV = document.querySelector("#busuanzi_value_site_pv")
+    const $PV = document.querySelector('#busuanzi_value_site_pv')
     const text = $PV?.innerHTML
     if ($PV && text) {
       pv.value = formatNumber(text)

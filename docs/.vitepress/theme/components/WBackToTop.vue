@@ -12,7 +12,7 @@ import { onBeforeUnmount, onMounted, ref } from 'vue'
 // 是否显示返回顶部
 const showBackTop = ref(false)
 
-function scrollToTop() {
+const scrollToTop = () => {
   window.scrollTo({
     top: 0,
     behavior: 'smooth'
@@ -20,7 +20,7 @@ function scrollToTop() {
 }
 
 // 节流
-function throttle(fn, delay = 100) {
+const throttle = (fn, delay = 100) => {
   let lastTime = 0
   return function () {
     let nowTime = +new Date()
@@ -66,7 +66,7 @@ onBeforeUnmount(() => window.removeEventListener('scroll', onScroll))
   .vitepress-backTop-main {
     right: calc((100vw - 752px) / 2 - 40px);
   }
-  .has-sidebar.has-aside  .vitepress-backTop-main {
+  .has-sidebar.has-aside .vitepress-backTop-main {
     right: var(--center-position);
   }
 }
