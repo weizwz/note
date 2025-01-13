@@ -36,7 +36,9 @@ export default createContentLoader(
   ],
   {
     // 包含原始 markdown 源
-    includeSrc: true,
+    includeSrc: false,
+    // 包含摘录
+    excerpt: false,
     async transform(data) {
       const promises: Promise<any>[] = []
       let posts: Post[] = []
@@ -46,6 +48,7 @@ export default createContentLoader(
       data.forEach(({ frontmatter, src, url }) => {
         // 优先取frontmatter里的标题，没有的话再去找源文中的标题
         let title = frontmatter.title
+        /** includeSrc=true才生效
         if (!title) {
           title = src?.match(/^\s*#\s+(.*)\s*$/m)?.[1] || basename(url).replace(extname(url), '')
           // 标题可能用到了变量，需要替换
@@ -56,6 +59,7 @@ export default createContentLoader(
             title = title.replace(replaceReg, frontmatter[match[1]])
           }
         }
+        */
         let _tags = frontmatter?.tags
         let abstract = frontmatter?.description
         // 获取手动设置的更新时间
@@ -83,7 +87,9 @@ export default createContentLoader(
               ? dateOption.format(updatedDate)
               : dateOption.format(date[1]),
           ],
-          abstract: abstract || src
+          abstract: abstract,
+          /** includeSrc=true才生效
+            || src
             // 去除html标签
             ?.replace(/<[^>]+?>/g, '')
             // 去除frontmatter
@@ -106,6 +112,7 @@ export default createContentLoader(
             .trim()
             // 仅保留可能显示的部分，减小数据大小
             .slice(0, 200),
+          */
           tags: _tags
         }))
         promises.push(task)
