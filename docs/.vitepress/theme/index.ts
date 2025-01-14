@@ -4,6 +4,7 @@ import DefaultTheme from 'vitepress/theme'
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
 import './style/index.scss'
+import WLoading from './components/WLoading.vue'
 import WLayout from './components/WLayout.vue'
 import WPostCard from './components/WPostCard.vue'
 import WHome from './components/WHome/index.vue'
@@ -34,6 +35,7 @@ export default {
     app.component('weiz-tag', WTag)
     app.component('weiz-post', WPost)
     app.component('weiz-title-meta', WDocTitleMeta)
+    app.component('weiz-loading', WLoading)
     app.use(TwoslashFloatingVue)
     app.use(ElementPlus)
     if (inBrowser) {

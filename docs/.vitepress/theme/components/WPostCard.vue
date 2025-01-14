@@ -1,13 +1,22 @@
 <template>
-  <a class="post-card" :href="(props.post?.baseUrl || '') + props.post.url">
+  <a v-if="props.noData" class="post-card post-card-no-data">
+    <div class="post-container">
+      <div class="weiz-icon weiz-icon-post xxl"/>
+      <div class="title">
+        <weiz-loading/>
+      </div>
+      <div class="desc">&nbsp;</div>
+    </div>
+  </a>
+  <a v-else class="post-card" :href="(post?.baseUrl || '') + post.url">
     <div class="post-container">
       <div
         :class="
           'weiz-icon xxl weiz-icon-post ' +
-          (props.post.tags ? 'weiz-icon-' + props.post.tags[0].toLocaleLowerCase().replace(/\./g, '') : '')
+          (post.tags ? 'weiz-icon-' + post.tags[0].toLocaleLowerCase().replace(/\./g, '') : '')
         " />
-      <div class="title">{{ props.post.title }}</div>
-      <div class="desc">{{ props.post.abstract }}</div>
+      <div class="title">{{ post.title }}</div>
+      <div class="desc">{{ post.abstract }}</div>
     </div>
   </a>
 </template>
@@ -19,7 +28,8 @@ export interface PostCard extends Post {
   baseUrl?: string
 }
 
-const props = defineProps<{ post: PostCard }>()
+const props = defineProps<{ post?: PostCard, noData?: Boolean }>()
+const post = props?.post as PostCard
 </script>
 
 <style lang="scss" scoped>
@@ -36,6 +46,14 @@ const props = defineProps<{ post: PostCard }>()
     border-color: var(--weiz-primary-color);
     box-shadow: 0 0.5em 0.5em -0.2em var(--weiz-primary-color);
     transform: translateY(-0.5em);
+  }
+  &.post-card-no-data {
+    .title {
+      text-align: center;
+    }
+    .desc {
+      height: 68px;
+    }
   }
 }
 
