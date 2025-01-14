@@ -8,7 +8,7 @@
             <div
               v-for="(item, index) of tagsText"
               :key="index"
-              :style="{ fontSize: 1 + tags[item].length * 0.05 + 'em' }"
+              :style="{ fontSize: minSize + (tags[item].length - 1) * unit + 'em' }"
               @click="activeTag(item)"
               v-bind:class="{ tag: true, 'tag-active': currentTag === item }">
               {{ item }}
@@ -39,6 +39,22 @@ import { Post, data } from '../../../utils/post.data'
 const routeData = useRouter()
 const tags = ref(data.tags)
 const tagsText = ref(Object.keys(tags.value))
+let maxPost = 1
+
+const getMaxPost = () => {
+  for (const item in tags.value) {
+    if (tags.value[item].length > maxPost) maxPost = tags.value[item].length
+  }
+  countSize()
+}
+
+// 计算文字大小，最大为2em，最小为1em
+const maxSize = 2
+const minSize = ref(1)
+const unit = ref(1)
+const countSize = () => {
+  unit.value = Math.floor(((maxSize - minSize.value) / maxPost) * 100) / 100
+}
 
 let currentTag = ref('')
 let posts = ref<Post[]>([])
@@ -57,7 +73,9 @@ const handlePopState = () => {
   currentTag.value = tag
   posts.value = tags.value[tag]
 }
+
 onMounted(() => {
+  getMaxPost()
   handlePopState()
   window.addEventListener('popstate', handlePopState)
 })
