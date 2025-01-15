@@ -251,6 +251,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
         {
           text: '应用推荐',
           items: [
+            { text: '自动点击器', link: '/macos/app/free-auto-mouse-click.md' },
           ]
         },
       ]

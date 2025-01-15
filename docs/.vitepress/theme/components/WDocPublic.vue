@@ -104,6 +104,7 @@ onMounted(() => {
   }
 }
 .post-tags {
+  margin-top: 12px;
   margin-bottom: 44px;
   .tags-list a {
     display: inline-block;

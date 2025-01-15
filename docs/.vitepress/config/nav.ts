@@ -66,7 +66,7 @@ export const nav: DefaultTheme.Config['nav'] = [
       },
       {
         items: [
-          { text: 'Clash 配置', link: '/app/network/clash-verge.md' },
+          { text: 'Clash 配置', link: 'app/network/clash-verge.md' },
           { text: 'Nodejs 相关', link: '/nodejs/apply/pnpm-setting.md' },
           { text: '终端 相关', link: 'vitepress/extend/markdown-examples.md' },
           { text: 'Git 相关', link: 'vitepress/basic/api-examples.md' },

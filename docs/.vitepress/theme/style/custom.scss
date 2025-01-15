@@ -38,7 +38,7 @@ pre:not(.vp-code) {
 
 /* 图片 */
 .vp-doc img:not([src^="https://img.shields.io"]) {
-  max-height: 420px;
+  max-height: 700px;
   border: solid 1px var(--vp-c-divider);
   border-radius: var(--weiz-border-radius);
 }
