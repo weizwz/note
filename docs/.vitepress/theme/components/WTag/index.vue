@@ -51,7 +51,7 @@ const getMaxPost = () => {
 // 计算文字大小，最大为2em，最小为1em
 const maxSize = 2
 const minSize = ref(1)
-const unit = ref(1)
+const unit = ref(0.1)
 const countSize = () => {
   unit.value = Math.floor(((maxSize - minSize.value) / maxPost) * 100) / 100
 }
