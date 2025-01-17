@@ -32,7 +32,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onBeforeUnmount, nextTick } from 'vue'
+import { ref, onMounted, onBeforeUnmount } from 'vue'
 import { useRouter } from 'vitepress'
 import { Post, data } from '../../../utils/post.data'
 
@@ -80,7 +80,7 @@ onMounted(() => {
   const originalReplaceState = history.replaceState;
   history.replaceState = function(state, title, url) {
     originalReplaceState.apply(history, arguments);
-    nextTick(() => {
+    setTimeout(() => {
       handleUrlState()
     })
   };
