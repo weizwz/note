@@ -72,12 +72,12 @@ const handleUrlState = () => {
   posts.value = tags.value[tag]
 }
 
-const originalReplaceState = history.replaceState;
-
 onMounted(() => {
   getMaxPost()
   handleUrlState()
   window.addEventListener('popstate', handleUrlState)
+
+  const originalReplaceState = history.replaceState;
   history.replaceState = function(state, title, url) {
     originalReplaceState.apply(history, arguments);
     nextTick(() => {
@@ -85,6 +85,7 @@ onMounted(() => {
     })
   };
 })
+
 onBeforeUnmount(() => {
   window.removeEventListener('popstate', handleUrlState)
 })
