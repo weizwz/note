@@ -32,8 +32,8 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onBeforeUnmount } from 'vue'
-import { useRouter } from 'vitepress'
+import { ref, watch, onMounted } from 'vue'
+import { useRouter, useRoute } from 'vitepress'
 import { Post, data } from '../../../utils/post.data'
 
 const routeData = useRouter()
@@ -60,13 +60,11 @@ let currentTag = ref('')
 let posts = ref<Post[]>([])
 
 const activeTag = (tag) => {
-  currentTag.value = tag
-  posts.value = tags.value[tag]
   routeData.go(routeData.route.path + '?q=' + tag)
 }
 
-// 监听url里参数变化
-const handlePopState = () => {
+// 监听url里参数
+const handleUrlState = () => {
   const params = new URLSearchParams(window.location.search)
   let tag = params.get('q')
   tag = tag && tagsText.value.indexOf(tag) !== -1 ? tag : tagsText.value[0]
@@ -74,13 +72,14 @@ const handlePopState = () => {
   posts.value = tags.value[tag]
 }
 
+const route = useRoute()
+watch(route, () => {
+  handleUrlState()
+})
+
 onMounted(() => {
   getMaxPost()
-  handlePopState()
-  window.addEventListener('popstate', handlePopState)
-})
-onBeforeUnmount(() => {
-  window.removeEventListener('popstate', handlePopState)
+  handleUrlState()
 })
 </script>
 

@@ -13,9 +13,10 @@ export const nav: DefaultTheme.Config['nav'] = [
       {
         text: '推荐文章',
         items: [
-          { text: 'Git 使用记录', link: 'git/use-log.md' },
-          { text: 'Markdown 示例', link: 'vitepress/extend/markdown-examples' },
-          { text: 'Clash Verge 使用', link: 'app/network/clash-verge.md' },
+          { text: 'Clash Verge 使用记录', link: 'app/network/clash-verge.md' },
+          { text: 'Markdown 扩展语法示例', link: 'vitepress/extend/markdown-examples' },
+          { text: 'Git 使用记录 - 持续更新', link: 'git/use-log.md' },
+          { text: 'VSCode 接入DeepSeek', link: 'editor/vscode/vscode-deepseek.md' },
         ]
       },
     ] 
@@ -25,30 +26,30 @@ export const nav: DefaultTheme.Config['nav'] = [
     items: [
       {
         items: [
-          { text: 'HTML 基础知识', link: 'vitepress/extend/markdown-examples.md' },
-          { text: 'CSS 基础知识', link: 'vitepress/extend/markdown-examples.md' },
+          // { text: 'HTML 基础知识', link: 'vitepress/extend/markdown-examples.md' },
+          { text: 'CSS 基础知识', link: 'css/apply/icon-label-shields.md' },
           { text: 'JS 基础知识', link: 'js/apply/compare-number.md' },
-          { text: 'ES6 常用语法', link: 'vitepress/extend/markdown-examples.md' },
-          { text: '浏览器相关知识', link: 'vitepress/extend/markdown-examples.md' },
+          // { text: 'ES6 常用语法', link: 'vitepress/extend/markdown-examples.md' },
+          { text: '浏览器相关知识', link: 'browser/apply/browser-plugin.md' },
           { text: 'TS 常用语法', link: '/ts/basic/ts-normal-summary.md' },
           { text: 'Nodejs 基础知识', link: 'nodejs/problem/error-log.md' },
         ]
       },
-      {
-        items: [
-          { text: 'HTTP 协议', link: 'vitepress/extend/markdown-examples.md' },
-          { text: 'XMLHttpRequest', link: 'vitepress/extend/markdown-examples.md' },
-          { text: 'JSON 语法', link: 'vitepress/extend/markdown-examples.md' },
-          { text: 'Ajax 基础知识', link: 'vitepress/extend/markdown-examples.md' },
-        ]
-      },
+      // {
+      //   items: [
+      //     { text: 'HTTP 协议', link: 'vitepress/extend/markdown-examples.md' },
+      //     { text: 'XMLHttpRequest', link: 'vitepress/extend/markdown-examples.md' },
+      //     { text: 'JSON 语法', link: 'vitepress/extend/markdown-examples.md' },
+      //     { text: 'Ajax 基础知识', link: 'vitepress/extend/markdown-examples.md' },
+      //   ]
+      // },
       {
         items: [
           { text: 'Vue.js', link: '/vuejs/basic/vue-mvvm-binding.md' },
-          { text: 'React', link: 'vitepress/extend/markdown-examples.md' },
+          // { text: 'React', link: 'vitepress/extend/markdown-examples.md' },
           { text: 'uni-app', link: '/mobile/uniapp/project-building-uniapp-vue3.md' },
-          { text: 'Vite', link: 'vitepress/extend/markdown-examples.md' },
-          { text: '其他库', link: 'vitepress/extend/markdown-examples.md' },
+          { text: 'Vite', link: 'pages/tags?q=Vite' },
+          // { text: '其他库', link: 'vitepress/extend/markdown-examples.md' },
         ]
       },
     ]
@@ -61,25 +62,23 @@ export const nav: DefaultTheme.Config['nav'] = [
           { text: 'JS 日常应用', link: '/js/apply/compare-number.md' },
           { text: 'CSS 实用特效', link: '/css/apply/icon-label-shields.md' },
           { text: 'Element 使用', link: '/element/responsive-layout.md' },
-          { text: '前端常见问题', link: 'vitepress/extend/markdown-examples.md' },
         ]
       },
       {
         items: [
           { text: 'Clash 配置', link: 'app/network/clash-verge.md' },
           { text: 'Nodejs 相关', link: '/nodejs/apply/pnpm-setting.md' },
-          { text: '终端 相关', link: 'vitepress/extend/markdown-examples.md' },
-          { text: 'Git 相关', link: 'vitepress/basic/api-examples.md' },
+          { text: '终端 相关', link: 'pages/tags?q=command' },
+          { text: 'Git 相关', link: '/git/use-log.md' },
           { text: '浏览器相关', link: '/browser/apply/browser-plugin.md' },
           { text: 'Nginx 代理', link: '/nginx/nginx-web-cross-domain.md' },
-          { text: 'Linux 相关', link: 'vitepress/extend/markdown-examples.md' },
         ]
       },
       {
         items: [
           { text: 'VSCode 配置', link: '/editor/vscode/vscode-self-plugin.md' },
-          { text: '微信开发者工具', link: 'vitepress/extend/markdown-examples.md' },
-          { text: '其他开发软件', link: 'vitepress/extend/markdown-examples.md' },
+          // { text: '微信开发者工具', link: 'vitepress/extend/markdown-examples.md' },
+          // { text: '其他开发软件', link: 'vitepress/extend/markdown-examples.md' },
         ]
       },
     ]
@@ -117,8 +116,8 @@ export const nav: DefaultTheme.Config['nav'] = [
       {
         items: [
           { text: '开源字体', link: '/resource/font/open-source-font.md' },
-          { text: '图标图片', link: 'vitepress/extend/markdown-examples.md' },
-          { text: '其他资源', link: 'vitepress/extend/markdown-examples.md' },
+          { text: '图标图片', link: 'resource/font/open-source-font.md' },
+          { text: '其他资源', link: 'resource/font/open-source-font.md' },
         ]
       },
       {
@@ -136,9 +135,9 @@ export const nav: DefaultTheme.Config['nav'] = [
       {
         text: '前端网站',
         items: [
-          { text: '常用API导航', link: 'vitepress/extend/markdown-examples.md' },
-          { text: 'GitHub相关', link: 'vitepress/basic/api-examples.md' },
-          { text: '博客网站', link: 'vitepress/extend/markdown-examples.md' },
+          { text: '常用API导航', link: 'https://nav.liwenkai.fun/' },
+          { text: 'GitHub相关', link: 'pages/tags?q=Github' },
+          { text: '博客网站', link: 'pages/tags?q=Hexo' },
         ]
       },
       {
@@ -147,7 +146,7 @@ export const nav: DefaultTheme.Config['nav'] = [
           { text: '趣味动画', link: 'https://weizwz.com/fun-animation/' },
           { text: '大屏演示', link: 'https://weizwz.com/vite-vue3-charts/#/' },
           { text: 'vue3模版', link: 'https://weizwz.com/weiz-vue3-ts/' },
-          { text: '其他项目', link: 'vitepress/extend/markdown-examples.md' },
+          { text: '其他项目', link: 'https://github.com/weizwz' },
         ]
       }
     ]
