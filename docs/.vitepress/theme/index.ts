@@ -1,21 +1,26 @@
 import type { Theme } from 'vitepress'
-import { h } from 'vue'
+import { EnhanceAppContext, useData, inBrowser, useRoute } from 'vitepress'
+import { h, nextTick, onMounted, watch } from 'vue'
 import DefaultTheme from 'vitepress/theme'
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
-import './style/index.scss'
-import WLoading from './components/WLoading.vue'
-import WLayout from './components/WLayout.vue'
-import WPostCard from './components/WPostCard.vue'
-import WHome from './components/WHome/index.vue'
-import WTag from './components/WTag/index.vue'
-import WPost from './components/WPost/index.vue'
+
+import WLoading from './components/WLoading.vue' // 加载动画
+import WLayout from './components/WLayout.vue' // 布局
+import WPostCard from './components/WPostCard.vue' // 文章小卡片
+import WHome from './components/WHome/index.vue' // 首页
+import WTag from './components/WTag/index.vue' // 标签页
+import WPost from './components/WPost/index.vue' // 所有文章页
 import WDocTitleMeta from './components/WDocTitleMeta.vue' //文章顶部
-import { EnhanceAppContext, useData } from 'vitepress'
-import TwoslashFloatingVue from '@shikijs/vitepress-twoslash/client'
+
+import TwoslashFloatingVue from '@shikijs/vitepress-twoslash/client' // type类型悬浮框
 import '@shikijs/vitepress-twoslash/style.css'
-import { inBrowser } from 'vitepress'
-import busuanzi from 'busuanzi.pure.js'
+import busuanzi from 'busuanzi.pure.js' // 卜算子统计插件
+import mediumZoom from 'medium-zoom' // 图片缩略插件
+import { NProgress } from 'nprogress-v2/dist/index.js' // 进度条
+import 'nprogress-v2/dist/index.css'
+// 全局样式
+import './style/index.scss'
 
 export default {
   extends: DefaultTheme,
@@ -39,9 +44,30 @@ export default {
     app.use(TwoslashFloatingVue)
     app.use(ElementPlus)
     if (inBrowser) {
+      NProgress.configure({ showSpinner: false })
+
+      router.onBeforeRouteChange = () => {
+        NProgress.start() // 开始进度条
+        busuanzi.fetch() // 卜算子
+      }
       router.onAfterRouteChanged = () => {
         busuanzi.fetch()
+        NProgress.done() // 停止进度条
       }
     }
+  },
+  setup() {
+    const route = useRoute()
+    const initZoom = () => {
+      // mediumZoom('[data-zoomable]', { background: 'var(--vp-c-bg)' }); // 默认
+      mediumZoom('.main img') // 不显式添加{data-zoomable}的情况下为所有图像启用此功能
+    }
+    onMounted(() => {
+      initZoom()
+    })
+    watch(
+      () => route.path,
+      () => nextTick(() => initZoom())
+    )
   }
 } satisfies Theme

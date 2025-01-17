@@ -122,3 +122,27 @@ pre:not(.vp-code) {
 /**
 * element组件样式
 * -------------------------------------------------------------------------- */
+
+/**
+* 插件
+* -------------------------------------------------------------------------- */
+// medium-zoom
+.medium-zoom-overlay {
+  z-index: var(--weiz-index-topShadow);
+}
+.medium-zoom-image {
+  z-index: calc(var(--weiz-index-topShadow) + 1);
+}
+.medium-zoom-image:not([src^="https://img.shields.io"]) {
+  border: solid 1px var(--vp-c-divider);
+  border-radius: var(--weiz-border-radius);
+}
+.medium-zoom--opened .medium-zoom-overlay {
+  backdrop-filter: blur(20px);
+  opacity: .9 !important;
+  background: rgba(var(--vp-c-bg-rgb), .5) !important;
+}
+// NProgress
+#nprogress .bar {
+  background: var(--weiz-primary-color);
+}

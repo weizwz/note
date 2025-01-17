@@ -14,6 +14,12 @@ importers:
       element-plus:
         specifier: ^2.8.8
         version: 2.8.8(vue@3.5.12(typescript@5.6.3))
+      medium-zoom:
+        specifier: ^1.1.0
+        version: 1.1.0
+      nprogress-v2:
+        specifier: ^1.0.4
+        version: 1.0.4
     devDependencies:
       '@shikijs/vitepress-twoslash':
         specifier: ^1.22.2
@@ -977,6 +983,9 @@ packages:
   mdast-util-to-string@4.0.0:
     resolution: {integrity: sha512-0H44vDimn51F0YwvxSJSm0eCDOJTRlmN0R1yBh4HLj9wiV1Dn0QoXGbvFAWj2hSItVTlCmBF1hqKlIyUBVFLPg==}
 
+  medium-zoom@1.1.0:
+    resolution: {integrity: sha512-ewyDsp7k4InCUp3jRmwHBRFGyjBimKps/AJLjRSox+2q/2H4p/PNpQf+pwONWlJiOudkBXtbdmVbFjqyybfTmQ==}
+
   memoize-one@6.0.0:
     resolution: {integrity: sha512-rkpe71W0N0c0Xz6QD0eJETuWAJGnJ9afsl1srmwPrI+yBCkge5EycXXbYRyvL29zZVUWQCY7InPRCv3GDXuZNw==}
 
@@ -1143,6 +1152,9 @@ packages:
 
   normalize-wheel-es@1.2.0:
     resolution: {integrity: sha512-Wj7+EJQ8mSuXr2iWfnujrimU35R2W4FAErEyTmJoJ7ucwTn2hOUSsRehMb5RSYkxXGTM7Y9QpvPmp++w5ftoJw==}
+
+  nprogress-v2@1.0.4:
+    resolution: {integrity: sha512-HPhTEgqsQMFXXuaftvu6bevqEXvcQ/hogvkAswlcNyS9eRGjvo7wZY1O4H3aZS4Uq8oWSO6sL3dOj6Oq/ZJN5A==}
 
   oniguruma-to-js@0.4.3:
     resolution: {integrity: sha512-X0jWUcAlxORhOqqBREgPMgnshB7ZGYszBNspP+tS9hPD3l13CdaXcHbgImoHUHlrvGx/7AvFEkTRhAGYh+jzjQ==}
@@ -2388,6 +2400,8 @@ snapshots:
     dependencies:
       '@types/mdast': 4.0.4
 
+  medium-zoom@1.1.0: {}
+
   memoize-one@6.0.0: {}
 
   micromark-core-commonmark@1.1.0:
@@ -2689,6 +2703,8 @@ snapshots:
     optional: true
 
   normalize-wheel-es@1.2.0: {}
+
+  nprogress-v2@1.0.4: {}
 
   oniguruma-to-js@0.4.3:
     dependencies:

@@ -17,6 +17,7 @@
 
   // 颜色 - 紫红色
   --vp-c-purple-1: #bd34fe;
+  --vp-c-bg-rgb: 255,255,255;
 
   --vp-c-indigo-1: var(--weiz-primary-color);
   --vp-c-indigo-1-rgb: var(--weiz-primary-color-rgb);
@@ -28,6 +29,8 @@
 
   // position z-index
   --weiz-index-footer: 10;
+  --weiz-index-backTop: 99;
+  --weiz-index-topShadow: 999;
 
   // 默认动画
   --weiz-transition: all 0.2s;
@@ -50,6 +53,8 @@
   --vp-c-text-4: rgba(235, 235, 245, 0.24);
   --vp-c-text-5: rgba(235, 235, 245, 0.08);
   --vp-c-text-6: #99a9bf;
+
+  --vp-c-bg-rgb: 25,26,28
 }
 
 /* MacOS风格相关颜色 */
