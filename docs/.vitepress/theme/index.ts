@@ -48,7 +48,6 @@ export default {
 
       router.onBeforeRouteChange = () => {
         NProgress.start() // 开始进度条
-        busuanzi.fetch() // 卜算子
       }
       router.onAfterRouteChanged = () => {
         busuanzi.fetch()
