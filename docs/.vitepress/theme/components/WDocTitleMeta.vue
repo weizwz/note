@@ -15,7 +15,7 @@
       </div>
       <div class="reader" title="阅读量">
         <i class="weiz-icon weiz-icon-user gray"></i>
-        <span>阅读量 <span id="busuanzi_value_page_pv"/></span>
+        <span>阅读量 {{ pv }}<span id="busuanzi_value_page_pv" style="display: none" /></span>
       </div>
     </div>
   </div>
@@ -30,6 +30,21 @@ const { frontmatter } = useData()
 const wordCount = ref('')
 const firstCommit = ref('')
 const lastUpdated = ref('')
+const pv = ref('')
+
+let timeoutPV = 0
+const getPV = () => {
+  if (timeoutPV) clearTimeout(timeoutPV)
+  timeoutPV = window.setTimeout(() => {
+    const $PV = document.querySelector('#busuanzi_value_page_pv')
+    const text = $PV?.innerHTML
+    if ($PV && text) {
+      pv.value = countTransK(parseInt(text))
+    } else {
+      getPV()
+    }
+  }, 500)
+}
 
 onMounted(() => {
   const dateOption = formatDate()
@@ -39,6 +54,8 @@ onMounted(() => {
   const docDomContainer = window.document.querySelector('#VPContent')
   const words = docDomContainer?.querySelector('.content-container .main')?.textContent || ''
   wordCount.value = countWord(words)
+
+  getPV()
 })
 </script>
 
