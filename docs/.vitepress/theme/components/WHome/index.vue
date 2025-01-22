@@ -84,7 +84,7 @@
       <div class="swiper-wrapper">
         <div
           class="swiper-container"
-          v-for="(i, idx) of 2"
+          v-for="(i, idx) of 3"
           :key="idx"
           :style="'--swiper-animation-time: ' + tags.length * 5 + 's'">
           <div class="swiper-item" v-for="(item, index) of tags" :key="index">

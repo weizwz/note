@@ -308,7 +308,7 @@
   .swiper-wrapper {
     display: flex;
     overflow: hidden;
-    --swiper-animation-time: 80s;
+    --swiper-animation-time: 30s;
     --swiper-animation-status: running;
     &:hover {
       --swiper-animation-status: paused;
@@ -336,12 +336,14 @@
     font-weight: 600;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: var(--vp-c-text-4);
+    -webkit-text-stroke-color: var(--vp-c-text-5);
+    text-shadow: 2px 3px 6px var(--vp-c-bg-soft);
     transition: var(--weiz-transition-3);
     &:hover {
+      -webkit-text-fill-color: var(--vp-c-bg-soft);
       -webkit-text-stroke-width: 1.6px;
       -webkit-text-stroke-color: var(--weiz-primary-color);
-      -webkit-text-fill-color: var(--vp-c-bg-soft);
+      text-shadow: 2px 3px 6px var(--weiz-primary-color);
     }
   }
 }
