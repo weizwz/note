@@ -83,6 +83,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
           text: '基础知识',
           items: [
             { text: 'Vue双向绑定原理', link: '/vuejs/basic/vue-mvvm-binding.md' },
+            { text: 'Vue3.5常用特性整理', link: '/vuejs/basic/vue3.5-new.md' },
           ]
         },
         {
