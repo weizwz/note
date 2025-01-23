@@ -120,17 +120,16 @@ export default createContentLoader(
 
       const pages = await Promise.all(promises)
 
-      // 固定文章从最早发布日期开始，以便标签页能稳定显示
+      // 固定文章从最早发布日期开始，以便标签数组能稳定显示（不会因为新发布文章而导致顺序变化）
       const fixPages = pages.sort((a, b) => a.date[0] - b.date[0])
+      let tagNames: string[] = []
       fixPages.forEach((item) => {
-        if (item.tags) {
-          item.tags.forEach((tag) => {
-            if (!tags[tag]) {
-              tags[tag] = []
-            }
-            tags[tag].push(item)
-          })
-        }
+        item.tags.forEach((tag) => {
+          if (tagNames.indexOf(tag) == -1) {
+            tagNames.push(tag)
+            tags[tag] = []
+          }
+        })
       })
 
       // 发布时间降序排列
@@ -138,8 +137,14 @@ export default createContentLoader(
       // 更新时间降序排列
       // posts = pages.sort((a, b) => b.date[1] - a.date[1])
 
-      // 年份排列，以便显示全部文章
       posts.forEach((item) => {
+        // 根据标签归类文章
+        if (item.tags) {
+          item.tags.forEach((tag) => {
+            tags[tag].push(item)
+          })
+        }
+        // 年份排列，以便显示全部文章
         const year = new Date(item.date[0]).getFullYear()
         if (!years[year]) {
           years[year] = []
