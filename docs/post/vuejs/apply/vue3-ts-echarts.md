@@ -8,7 +8,7 @@ tags:
   - Vue.js
   - Vite
   - TypeScript
-  - map
+  - 地图
 ---
 
 # vue3+ts打开echarts的正确方式

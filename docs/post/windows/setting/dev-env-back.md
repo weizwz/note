@@ -5,7 +5,7 @@ firstCommit: 2023-10-25 22:19:32+8:00
 lastUpdated: 2024-06-06 23:47:24+8:00
 tags:
   - Windows
-  - command
+  - 终端
   - Node.js
 ---
 

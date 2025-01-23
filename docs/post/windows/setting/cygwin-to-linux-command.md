@@ -4,9 +4,9 @@ description: 这篇文章介绍了如何在Windows中使用Cygwin来执行Linux�
 firstCommit: 2023-09-22 20:13:00+8:00
 lastUpdated: 2023-12-07 17:23:15+8:00
 tags:
-  - command
+  - 终端
   - Windows
-  - APP
+  - 应用程序
 ---
 
 # Cygwin，在Windows中使用linux命令

@@ -6,7 +6,7 @@ lastUpdated: 2024-03-15 11:32:42+8:00
 tags:
   - Git
   - Github
-  - proxy
+  - 代理
 ---
 
 # Git 使用记录 - 持续更新

@@ -4,8 +4,8 @@ description: 该页面介绍了一款功能强大的截图工具 PixPin，支持
 firstCommit: 2023-11-29 16:13:08+8:00
 lastUpdated: 2023-11-29 16:13:08+8:00
 tags:
-  - image
-  - APP
+  - 图片
+  - 应用程序
 ---
 
 # PixPin - 新截图工具

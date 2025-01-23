@@ -6,8 +6,8 @@ lastUpdated: 2024-09-12 23:39:12+8:00
 tags:
   - Github
   - Vue.js
-  - pnpm
   - Vite
+  - Vue-CLI
 ---
 
 # vue3项目部署到Github

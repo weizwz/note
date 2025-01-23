@@ -2,9 +2,10 @@
 title: Clash Verge 使用记录：安装、配置
 description: 这篇文章介绍了Clash Verge的使用方法。Clash Verge是一个基于Clash Meta内核的GUI代理工具，支持多种操作系统和代理协议。文章详细讲解了安装、配置和常见问题的解决方法
 firstCommit: 2022-11-22 23:11:47+8:00
+lastUpdated: 2025-01-14 12:10:23+8:00
 tags:
-  - proxy
-  - APP
+  - 代理
+  - 应用程序
   - Github
   - npm
   - Git

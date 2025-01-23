@@ -5,7 +5,7 @@ firstCommit: 2022-11-19 21:00:37+8:00
 lastUpdated: 2022-11-19 21:00:37+8:00
 tags:
   - Vue.js
-  - npm
+  - Vue-CLI
 ---
 
 # Vue 多界面开发

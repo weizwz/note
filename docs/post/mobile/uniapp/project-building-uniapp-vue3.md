@@ -5,7 +5,6 @@ firstCommit: 2024-01-05 17:45:01+8:00
 lastUpdated: 2024-01-05 17:45:01+8:00
 tags:
   - uni-app
-  - WeChat
   - TypeScript  
   - Vue.js
   - Vite

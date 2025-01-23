@@ -5,7 +5,6 @@ firstCommit: 2023-10-08 14:03:00+8:00
 lastUpdated: 2023-10-08 14:03:00+8:00
 tags:
   - OPPO
-  - mobile
   - Windows
 ---
 

@@ -5,7 +5,7 @@ firstCommit: 2023-10-21 15:35:35+8:00
 lastUpdated: 2023-10-21 15:35:35+8:00
 tags:
   - nginx
-  - proxy
+  - 代理
   - Vite
   - Vue.js
   - Node.js

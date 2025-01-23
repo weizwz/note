@@ -4,7 +4,7 @@ description: 这篇文章介绍了一些实用的浏览器插件，包括Tab Ses
 firstCommit: 2022-12-17 19:10:59+8:00
 lastUpdated: 2023-01-03 12:10:23+8:00
 tags:
-  - browser
+  - 浏览器
 ---
 
 # 浏览器好用插件分享

@@ -5,7 +5,7 @@ firstCommit: 2023-04-25 14:06:46+8:00
 lastUpdated: 2023-12-18 11:23:12+8:00
 tags:
   - VSCode
-  - icon
+  - 图标
 ---
 
 # 自用 VSCode 插件

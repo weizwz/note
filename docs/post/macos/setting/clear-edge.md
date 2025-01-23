@@ -5,7 +5,7 @@ firstCommit: 2024-02-03 21:03:47+8:00
 lastUpdated: 2024-02-05 11:12:32+8:00
 tags:
   - MacOS
-  - browser
+  - 浏览器
 ---
 
 # 定制你的清爽Mac版Edge浏览器

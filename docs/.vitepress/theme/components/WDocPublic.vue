@@ -27,7 +27,7 @@
   </div>
   <div class="post-tags">
     <div class="tags-list">
-      <a v-for="(item, index) of postTags" :key="index" :href="withBase('/pages/tags?q=' + item)" class="tag">{{
+      <a v-for="(item, index) of postTags" :key="index" :href="withBase('/pages/tags?q=' + encodeURIComponent(item))" class="tag">{{
         item
       }}</a>
     </div>

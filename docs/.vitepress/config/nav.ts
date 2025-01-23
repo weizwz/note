@@ -68,7 +68,7 @@ export const nav: DefaultTheme.Config['nav'] = [
         items: [
           { text: 'Clash 配置', link: 'app/network/clash-verge.md' },
           { text: 'Nodejs 相关', link: '/nodejs/apply/pnpm-setting.md' },
-          { text: '终端 相关', link: 'pages/tags?q=command' },
+          { text: '终端 相关', link: 'pages/tags?q=%E7%BB%88%E7%AB%AF' },
           { text: 'Git 相关', link: '/git/use-log.md' },
           { text: '浏览器相关', link: '/browser/apply/browser-plugin.md' },
           { text: 'Nginx 代理', link: '/nginx/nginx-web-cross-domain.md' },

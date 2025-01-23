@@ -1,8 +1,9 @@
 ---
 title: 适用于Mac的免费自动点击器 Auto Mouse Click
 description: 本文分享了适用于Mac的免费自动点击器Auto Mouse Click，解压即用，支持坐标定位、自动移动、设置延迟和循环次数、定时、选定鼠标或键盘按键，可保存或加载脚本。下载链接和使用说明详见原文
+lastUpdated: 2025-01-17 17:23:15+8:00
 tags: 
- - APP
+ - 应用程序
  - MacOS
 ---
 

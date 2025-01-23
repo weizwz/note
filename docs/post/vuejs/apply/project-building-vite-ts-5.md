@@ -7,7 +7,7 @@ tags:
   - Vue.js
   - Vite
   - TypeScript
-  - router
+  - 路由
 ---
 
 # Vite4+Typescript+Vue3+Pinia 从零搭建(5) - 路由router

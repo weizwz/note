@@ -4,7 +4,7 @@ description: 本文介绍了在macOS上使用Homebrew对原生终端美化的方
 firstCommit: 2024-01-24 17:05:48+8:00
 lastUpdated: 2024-05-21 11:51:23+8:00
 tags:
-  - command
+  - 终端
   - MacOS
 ---
 

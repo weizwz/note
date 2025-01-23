@@ -60,14 +60,14 @@ let currentTag = ref('')
 let posts = ref<Post[]>([])
 
 const activeTag = (tag) => {
-  routeData.go(routeData.route.path + '?q=' + tag)
+  routeData.go(routeData.route.path + '?q=' + encodeURIComponent(tag))
 }
 
 // 监听url里参数
 const handleUrlState = () => {
   const params = new URLSearchParams(window.location.search)
-  let tag = params.get('q')
-  tag = tag && tagsText.value.indexOf(tag) !== -1 ? tag : tagsText.value[0]
+  let tag = params.get('q') ? decodeURIComponent(params.get('q') as string) : ''
+  tag = tagsText.value.indexOf(tag) !== -1 ? tag : tagsText.value[0]
   currentTag.value = tag
   posts.value = tags.value[tag]
 }
