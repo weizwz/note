@@ -17,7 +17,7 @@ tags:
 ## 1. 前提：你的代码库已经提交到Github上
 
 如果没有的话，请到GitHub上新建仓库，并把你本地的项目提交到GitHub上新建的仓库里。
-具体方法，可以参考我的博客 [Git使用记录 - 持续更新 - 将本地项目关联到远程仓库](https://weizwz.com/posts/64094821.html)
+具体方法，可以参考我的博客 [Git使用记录 - 持续更新 - 将本地项目关联到远程仓库](https://note.weizwz.com/git/use-log#%E5%B0%86%E6%9C%AC%E5%9C%B0%E9%A1%B9%E7%9B%AE%E5%85%B3%E8%81%94%E5%88%B0%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93)
 
 ## 2. 在GitHub上设置部署配置
 

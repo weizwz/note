@@ -51,7 +51,7 @@ pip 22.3.1 from D:\develop\python\lib\site-packages\pip (python 3.10)
 刚开始会下载一些依赖库，如图：
 ![images](https://www.helloimg.com/i/2025/01/02/677608d0aa882.png)
 
-下载某些资源需要[飞行工具](https://weizwz.com/posts/18a50dc4.html)；
+下载某些资源需要[飞行工具](https://note.weizwz.com/app/network/clash-verge)；
 或者配置国内镜像地址：
 在`C:\Users\Administrator\AppData\Roaming`目录下新建`pip/pip.ini`,若存在则修改。文件内容如下:
 
