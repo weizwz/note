@@ -36,7 +36,7 @@ const post = props?.post as PostCard
 .post-card {
   display: flex;
   height: 100%;
-  border-radius: 12px;
+  border-radius: var(--weiz-card-border-radius);
   border: 1px solid var(--vp-c-bg-soft);
   background-color: var(--vp-c-bg-soft);
   color: var(--vp-c-brand-1);

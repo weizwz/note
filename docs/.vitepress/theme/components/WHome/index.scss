@@ -128,7 +128,7 @@
       right: 15px;
       background: var(--weiz-primary-color);
       width: 100%;
-      border-radius: 50% 12px 12px 50%;
+      border-radius: 50% var(--weiz-card-border-radius) var(--weiz-card-border-radius) 50%;
     }
     &::after {
       content: '';
@@ -139,7 +139,7 @@
       right: 30px;
       width: 100%;
       border: 1px dashed var(--vp-c-gray-1);
-      border-radius: 50% 12px 12px 50%;
+      border-radius: 50% var(--weiz-card-border-radius) var(--weiz-card-border-radius) 50%;
     }
   }
   .hero-social {
@@ -184,7 +184,7 @@
   .post-card {
     display: flex;
     height: 100%;
-    border-radius: 12px;
+    border-radius: var(--weiz-card-border-radius);
     &.statistic {
       justify-content: center;
       align-items: center;
@@ -236,7 +236,7 @@
     height: 100%;
     top: 0;
     left: 10px;
-    border-radius: 12px;
+    border-radius: var(--weiz-card-border-radius);
     color: white;
     font-size: 16px;
     font-weight: 600;
