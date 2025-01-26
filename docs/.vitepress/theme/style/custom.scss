@@ -57,6 +57,11 @@ pre:not(.vp-code) {
 :root {
   --vp-code-link-hover-color: var(--weiz-primary-color-light-1);
 }
+.vp-doc .code-wrap [class*='language-'] pre,
+.vp-doc .code-wrap [class*='language-'] code {
+  white-space: pre-wrap;
+  word-break: break-all;
+}
 
 /* 搜索 */
 :root {
