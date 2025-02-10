@@ -61,6 +61,7 @@ export default async ({ mode }) => {
             return htmlResult
           }
           const defaultRender = md.render
+          // 2.0.0-alpha.2 允许并接受异步函数 升级到此版本之后或可以使用 docs/.vitepress/utils/fileTime.ts
           md.render = function (...args) {
             // 对原生内容做处理，增加创建时间和更新时间
             args[0] = addTime(args[0], args[1].realPath)
