@@ -5,7 +5,7 @@ firstCommit: 2023-11-25 10:05:41+8:00
 lastUpdated: 2023-11-25 10:05:41+8:00
 tags:
   - Hexo
-  - Npm
+  - npm
 ---
 
 # 博客升级 Hexo 版本记录
