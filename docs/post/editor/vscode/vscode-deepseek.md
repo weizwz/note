@@ -10,7 +10,7 @@ tags:
 # VSCode 接入DeepSeek V3大模型，附使用说明
 
 > [!CAUTION] 提示
-> 由于近期 DeepSeek 使用人数激增，服务器压力较大，官网已 **暂停充值入口** ，且接口响应也开始不稳定，建议使用第三方部署的 DeepSeek，如 [硅基流动(注册送14R)](https://cloud.siliconflow.cn/i/38Vhbw8N) 等
+> 由于近期 DeepSeek 使用人数激增，服务器压力较大，官网已 **暂停充值入口** ，且接口响应也开始不稳定，建议使用第三方部署的 DeepSeek，如 [硅基流动](https://cloud.siliconflow.cn/i/38Vhbw8N) (使用教程查看我最新文章 [VS Code 使用硅基流动的 API 接入 DeepSeek](./vscode-siliconflow))等
 > 
 > 或者使用其他模型/插件，如 [豆包免费AI插件 MarsCode](https://www.marscode.cn/)、[阿里免费AI插件 TONGYI Lingma](https://marketplace.visualstudio.com/items?itemName=Alibaba-Cloud.tongyi-lingma)
 >
