@@ -116,22 +116,26 @@ const cardLength = ref(0)
 const postMerge = () => {
   const postLength = 7
   const fmLength = fm.value.post ? fm.value.post.length : 0
-  postData.value =
+  let postLoadingData: HomePost[] = []
+  postLoadingData =
     fm.value.post && fmLength >= postLength
-      ? fm.value.post
+      ? fm.value.post.map((item)=> {
+        return item
+      })
       : (() => {
           const newPosts = data.posts.slice(0, postLength - fmLength)
           const mdPosts = fm.value.post || []
           let showPosts = mdPosts.concat(newPosts) as unknown as HomePost[]
-          // 第四张卡片插入卜算子统计
-          showPosts.splice(3, 0, {
-            title: '统计访问量',
-            type: 'busuanzi',
-            abstract: '统计访问量'
-          })
-          cardLength.value = showPosts.length
           return showPosts
         })()
+  // 第四张卡片插入卜算子统计
+  postLoadingData.splice(3, 0, {
+    title: '统计访问量',
+    type: 'busuanzi',
+    abstract: '统计访问量'
+  })
+  postData.value = postLoadingData
+  cardLength.value = postLoadingData.length
 }
 
 const formatNumber = (num) => {
