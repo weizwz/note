@@ -100,34 +100,38 @@
 <script setup lang="ts">
 import { useData, withBase } from 'vitepress'
 import { HomeAbout, HomePost } from '../../type/WHome'
-import { data } from '../../../utils/post.data'
+// import { data } from '../../../utils/post.data'
 import { onMounted, ref } from 'vue'
 
 const { frontmatter: fm } = useData()
 
 const aboutData = fm.value.about as HomeAbout
 let postData = ref<HomePost[]>([])
-const tags = fm.value.tags ? fm.value.tags.split(',') : Object.keys(data.tags)
+const tags = fm.value.tags.split(',')
+// fm.value.tags ? fm.value.tags.split(',') : Object.keys(data.tags)
+// console.log(Object.keys(data.tags))
+
 
 const pv = ref('loading')
 const uv = ref('loading')
 const cardLength = ref(0)
 
 const postMerge = () => {
-  const postLength = 7
-  const fmLength = fm.value.post ? fm.value.post.length : 0
+  // const postLength = 7
+  // const fmLength = fm.value.post ? fm.value.post.length : 0
   let postLoadingData: HomePost[] = []
   postLoadingData =
-    fm.value.post && fmLength >= postLength
-      ? fm.value.post.map((item)=> {
+    // fm.value.post && fmLength >= postLength
+    //   ? 
+      fm.value.post.map((item)=> {
         return item
       })
-      : (() => {
-          const newPosts = data.posts.slice(0, postLength - fmLength)
-          const mdPosts = fm.value.post || []
-          let showPosts = mdPosts.concat(newPosts) as unknown as HomePost[]
-          return showPosts
-        })()
+      // : (() => {
+      //     const newPosts = data.posts.slice(0, postLength - fmLength)
+      //     const mdPosts = fm.value.post || []
+      //     let showPosts = mdPosts.concat(newPosts) as unknown as HomePost[]
+      //     return showPosts
+      //   })()
   // 第四张卡片插入卜算子统计
   postLoadingData.splice(3, 0, {
     title: '统计访问量',
