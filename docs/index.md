@@ -62,6 +62,6 @@ post:
       - 代理
     url: app/network/clash-verge
     abstract: 这篇文章介绍了Clash Verge的下载、配置和使用方法。Clash Verge是一个基于Clash Meta内核的GUI代理工具，支持多种操作系统和代理协议。文章详细讲解了如何加速下载，日常编码如何正确使用代理，以及日常使用中出现的一些问题，文章最后还总结了常用的代理规则，对国内大部分网站都进行了优化，可以直接访问。
-tags: Hexo, Markdown, VSCode, Node.js, npm, Vue.js, Sass, JavaScript, Vue-CLI, 代理, 应用程序, Github, Git, pnpm, 字体, 浏览器, CSS, 图标, AI, Python, 终端, Windows, OPPO, nginx, Vite, TypeScript, 图片, 路由, Pina, cookie, Axios, ECharts, 地图, uni-app, MacOS, SVG, VitePress, SSR, Element, 网站, webpack
+tags: Hexo,Markdown,VSCode,Node.js,npm,Vue.js,Sass,JavaScript,Vue-CLI,代理,应用程序,Github,Git,pnpm,字体,浏览器,CSS,图标,AI,Python,终端,Windows,OPPO,nginx,Vite,TypeScript,图片,路由,Pina,cookie,Axios,ECharts,地图,uni-app,MacOS,SVG,VitePress,SSR,Element,网站,webpack
 ---
 
