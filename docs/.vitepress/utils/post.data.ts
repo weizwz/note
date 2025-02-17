@@ -28,7 +28,7 @@ export interface Data {
 declare const data: Data
 export { data }
 
-// 获取并处理所有文档数据，供首页等使用
+// 获取并处理所有文档数据，供首页、全部文章等使用
 // https://vitepress.dev/zh/guide/data-loading#createcontentloader
 export default createContentLoader(
   [

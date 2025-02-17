@@ -190,7 +190,26 @@
       align-items: center;
       border-color: var(--weiz-primary-color);
       background: var(--weiz-primary-color);
-      transition: var(--weiz-transition-3);
+    }
+    &.post-more {
+      min-height: 196px;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid var(--vp-c-bg-soft);
+      background-color: var(--vp-c-bg-soft);
+      transition: var(--weiz-transition);
+      &:hover {
+        border-color: var(--weiz-primary-color);
+        background: var(--weiz-primary-color);
+        box-shadow: 0 0.5em 0.5em -0.2em var(--weiz-primary-color);
+        transform: translateY(-0.5em);
+        .post-more-container {
+          color: white;
+          .weiz-icon {
+            background-color: white;
+          }
+        }
+      }
     }
   }
   .statistic .post-container {
@@ -230,51 +249,18 @@
       color: white;
     }
   }
-  .post-more {
-    position: absolute;
-    width: calc(100% - 20px);
+  .post-more .post-more-container {
+    width: 100%;
     height: 100%;
-    top: 0;
-    left: 10px;
-    border-radius: var(--weiz-card-border-radius);
-    color: white;
-    font-size: 16px;
-    font-weight: 600;
-    background: var(--vp-c-bg-soft);
-    border: 1px solid var(--vp-c-bg-soft);
-    opacity: 0;
-    transition: var(--weiz-transition-3);
-    .post-more-container {
-      width: 50%;
-      height: 100%;
-      box-sizing: border-box;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      text-align: center;
-      margin-left: 10%;
-      transition: var(--weiz-transition-3);
-      > span:first-child {
-        margin-bottom: .5rem;
-      }
-    }
-  }
-  .statistic-wrapper:hover {
-    .statistic {
-      transform: translateY(-0.5em);
-    }
-    .post-more {
-      opacity: 1;
-      border-color: var(--weiz-primary-color);
-      background: rgba(255, 255, 255, 0);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      backface-visibility: hidden;
-      box-shadow: 0 0.5em 0.5em -0.2em var(--weiz-primary-color);
-      transform: translateY(-0.5em);
-      .post-more-container {
-        margin-left: 25%;
-      }
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-weight: 500;
+    color: var(--vp-c-text-2);
+    transition: var(--weiz-transition);
+    > span:first-child {
+      margin-bottom: .5rem;
     }
   }
 }
