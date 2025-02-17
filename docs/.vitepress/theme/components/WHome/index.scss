@@ -195,18 +195,15 @@
       min-height: 196px;
       justify-content: center;
       align-items: center;
-      border: 1px solid var(--vp-c-bg-soft);
       background-color: var(--vp-c-bg-soft);
       transition: var(--weiz-transition);
       &:hover {
-        border-color: var(--weiz-primary-color);
-        background: var(--weiz-primary-color);
-        box-shadow: 0 0.5em 0.5em -0.2em var(--weiz-primary-color);
+        box-shadow: 0 0.5em 0.5em 0 var(--weiz-primary-color);
         transform: translateY(-0.5em);
         .post-more-container {
-          color: white;
+          color: var(--weiz-primary-color);
           .weiz-icon {
-            background-color: white;
+            background-color: var(--weiz-primary-color);
           }
         }
       }

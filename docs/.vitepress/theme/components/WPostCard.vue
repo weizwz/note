@@ -63,11 +63,8 @@ const post = props?.post as PostCard
   width: 100%;
   height: 100%;
   padding: 24px;
-  .weiz-icon {
-    margin-bottom: 16px;
-  }
   .title {
-    line-height: 1.4;
+    line-height: 40px;
     font-size: 16px;
     font-weight: 600;
     width: 100%;
@@ -76,7 +73,6 @@ const post = props?.post as PostCard
     text-overflow: ellipsis;
   }
   .desc {
-    padding-top: 8px;
     line-height: 20px;
     font-weight: 500;
     color: var(--vp-c-text-2);

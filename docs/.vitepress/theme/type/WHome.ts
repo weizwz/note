@@ -28,9 +28,15 @@ export interface HomePost {
   // 链接
   url?: string
   // 摘要
-  abstract: string
+  abstract?: string
+  // 日期：创建日期，更新日期
+  date?: [number, number]
+   // 日期文本
+  dateText?: [string, string]
   // 标签名称
   tags?: string[]
+  // 置顶
+  top?: boolean
 }
 
 export interface HomePostStatistic {

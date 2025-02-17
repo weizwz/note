@@ -129,8 +129,20 @@ const postMerge = () => {
           let mdPosts = fm.value.post || newPosts
           // 过滤重复数据
           if (fmLength > 0) {
+            // 补全首页数据 docs/index.md
+            const fullPost = fm.value.post.map(item => {
+              // 在第二个数组中查找对应的完整信息
+              const fullInfo = data.posts.find(fullItem => fullItem.url === item.url)
+              // 如果找到了对应的信息，合并到当前对象中
+              if (fullInfo) {
+                return { ...item, ...fullInfo }
+              }
+              // 如果没有找到，返回原始对象
+              return item
+            });
+
             // 合并两个数组并过滤掉重复的数据
-            const combinedArray = [...fm.value.post, ...newPosts]
+            const combinedArray = [...fullPost, ...newPosts]
             mdPosts = combinedArray.filter((item, index, self) =>
               index === self.findIndex(t => (
                 t.url === item.url
