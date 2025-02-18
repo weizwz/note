@@ -186,16 +186,16 @@
     height: 100%;
     border-radius: var(--weiz-card-border-radius);
     &.statistic {
+      min-height: 200px;
       justify-content: center;
       align-items: center;
-      border-color: var(--weiz-primary-color);
       background: var(--weiz-primary-color);
     }
     &.post-more {
-      min-height: 196px;
+      min-height: 200px;
       justify-content: center;
       align-items: center;
-      background-color: var(--vp-c-bg-soft);
+      background: var(--vp-c-bg-soft);
       transition: var(--weiz-transition);
       &:hover {
         box-shadow: 0 0.5em 0.5em 0 var(--weiz-primary-color);
@@ -346,7 +346,6 @@
     }
   }
   #post .post-card.statistic {
-    border-color: var(--vp-c-gray-1);
     background: var(--vp-c-gray-1);
   }
   #post .statistic .post-container .number {

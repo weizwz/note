@@ -36,10 +36,15 @@
 
 // 文章小分类/标签
 .weiz-icon-post {
+  --weiz-icon-color: var(--weiz-primary-color);
   --url: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='%23000' stroke-width='1.5'%3E%3Cpath d='M2.906 17.505L5.337 3.718a2 2 0 0 1 2.317-1.623L19.472 4.18a2 2 0 0 1 1.622 2.317l-2.431 13.787a2 2 0 0 1-2.317 1.623L4.528 19.822a2 2 0 0 1-1.622-2.317Z'/%3E%3Cpath stroke-linecap='round' d='m8.929 6.382l7.879 1.389m-8.574 2.55l7.879 1.39M7.54 14.26l4.924.869'/%3E%3C/g%3E%3C/svg%3E");
 }
 .weiz-icon-post-top {
-  --url: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23000' d='M3 2.25a.75.75 0 0 1 .75-.75h8.5a.75.75 0 0 1 0 1.5h-8.5A.75.75 0 0 1 3 2.25m5.53 2.97l3.75 3.75a.749.749 0 1 1-1.06 1.06L8.75 7.561v6.689a.75.75 0 0 1-1.5 0V7.561L4.78 10.03a.749.749 0 1 1-1.06-1.06l3.75-3.75a.75.75 0 0 1 1.06 0'/%3E%3C/svg%3E");
+  --weiz-icon-color: linear-gradient(20deg, var(--weiz-primary-color) 30%, var(--vp-c-purple-1) 100%);
+  --url: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M5 15h4v6h6v-6h4l-7-8zM4 3h16v2H4z'/%3E%3C/svg%3E");
+}
+.weiz-icon-post-hot {
+  --url: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M16.5 8c0 1.5-.5 3.5-2.9 4.3c.7-1.7.8-3.4.3-5c-.7-2.1-3-3.7-4.6-4.6c-.4-.3-1.1.1-1 .7c0 1.1-.3 2.7-2 4.4C4.1 10 3 12.3 3 14.5C3 17.4 5 21 9 21c-4-4-1-7.5-1-7.5c.8 5.9 5 7.5 7 7.5c1.7 0 5-1.2 5-6.4c0-3.1-1.3-5.5-2.4-6.9c-.3-.5-1-.2-1.1.3'/%3E%3C/svg%3E");
 }
 .weiz-icon-ai {
   --weiz-icon-color: linear-gradient(100deg, #00c3ff 0%, #fb00ff 100%);
@@ -65,8 +70,9 @@
   --url: url(https://api.iconify.design/basil/chrome-solid.svg?color=%23000);
 }
 .weiz-icon-command,
+.weiz-icon-terminal,
 .weiz-icon-终端 {
-  --weiz-icon-color: radial-gradient(circle, #000000 0%, #2d2d2d 30%, #eaeaea 100%);
+  --weiz-icon-color: radial-gradient(circle, #737373 0%, #6b6b6b 30%, #eaeaea 100%);
   --url: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' fill-rule='evenodd' d='M2.25 6a3 3 0 0 1 3-3h13.5a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3zm3.97.97a.75.75 0 0 1 1.06 0l2.25 2.25a.75.75 0 0 1 0 1.06l-2.25 2.25a.75.75 0 0 1-1.06-1.06l1.72-1.72l-1.72-1.72a.75.75 0 0 1 0-1.06m4.28 4.28a.75.75 0 0 0 0 1.5h3a.75.75 0 0 0 0-1.5z' clip-rule='evenodd'/%3E%3C/svg%3E");
 }
 .weiz-icon-css {
@@ -109,9 +115,14 @@
   --weiz-icon-color: linear-gradient(-225deg, #919193 0%, #44107A 29%, #FF1361 67%, #FFF800 100%);
   --url: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'%3E%3Cpath d='M3 7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z'/%3E%3Cpath d='M7 15V9l2 2l2-2v6m3-2l2 2l2-2m-2 2V9'/%3E%3C/g%3E%3C/svg%3E");
 }
+.weiz-icon-map,
+.weiz-icon-地图 {
+  --weiz-icon-color: linear-gradient(-225deg, #919193 0%, #20d69e 29%, #13b0ff 67%, #2f88ff 100%);
+  --url: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M12 18.5L9 17l-6 3V7l6-3l6 3l6-3v7M9 4v13m6-10v5m6.121 8.121a3 3 0 1 0-4.242 0Q17.506 20.749 19 22q1.577-1.335 2.121-1.879M19 18v.01'/%3E%3C/svg%3E");
+}
 .weiz-icon-nginx {
-  --weiz-icon-color: linear-gradient(to bottom, #09e661, #158637);
-  --url: url(https://api.iconify.design/mynaui/letter-n-square-solid.svg?color=%23000);
+  --weiz-icon-color: linear-gradient(to bottom, #28ba62, #49ef7b);
+  --url: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M9 7h2l2 5V7h2v10h-2l-2-5v5H9zm3-5a10 10 0 0 1 10 10a10 10 0 0 1-10 10A10 10 0 0 1 2 12A10 10 0 0 1 12 2m0 2a8 8 0 0 0-8 8a8 8 0 0 0 8 8a8 8 0 0 0 8-8a8 8 0 0 0-8-8'/%3E%3C/svg%3E");
 }
 .weiz-icon-node,
 .weiz-icon-nodejs {
@@ -247,6 +258,14 @@
 .weiz-icon.m {
   width: 12px;
   height: 12px;
+}
+.weiz-icon.xm {
+  width: 16px;
+  height: 16px;
+}
+.weiz-icon.xxm {
+  width: 20px;
+  height: 20px;
 }
 .weiz-icon.l {
   width: 24px;

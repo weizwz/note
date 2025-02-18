@@ -135,7 +135,7 @@ const postMerge = () => {
               const fullInfo = data.posts.find(fullItem => fullItem.url === item.url)
               // 如果找到了对应的信息，合并到当前对象中
               if (fullInfo) {
-                return { ...item, ...fullInfo }
+                return { ...fullInfo, ...item  }
               }
               // 如果没有找到，返回原始对象
               return item

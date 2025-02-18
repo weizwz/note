@@ -17,14 +17,17 @@
         " />
       <div class="title">{{ post.title }}</div>
       <div class="desc">{{ post.abstract }}</div>
+      <div class="top" v-if="post.top" title="置顶">
+        <i class="weiz-icon weiz-icon-post-top xm"></i>
+      </div>
     </div>
   </a>
 </template>
 
 <script setup lang="ts">
-import { Post } from '../../utils/post.data'
+import { HomePost } from '../type/WHome'
 
-export interface PostCard extends Post {
+export interface PostCard extends HomePost {
   baseUrl?: string
 }
 
@@ -37,14 +40,12 @@ const post = props?.post as PostCard
   display: flex;
   height: 100%;
   border-radius: var(--weiz-card-border-radius);
-  border: 1px solid var(--vp-c-bg-soft);
-  background-color: var(--vp-c-bg-soft);
+  background: var(--vp-c-bg-soft);
   color: var(--vp-c-brand-1);
   transition: var(--weiz-transition);
   &:not(.statistic):hover {
     color: var(--vp-c-brand-1);
-    border-color: var(--weiz-primary-color);
-    box-shadow: 0 0.5em 0.5em -0.2em var(--weiz-primary-color);
+    box-shadow: 0 0.5em 0.5em 0 var(--weiz-primary-color);
     transform: translateY(-0.5em);
   }
   &.post-card-no-data {
@@ -63,18 +64,19 @@ const post = props?.post as PostCard
   width: 100%;
   height: 100%;
   padding: 24px;
+  position: relative;
   .title {
     line-height: 40px;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 500;
     width: 100%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
   }
   .desc {
-    line-height: 20px;
-    font-weight: 500;
+    line-height: 24px;
+    font-weight: 400;
     color: var(--vp-c-text-2);
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -83,6 +85,11 @@ const post = props?.post as PostCard
     word-break: break-all;
     overflow: hidden;
     text-overflow: ellipsis;
+  }
+  .top {
+    position: absolute;
+    top: 10px;
+    right: 10px;
   }
 }
 </style>

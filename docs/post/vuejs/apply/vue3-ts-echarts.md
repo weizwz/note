@@ -5,10 +5,10 @@ firstCommit: 2023-12-28 20:35:25+8:00
 lastUpdated: 2023-12-28 20:35:25+8:00
 tags:
   - ECharts
+  - 地图
   - Vue.js
   - Vite
   - TypeScript
-  - 地图
 ---
 
 # vue3+ts打开echarts的正确方式
