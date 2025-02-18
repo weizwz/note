@@ -71,7 +71,7 @@
           <a v-else-if="item.type && item.type === 'more'" class="post-card post-more" href="pages/posts">
             <div class="post-container">
               <div class="post-more-container">
-                <span><i class="weiz-icon weiz-icon-arrow-right l"></i></span>
+                <span><i class="weiz-icon weiz-icon-arrow-right xl"></i></span>
                 <span>更多文章</span>
               </div>
             </div>

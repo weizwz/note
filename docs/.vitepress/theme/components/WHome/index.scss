@@ -256,8 +256,8 @@
     font-weight: 500;
     color: var(--vp-c-text-2);
     transition: var(--weiz-transition);
-    > span:first-child {
-      margin-bottom: .5rem;
+    > span:last-child {
+      margin-top: -.5rem;
     }
   }
 }
