@@ -39,6 +39,7 @@
 
 <script setup lang="ts">
 import { HomePost } from '../type/WHome'
+import { withBase } from 'vitepress'
 
 export interface PostCard extends HomePost {
   baseUrl?: string
@@ -56,7 +57,7 @@ const formateDate = (date: string) => {
 }
 
 const go = (tag: string) => {
-  return  window.location.origin + '/pages/tags?q=' + encodeURIComponent(tag)
+  return withBase('/pages/tags?q=' + encodeURIComponent(tag))
 }
 </script>
 
