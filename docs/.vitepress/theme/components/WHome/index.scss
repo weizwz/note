@@ -7,7 +7,7 @@
 * 标题模块
 * -------------------------------------------------------------------------- */
 #about {
-  padding: calc(var(--vp-layout-top-height, 0px) + 36px) 48px 36px;
+  padding: 48px;
   .container-left {
     order: 2;
     margin-top: 30px;
@@ -99,9 +99,9 @@
 * 文章模块
 * -------------------------------------------------------------------------- */
 #post {
-  padding: var(--vp-layout-top-height, 0) 48px 24px;
+  padding: 0 48px 24px;
   .el-col {
-    margin-bottom: 20px;
+    margin-bottom: 24px;
     position: relative;
   }
   .post-card {
@@ -190,7 +190,7 @@
 * -------------------------------------------------------------------------- */
 #tag {
   --swiper-animation-status: running;
-  padding: var(--vp-layout-top-height, 0) 0 12px;
+  padding: 0 0 24px;
   .swiper {
     position: relative;
     overflow: hidden;

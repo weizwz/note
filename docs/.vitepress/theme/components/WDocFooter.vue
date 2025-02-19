@@ -27,7 +27,7 @@
 
 <style lang="scss" scoped>
 .weiz-doc-footer {
-  padding: 20px 0;
+  padding: 24px 0;
   margin: 0 auto;
   max-width: var(--vp-layout-max-width);
   text-align: center;

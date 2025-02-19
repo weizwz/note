@@ -1,7 +1,7 @@
 import type { DefaultTheme } from 'vitepress'
 
 export const nav: DefaultTheme.Config['nav'] = [
-  { text: '站内导航', 
+  { text: '导航', 
     items: [
       {
         items: [
@@ -13,78 +13,50 @@ export const nav: DefaultTheme.Config['nav'] = [
       {
         text: '推荐文章',
         items: [
-          { text: 'Clash Verge 使用记录', link: 'app/network/clash-verge.md' },
-          { text: 'Markdown 扩展语法示例', link: 'vitepress/extend/markdown-examples' },
-          { text: 'Git 使用记录 - 持续更新', link: 'git/use-log.md' },
-          { text: 'VSCode 接入DeepSeek', link: 'editor/vscode/vscode-deepseek.md' },
+          { text: 'VSCode接入DeepSeek', link: 'editor/vscode/vscode-deepseek.md' },
+          { text: 'Clash Verge使用记录', link: 'app/network/clash-verge.md' },
+          { text: 'Markdown扩展语法示例', link: 'vitepress/extend/markdown-examples' },
+          { text: 'Git使用记录-持续更新', link: 'git/use-log.md' },
         ]
       },
     ] 
   },
   {
-    text: '前端笔记',
+    text: '技术',
     items: [
       {
         items: [
           // { text: 'HTML 基础知识', link: 'vitepress/extend/markdown-examples.md' },
-          { text: 'CSS 基础知识', link: 'css/apply/icon-label-shields.md' },
-          { text: 'JS 基础知识', link: 'js/apply/compare-number.md' },
+          { text: 'CSS 基础', link: '/css/apply/icon-label-shields.md' },
+          { text: 'JS 基础', link: '/js/apply/compare-number.md' },
           // { text: 'ES6 常用语法', link: 'vitepress/extend/markdown-examples.md' },
-          { text: '浏览器相关知识', link: 'browser/apply/browser-plugin.md' },
-          { text: 'TS 常用语法', link: '/ts/basic/ts-normal-summary.md' },
-          { text: 'Nodejs 基础知识', link: 'nodejs/problem/error-log.md' },
+          { text: '浏览器相关', link: 'browser/apply/browser-plugin.md' },
+          { text: 'TS 基础', link: '/ts/basic/ts-normal-summary.md' },
+          { text: 'Nodejs 相关', link: '/nodejs/apply/pnpm-setting.md' },
+          { text: 'Nginx 代理', link: '/nginx/nginx-web-cross-domain.md' },
         ]
       },
-      // {
-      //   items: [
-      //     { text: 'HTTP 协议', link: 'vitepress/extend/markdown-examples.md' },
-      //     { text: 'XMLHttpRequest', link: 'vitepress/extend/markdown-examples.md' },
-      //     { text: 'JSON 语法', link: 'vitepress/extend/markdown-examples.md' },
-      //     { text: 'Ajax 基础知识', link: 'vitepress/extend/markdown-examples.md' },
-      //   ]
-      // },
       {
         items: [
           { text: 'Vue.js', link: '/vuejs/basic/vue-mvvm-binding.md' },
           // { text: 'React', link: 'vitepress/extend/markdown-examples.md' },
           { text: 'uni-app', link: '/mobile/uniapp/project-building-uniapp-vue3.md' },
           { text: 'Vite', link: 'pages/tags?q=Vite' },
-          // { text: '其他库', link: 'vitepress/extend/markdown-examples.md' },
-        ]
-      },
-    ]
-  },
-  {
-    text: '编码提效',
-    items: [
-      {
-        items: [
-          { text: 'JS 日常应用', link: '/js/apply/compare-number.md' },
-          { text: 'CSS 实用特效', link: '/css/apply/icon-label-shields.md' },
-          { text: 'Element 使用', link: '/element/responsive-layout.md' },
+          { text: 'Element', link: '/element/responsive-layout.md' },
         ]
       },
       {
         items: [
-          { text: 'Clash 配置', link: 'app/network/clash-verge.md' },
-          { text: 'Nodejs 相关', link: '/nodejs/apply/pnpm-setting.md' },
-          { text: '终端 相关', link: 'pages/tags?q=%E7%BB%88%E7%AB%AF' },
+          { text: '终端配置/美化', link: 'pages/tags?q=%E7%BB%88%E7%AB%AF' },
           { text: 'Git 相关', link: '/git/use-log.md' },
-          { text: '浏览器相关', link: '/browser/apply/browser-plugin.md' },
-          { text: 'Nginx 代理', link: '/nginx/nginx-web-cross-domain.md' },
-        ]
-      },
-      {
-        items: [
           { text: 'VSCode 配置', link: '/editor/vscode/vscode-self-plugin.md' },
-          // { text: '微信开发者工具', link: 'vitepress/extend/markdown-examples.md' },
-          // { text: '其他开发软件', link: 'vitepress/extend/markdown-examples.md' },
+          { text: 'Clash 配置', link: 'app/network/clash-verge.md' },
         ]
       },
     ]
   },
   {
-    text: '博客文档',
+    text: '博客',
     items: [
       {
         text: '网站管理',
@@ -111,15 +83,8 @@ export const nav: DefaultTheme.Config['nav'] = [
     ]
   },
   {
-    text: '资源分享',
+    text: '资源',
     items: [
-      {
-        items: [
-          { text: '开源字体', link: '/resource/font/open-source-font.md' },
-          { text: '图标图片', link: 'resource/font/open-source-font.md' },
-          { text: '其他资源', link: 'resource/font/open-source-font.md' },
-        ]
-      },
       {
         items: [
           { text: '应用分享', link: '/app/network/clash-verge.md' },
@@ -127,19 +92,25 @@ export const nav: DefaultTheme.Config['nav'] = [
           { text: 'MacOS', link: '/macos/setting/mac-terminal-beautify.md' },
         ]
       },
+      {
+        items: [
+          { text: '开源字体', link: '/resource/font/open-source-font.md' },
+          { text: '图标图片', link: 'resource/font/open-source-font.md' },
+          { text: 'GitHub相关', link: 'pages/tags?q=Github' },
+          { text: '其他资源', link: 'resource/font/open-source-font.md' },
+        ]
+      },
+      {
+        items: [
+          { text: '前端导航', link: 'https://nav.liwenkai.fun/' },
+          { text: 'AI集合', link: 'https://ai-bot.cn/' },
+        ]
+      },
     ]
   },
   {
-    text: '杂项记录',
+    text: '关于',
     items: [
-      {
-        text: '前端网站',
-        items: [
-          { text: '常用API导航', link: 'https://nav.liwenkai.fun/' },
-          { text: 'GitHub相关', link: 'pages/tags?q=Github' },
-          { text: '博客网站', link: 'pages/tags?q=Hexo' },
-        ]
-      },
       {
         text: '我的项目',
         items: [

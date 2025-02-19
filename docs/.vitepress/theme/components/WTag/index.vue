@@ -19,7 +19,7 @@
         <div id="posts">
           <h3><i class="weiz-icon weiz-icon-post-fill l" />文章列表</h3>
           <div class="posts-wrapper">
-            <el-row class="container-row" :gutter="20">
+            <el-row class="container-row" :gutter="24">
               <el-col v-for="item of posts" :key="item.url" :xs="24" :sm="12" :md="6">
                 <weiz-post-card :post="Object.assign({ baseUrl: '../' }, item)" />
               </el-col>
