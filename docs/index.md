@@ -30,8 +30,10 @@ post:
   - title: VSCode接入DeepSeek-V3
     top: true
     url: editor/vscode/vscode-deepseek
+    abstract: 文章介绍了在VSCode中接入DeepSeek V3大模型的方法，包括插件下载、API Key注册与配置等
   - title: Clash Verge下载、配置、使用
     top: true
     url: app/network/clash-verge
+    abstract: 文章介绍了Clash Verge的下载、配置和使用方法。Clash Verge是一个基于Clash Meta内核的GUI代理工具，支持多种操作系统和代理协议
 ---
 

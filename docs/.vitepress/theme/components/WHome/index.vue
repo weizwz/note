@@ -2,59 +2,49 @@
   <div id="about">
     <div class="container">
       <el-row class="container-row" :gutter="20">
-        <el-col :xs="24" :sm="16" :md="18" class="container-left">
+        <el-col :xs="24" :sm="12" :md="16" class="container-left">
           <div class="title">
             <h1 class="about-title">
               <span>{{ aboutData.title }}</span>
             </h1>
-            <h1 class="about-desc">
-              <span>{{ aboutData.desc }}</span>
-            </h1>
           </div>
-          <h2 class="about-tagline">{{ aboutData.tagline }}</h2>
-          <div class="about-nav">
-            <ul class="list-inline">
-              <li v-for="(item, index) of aboutData.links" :key="index">
-                <a :href="item.link">
-                  <i :class="'weiz-icon l ' + item.iconName" />
-                  <span>{{ item.title }}</span>
-                </a>
-              </li>
-            </ul>
+          <div class="info-wrapper">
+            <div class="avatar-wrapper">
+              <img
+                :src="aboutData.logo.indexOf('http') === 0 ? aboutData.logo : withBase(aboutData.logo)"
+                width="40"
+                alt="head-avatar" />
+            </div>
+            <div class="info-desc-wrapper">
+              <h2 class="about-tagline">{{ aboutData.tagline }}</h2>
+              <ul class="social-wrapper">
+                <li class="hero-social-item">
+                  <a class="social" href="https://github.com/weizwz" target="_blank">
+                    <i class="weiz-icon weiz-icon-github main xm"/>
+                  </a>
+                </li>
+                <li class="hero-social-item">
+                  <a class="social" href="https://gitee.com/weizwz" target="_blank">
+                    <i class="weiz-icon weiz-icon-gitee main xm"/>
+                  </a>
+                </li>
+                <li class="hero-social-item">
+                  <a class="social" href="https://www.cnblogs.com/weizwz" target="_blank">
+                    <i class="weiz-icon weiz-icon-cnblog main xm"/>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </el-col>
-        <el-col :xs="24" :sm="8" :md="6" class="container-right">
-          <div class="hero-avatar">
-            <img
-              :src="aboutData.logo.indexOf('http') === 0 ? aboutData.logo : withBase(aboutData.logo)"
-              alt="head-avatar" />
-          </div>
-          <div class="hero-social">
-            <ul>
-              <li class="hero-social-item">
-                <a class="social" href="https://github.com/weizwz" target="_blank">
-                  <i class="weiz-icon weiz-icon-github main"/>
-                </a>
-              </li>
-              <li class="hero-social-item">
-                <a class="social" href="https://gitee.com/weizwz" target="_blank">
-                  <i class="weiz-icon weiz-icon-gitee main"/>
-                </a>
-              </li>
-              <li class="hero-social-item">
-                <a class="social" href="https://www.cnblogs.com/weizwz" target="_blank">
-                  <i class="weiz-icon weiz-icon-cnblog main"/>
-                </a>
-              </li>
-            </ul>
-          </div>
+        <el-col :xs="24" :sm="12" :md="8" class="container-right">
         </el-col>
       </el-row>
     </div>
   </div>
   <div id="post">
     <div class="container">
-      <el-row class="container-row" :gutter="20">
+      <el-row class="container-row" :gutter="24">
         <el-col v-if="cardLength <= 0" v-for="idx of 8" :key="idx" class="statistic-wrapper" :xs="24" :sm="12" :md="6">
           <weiz-post-card :noData="true" />
         </el-col>
@@ -216,4 +206,11 @@ onMounted(() => {
 </script>
 <style lang="scss" scoped>
 @use './index.scss';
+</style>
+
+<style lang="scss">
+.weiz-home .post-container .desc {
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+}
 </style>

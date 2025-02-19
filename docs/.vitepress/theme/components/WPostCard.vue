@@ -149,11 +149,11 @@ const go = (tag: string) => {
   }
   .desc {
     padding: 0 var(--post-padding);
-    margin-bottom: var(--post-padding);
+    margin-bottom: calc(var(--post-padding) - 3px);
     line-height: 24px;
     font-size: 13px;
     font-weight: 400;
-    color: var(--vp-c-text-2);
+    color: var(--vp-c-text-3);
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
