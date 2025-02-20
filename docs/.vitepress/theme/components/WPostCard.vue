@@ -1,9 +1,9 @@
 <template>
   <a v-if="props.noData" class="post-card post-card-no-data">
     <div class="post-container">
-      <div class="weiz-icon weiz-icon-post xl"/>
+      <div class="weiz-icon weiz-icon-post xl" />
       <div class="post-loading">
-        <weiz-loading/>
+        <weiz-loading />
       </div>
     </div>
   </a>
@@ -44,7 +44,7 @@ export interface PostCard extends HomePost {
   baseUrl?: string
 }
 
-const props = defineProps<{ post?: PostCard, noData?: Boolean }>()
+const props = defineProps<{ post?: PostCard; noData?: Boolean }>()
 const post = props?.post as PostCard
 
 const formateDate = (date: string) => {
@@ -61,6 +61,10 @@ const go = (tag: string) => {
 </script>
 
 <style lang="scss" scoped>
+.weiz-post .post-card.post-card-no-data,
+.weiz-tag .post-card.post-card-no-data {
+  min-height: 215px;
+}
 .post-card {
   display: flex;
   height: 100%;
@@ -156,7 +160,7 @@ const go = (tag: string) => {
         color: var(--weiz-primary-color);
       }
       > span {
-        font-size: .8em;
+        font-size: 0.8em;
       }
     }
   }

@@ -22,7 +22,7 @@
 #tags {
   margin: 0 auto;
   .tags-wrapper {
-    margin-top: 20px;
+    margin: 20px 0 0;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -31,14 +31,13 @@
   }
   .tag {
     padding: 6px 8px;
-    font-size: 0.85em;
     font-weight: 500;
     line-height: 25px;
     transition: 0.4s;
     cursor: pointer;
     &:hover {
       color: var(--weiz-primary-color);
-      transform: scale(1.1);
+      transform: scale(1.2);
     }
     &.tag-active {
       color: var(--weiz-primary-color);

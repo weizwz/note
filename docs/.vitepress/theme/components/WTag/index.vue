@@ -8,7 +8,6 @@
             <div
               v-for="(item, index) of tagsText"
               :key="index"
-              :style="{ fontSize: minSize + (tags[item].length - 1) * unit + 'em' }"
               @click="activeTag(item)"
               v-bind:class="{ tag: true, 'tag-active': currentTag === item }">
               {{ item }}
@@ -19,7 +18,12 @@
         <div id="posts">
           <h3><i class="weiz-icon weiz-icon-post-fill l" />文章列表</h3>
           <div class="posts-wrapper">
-            <el-row class="container-row" :gutter="24">
+            <el-row v-if="posts.length === 0" class="container-row" :gutter="24">
+              <el-col v-for="idx of 8" :key="idx" :xs="24" :sm="12" :md="6">
+                <weiz-post-card :noData="true" />
+              </el-col>
+            </el-row>
+            <el-row v-else class="container-row" :gutter="24">
               <el-col v-for="item of posts" :key="item.url" :xs="24" :sm="12" :md="6">
                 <weiz-post-card :post="Object.assign({ baseUrl: '../' }, item)" />
               </el-col>
@@ -39,22 +43,6 @@ import { Post, data } from '../../../utils/post.data'
 const routeData = useRouter()
 const tags = ref(data.tags)
 const tagsText = ref(Object.keys(tags.value))
-let maxPost = 1
-
-const getMaxPost = () => {
-  for (const item in tags.value) {
-    if (tags.value[item].length > maxPost) maxPost = tags.value[item].length
-  }
-  countSize()
-}
-
-// 计算文字大小，最大为2em，最小为1em
-const maxSize = 2
-const minSize = ref(1)
-const unit = ref(0.1)
-const countSize = () => {
-  unit.value = Math.floor(((maxSize - minSize.value) / maxPost) * 100) / 100
-}
 
 let currentTag = ref('')
 let posts = ref<Post[]>([])
@@ -73,7 +61,6 @@ const handleUrlState = () => {
 }
 
 onMounted(() => {
-  getMaxPost()
   handleUrlState()
   window.addEventListener('popstate', handleUrlState)
 
