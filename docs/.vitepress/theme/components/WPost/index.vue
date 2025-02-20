@@ -4,15 +4,18 @@
       <div class="container">
         <div class="title">
           <h1>
-            全部文章<sub>{{ postLength }}</sub>
+            全部文章<sub>{{ postLength || '' }}</sub>
           </h1>
         </div>
         <div id="post">
-          <el-row v-if="postLength === 0" class="container-row" :gutter="24">
-            <el-col v-for="idx of 8" :key="idx" :xs="24" :sm="12" :md="6">
-              <weiz-post-card :noData="true" />
-            </el-col>
-          </el-row>
+          <div  v-if="postLength === 0" class="year-post">
+            <h3>{{ new Date().getFullYear() }}</h3>
+            <el-row class="container-row" :gutter="24">
+              <el-col v-for="idx of 8" :key="idx" :xs="24" :sm="12" :md="6">
+                <weiz-post-card :noData="true" />
+              </el-col>
+            </el-row>
+          </div>
           <div v-else v-for="(year, index) of yearKeys" :key="index" class="year-post">
             <h3>{{ year }}</h3>
             <el-row class="container-row" :gutter="24">

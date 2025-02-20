@@ -7,7 +7,7 @@ titleTemplate: 唯知笔记
 about:
   title: 唯知笔记
   logo: https://www.helloimg.com/i/2025/01/04/6778a918882f8.png
-  desc: 编码、记录、分享
+  desc:  学习 』记录 』分享 
   tagline: 知之为知之，不知为不知
   links:
     - title: 前端笔记

@@ -16,7 +16,7 @@
                 alt="head-avatar" />
             </div>
             <div class="info-desc-wrapper">
-              <h2 class="about-tagline">{{ aboutData.tagline }}</h2>
+              <h2 class="about-tagline">{{ aboutData.desc }}</h2>
               <ul class="social-wrapper">
                 <li class="hero-social-item">
                   <a class="social" href="https://github.com/weizwz" target="_blank">
