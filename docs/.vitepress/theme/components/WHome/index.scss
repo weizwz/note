@@ -9,8 +9,6 @@
 #about {
   padding: 48px;
   .container-left {
-    order: 2;
-    margin-top: 30px;
     .title {
       width: fit-content;
     }
@@ -87,7 +85,6 @@
     }
   }
   .container-right {
-    order: 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -295,8 +292,6 @@
 @media (min-width: 768px) {
   #about {
     .container-left {
-      order: 1;
-      margin-top: 0;
       h1 {
         line-height: 56px;
         font-size: 48px;
@@ -305,10 +300,6 @@
         line-height: 32px;
         font-size: 20px;
       }
-    }
-    .container-right {
-      order: 2;
-      justify-content: end;
     }
   }
 }

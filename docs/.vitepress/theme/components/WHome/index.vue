@@ -2,7 +2,7 @@
   <div id="about">
     <div class="container">
       <el-row class="container-row" :gutter="24">
-        <el-col :xs="24" :sm="12" :md="16" class="container-left">
+        <el-col :xs="24" :sm="12" :md="12" class="container-left">
           <div class="title">
             <h1 class="about-title">
               <span>{{ aboutData.title }}</span>
@@ -37,7 +37,7 @@
             </div>
           </div>
         </el-col>
-        <el-col :xs="24" :sm="12" :md="8" class="container-right">
+        <el-col :xs="24" :sm="12" :md="12" class="container-right">
         </el-col>
       </el-row>
     </div>
