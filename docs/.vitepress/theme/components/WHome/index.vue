@@ -48,7 +48,7 @@
         <el-col v-if="cardLength <= 0" v-for="idx of 8" :key="idx" class="statistic-wrapper" :xs="24" :sm="12" :md="6">
           <weiz-post-card :noData="true" />
         </el-col>
-        <el-col v-for="(item, index) of postData" :key="index" class="statistic-wrapper" :xs="24" :sm="12" :md="6">
+        <el-col v-else v-for="(item, index) of postData" :key="index" class="statistic-wrapper" :xs="24" :sm="12" :md="6">
           <div v-if="item.type && item.type === 'busuanzi'" class="post-card statistic">
             <div class="post-container">
               <div class="number">{{ uv }}</div>

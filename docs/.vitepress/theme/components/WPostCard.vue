@@ -1,11 +1,10 @@
 <template>
   <a v-if="props.noData" class="post-card post-card-no-data">
     <div class="post-container">
-      <div class="weiz-icon weiz-icon-post xxl"/>
-      <div class="title">
+      <div class="weiz-icon weiz-icon-post xl"/>
+      <div class="post-loading">
         <weiz-loading/>
       </div>
-      <div class="desc">&nbsp;</div>
     </div>
   </a>
   <a v-else class="post-card" :href="(post?.baseUrl || '') + post.url">
@@ -77,11 +76,25 @@ const go = (tag: string) => {
     transform: translateY(-0.5em);
   }
   &.post-card-no-data {
-    .title {
-      text-align: center;
+    min-height: 200px;
+    box-sizing: border-box;
+    position: relative;
+    .post-container {
+      width: 100%;
+      height: 100%;
     }
-    .desc {
-      height: 68px;
+    .weiz-icon {
+      position: absolute;
+      top: 24px;
+      left: 24px;
+    }
+    .post-loading {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
     }
   }
 }
