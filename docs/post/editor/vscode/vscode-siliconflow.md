@@ -10,6 +10,8 @@ tags:
 # VSCode 使用硅基流动的 API 接入 DeepSeek
 
 > 由于近期 DeepSeek官方服务器压力较大，在 VS Code 中使用其 API 时，连接缓慢，很糟心。正好看到 硅基流动 近期也部署了 DeepSeek V3 以及 DeepSeek R1，于是转向使用三方的 API
+>
+> 硅基流动官方最近已上线接入cline的文档，可结合此文进行安装配置 [硅基流动 - 在 Cline 中使用](https://docs.siliconflow.cn/cn/usercases/use-siliconcloud-in-cline)
 
 ## 注册硅基流动账号并创建API 
 
