@@ -7,7 +7,7 @@ titleTemplate: 唯知笔记
 about:
   title: 唯知笔记
   logo: https://www.helloimg.com/i/2025/01/04/6778a918882f8.png
-  desc:  学习 』记录 』分享 
+  desc: 学习 记录 分享
   tagline: 知之为知之，不知为不知
   links:
     - title: 前端笔记
@@ -30,7 +30,7 @@ post:
   - title: VSCode接入DeepSeek-V3
     top: true
     url: editor/vscode/vscode-deepseek
-    abstract: 文章介绍了在VSCode中接入DeepSeek V3大模型的方法，包括插件下载、API Key注册与配置等
+    abstract: 文章介绍了在VSCode中接入DeepSeek V3大模型的方法，包括插件下载、API Key注册与配置等，文章还介绍了 Continue 的对话提问、代码优化、自动补全和注释生成代码等功能。
   - title: Clash Verge下载、配置、使用
     top: true
     url: app/network/clash-verge

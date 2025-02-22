@@ -2,13 +2,13 @@
   max-width: 1152px;
   margin: 0 auto;
 }
-
 /**
 * 标题模块
 * -------------------------------------------------------------------------- */
 #about {
-  padding: 48px;
+  padding: var(--weiz-home-margin);
   .container-left {
+    margin-bottom: var(--weiz-home-margin);
     .title {
       width: fit-content;
     }
@@ -32,22 +32,22 @@
       }
     }
     .info-wrapper {
-      padding-top: 12px;
+      padding-top: var(--weiz-home-padding-2);
       display: flex;
       align-items: center;
     }
     .avatar-wrapper {
       width: 68px;
       height: 68px;
+      margin-right: var(--weiz-home-padding-2);
       display: flex;
       align-items: center;
       justify-content: center;
       background: var(--vp-c-bg-soft);
       border-radius: 50%;
-      margin-right: 12px;
       img {
-        width: 48px;
-        height: 48px;
+        width: var(--weiz-home-margin);
+        height: var(--weiz-home-margin);
       }
     }
     .about-tagline {
@@ -55,11 +55,8 @@
       padding-bottom: 6px;
       line-height: 24px;
       font-size: 14px;
-      color: var(--vp-c-text-3);
+      color: var(--vp-c-text-2);
       white-space: nowrap;
-    }
-    .info-desc-wrapper {
-      padding: 10px 0;
     }
     .social-wrapper {
       display: flex;
@@ -85,10 +82,41 @@
     }
   }
   .container-right {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    --el-carousel-height: 240px;
+    height: calc(var(--el-carousel-height) - var(--weiz-home-margin) * 2);
     position: relative;
+  }
+  .el-carousel {
+    width: calc(100% - var(--weiz-home-padding));
+    height: var(--el-carousel-height);
+    position: absolute;
+    top: calc(var(--weiz-home-margin) - var(--weiz-home-margin) * 2);
+    right: var(--weiz-home-padding-2);
+    border-radius: var(--weiz-card-border-radius);
+  }
+  .carousel-item {
+    display: flex;
+    padding: var(--weiz-home-margin) var(--weiz-home-padding) var(--weiz-home-margin) 0;
+    height: 100%;
+    h3 {
+      line-height: 24px;
+      font-size: 18px;
+      font-weight: 500;
+      color: var(--vp-c-text-2);
+      white-space: nowrap;
+      text-shadow: 1px 1px 0px var(--vp-c-bg), -1px -1px 2px var(--vp-c-bg);
+    }
+  }
+  .carousel-1 {
+    background: url("https://www.helloimg.com/i/2025/02/22/67b9e10642edb.png") no-repeat center center;
+    background-size: auto 100%;
+    position: relative;
+    h3 {
+      padding: 4px 0;
+      font-weight: 800;
+      width: 68px;
+      font-size: 20px;
+    }
   }
 }
 
@@ -96,9 +124,9 @@
 * 文章模块
 * -------------------------------------------------------------------------- */
 #post {
-  padding: 0 48px 24px;
+  padding: 0 var(--weiz-home-margin) var(--weiz-home-padding);
   .el-col {
-    margin-bottom: 24px;
+    margin-bottom: var(--weiz-home-padding);
     position: relative;
   }
   .post-card {
@@ -130,7 +158,6 @@
     }
   }
   .statistic .post-container {
-    margin: 20px 0;
     text-align: center;
     .desc {
       padding-top: 0;
@@ -187,7 +214,7 @@
 * -------------------------------------------------------------------------- */
 #tag {
   --swiper-animation-status: running;
-  padding: 0 0 24px;
+  padding: 0 0 var(--weiz-home-padding);
   .swiper {
     position: relative;
     overflow: hidden;
@@ -233,7 +260,7 @@
     }
   }
   .tag {
-    padding: 20px 30px;
+    padding: 0 var(--weiz-home-margin);
     font-size: 48px;
     line-height: 1.2;
     font-weight: 600;
@@ -292,6 +319,7 @@
 @media (min-width: 768px) {
   #about {
     .container-left {
+      margin-bottom: 0;
       h1 {
         line-height: 56px;
         font-size: 48px;
@@ -299,6 +327,26 @@
       h2 {
         line-height: 32px;
         font-size: 20px;
+      }
+    }
+    .carousel-1 {
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: center;
+      h3 {
+        position: relative;
+        &:first-child::after {
+          content: "『";
+          position: absolute;
+          left: -24px;
+          top: -4px;
+        }
+        &:last-child::after {
+          content: "』";
+          position: absolute;
+          right: 5px;
+          bottom: -4px;
+        }
       }
     }
   }

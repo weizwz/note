@@ -16,7 +16,7 @@
                 alt="head-avatar" />
             </div>
             <div class="info-desc-wrapper">
-              <h2 class="about-tagline">{{ aboutData.desc }}</h2>
+              <h2 class="about-tagline">{{ aboutData.tagline }}</h2>
               <ul class="social-wrapper">
                 <li class="hero-social-item">
                   <a class="social" href="https://github.com/weizwz" target="_blank">
@@ -38,6 +38,27 @@
           </div>
         </el-col>
         <el-col :xs="24" :sm="12" :md="12" class="container-right">
+          <el-carousel
+            height="240px"
+            direction="vertical"
+            :autoplay="false"
+          >
+            <el-carousel-item>
+              <div class="carousel-1 carousel-item">
+                <h3 v-for="(item, index) of aboutData.desc.split(' ')" :key="index">{{ item }}</h3>
+              </div>
+            </el-carousel-item>
+            <!-- <el-carousel-item>
+              <div class="carousel-2 carousel-item">
+                <h3>{{ 2 }}</h3>
+              </div>
+            </el-carousel-item>
+            <el-carousel-item>
+              <div class="carousel-3 carousel-item">
+                <h3>{{ 3 }}</h3>
+              </div>
+            </el-carousel-item> -->
+          </el-carousel>
         </el-col>
       </el-row>
     </div>
@@ -209,8 +230,23 @@ onMounted(() => {
 </style>
 
 <style lang="scss">
-.weiz-home .post-container .desc {
-  -webkit-line-clamp: 2;
-  line-clamp: 2;
+.weiz-home {
+  --weiz-home-margin: 48px;
+  --weiz-home-padding: calc(var(--weiz-home-margin) / 2);
+  --weiz-home-padding-2: calc(var(--weiz-home-margin) / 4);
+  .post-container .desc {
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+  }
+  .el-carousel {
+    --el-carousel-indicator-height: 4px;
+    .el-carousel__button {
+      border-radius: 8px;
+      background: var(--weiz-primary-color);
+    }
+    .el-carousel__indicators--vertical {
+      transform: translate(var(--weiz-home-padding-2), -50%);
+    }
+  }
 }
 </style>
