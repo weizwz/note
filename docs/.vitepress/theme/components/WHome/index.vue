@@ -41,23 +41,18 @@
           <el-carousel
             height="240px"
             direction="vertical"
-            :autoplay="false"
+            :autoplay="true"
           >
             <el-carousel-item>
-              <div class="carousel-1 carousel-item">
+              <div class="carousel-item carousel-features carousel-1">
                 <h3 v-for="(item, index) of aboutData.desc.split(' ')" :key="index">{{ item }}</h3>
               </div>
             </el-carousel-item>
-            <!-- <el-carousel-item>
-              <div class="carousel-2 carousel-item">
-                <h3>{{ 2 }}</h3>
-              </div>
-            </el-carousel-item>
             <el-carousel-item>
-              <div class="carousel-3 carousel-item">
-                <h3>{{ 3 }}</h3>
-              </div>
-            </el-carousel-item> -->
+              <a class="carousel-item carousel-features carousel-2" :href="lookHref" @click="postRandom">
+                <h3>随便看看</h3>
+              </a>
+            </el-carousel-item>
           </el-carousel>
         </el-col>
       </el-row>
@@ -115,6 +110,7 @@ import { useData, withBase } from 'vitepress'
 import { onMounted, ref } from 'vue'
 import { HomeAbout, HomePost } from '../../type/WHome'
 import { data } from '../../../utils/post.data'
+import { countTransK, getRandomElement } from '../../../utils/tools'
 
 const { frontmatter: fm } = useData()
 
@@ -125,6 +121,7 @@ const tags = fm.value.tags ? fm.value.tags.split(',') : Object.keys(data.tags)
 const pv = ref('loading')
 const uv = ref('loading')
 const cardLength = ref(0)
+const lookHref = ref(withBase('editor/vscode/vscode-siliconflow'))
 
 const postMerge = () => {
   const postLength = 6
@@ -182,12 +179,9 @@ const postMerge = () => {
   cardLength.value = postLoadingData.length
 }
 
-const formatNumber = (num) => {
-  if (num >= 1000000) {
-    return (num / 1000000).toFixed(1) + 'M' // 超过6位数，转换为百万单位
-  } else {
-    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') // 千分位格式化
-  }
+const postRandom = () => {
+  const post = getRandomElement(data.posts)
+  lookHref.value = post ? post.url : ''
 }
 
 let timeoutUV = 0
@@ -198,7 +192,7 @@ const getUV = () => {
     const text = $UV?.innerHTML
     if ($UV && text) {
       const text = $UV.innerHTML
-      uv.value = formatNumber(text)
+      uv.value = countTransK(parseInt(text))
     } else {
       getUV()
     }
@@ -212,7 +206,7 @@ const getPV = () => {
     const $PV = document.querySelector('#busuanzi_value_site_pv')
     const text = $PV?.innerHTML
     if ($PV && text) {
-      pv.value = formatNumber(text)
+      pv.value = countTransK(parseInt(text))
     } else {
       getPV()
     }
@@ -221,6 +215,7 @@ const getPV = () => {
 
 onMounted(() => {
   postMerge()
+  postRandom()
   getUV()
   getPV()
 })

@@ -22,16 +22,18 @@ export const countWord = (data: string) => {
 }
 
 /**
- * 数字转换为带k单位的字符串，比如：1500 -> 1.5k
+ * 数字千分位转换 1500 -> 1.5k，1500000 -> 1.5M
  * @param count
  * @returns
  */
 export const countTransK = (count: number) => {
+  if (count >= 1000000) {
+    return (count / 1000000).toFixed(1) + 'M'
+  }
   if (count >= 1000) {
     return (count / 1000).toFixed(1) + 'K'
-  } else {
-    return count.toString()
   }
+  return count.toString()
 }
 
 /**
@@ -82,3 +84,13 @@ export const dateToUTC8 = (date: string) => {
   utcDate = (utcDate.indexOf('+0800') >= 0 || utcDate.indexOf('+8:00') >= 0) ? utcDate.replace(' +0800', '+8:00') : utcDate + '+8:00'
   return utcDate
 }
+
+
+/**
+ * 获取数组中随机元素，数组为空 返回`undefined`.
+ * @param {T[]} arr - 数组
+ * @returns {T | undefined} - 返回值
+ */
+export const getRandomElement = (arr) => {
+  return arr.length === 0 ? undefined : arr[Math.floor(Math.random() * arr.length)];
+};
