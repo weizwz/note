@@ -67,6 +67,34 @@ pre:not(.vp-code) {
   color: var(--weiz-primary-color-light-1);
 }
 
+/* 文章内标题 */
+.vp-doc h1 {
+  color: transparent;
+  background: -webkit-linear-gradient(120deg, var(--vp-c-purple-1) 30%, var(--weiz-primary-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.vp-doc h2 {
+  color: var(--weiz-primary-color);
+}
+.vp-doc h4 {
+  font-size: 16px;
+}
+
+/* 导航 */
+.outline-title {
+  color: var(--vp-c-text-2);
+}
+.VPDocOutlineItem.root > li > .outline-link {
+  color: var(--vp-c-text-1);
+  font-weight: 500;
+}
+.VPDocAsideOutline.has-outline .outline-marker {
+  width: 4px;
+  border-radius: 4px;
+}
+
 /**
 * 首页消除导航栏的下划线
 * -------------------------------------------------------------------------- */

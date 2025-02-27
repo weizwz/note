@@ -111,6 +111,11 @@
   --weiz-icon-color: #F8D93A;
   --url: url(https://api.iconify.design/ri/javascript-fill.svg?color=%23000);
 }
+.weiz-icon-low-level-operation,
+.weiz-icon-底层运行原理 {
+  --weiz-icon-color: linear-gradient(to right, #D75153, #F2D975);
+  --url: url(https://api.iconify.design/fluent/laptop-settings-24-regular.svg?color=%23000);
+}
 .weiz-icon-markdown {
   --weiz-icon-color: linear-gradient(-225deg, #919193 0%, #44107A 29%, #FF1361 67%, #FFF800 100%);
   --url: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'%3E%3Cpath d='M3 7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z'/%3E%3Cpath d='M7 15V9l2 2l2-2v6m3-2l2 2l2-2m-2 2V9'/%3E%3C/g%3E%3C/svg%3E");
@@ -136,6 +141,11 @@
   --weiz-icon-color: linear-gradient(to bottom, #000000 0%, #3FAF7B 20%, #000000 100%);
   --url: url(https://api.iconify.design/simple-icons/oppo.svg?color=%23000);
 }
+.weiz-icon-programming-paradigm,
+.weiz-icon-编程思想 {
+  --weiz-icon-color: linear-gradient(100deg, #00c3ff 0%, #fb00ff 100%);
+  --url: url(https://api.iconify.design/material-symbols/deployed-code-account-outline-sharp.svg?color=%23000);
+}
 .weiz-icon-proxy,
 .weiz-icon-代理 {
   --weiz-icon-color: linear-gradient(to bottom, #ffaacd 0%, #db1cff 100%);
@@ -144,6 +154,10 @@
 .weiz-icon-sass {
   --weiz-icon-color: linear-gradient(to right, #fa709a 0%, #fee140 100%);
   --url: url(https://api.iconify.design/la/sass.svg?color=%23000);
+}
+.weiz-icon-terminology,
+.weiz-icon-术语 {
+  --url: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M15 12h6m-6-6h6M3 13l3.553-7.724a.5.5 0 0 1 .894 0L11 13m-8 5h18M4 11h6'/%3E%3C/svg%3E");
 }
 .weiz-icon-ts,
 .weiz-icon-typescript {
