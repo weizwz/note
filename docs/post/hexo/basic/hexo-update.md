@@ -2,7 +2,6 @@
 title: 博客升级 Hexo 版本记录
 description: 这篇文章记录了Hexo博客的升级过程。内容包括如何检查当前版本、安装必要的工具、更新依赖项以及解决常见问题。通过这些步骤，用户可以顺利将Hexo博客升级到最新版本，确保博客的稳定性和安全性
 firstCommit: 2023-11-25 10:05:41+8:00
-lastUpdated: 2023-11-25 10:05:41+8:00
 tags:
   - Hexo
   - npm
@@ -23,11 +22,12 @@ hexo: 6.3.0
 ## 2. `npm i hexo-cli -g`, 全局安装 hexo-cli
 
 ```sh
-PS D:\workspace\blog\github-blog> hexo -v
-INFO  Validating config
-INFO
-# ……
-hexo: 6.3.0
+PS D:\workspace\blog\github-blog> npm i hexo-cli -g
+
+changed 53 packages in 21s
+
+14 packages are looking for funding
+  run `npm fund` for details
 ```
 
 ## 3. `npm install -g npm-check`, 安装 npm-check，若已安装可以跳过
@@ -188,4 +188,4 @@ INFO
 INFO  Start processing
 ```
 
-** 升级完成，nice 😊 **
+**升级完成，nice 😊**
