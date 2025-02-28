@@ -62,7 +62,7 @@ d.speak() // 输出: Mitzie barks.
 
 在前端开发中，MVC 和 MVVM 是常见的设计模式，它们用于分离关注点，使得代码更加模块化、易于维护和扩展。
 
-### 1. MVC (Model-View-Controller)
+### MVC (Model-View-Controller)
 
 **MVC** 模式将应用程序分为三个核心组件：
 
@@ -72,7 +72,7 @@ d.speak() // 输出: Mitzie barks.
 
 - **Controller（控制器）**：作为 Model 和 View 之间的桥梁，接收输入并转换它为命令发给 Model 或 View。
 
-### 2. MVVM (Model-View-ViewModel)
+### MVVM (Model-View-ViewModel)
 
 **MVVM** 是一种专门为简化用户界面的开发而设计的模式，它包括：
 
@@ -86,7 +86,7 @@ d.speak() // 输出: Mitzie barks.
 
 假设有一个简单的待办事项应用。当你添加一个新的待办事项时，输入会发送到 Controller，Controller 会通知 Model 更新数据，然后 Model 通知 View 刷新显示内容。
 
-#### 1. MVC
+#### MVC
 
 **模型负责处理应用的数据逻辑和规则**。在我们的待办事项应用中，`TodoItem`可以作为一个模型，它包含了待办事项的详细信息以及相关的业务逻辑。
 
@@ -151,7 +151,7 @@ document.getElementById('add-todo').addEventListener('click', () => {
 
 - **Controller** (事件监听器)：处理用户输入（如点击按钮），并根据输入更新模型或视图。
 
-#### 2. MVVM
+#### MVVM
 
 继续以待办事项应用为例，在 MVVM 架构下，你可能会使用像 Vue.js 这样的框架。ViewModel 通过双向绑定机制自动同步 Model 和 View 之间的数据。当用户在 View 中更改待办事项的状态时，这些更改会自动反映在 Model 中，反之亦然。
 
@@ -375,7 +375,7 @@ console.log(newArr) // 输出 [1, 2, 3, 4]
 
 在现代 JavaScript（ES6 及以后版本）中，`class`提供了一种定义对象蓝图的清晰且简洁的语法。虽然 JavaScript 中的类本质上是基于原型的继承的一种语法糖，但它们使得面向对象编程的概念如类、构造函数、继承等更加直观和易于理解。
 
-#### 基本概念
+**基本概念**
 
 - **类（Class）**：定义了如何创建一个对象的类型。它包含了属性（数据成员）和方法（成员函数）。
 
@@ -493,7 +493,7 @@ console.log(adultNames) // 输出 ["Alice", "Carol"]
 
 从更广泛的角度来看，**“Hook”可以被理解为一种设计模式或机制，它允许函数或模块之间以一种更加动态和灵活的方式进行交互**。具体来说，Hook 通常指的是一个函数，该函数可以在不修改原始代码的情况下扩展或改变某些行为。这种模式不仅限于 React 框架，实际上，在其他编程环境和语言中也有类似的概念。
 
-#### 在 React 中，Hooks 存在以下基本概念
+**在 React 中，Hooks 存在以下基本概念**
 
 - **State Hook**：使用`useState`来为函数组件添加状态。
 - **Effect Hook**：使用`useEffect`来执行副作用操作，如数据获取、订阅或手动 DOM 更新等。
@@ -1066,3 +1066,8 @@ export default {
 ### 总结
 
 生命周期的概念帮助开发者更好地控制组件的行为，特别是在资源管理和状态同步方面。无论是 React 还是 Vue，了解并合理利用生命周期钩子都能极大地提升应用的质量和性能。例如，通过在适当的生命周期钩子中加载数据或释放资源，可以避免内存泄漏和其他潜在问题。
+
+
+
+## **未完待续**
+…
