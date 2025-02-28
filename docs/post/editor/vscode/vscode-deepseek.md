@@ -9,8 +9,8 @@ tags:
 
 # VSCode 接入DeepSeek V3大模型，附使用说明
 
-> [!CAUTION] 提示
-> 由于近期 DeepSeek 使用人数激增，服务器压力较大，官网已 **暂停充值入口** ，且接口响应也开始不稳定，建议使用第三方部署的 DeepSeek，如 [硅基流动](https://cloud.siliconflow.cn/i/38Vhbw8N) (使用教程查看我最新文章 [VS Code 使用硅基流动的 API 接入 DeepSeek](./vscode-siliconflow))等
+> [!WARNING] 提示
+> 由于近期 DeepSeek 使用人数激增，服务器压力较大，~~官网已 **暂停充值入口**~~，官网目前已恢复充值，不过接口还是有些不稳定，也可以考虑使用第三方部署的 DeepSeek，如 [硅基流动](https://cloud.siliconflow.cn/i/38Vhbw8N) (使用教程查看我最新文章 [VS Code 使用硅基流动的 API 接入 DeepSeek](./vscode-siliconflow))等
 > 
 > 或者使用其他模型/插件，如 [豆包免费AI插件 MarsCode](https://www.marscode.cn/)、[阿里免费AI插件 TONGYI Lingma](https://marketplace.visualstudio.com/items?itemName=Alibaba-Cloud.tongyi-lingma)
 >
@@ -25,6 +25,11 @@ DeepSeek V3 是一个拥有 6710 亿参数的专家混合（MoE）语言模型�
 VSCode 插件商店搜索 `Continue`，第一个下载就是
 
 ![image-20250103154346320.png](https://www.helloimg.com/i/2025/01/03/677797a8847e0.png)
+
+> [!NOTE] 关于 Cline插件 和 Continue插件 的区别：
+>
+> + `Continue` 适合轻度辅助，帮你自动补全，优化代码，利用注释快速生成代码，最终由自己把控编码方向和进度
+> + `Cline` 自由度更高，给予它更高权限后，可以帮你阅读优化整个项目，可以自动新增、删除文件、安装依赖，但是它的准确率对你的api要求更高，也需要你更多关注修改前后的内容。想要使用 `Cline` 可以看我这篇文章 [VS Code 使用硅基流动的 API 接入 DeepSeek](./vscode-siliconflow)
 
 ## 注册 DeepSeek V3
 
