@@ -137,14 +137,6 @@
     background-size: auto 100%;
     position: relative;
   }
-  .carousel-2 {
-    background: url("https://www.helloimg.com/i/2025/02/26/67bf1db38d750.png") no-repeat center center;
-    background-size: auto 100%;
-    position: relative;
-    &:hover h3 {
-      color: var(--weiz-primary-color);
-    }
-  }
 }
 
 /**
@@ -160,27 +152,47 @@
     display: flex;
     height: 100%;
     border-radius: var(--weiz-card-border-radius);
-    &.statistic {
-      min-height: 200px;
-      justify-content: center;
-      align-items: center;
-      background: var(--weiz-primary-color);
-    }
+    position: relative;
+    &.statistic,
     &.post-more {
       min-height: 200px;
       justify-content: center;
       align-items: center;
-      background: var(--vp-c-bg-soft);
       transition: var(--weiz-transition);
       &:hover {
         box-shadow: 0 0.5em 0.5em 0 var(--weiz-primary-color);
         transform: translateY(-0.5em);
-        .post-more-container {
-          color: var(--weiz-primary-color);
-          .weiz-icon {
-            background-color: var(--weiz-primary-color);
-          }
+      }
+    }
+    &.statistic {
+      background: var(--weiz-primary-color);
+      .post-random-container {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 0;
+        border-radius: var(--weiz-card-border-radius);
+        background: var(--vp-c-bg-soft);
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: var(--weiz-transition);
+      }
+      &:hover {
+        .post-random-container {
+          height: 100%;
         }
+      }
+    }
+    &.post-more {
+      background: var(--vp-c-bg-soft);
+    }
+    &:hover .post-more-container {
+      color: var(--weiz-primary-color);
+      .weiz-icon {
+        background-color: var(--weiz-primary-color);
       }
     }
   }
@@ -220,9 +232,7 @@
       color: white;
     }
   }
-  .post-more .post-more-container {
-    width: 100%;
-    height: 100%;
+  .post-more-container {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;

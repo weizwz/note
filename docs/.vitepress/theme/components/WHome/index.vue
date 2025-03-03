@@ -48,11 +48,6 @@
                 <h3 v-for="(item, index) of aboutData.desc.split(' ')" :key="index">{{ item }}</h3>
               </div>
             </el-carousel-item>
-            <el-carousel-item>
-              <a class="carousel-item carousel-features carousel-2" :href="lookHref" @click="postRandom">
-                <h3>随便看看</h3>
-              </a>
-            </el-carousel-item>
           </el-carousel>
         </el-col>
       </el-row>
@@ -73,6 +68,12 @@
               <div class="desc">本站总访问量<span id="busuanzi_value_site_pv" style="display: none" /></div>
               <div class="number">{{ pv }}</div>
             </div>
+            <a class="post-container post-random-container" :href="lookHref" @click="postRandom">
+              <div class="post-more-container">
+                <span><i class="weiz-icon weiz-icon-random xl"></i></span>
+                <span>随便看看</span>
+              </div>
+            </a>
           </div>
           <a v-else-if="item.type && item.type === 'more'" class="post-card post-more" href="pages/posts">
             <div class="post-container">

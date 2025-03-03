@@ -74,7 +74,7 @@ const go = (tag: string) => {
   color: var(--vp-c-brand-1);
   transition: var(--weiz-transition);
   --post-padding: 24px;
-  &:not(.statistic):hover {
+  &:hover {
     color: var(--vp-c-brand-1);
     box-shadow: 0 0.5em 0.5em 0 var(--weiz-primary-color);
     transform: translateY(-0.5em);
