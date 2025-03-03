@@ -36,8 +36,8 @@ jobs:
           fetch-depth: 0
       # vercel deploy
       - name: Restore file modification time 🕒
-        run: find docs/post -name '*.md' | while read file; do touch -d "$(git log -1 --format="@%ct" "$file")" "$file"; done
-        # run: "git ls-files -z | while read -d '' path; do touch -d \"$(git log -1 --format=\"@%ct\" \"$path\")\" \"$path\"; done"
+        # run: find docs/post -name '*.md' | while read file; do touch -d "$(git log -1 --format="@%ct" "$file")" "$file"; done
+        run: "git ls-files -z | while read -d '' path; do touch -d \"$(git log -1 --format=\"@%ct\" \"$path\")\" \"$path\"; done"
       - name: Install Vercel-cli🔧
         run: npm install --global vercel@latest
       - name: Pull Vercel Environment Information
