@@ -33,7 +33,7 @@ export const getGitTimestamp = (filePath: string) => {
     let output: number[] = []
 
     // 开启子进程执行git log命令
-    const child = spawn('git', ['--no-pager', 'log', '--pretty="%ci"', filePath])
+    const child = spawn('git', ['--no-pager', 'log', '--follow', '--pretty="%ci"', filePath])
 
     // 监听输出流
     child.stdout.on('data', (d) => {

@@ -34,10 +34,45 @@ jobs:
         with:
           persist-credentials: false
           fetch-depth: 0
+  # github page deploy
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'pnpm'
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+      - name: Install dependencies
+        run: pnpm install
+      - name: Build
+        run: pnpm run build
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Upload dist repository
+          path: './dist'
+
+  # 部署
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    needs: build
+    runs-on: ubuntu-latest
+    name: Deploy
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+    
       # vercel deploy
-      - name: Restore file modification time 🕒
+      # - name: Restore file modification time 🕒
         # run: find docs/post -name '*.md' | while read file; do touch -d "$(git log -1 --format="@%ct" "$file")" "$file"; done
-        run: "git ls-files -z | while read -d '' path; do touch -d \"$(git log -1 --format=\"@%ct\" \"$path\")\" \"$path\"; done"
+        # run: "git ls-files -z | while read -d '' path; do touch -d \"$(git log -1 --format=\"@%ct\" \"$path\")\" \"$path\"; done"
       - name: Install Vercel-cli🔧
         run: npm install --global vercel@latest
       - name: Pull Vercel Environment Information
@@ -46,40 +81,3 @@ jobs:
         run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
       - name: Deploy Project Artifacts to Vercel
         run: vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
-
-
-
-  # github page deploy
-  #     - name: Set up pnpm
-  #       uses: pnpm/action-setup@v4
-  #       with:
-  #         version: 9
-  #     - name: Set up Node
-  #       uses: actions/setup-node@v4
-  #       with:
-  #         node-version: 20
-  #         cache: 'pnpm'
-  #     - name: Setup Pages
-  #       uses: actions/configure-pages@v4
-  #     - name: Install dependencies
-  #       run: pnpm install
-  #     - name: Build
-  #       run: pnpm run build
-  #     - name: Upload artifact
-  #       uses: actions/upload-pages-artifact@v3
-  #       with:
-  #         # Upload dist repository
-  #         path: './dist'
-
-  # # 部署
-  # deploy:
-  #   environment:
-  #     name: github-pages
-  #     url: ${{ steps.deployment.outputs.page_url }}
-  #   needs: build
-  #   runs-on: ubuntu-latest
-  #   name: Deploy
-  #   steps:
-  #     - name: Deploy to GitHub Pages
-  #       id: deployment
-  #       uses: actions/deploy-pages@v4
