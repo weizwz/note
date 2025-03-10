@@ -62,6 +62,11 @@ export default {
   setup() {
     const route = useRoute()
     // 启用插件
-    imageViewer(route)
+    imageViewer(route, '.vp-doc', {
+      navbar: false,
+      zoomRatio: .2,
+      minZoomRatio: .1,
+      toggleOnDblclick: false,
+    })
   }
 } satisfies Theme
