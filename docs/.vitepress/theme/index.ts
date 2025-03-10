@@ -1,6 +1,6 @@
 import type { Theme } from 'vitepress'
 import { EnhanceAppContext, useData, inBrowser, useRouter } from 'vitepress'
-import { h, onMounted, nextTick, onUnmounted } from 'vue'
+import { h, onMounted, onUnmounted } from 'vue'
 import DefaultTheme from 'vitepress/theme'
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
@@ -16,8 +16,7 @@ import WDocTitleMeta from './components/WDocTitleMeta.vue' //文章顶部
 import TwoslashFloatingVue from '@shikijs/vitepress-twoslash/client' // type类型悬浮框
 import '@shikijs/vitepress-twoslash/style.css'
 import busuanzi from 'busuanzi.pure.js' // 卜算子统计插件
-import '@fancyapps/ui/dist/fancybox/fancybox.css' // 图片查看器
-import { Fancybox } from '@fancyapps/ui'
+import '@fancyapps/ui/dist/fancybox/fancybox.css' 
 import { bindFancybox } from './components/ImgViewer'
 import { NProgress } from 'nprogress-v2/dist/index.js' // 进度条
 import 'nprogress-v2/dist/index.css'
@@ -65,7 +64,8 @@ export default {
     onMounted(() => {
       bindFancybox()
     })
-    onUnmounted(() => {
+    onUnmounted(async () => {
+      const { Fancybox } = await import('@fancyapps/ui')
       Fancybox.destroy()
       router.onBeforeRouteChange = undefined
       router.onAfterRouteChange = undefined

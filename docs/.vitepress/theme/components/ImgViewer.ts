@@ -1,8 +1,8 @@
-import { Fancybox } from '@fancyapps/ui'
 import { nextTick } from 'vue'
 
 export const bindFancybox = () => {
-  nextTick(() => {
+  nextTick(async () => {
+    const { Fancybox } = await import('@fancyapps/ui')
     const imgs = document.querySelectorAll('.vp-doc img')
     imgs.forEach((img) => {
       const image = img as HTMLImageElement
@@ -10,6 +10,7 @@ export const bindFancybox = () => {
         image.setAttribute('data-fancybox', 'gallery')
       }
     })
+    
     Fancybox.bind('[data-fancybox="gallery"]', {
       Hash: false, // 禁用hash导航
       Thumbs: {
