@@ -26,7 +26,8 @@
   "dependencies": {
     "@giscus/vue": "^3.1.1",
     "element-plus": "^2.9.4",
-    "medium-zoom": "^1.1.0",
-    "nprogress-v2": "^1.0.4"
+    "nprogress-v2": "^1.0.4",
+    "viewerjs": "^1.11.7",
+    "vitepress-plugin-image-viewer": "^1.1.6"
   }
 }

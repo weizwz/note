@@ -3,6 +3,8 @@
   --weiz-primary-color: #409eff;
   --weiz-primary-color-rgb: 64,158,255;
   --weiz-primary-color-dark: rgb(51.2, 126.4, 204);
+  --vp-c-bg-rgb: 255,255,255;
+  --vp-c-bg-reverse-rgb: 25,26,28;
   --weiz-font-size: 14px;
   
   --weiz-primary-color-light-1: rgb(121.3, 187.1, 255);
@@ -17,7 +19,6 @@
 
   // 颜色 - 紫红色
   --vp-c-purple-1: #bd34fe;
-  --vp-c-bg-rgb: 255,255,255;
 
   --vp-c-indigo-1: var(--weiz-primary-color);
   --vp-c-indigo-1-rgb: var(--weiz-primary-color-rgb);
@@ -44,6 +45,8 @@
   --weiz-primary-color: #409eff;
   --weiz-primary-color-rgb: 64,158,255;
   --weiz-primary-color-dark: rgb(102.2, 177.4, 255);
+  --vp-c-bg-rgb: 25,26,28;
+  --vp-c-bg-reverse-rgb: 255,255,255;
 
   --weiz-primary-color-light-1: rgb(50.8, 116.6, 184.5);
   --weiz-primary-color-light-2: rgb(42, 89, 137.5);
@@ -54,8 +57,6 @@
   --vp-c-text-4: rgba(235, 235, 245, 0.24);
   --vp-c-text-5: rgba(235, 235, 245, 0.08);
   --vp-c-text-6: #99a9bf;
-
-  --vp-c-bg-rgb: 25,26,28
 }
 
 /* MacOS风格相关颜色 */
