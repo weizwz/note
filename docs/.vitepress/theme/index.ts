@@ -49,10 +49,10 @@ export default {
 
       const onBeforeRouteChange = () => {
         NProgress.start() // 开始进度条
-        busuanzi.fetch()
       }
       const onAfterRouteChange = () => {
         NProgress.done() // 停止进度条
+        busuanzi.fetch() //卜算子统计
         bindFancybox()
       }
       router.onBeforeRouteChange = onBeforeRouteChange
