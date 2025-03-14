@@ -120,6 +120,7 @@ pre:not(.vp-code) {
     --f-button-color: rgba(var(--vp-c-bg-reverse-rgb), 1);
     --f-button-hover-color: rgba(var(--vp-c-bg-reverse-rgb), 1);
     --f-button-svg-disabled-opacity: 0.2;
+    background: rgba(var(--vp-c-bg-rgb), 0.2);
   }
   &::before {
     content: "";
