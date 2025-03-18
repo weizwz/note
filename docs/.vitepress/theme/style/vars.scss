@@ -5,7 +5,7 @@
   --weiz-primary-color-dark: rgb(51.2, 126.4, 204);
   --vp-c-bg-rgb: 255,255,255;
   --vp-c-bg-reverse-rgb: 25,26,28;
-  --weiz-font-size: 14px;
+  --weiz-font-size: 16px;
   
   --weiz-primary-color-light-1: rgb(121.3, 187.1, 255);
   --weiz-primary-color-light-2: rgb(159.5, 206.5, 255);
@@ -24,10 +24,16 @@
   --vp-c-indigo-1-rgb: var(--weiz-primary-color-rgb);
   --vp-c-indigo-2: var(--weiz-primary-color-light-1);
 
+  // 基础单位 font 16px -> 4px
+  --weiz-spacing: 0.25rem;
+  --weiz-spacing-2xl: calc(var(--weiz-spacing) * 2);
+  --weiz-spacing-4xl: calc(var(--weiz-spacing) * 4);
+  --weiz-spacing-6xl: calc(var(--weiz-spacing) * 6);
+
   // border
   --weiz-border-color: #dcdfe6;
-  --weiz-border-radius: 8px;
-  --weiz-card-border-radius: 12px;
+  --weiz-border-radius: var(--weiz-spacing-2xl);
+  --weiz-card-border-radius: var(--weiz-spacing-4xl);
 
   // position z-index
   --weiz-index-footer: 10;
@@ -112,31 +118,6 @@
   --vp-badge-danger-border: var(--weiz-block-danger);
   --vp-badge-danger-text: var(--weiz-block-danger);
   --vp-badge-danger-bg: var(--weiz-block-danger-bg);
-}
-
-/* 滚动条 */
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: var(--weiz-primary-color);
-  border-radius: 2em;
-}
-
-::-webkit-scrollbar-corner {
-  background-color: transparent;
-}
-
-::-moz-selection {
-  color: var(--vp-c-white);
-  background-color: var(--weiz-primary-color);
-}
-
-/* 代码滚动条 */
-pre::-webkit-scrollbar-thumb {
-  background-color: rgba(var(--weiz-primary-color-rgb), .2);
 }
 
 /* 页脚定位层级 */

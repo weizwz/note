@@ -91,7 +91,7 @@
     display: inline-block;
     vertical-align: top;
     position: relative;
-    margin-right: 4px;
+    margin-right: var(--weiz-spacing);
     left: -5px;
     top: 1px;
   }
