@@ -6,10 +6,49 @@ footer.VPFooter {
 }
 
 /**
+* 自定义页面初始化
+* -------------------------------------------------------------------------- */
+.weiz-home,
+.weiz-post,
+.weiz-tag {
+  .VPContent {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    @media (min-width: 640px) {
+      padding: 3rem 1.5rem;
+      margin-top: 64px;
+    }
+    @media (min-width: 1024px) {
+      padding: 3rem 2rem;
+    }
+    h1 {
+      color: var(--vp-c-text-1);
+      background-clip: initial;
+      background: none;
+      -webkit-text-fill-color: initial;
+    }
+  }
+  a {
+    text-decoration: none;
+  }
+  h3 {
+    margin: 0;
+    font-size: initial;
+    line-height: initial;
+  }
+  p {
+    margin: 0;
+    font-size: initial;
+    line-height: initial;
+  }
+}
+/**
 * 界面元素/组件
 * -------------------------------------------------------------------------- */
 body {
   font-size: var(--weiz-font-size);
+  background-color: var(--vp-c-bg-soft);
 }
 
 pre:not(.vp-code) {

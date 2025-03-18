@@ -101,8 +101,6 @@
           </div>
         </div>
       </div>
-      <div class="shadow swiper-left-shadow" />
-      <div class="shadow swiper-right-shadow" />
     </div>
   </div>
 </template>

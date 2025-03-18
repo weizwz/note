@@ -7,6 +7,7 @@
   --vp-c-bg-reverse-rgb: 25,26,28;
   --weiz-font-size: 16px;
   
+  --vp-c-bg-soft: #F8F9FB;
   --weiz-primary-color-light-1: rgb(121.3, 187.1, 255);
   --weiz-primary-color-light-2: rgb(159.5, 206.5, 255);
   --weiz-primary-color-light-3: rgb(197.7, 225.9, 255);
@@ -16,6 +17,23 @@
   --vp-c-text-4: rgba(60, 60, 67, 0.34);
   --vp-c-text-5: rgba(60, 60, 67, 0.12);
   --vp-c-text-6: #99a9bf;
+  --weiz-font-weight-medium: 500;
+  --weiz-font-weight-semibold: 600;
+  --weiz-font-weight-bold: 700;
+
+  --weiz-font-size-xs: 0.75rem;
+  --weiz-font-size-sm: 0.875rem;
+  --weiz-font-size-st: 1rem;
+  --weiz-font-size-xl: 1.25rem;
+  --weiz-font-size-2xl: 1.5rem;
+  --weiz-font-size-3xl: 1.875rem;
+
+  --weiz-text-xs-line-height: calc(1 / 0.75);
+  --weiz-text-sm-line-height: calc(1.25 / 0.875);
+  --weiz-text-st-line-height: calc(1.5 / 1);
+  --weiz-text-xl-line-height: calc(1.75 / 1.25);
+  --weiz-text-2xl-line-height: calc(2 / 1.5);
+  --weiz-text-3xl-line-height: calc(2.25 / 1.875);
 
   // 颜色 - 紫红色
   --vp-c-purple-1: #bd34fe;
@@ -27,8 +45,14 @@
   // 基础单位 font 16px -> 4px
   --weiz-spacing: 0.25rem;
   --weiz-spacing-2xl: calc(var(--weiz-spacing) * 2);
+  --weiz-spacing-3xl: calc(var(--weiz-spacing) * 3);
   --weiz-spacing-4xl: calc(var(--weiz-spacing) * 4);
   --weiz-spacing-6xl: calc(var(--weiz-spacing) * 6);
+  --weiz-spacing-8xl: calc(var(--weiz-spacing) * 8);
+
+  // shadow
+  --weiz-shadow: 0 1px 2px 0 rgba(var(--vp-c-bg-reverse-rgb), 0.05);
+  --weiz-shadow-hover: 0 10px 15px -3px rgba(var(--vp-c-bg-reverse-rgb), 0.1), 0 4px 6px -4px rgba(var(--vp-c-bg-reverse-rgb), 0.1);
 
   // border
   --weiz-border-color: #dcdfe6;

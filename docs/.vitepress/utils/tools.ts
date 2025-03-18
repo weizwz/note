@@ -9,7 +9,7 @@ export const countWord = (data: string) => {
   const m = data.match(pattern)
   let count = 0
   if (!m) {
-    return ''
+    return count
   }
   for (let i = 0; i < m.length; i += 1) {
     if (m[i].charCodeAt(0) >= 0x4e00) {
@@ -18,7 +18,52 @@ export const countWord = (data: string) => {
       count += 1
     }
   }
-  return countTransK(count)
+  return count
+}
+
+/**
+ * 计算字符串长度, 汉字算1.5个字符
+ * @param str 字符串
+ * @returns 长度
+ */
+export const calculateStrLength = (str) => {
+  let length = 0
+
+  for (let i = 0; i < str.length; i++) {
+    const charCode = str.charCodeAt(i)
+    // 判断是否为汉字（Unicode范围）
+    if (charCode >= 0x4e00 && charCode <= 0x9fff) {
+      length += 1.5
+    } else {
+      // 非汉字字符，包括英文字母、数字、英文标点等
+      length += 1
+    }
+  }
+
+  return length
+}
+
+/**
+ * 截取字符串, 汉字算1.5个字符
+ * @param str
+ * @param maxLength
+ * @returns
+ */
+export const truncateStr = (str, maxLength) => {
+  let result = ''
+  let currentLength = 0
+
+  for (let char of str) {
+    const charCode = char.charCodeAt(0)
+    const charWeight = charCode >= 0x4e00 && charCode <= 0x9fff ? 1.5 : 1
+
+    if (currentLength + charWeight > maxLength) break
+
+    result += char
+    currentLength += charWeight
+  }
+
+  return result
 }
 
 /**
@@ -55,7 +100,7 @@ export const randomColor = () => {
 /**
  * 日期格式化程序
  * @param hasTime 是否包含时间
- * @returns 
+ * @returns
  */
 export const formatDate = (hasTime?: boolean) => {
   let formatOption = {
@@ -77,14 +122,16 @@ export const formatDate = (hasTime?: boolean) => {
 /**
  * 将日期字符串转换为东八区日期字符串
  * @param date 日期字符串
- * @returns 
+ * @returns
  */
 export const dateToUTC8 = (date: string) => {
   let utcDate = date.replace(/\//g, '-')
-  utcDate = (utcDate.indexOf('+0800') >= 0 || utcDate.indexOf('+8:00') >= 0) ? utcDate.replace(' +0800', '+8:00') : utcDate + '+8:00'
+  utcDate =
+    utcDate.indexOf('+0800') >= 0 || utcDate.indexOf('+8:00') >= 0
+      ? utcDate.replace(' +0800', '+8:00')
+      : utcDate + '+8:00'
   return utcDate
 }
-
 
 /**
  * 获取数组中随机元素，数组为空 返回`undefined`.
@@ -92,5 +139,5 @@ export const dateToUTC8 = (date: string) => {
  * @returns {T | undefined} - 返回值
  */
 export const getRandomElement = (arr) => {
-  return arr.length === 0 ? undefined : arr[Math.floor(Math.random() * arr.length)];
-};
+  return arr.length === 0 ? undefined : arr[Math.floor(Math.random() * arr.length)]
+}

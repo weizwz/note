@@ -53,7 +53,7 @@ onMounted(() => {
 
   const docDomContainer = window.document.querySelector('#VPContent')
   const words = docDomContainer?.querySelector('.content-container .main')?.textContent || ''
-  wordCount.value = countWord(words)
+  wordCount.value = countTransK(countWord(words))
 
   getPV()
 })

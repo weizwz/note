@@ -1,37 +1,36 @@
 <template>
-  <a v-if="props.noData" class="post-card post-card-no-data">
+  <a v-if="props.noData" class="article-card post-card-no-data">
     <div class="post-container">
-      <div class="weiz-icon weiz-icon-post xl" />
-      <div class="post-loading">
-        <weiz-loading />
-      </div>
+      <el-skeleton>
+        <template #template>
+          <div class="article-head">
+            <el-skeleton-item variant="text" style="width: 30%;"/>
+            <el-skeleton-item variant="text" style="width: 20px;"/>
+          </div>
+          <el-skeleton-item variant="text"/>
+          <div class="post-loading">
+            <weiz-loading />
+          </div>
+          <el-skeleton-item variant="text"/>
+        </template>
+      </el-skeleton>
     </div>
   </a>
-  <a v-else class="post-card" :href="(post?.baseUrl || '') + post.url">
-    <div class="post-container">
-      <div class="top" v-if="post.top" title="置顶">
-        <i class="weiz-icon weiz-icon-post-top m"></i>
-      </div>
-      <div class="info">
-        <div class="tags">
-          <a class="tag" v-for="(item, index) of post.tags?.slice(0, 1)" :key="index" :href="go(item)">
-            <span>#</span>
-            {{ item }}
-          </a>
-        </div>
-        <div class="date">{{ post.dateText ? formateDate(post.dateText[0]) : '' }}</div>
-      </div>
-      <div class="icon-wrapper">
-        <div
-          :class="
-            'weiz-icon xxl weiz-icon-post ' +
-            (post.tags ? 'weiz-icon-' + post.tags[0].toLocaleLowerCase().replace(/\./g, '') : '')
-          " />
-      </div>
-      <div class="title">{{ post.title }}</div>
-      <div class="desc">
-        {{ post.abstract }}
-      </div>
+  <a v-else class="article-card" :href="(post?.baseUrl || '') + post.url">
+    <div class="article-head">
+      <span class="date">{{ post.dateText ? formateDate(post.dateText[0]) : '' }}</span>
+      <!-- 图标 -->
+      <div :class="'weiz-icon weiz-icon-post xxm ' + (post.tags ? 'weiz-icon-' + post.tags[0].toLocaleLowerCase().replace(/\./g, '') : '')"></div>
+    </div>
+    <h3 class="article-title">
+      <span>{{ subTitle(post.title) }}</span>
+      <span class="article-title-hover">{{ subTitle(post.title) }}</span>
+    </h3>
+    <p class="article-abstract">{{ post.abstract }}</p>
+    <div class="article-tag">
+      <a class="article-tag-wrapper" v-for="(item, index) of post.tags?.slice(0, 3)" :key="index" :href="go(item)">
+        <span class="sign">#</span> {{ item }}
+      </a>
     </div>
   </a>
 </template>
@@ -39,6 +38,7 @@
 <script setup lang="ts">
 import { HomePost } from '../type/WHome'
 import { withBase } from 'vitepress'
+import { calculateStrLength, truncateStr} from '../../utils/tools'
 
 export interface PostCard extends HomePost {
   baseUrl?: string
@@ -55,129 +55,106 @@ const formateDate = (date: string) => {
   return date
 }
 
+const subTitle = (title: string) => {
+  return calculateStrLength(title) > 24 ? truncateStr(title, 24) + '...' : title
+}
+
 const go = (tag: string) => {
   return withBase('/pages/tags?q=' + encodeURIComponent(tag))
 }
 </script>
 
 <style lang="scss" scoped>
-.weiz-post .post-card.post-card-no-data,
-.weiz-tag .post-card.post-card-no-data {
-  min-height: 215px;
-}
-.post-card {
-  display: flex;
-  height: 100%;
-  border: solid 1px var(--vp-c-bg-soft);
-  border-radius: var(--weiz-card-border-radius);
-  background: var(--vp-c-bg-soft);
-  color: var(--vp-c-brand-1);
-  transition: var(--weiz-transition);
-  --post-padding: 24px;
-  &:hover {
-    color: var(--vp-c-brand-1);
-    box-shadow: 0 0.5em 0.5em 0 var(--weiz-primary-color);
-    transform: translateY(-0.5em);
-  }
-  &.post-card-no-data {
-    min-height: 200px;
-    box-sizing: border-box;
-    position: relative;
-    .post-container {
-      width: 100%;
-      height: 100%;
-    }
-    .weiz-icon {
-      position: absolute;
-      top: 24px;
-      left: 24px;
-    }
-    .post-loading {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 16px;
-    }
-  }
-}
-
-.post-container {
-  display: flex;
-  flex-direction: column;
+.article-card {
   width: 100%;
-  height: 100%;
-  position: relative;
-  .icon-wrapper {
-    padding: calc(var(--post-padding) / 2) var(--post-padding) 0;
-    display: flex;
+  display: inline-block;
+  border-radius: var(--weiz-card-border-radius);
+  background-color: var(--vp-c-bg);
+  color: var(--vp-c-text-1);
+  font-weight: var(--weiz-font-weight-medium);
+  padding: var(--weiz-spacing-6xl);
+  box-shadow: var(--weiz-shadow);
+  transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.6s;
+  &:hover {
+    color: var(--vp-c-text-1);
+    transform: scale(1.03);
+    box-shadow: var(--weiz-shadow-hover);
+    .article-title .article-title-hover {
+      width: 100%;
+    }
   }
-  .top {
-    position: absolute;
-    top: 5px;
-    right: 6px;
-  }
-  .info {
+  .article-head {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 var(--post-padding);
-    background: rgba(var(--weiz-primary-color-rgb), 0.1);
-    border-radius: var(--weiz-card-border-radius) var(--weiz-card-border-radius) 0 0;
-    height: 32px;
-    line-height: 32px;
-    font-size: 12px;
-    font-weight: 500;
-    color: var(--vp-c-text-3);
+    margin-bottom: var(--weiz-spacing-4xl);
+    .date {
+      font-size: var(--weiz-font-size-sm);
+      color: var(--vp-c-text-2);
+    }
+    .weiz-icon {
+      filter: blur(8px);
+    }
   }
-  .title {
-    padding: calc(var(--post-padding) / 4) var(--post-padding) calc(var(--post-padding) / 4);
-    line-height: 24px;
-    font-size: 16px;
-    font-weight: 500;
-    width: 100%;
+  .article-title {
+    font-size: var(--weiz-font-size-st);
+    line-height: var(--weiz-text-st-line-height);
+    font-weight: var(--weiz-font-weight-semibold);
+    margin-bottom: var(--weiz-spacing-2xl);
     white-space: nowrap;
+    position: relative;
     overflow: hidden;
-    text-overflow: ellipsis;
+    .article-title-hover {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 0;
+      overflow: hidden;
+      background-color: var(--vp-c-bg);
+      color: var(--weiz-primary-color);
+      transition: width 1s ease-in-out;
+    }
   }
-  .tags {
-    margin-right: calc(var(--post-padding) / 2);
-    font-size: 12px;
-    font-weight: 500;
+  .article-abstract {
+    font-size: var(--weiz-font-size-sm);
+    line-height: var(--weiz-text-sm-line-height);
+    color: var(--vp-c-text-2);
+    margin-bottom: var(--weiz-spacing-4xl);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+  }
+  .article-tag {
     display: flex;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    .tag {
-      color: var(--vp-c-text-3);
-      text-decoration: none;
-      margin-right: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+    .article-tag-wrapper {
+      font-size: var(--weiz-font-size-xs);
+      color: var(--vp-c-text-2);
+      margin-right: var(--weiz-spacing-3xl);
+      &:first-child {
+        color: var(--weiz-primary-color);
+      }
       &:last-child {
         margin-right: 0;
       }
+      cursor: pointer;
       &:hover {
         color: var(--weiz-primary-color);
       }
-      > span {
-        font-size: 0.8em;
+      .sign {
+        font-size: var(--weiz-font-size-xs);
+        color: var(--vp-c-text-4);
       }
     }
   }
-  .desc {
-    padding: 0 var(--post-padding);
-    margin-bottom: calc(var(--post-padding) - 3px);
-    line-height: 24px;
-    font-size: 13px;
-    font-weight: 400;
-    color: var(--vp-c-text-3);
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
-    line-clamp: 3;
-    word-break: break-all;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  .post-loading {
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 </style>

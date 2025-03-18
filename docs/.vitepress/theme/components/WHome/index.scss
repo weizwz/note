@@ -1,12 +1,8 @@
-.container {
-  max-width: 1152px;
-  margin: 0 auto;
-}
 /**
 * 标题模块
 * -------------------------------------------------------------------------- */
 #about {
-  padding: var(--weiz-home-margin);
+  margin-bottom: var(--weiz-spacing-8xl);
   .container-left {
     margin-bottom: var(--weiz-home-margin);
     .title {
@@ -143,7 +139,7 @@
 * 文章模块
 * -------------------------------------------------------------------------- */
 #post {
-  padding: 0 var(--weiz-home-margin) var(--weiz-home-padding);
+  margin-bottom: var(--weiz-spacing-8xl);
   .el-col {
     margin-bottom: var(--weiz-home-padding);
     position: relative;
@@ -251,26 +247,8 @@
 * -------------------------------------------------------------------------- */
 #tag {
   --swiper-animation-status: running;
-  padding: 0 0 var(--weiz-home-padding);
   .swiper {
-    position: relative;
     overflow: hidden;
-    .shadow {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      z-index: 1;
-      width: 10%;
-      pointer-events: none;
-    }
-    .swiper-left-shadow {
-      left: 0;
-      background: linear-gradient(to right, var(--vp-c-bg) 10%, transparent 100%);
-    }
-    .swiper-right-shadow {
-      right: 0;
-      background: linear-gradient(to right, transparent 0%, var(--vp-c-bg) 90%);
-    }
   }
   .swiper-wrapper {
     display: flex;
