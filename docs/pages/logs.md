@@ -1,5 +1,6 @@
 ---
 layout: doc
+pageClass: weiz-log
 title: 更新日志
 description: 这是唯知笔记网站的更新日志页面，记录了站点的重要更新，包括UI改动、新增功能、版本升级、内容迁移等。最近的更新包括加载动画、博文迁移、站内导航独立、域名更新、统一图标、访问统计、首页重构、主题优化、搜索功能配置和版本升级等内容
 firstCommit: 2023-11-03 18:23:11+8:00
@@ -7,7 +8,7 @@ lastUpdated: 2025-03-03 17:58:31+8:00
 sidebar: false
 ---
 
-# 更新日志
+<!-- # 更新日志 -->
 
 > [!IMPORTANT] 日志说明
 > 本站重要更新日志：包括 UI重要改动、新增组件或者功能、版本升级、内容迁移、站点升级等
@@ -100,3 +101,19 @@ sidebar: false
 
 + 项目搭建和初始化
 + 主题修改，包括主题色，代码块，首页动画
+
+<script setup>
+import { onMounted } from 'vue'
+
+onMounted(() => {
+  const $doc = document.querySelector('.VPDoc')
+
+  // 要插入的HTML内容
+  var newContent = "<h1>更新日志</h1>"
+  var tempDiv = document.createElement('div')
+  tempDiv.className = 'title'
+  tempDiv.innerHTML = newContent
+
+  $doc.prepend(tempDiv)
+})
+</script>
