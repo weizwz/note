@@ -7,7 +7,7 @@ import { footer } from './footer'
 import MarkdownPreview from 'vite-plugin-markdown-preview'
 // https://shiki-zh-docs.vercel.app/packages/vitepress
 import { transformerTwoslash } from '@shikijs/vitepress-twoslash'
-import addTime from './addTime'
+// import addTime from './addTime'
 
 // https://github.com/vuejs/vitepress/discussions/3533
 export default async ({ mode }) => {
