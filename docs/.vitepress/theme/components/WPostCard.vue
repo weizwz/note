@@ -56,7 +56,7 @@ const formateDate = (date: string) => {
 }
 
 const subTitle = (title: string) => {
-  return calculateStrLength(title) > 24 ? truncateStr(title, 24) + '...' : title
+  return calculateStrLength(title) > 28 ? truncateStr(title, 28) + '...' : title
 }
 
 const go = (tag: string) => {
