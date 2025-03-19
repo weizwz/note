@@ -6,6 +6,28 @@ footer.VPFooter {
 }
 
 /**
+* 导航栏
+* -------------------------------------------------------------------------- */
+@media (min-width: 960px) {
+  .VPNavBar {
+    // background: var(--vp-nav-bg-color);
+  }
+  .VPNavBarTitle.has-sidebar .title[data-v-76bc7879] {
+    border-bottom-color: transparent;
+  }
+}
+.VPNavBar {
+  box-shadow: var(--weiz-shadow);
+}
+.VPContent.has-sidebar {
+  background: var(--vp-nav-bg-color);
+}
+/* 导航栏下划线隐藏 */
+.divider {
+  display: none;
+}
+
+/**
 * 自定义页面初始化
 * -------------------------------------------------------------------------- */
 .weiz-home,
@@ -17,6 +39,8 @@ footer.VPFooter {
     padding: 2rem 1rem;
     @media (min-width: 640px) {
       padding: 3rem 1.5rem;
+    }
+    @media (min-width: 960px) {
       margin-top: 64px;
     }
     @media (min-width: 1024px) {
