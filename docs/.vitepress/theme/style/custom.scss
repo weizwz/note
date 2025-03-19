@@ -54,6 +54,8 @@ footer.VPFooter {
       padding: 3rem 2rem;
     }
     h1 {
+      font-size: var(--weiz-font-size-2xl);
+      line-height: var(--weiz-text-2xl-line-height);
       color: var(--vp-c-text-1);
       background-clip: initial;
       background: none;

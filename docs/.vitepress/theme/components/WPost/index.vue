@@ -10,7 +10,7 @@
         <div id="post">
           <div  v-if="postLength === 0" class="year-post">
             <div class="year-wrapper">
-              <h3 class="year">☆ {{ new Date().getFullYear() }}</h3>
+              <h3 class="year">{{ new Date().getFullYear() }}</h3>
             </div>
             <el-row class="container-row" :gutter="24">
               <el-col v-for="idx of 8" :key="idx" :xs="24" :sm="12" :md="6">
@@ -56,17 +56,9 @@ onMounted(() => {
 <style lang="scss" scoped>
 .title {
   margin-bottom: var(--weiz-spacing-8xl);
-  h1 {
-    font-size: var(--weiz-font-size-2xl);
-    line-height: var(--weiz-text-2xl-line-height);
-    color: var(--vp-c-text-1);
-    background-clip: initial;
-    background: none;
-    -webkit-text-fill-color: initial;
-    span {
-      font-size: var(--weiz-font-size-st);
-      color: var(--vp-c-text-3);
-    }
+  h1 span {
+    font-size: var(--weiz-font-size-st);
+    color: var(--vp-c-text-3);
   }
 }
 #post {

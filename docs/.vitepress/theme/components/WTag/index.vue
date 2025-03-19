@@ -16,7 +16,9 @@
           </div>
         </div>
         <div id="posts">
-          <h3><i class="weiz-icon weiz-icon-post-fill l" />文章列表</h3>
+          <div class="title-wrapper">
+            <h3 class="title">文章列表</h3>
+          </div>
           <div class="posts-wrapper">
             <el-row v-if="posts.length === 0" class="container-row" :gutter="24">
               <el-col v-for="idx of 8" :key="idx" :xs="24" :sm="12" :md="6">
