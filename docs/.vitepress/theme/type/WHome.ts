@@ -35,8 +35,6 @@ export interface HomePost {
   dateText?: [string, string]
   // 标签名称
   tags?: string[]
-  // 置顶
-  top?: boolean
 }
 
 export interface HomePostStatistic {
