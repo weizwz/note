@@ -9,10 +9,10 @@ footer.VPFooter {
 * 导航栏
 * -------------------------------------------------------------------------- */
 @media (min-width: 960px) {
-  .VPNavBar {
-    // background: var(--vp-nav-bg-color);
+  .VPNav .VPNavBar {
+    background: var(--vp-nav-bg-color);
   }
-  .VPNavBarTitle.has-sidebar .title[data-v-76bc7879] {
+  .VPNav .VPNavBarTitle.has-sidebar .title {
     border-bottom-color: transparent;
   }
 }
@@ -25,6 +25,13 @@ footer.VPFooter {
 /* 导航栏下划线隐藏 */
 .divider {
   display: none;
+}
+
+/**
+* 页面导航
+* -------------------------------------------------------------------------- */
+.VPDocAsideOutline .outline-title {
+  color: var(--weiz-primary-color);
 }
 
 /**
