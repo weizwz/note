@@ -60,6 +60,11 @@ export default async ({ mode }) => {
             if (tokens[idx].tag === 'h1') htmlResult += `<weiz-title-meta />`
             return htmlResult
           }
+          /**
+           * 删除对文章时间的封装，依赖于git，部署到三方平台后无法获取git信息。以后改用在文章中手动添加时间标签，如下格式
+           * firstCommit: 2025-02-27 17:32:17+8:00
+           * lastUpdated: 2025-03-03 10:08:46+8:00
+           */
           // const defaultRender = md.render
           // // 2.0.0-alpha.2 允许并接受异步函数 升级到此版本之后或可以使用 docs/.vitepress/utils/fileTime.ts
           // md.render = function (...args) {
