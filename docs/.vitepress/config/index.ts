@@ -60,19 +60,19 @@ export default async ({ mode }) => {
             if (tokens[idx].tag === 'h1') htmlResult += `<weiz-title-meta />`
             return htmlResult
           }
-          const defaultRender = md.render
-          // 2.0.0-alpha.2 允许并接受异步函数 升级到此版本之后或可以使用 docs/.vitepress/utils/fileTime.ts
-          md.render = function (...args) {
-            // 对原生内容做处理，增加创建时间和更新时间
-            args[0] = addTime(args[0], args[1].realPath)
-            // 调用原始渲染
-            let defaultContent = defaultRender.apply(md, args)
-            // 替换内容
-            // defaultContent = defaultContent
-            //       .replace(/<\!---@include:/g, '<!--@include:')
-            // 返回渲染的内容
-            return defaultContent
-          }
+          // const defaultRender = md.render
+          // // 2.0.0-alpha.2 允许并接受异步函数 升级到此版本之后或可以使用 docs/.vitepress/utils/fileTime.ts
+          // md.render = function (...args) {
+          //   // 对原生内容做处理，增加创建时间和更新时间
+          //   args[0] = addTime(args[0], args[1].realPath)
+          //   // 调用原始渲染
+          //   let defaultContent = defaultRender.apply(md, args)
+          //   // 替换内容
+          //   // defaultContent = defaultContent
+          //   //       .replace(/<\!---@include:/g, '<!--@include:')
+          //   // 返回渲染的内容
+          //   return defaultContent
+          // }
         })
       }
     },
