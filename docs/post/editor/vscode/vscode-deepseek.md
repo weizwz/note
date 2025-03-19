@@ -1,6 +1,8 @@
 ---
 title: VSCode 接入DeepSeek V3大模型，附使用说明
 description: 文章介绍了如何在 VSCode 中接入 DeepSeek V3 大模型，包括插件下载、API Key 注册与配置等，文章还介绍了 Continue 的对话提问、代码优化、自动补全和注释生成代码等功能。DeepSeek V3 是一个拥有 6710 亿参数的专家混合语言模型，支持国内使用，价格便宜。
+firstCommit: 2025-01-03 17:21:52+8:00
+lastUpdated: 2025-02-28 11:45:22+8:00
 tags: 
  - VSCode
  - AI

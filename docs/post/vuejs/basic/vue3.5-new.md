@@ -1,6 +1,8 @@
 ---
 title: Vue3.5常用特性整理
 description: Vue3.5 常用特性总结，包括响应式 Props 解构、watch 深度监听、onWatcherCleanup 清理函数、watch 返回值增强、SSR 改进、useId 生成唯一应用 ID、data-allow-mismatch 属性、useTemplateRef 动态绑定元素等。这些改进提升了 Vue3.5 的开发体验和性能
+firstCommit: 2025-01-22 17:12:22+8:00
+lastUpdated: 2025-01-22 18:28:11+8:00
 tags: 
  - Vue.js
  - SSR

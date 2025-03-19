@@ -1,6 +1,7 @@
 ---
 title: 巧用 Element 自适应布局
 description: 这篇文章介绍了 Element UI 的 响应式布局，包括五个预设的响应尺寸：xs、sm、md、lg 和 xl。每个尺寸对应不同的屏幕宽度范围，并提供了 Vue.js 中的使用示例，展示了如何根据屏幕尺寸调整布局
+firstCommit: 2024-12-28 15:25:09+8:00
 lastUpdated: 2024-12-31 18:24:53+8:00
 tags: 
  - Element

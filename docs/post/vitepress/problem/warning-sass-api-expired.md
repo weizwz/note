@@ -1,6 +1,8 @@
 ---
 title: Vitepress中警告Sass API过期：The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0
 description: 本文介绍了在 Vitepress 1.5.0 中引入 Sass 后，控制台出现的告警：The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0。原因是部分API弃用。解决方案是修改配置以使用现代 API，并介绍了 处理其他告警如 Sass @import 规则弃用，以及修改自定义函数如 unquote()、length()、nth() 等的办法
+firstCommit: 2025-01-06 17:51:09+8:00
+lastUpdated: 2025-01-06 18:11:06+8:00
 tags: 
  - Sass
  - VitePress
