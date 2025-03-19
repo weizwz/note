@@ -41,31 +41,28 @@ footer.VPFooter {
 .weiz-post,
 .weiz-tag,
 .weiz-log {
-  .VPContent {
+  #main {
     max-width: 90rem;
     margin: 0 auto;
     padding: 2rem 1rem;
     @media (min-width: 640px) {
       padding: 3rem 1.5rem;
     }
-    @media (min-width: 960px) {
-      margin-top: 64px;
-    }
     @media (min-width: 1024px) {
       padding: 3rem 2rem;
-    }
-    h1 {
-      font-size: var(--weiz-font-size-2xl);
-      font-weight: var(--weiz-font-weight-semibold);
-      line-height: var(--weiz-text-2xl-line-height);
-      color: var(--vp-c-text-1);
-      background-clip: initial;
-      background: none;
-      -webkit-text-fill-color: initial;
     }
   }
   a {
     text-decoration: none;
+  }
+  h1 {
+    font-size: var(--weiz-font-size-2xl);
+    font-weight: var(--weiz-font-weight-semibold);
+    line-height: var(--weiz-text-2xl-line-height);
+    color: var(--vp-c-text-1);
+    background-clip: initial;
+    background: none;
+    -webkit-text-fill-color: initial;
   }
   h2 {
     font-size: var(--weiz-font-size-xl);
@@ -84,7 +81,15 @@ footer.VPFooter {
 }
 .weiz-log {
   .VPDoc {
-    padding: 0;
+    max-width: 90rem;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    @media (min-width: 640px) {
+      padding: 3rem 1.5rem;
+    }
+    @media (min-width: 1024px) {
+      padding: 3rem 2rem;
+    }
   }
   .VPDoc:not(.has-sidebar) .container,
   .VPDoc.has-aside .content-container {
@@ -96,6 +101,9 @@ footer.VPFooter {
     flex: 1;
     background-color: var(--vp-c-bg);
     border-radius: var(--weiz-card-border-radius);
+    @media (min-width: 960px) {
+      padding: var(--weiz-spacing-6xl) var(--weiz-spacing-8xl) calc(var(--weiz-spacing) * 12);
+    }
   }
   .title {
     margin-bottom: var(--weiz-spacing-8xl);

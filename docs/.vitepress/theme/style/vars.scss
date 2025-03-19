@@ -60,7 +60,6 @@
   --weiz-card-border-radius: var(--weiz-spacing-4xl);
 
   // position z-index
-  --weiz-index-footer: 10;
   --weiz-index-backTop: 99;
   --weiz-index-topShadow: 999;
 
@@ -145,11 +144,4 @@
   --vp-badge-danger-border: var(--weiz-block-danger);
   --vp-badge-danger-text: var(--weiz-block-danger);
   --vp-badge-danger-bg: var(--weiz-block-danger-bg);
-}
-
-/* 页脚定位层级 */
-@media (min-width: 960px) {
-  :root {
-    --weiz-index-footer: 30;
-  }
 }

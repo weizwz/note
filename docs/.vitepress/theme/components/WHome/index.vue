@@ -1,112 +1,116 @@
 <template>
-  <div id="about">
-    <div class="container">
-      <el-row class="container-row" :gutter="24">
-        <el-col :xs="24" :sm="12" :md="12" class="container-left">
-          <div class="title">
-            <h1 class="about-title">
-              <span>{{ aboutData.title }}</span>
-            </h1>
-          </div>
-          <div class="info-wrapper">
-            <div class="avatar-wrapper">
-              <img
-                :src="aboutData.logo.indexOf('http') === 0 ? aboutData.logo : withBase(aboutData.logo)"
-                width="40"
-                alt="head-avatar" />
+  <div id="main">
+    <div id="about">
+      <div class="container">
+        <el-row class="container-row" :gutter="24">
+          <el-col :xs="24" :sm="12" :md="12" class="container-left">
+            <div class="title">
+              <h1 class="about-title">
+                <span>{{ aboutData.title }}</span>
+              </h1>
             </div>
-            <div class="info-desc-wrapper">
-              <h2 class="about-tagline">{{ aboutData.tagline }}</h2>
-              <ul class="social-wrapper">
-                <li class="hero-social-item">
-                  <a class="social" href="https://github.com/weizwz" target="_blank">
-                    <i class="weiz-icon weiz-icon-github main xm"/>
-                  </a>
-                </li>
-                <li class="hero-social-item">
-                  <a class="social" href="https://gitee.com/weizwz" target="_blank">
-                    <i class="weiz-icon weiz-icon-gitee main xm"/>
-                  </a>
-                </li>
-                <li class="hero-social-item">
-                  <a class="social" href="https://www.cnblogs.com/weizwz" target="_blank">
-                    <i class="weiz-icon weiz-icon-cnblog main xm"/>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </el-col>
-        <el-col :xs="24" :sm="12" :md="12" class="container-right">
-          <el-carousel
-            height="240px"
-            direction="vertical"
-            :autoplay="true"
-          >
-            <el-carousel-item>
-              <div class="carousel-item carousel-features carousel-1">
-                <h3 v-for="(item, index) of aboutData.desc.split(' ')" :key="index">{{ item }}</h3>
+            <div class="info-wrapper">
+              <div class="avatar-wrapper">
+                <img
+                  :src="aboutData.logo.indexOf('http') === 0 ? aboutData.logo : withBase(aboutData.logo)"
+                  width="40"
+                  alt="head-avatar" />
               </div>
-            </el-carousel-item>
-          </el-carousel>
-        </el-col>
-      </el-row>
-    </div>
-  </div>
-  <div id="post">
-    <div class="container">
-      <el-row class="container-row" :gutter="24">
-        <el-col v-if="cardLength <= 0" v-for="idx of 8" :key="idx" class="statistic-wrapper" :xs="24" :sm="12" :md="6">
-          <weiz-post-card :noData="true" />
-        </el-col>
-        <el-col v-else v-for="(item, index) of postData" :key="index" class="statistic-wrapper" :xs="24" :sm="12" :md="6">
-          <div v-if="item.type && item.type === 'busuanzi'" class="post-card statistic">
-            <div class="post-container">
-              <div class="number">{{ uv }}</div>
-              <div class="desc">本站总访客<span id="busuanzi_value_site_uv" style="display: none" /></div>
-              <div class="desc-line"><span /></div>
-              <div class="desc">本站总访问量<span id="busuanzi_value_site_pv" style="display: none" /></div>
-              <div class="number">{{ pv }}</div>
+              <div class="info-desc-wrapper">
+                <h2 class="about-tagline">{{ aboutData.tagline }}</h2>
+                <ul class="social-wrapper">
+                  <li class="hero-social-item">
+                    <a class="social" href="https://github.com/weizwz" target="_blank">
+                      <i class="weiz-icon weiz-icon-github main xm"/>
+                    </a>
+                  </li>
+                  <li class="hero-social-item">
+                    <a class="social" href="https://gitee.com/weizwz" target="_blank">
+                      <i class="weiz-icon weiz-icon-gitee main xm"/>
+                    </a>
+                  </li>
+                  <li class="hero-social-item">
+                    <a class="social" href="https://www.cnblogs.com/weizwz" target="_blank">
+                      <i class="weiz-icon weiz-icon-cnblog main xm"/>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <a class="post-container post-random-container" :href="lookHref" @click="postRandom">
-              <div class="post-more-container">
-                <span><i class="weiz-icon weiz-icon-random xl"></i></span>
-                <span>随便看看</span>
+          </el-col>
+          <el-col :xs="24" :sm="12" :md="12" class="container-right">
+            <el-carousel
+              height="240px"
+              direction="vertical"
+              :autoplay="true"
+            >
+              <el-carousel-item>
+                <div class="carousel-item carousel-features carousel-1">
+                  <h3 v-for="(item, index) of aboutData.desc.split(' ')" :key="index">{{ item }}</h3>
+                </div>
+              </el-carousel-item>
+            </el-carousel>
+          </el-col>
+        </el-row>
+      </div>
+    </div>
+    <div id="post">
+      <div class="container">
+        <el-row class="container-row" :gutter="24">
+          <el-col v-if="cardLength <= 0" v-for="idx of 8" :key="idx" class="statistic-wrapper" :xs="24" :sm="12" :md="6">
+            <weiz-post-card :noData="true" />
+          </el-col>
+          <el-col v-else v-for="(item, index) of postData" :key="index" class="statistic-wrapper" :xs="24" :sm="12" :md="6">
+            <div v-if="item.type && item.type === 'busuanzi'" class="post-card statistic">
+              <div class="post-container">
+                <div class="number">{{ uv }}</div>
+                <div class="desc">本站总访客<span id="busuanzi_value_site_uv" style="display: none" /></div>
+                <div class="desc-line"><span /></div>
+                <div class="desc">本站总访问量<span id="busuanzi_value_site_pv" style="display: none" /></div>
+                <div class="number">{{ pv }}</div>
+              </div>
+              <a class="post-container post-random-container" :href="lookHref" @click="postRandom">
+                <div class="post-more-container">
+                  <span><i class="weiz-icon weiz-icon-random xl"></i></span>
+                  <span>随便看看</span>
+                </div>
+              </a>
+            </div>
+            <a v-else-if="item.type && item.type === 'more'" class="post-card post-more" href="pages/posts">
+              <div class="post-container">
+                <div class="post-more-container">
+                  <span><i class="weiz-icon weiz-icon-arrow-right xl"></i></span>
+                  <span>更多文章</span>
+                </div>
               </div>
             </a>
-          </div>
-          <a v-else-if="item.type && item.type === 'more'" class="post-card post-more" href="pages/posts">
-            <div class="post-container">
-              <div class="post-more-container">
-                <span><i class="weiz-icon weiz-icon-arrow-right xl"></i></span>
-                <span>更多文章</span>
-              </div>
-            </div>
-          </a>
-          <weiz-post-card v-else :post="item" />
-        </el-col>
-      </el-row>
+            <weiz-post-card v-else :post="item" />
+          </el-col>
+        </el-row>
+      </div>
     </div>
-  </div>
-  <div id="tag">
-    <div class="swiper">
-      <div class="swiper-wrapper">
-        <div
-          class="swiper-container"
-          v-for="(i, idx) of 3"
-          :key="idx"
-          :style="'--swiper-animation-time: ' + tags.length * 3 + 's'">
-          <div class="swiper-item" v-for="(item, index) of tags" :key="index">
-            <a class="tag" :href="'pages/tags?q=' + encodeURIComponent(item)">{{ item }}</a>
+    <div id="tag">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div
+            class="swiper-container"
+            v-for="(i, idx) of 3"
+            :key="idx"
+            :style="'--swiper-animation-time: ' + tags.length * 3 + 's'">
+            <div class="swiper-item" v-for="(item, index) of tags" :key="index">
+              <a class="tag" :href="'pages/tags?q=' + encodeURIComponent(item)">{{ item }}</a>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+  <WDocFooter />
 </template>
 <script setup lang="ts">
 import { useData, withBase } from 'vitepress'
 import { onMounted, ref } from 'vue'
+import WDocFooter from '../WDocFooter.vue'
 import { HomeAbout, HomePost } from '../../type/WHome'
 import { data } from '../../../utils/post.data'
 import { countTransK, getRandomElement } from '../../../utils/tools'

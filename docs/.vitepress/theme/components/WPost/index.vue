@@ -1,41 +1,39 @@
 <template>
-  <div class="VPDoc">
-    <div class="vp-doc">
-      <div class="container">
-        <div class="title">
-          <h1>
-            全部文章<span> - {{ postLength || '' }} 篇</span>
-          </h1>
+  <div id="main">
+    <div class="title">
+      <h1>
+        全部文章<span> - {{ postLength || '' }} 篇</span>
+      </h1>
+    </div>
+    <div id="post">
+      <div  v-if="postLength === 0" class="year-post">
+        <div class="year-wrapper">
+          <h3 class="year">{{ new Date().getFullYear() }}</h3>
         </div>
-        <div id="post">
-          <div  v-if="postLength === 0" class="year-post">
-            <div class="year-wrapper">
-              <h3 class="year">{{ new Date().getFullYear() }}</h3>
-            </div>
-            <el-row class="container-row" :gutter="24">
-              <el-col v-for="idx of 8" :key="idx" :xs="24" :sm="12" :md="6">
-                <weiz-post-card :noData="true" />
-              </el-col>
-            </el-row>
-          </div>
-          <div v-else v-for="(year, index) of yearKeys" :key="index" class="year-post">
-            <div class="year-wrapper">
-              <h3 class="year">{{ year }}</h3>
-            </div>
-            <el-row class="container-row" :gutter="24">
-              <el-col v-for="item of metaPost[year]" :key="item.url" :xs="24" :sm="12" :md="6">
-                <weiz-post-card :post="Object.assign({ baseUrl: '../' }, item)" />
-              </el-col>
-            </el-row>
-          </div>
+        <el-row class="container-row" :gutter="24">
+          <el-col v-for="idx of 8" :key="idx" :xs="24" :sm="12" :md="6">
+            <weiz-post-card :noData="true" />
+          </el-col>
+        </el-row>
+      </div>
+      <div v-else v-for="(year, index) of yearKeys" :key="index" class="year-post">
+        <div class="year-wrapper">
+          <h3 class="year">{{ year }}</h3>
         </div>
+        <el-row class="container-row" :gutter="24">
+          <el-col v-for="item of metaPost[year]" :key="item.url" :xs="24" :sm="12" :md="6">
+            <weiz-post-card :post="Object.assign({ baseUrl: '../' }, item)" />
+          </el-col>
+        </el-row>
       </div>
     </div>
   </div>
+  <WDocFooter />
 </template>
 
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
+import WDocFooter from '../WDocFooter.vue'
 import { Year, data } from '../../../utils/post.data'
 
 let metaPost = ref<Year>({})

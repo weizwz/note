@@ -2,8 +2,7 @@
 import { useData } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import WBackToTop from './WBackToTop.vue' //返回顶部
-import WDocPublic from './WDocPublic.vue' //文章footer
-import WDocFooter from './WDocFooter.vue' //文章footer
+import WDocPublic from './WDocPublic.vue' //文章版权
 import GiscusComment from './GiscusComment.vue' // 评论模块
 import { toggleDark } from './WDark'
 
@@ -17,14 +16,11 @@ toggleDark(isDark)
     <template #doc-footer-before>
       <WDocPublic />
     </template>
-    <template #doc-bottom>
-      <WBackToTop />
-    </template>
     <template #doc-after>
       <GiscusComment />
     </template>
     <template #layout-bottom>
-      <WDocFooter />
+      <WBackToTop />
     </template>
   </DefaultTheme.Layout>
 </template>
