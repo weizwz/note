@@ -3,6 +3,7 @@ title: Vite4+Typescript+Vue3+Pinia 从零搭建(6) - 状态管理pina
 description: 这篇文章介绍了如何使用 Vite4、Typescript、Vue3 和 Pinia 从零搭建项目，重点讲解了 Pinia 的安装、实例创建、状态管理和持久化方法。文章还提供了具体的代码示例，展示了如何在项目中集成和使用 Pinia 进行状态管理
 firstCommit: 2023-12-05 11:00:56+8:00
 lastUpdated: 2023-12-05 11:00:56+8:00
+category: 技术
 tags:
   - Vue.js
   - Vite

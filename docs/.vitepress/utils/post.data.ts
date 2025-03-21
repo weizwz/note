@@ -9,9 +9,13 @@ export interface Post {
   date: [number, number] // 日期：创建日期，更新日期
   dateText: [string, string] // 日期文本
   abstract: string // 摘要
+  category?: string | undefined // 分类
   tags?: string[] | undefined // 标签
 }
 export type Year = {
+  [key: string]: Post[]
+}
+export type Category = {
   [key: string]: Post[]
 }
 export type Tag = {
@@ -20,7 +24,8 @@ export type Tag = {
 
 export interface Data {
   posts: Post[]
-  years: Year
+  years: Year,
+  categories: Category,
   tags: Tag
 }
 
@@ -43,8 +48,24 @@ export default createContentLoader(
       const promises: Promise<any>[] = []
       let posts: Post[] = []
       let years: Year = {}
+      let categories: Category = {}
       let tags: Tag = {}
 
+      // data现有格式如下：
+      // {
+      //   src: undefined,
+      //   html: undefined,
+      //   frontmatter: {
+      //     title: 'Windows开发环境备份，再也不怕重装系统了',
+      //     description: '这篇文章介绍了如何在重装Windows系统后快速恢复开发环境。主要内容包括：软件安装在非系统盘，环境变量恢复，Win11环境优化，以及常用软件恢复。通过这些步骤，可以避免每次重装系统后重新配置环境的繁琐过程',
+      //     firstCommit: 2023-10-25T14:19:32.000Z,
+      //     lastUpdated: 2024-06-06T15:47:24.000Z,
+      //     category: '资源',
+      //     tags: [Array]
+      //   },
+      //   excerpt: undefined,
+      //   url: '/post/windows/setting/dev-env-back'
+      // }
       data.forEach(({ frontmatter, src, url }) => {
         // 优先取frontmatter里的标题，没有的话再去找源文中的标题
         let title = frontmatter.title
@@ -60,8 +81,9 @@ export default createContentLoader(
           }
         }
         */
-        let _tags = frontmatter?.tags
-        let abstract = frontmatter?.description
+        const _tags = frontmatter?.tags
+        const category = frontmatter?.category
+        const abstract = frontmatter?.description
         // 获取手动设置的更新时间
         const createdDate = frontmatter?.firstCommit ? +new Date(frontmatter.firstCommit) : ''
         const updatedDate = frontmatter?.lastUpdated ? +new Date(frontmatter.lastUpdated) : ''
@@ -113,6 +135,7 @@ export default createContentLoader(
             // 仅保留可能显示的部分，减小数据大小
             .slice(0, 200),
           */
+          category: category,
           tags: _tags
         }))
         promises.push(task)
@@ -138,6 +161,13 @@ export default createContentLoader(
       // posts = pages.sort((a, b) => b.date[1] - a.date[1])
 
       posts.forEach((item) => {
+        // 根据类型归类文章
+        if (item.category) {
+          if (!categories[item.category]) {
+            categories[item.category] = []
+          }
+          categories[item.category].push(item)
+        }
         // 根据标签归类文章
         if (item.tags) {
           item.tags.forEach((tag) => {
@@ -155,6 +185,7 @@ export default createContentLoader(
       return {
         posts,
         years,
+        categories,
         tags
       }
     }

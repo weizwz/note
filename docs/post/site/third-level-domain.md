@@ -3,6 +3,7 @@ title: 给网站设置三级域名
 description: 本文介绍了如何为使用 GitHub Pages 部署的网站设置三级域名。主要步骤包括在域名平台（如腾讯云）新增解析记录，并在 GitHub 项目设置中配置自定义域名
 firstCommit: 2024-12-30 16:13:27+8:00
 lastUpdated: 2024-12-30 18:53:35+8:00
+category: 资源
 tags: 
  - 网站
  - Github

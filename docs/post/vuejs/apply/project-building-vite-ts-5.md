@@ -3,6 +3,7 @@ title: Vite4+Typescript+Vue3+Pinia 从零搭建(5) - 路由router
 description: 这篇文章介绍了如何使用 Vite4、Typescript、Vue3 和 Pinia 从零搭建项目的路由部分。内容包括 安装 vue-router、创建示例页面、配置路由文件、修改 App.vue 和 main.ts 以集成路由，并提供了预览和进一步使用的链接
 firstCommit: 2023-11-29 21:33:04+8:00
 lastUpdated: 2023-11-29 21:33:04+8:00
+category: 技术
 tags:
   - Vue.js
   - Vite

@@ -3,6 +3,7 @@ title: mac原生终端美化记录
 description: 本文介绍了在macOS上使用Homebrew对原生终端美化的方法，包括通过代理加速下载、使用国内镜像源、安装和配置zsh、oh-my-zsh、oh-my-posh等工具，以及常用命令和问题处理
 firstCommit: 2024-01-24 17:05:48+8:00
 lastUpdated: 2024-05-21 11:51:23+8:00
+category: 资源
 tags:
   - 终端
   - MacOS

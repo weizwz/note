@@ -3,6 +3,7 @@ title: 常用TS语法总结
 description: 本文总结了作者常用的TypeScript写法，包括基本用法、对象、数组、函数、类型联合、类型断言、泛型、动态变量名以及在Vue3中的应用等方面的详细步骤和注意事项
 firstCommit: 2024-02-05 20:37:54+8:00
 lastUpdated: 2024-02-06 10:23:17+8:00
+category: 技术
 tags:
   - TypeScript
   - Vue.js

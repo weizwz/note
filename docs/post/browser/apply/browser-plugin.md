@@ -3,6 +3,7 @@ title: 浏览器好用插件分享
 description: 这篇文章介绍了一些实用的浏览器插件，包括Tab Session Manager、MONKNOW新标签页、Adblock Plus、Stylus、FeHelper和Window Resizer。每个插件都有详细的功能描述和使用建议，旨在提高用户的浏览体验和工作效率
 firstCommit: 2022-12-17 19:10:59+8:00
 lastUpdated: 2023-01-03 12:10:23+8:00
+category: 资源
 tags:
   - 浏览器
 ---

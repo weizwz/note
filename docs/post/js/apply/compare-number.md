@@ -3,6 +3,7 @@ title: JS 比较数值大小
 description: 本文详细介绍了在 JavaScript 中比较数值大小的几种方法，并提供了每种方法的代码示例和详细解释，帮助读者理解和应用这些方法来比较数值大小
 firstCommit: 2022-10-24 13:34:17+8:00
 lastUpdated: 2023-12-05 11:11:33+8:00
+category: 技术
 tags:
   - JavaScript
 ---

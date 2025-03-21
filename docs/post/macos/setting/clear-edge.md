@@ -3,6 +3,7 @@ title: 定制你的清爽Mac版Edge浏览器
 description: 本文介绍了如何定制Mac版Edge浏览器，包括禁用更新、禁用告警、关闭诊断、优化新标签页等功能的详细步骤和配置方法
 firstCommit: 2024-02-03 21:03:47+8:00
 lastUpdated: 2024-02-05 11:12:32+8:00
+category: 资源
 tags:
   - MacOS
   - 浏览器

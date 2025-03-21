@@ -3,6 +3,7 @@ title: uni-app+vue3+ts项目搭建
 description: 本文介绍了如何使用uni-app、Vue3和TypeScript构建项目，包括开发前准备、插件安装与配置、项目初始化、代码规范、请求拦截器封装等内容
 firstCommit: 2024-01-05 17:45:01+8:00
 lastUpdated: 2024-01-05 17:45:01+8:00
+category: 技术
 tags:
   - uni-app
   - TypeScript  

@@ -3,6 +3,7 @@ title: Vite4+Typescript+Vue3+Pinia 从零搭建(4) - 代码规范
 description: 本文介绍了如何在Vite4、TypeScript、Vue3和Pinia项目中配置代码规范，主要包括EditorConfig、ESLint和Prettier的安装与配置步骤，旨在提高代码质量和维护效率
 firstCommit: 2023-11-28 17:14:03+8:00
 lastUpdated: 2023-11-28 17:14:03+8:00
+category: 技术
 tags:
   - Vue.js
   - Vite

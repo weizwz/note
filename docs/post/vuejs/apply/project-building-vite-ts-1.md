@@ -3,6 +3,7 @@ title: Vite4+Typescript+Vue3+Pinia 从零搭建(1) - 项目初始化
 description: 本文介绍了如何使用 Vite4、Typescript、Vue3 和 Pinia 从零开始搭建项目。内容包括 Node.js 和 VSCode 的准备工作，项目初始化步骤，依赖安装，目录结构查看，以及运行项目的方法
 firstCommit: 2023-11-09 17:03:24+8:00
 lastUpdated: 2023-11-09 17:03:24+8:00
+category: 技术
 tags:
   - Vue.js
   - Vite

@@ -3,6 +3,7 @@ title: 渲染报错 Hydration completed but contains mismatches
 description: 文章讨论了在 VitePress 项目中，浏览器控制台出现 “Hydration completed but contains mismatches” 错误的原因及解决方案。1主要原因是服务端渲染的 HTML 结构与客户端渲染的虚拟 DOM 不匹配。解决方法是将动态数据的渲染放到 onMounted 钩子中，以确保客户端和服务端的渲染结果一致
 firstCommit: 2024-12-12 11:24:32+8:00
 lastUpdated: 2024-12-31 09:57:00+8:00
+category: 技术
 tags: 
  - VitePress
  - SSR

@@ -3,6 +3,7 @@ title: pnpm 安装和配置
 description: 这篇文章介绍了如何配置pnpm，包括安装pnpm、设置全局安装路径和缓存路径等内容。文章提供了详细的命令和操作步骤，涵盖了pnpm安装和配置中的常见问题
 firstCommit: 2022-12-03 20:32:09+8:00
 lastUpdated: 2022-12-03 20:32:09+8:00
+category: 技术
 tags:
  - Node.js
  - pnpm

@@ -3,6 +3,7 @@ title: GitHub + Hexo 搭建个人博客网站
 description: 这篇文章介绍了如何使用GitHub和Hexo搭建个人博客网站。内容包括注册GitHub账号、创建仓库、安装Hexo、生成博客模板、配置主题以及将本地博客部署到GitHub Pages上。通过这些步骤，用户可以快速建立属于自己的博客网站
 firstCommit: 2022-11-29 14:55:01+8:00
 lastUpdated: 2023-12-14 16:46:23+8:00
+category: 博客
 tags:
   - Hexo
   - Github

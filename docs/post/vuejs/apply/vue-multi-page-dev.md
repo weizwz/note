@@ -3,6 +3,7 @@ title: Vue 多界面开发
 description: 这篇文章介绍了如何使用 Vue CLI 创建多页面应用。文章详细讲解了安装 Vue CLI、创建项目、修改多页面配置、运行项目查看效果等步骤，并提供了相应的代码示例和配置文件修改方法。
 firstCommit: 2022-11-19 21:00:37+8:00
 lastUpdated: 2022-11-19 21:00:37+8:00
+category: 技术
 tags:
   - Vue.js
   - Vue-CLI

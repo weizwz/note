@@ -3,6 +3,7 @@ title: Vite4+Typescript+Vue3+Pinia 从零搭建(2) - TS配置
 description: 这篇文章介绍了如何配置 tsconfig.json 和 tsconfig.node.json 文件，以便在 Vite4、Typescript、Vue3 和 Pinia 项目中使用。内容包括 编译选项、路径映射、类型定义 以及 类型检查命令 的设置
 firstCommit: 2023-11-09 19:08:02+8:00
 lastUpdated: 2023-11-09 19:08:02+8:00
+category: 技术
 tags:
   - TypeScript
   - Vue.js

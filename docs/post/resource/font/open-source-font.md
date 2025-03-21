@@ -3,6 +3,7 @@ title: 开源字体整理
 description: 这篇文章主要介绍了几款开源字体，包括得意黑、思源黑体、思源宋体、霞鹜文楷、Sarasa Gothic、文泉驿正黑体、Mona Sans 和 Hubot Sans。文章详细描述了每款字体的特点和下载链接
 firstCommit: 2022-12-14 17:53:20+8:00
 lastUpdated: 2024-03-15 11:36:24+8:00
+category: 资源
 tags:
   - 字体
   - Github

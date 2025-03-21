@@ -3,6 +3,7 @@ title: hexo-butterfly-navctrl 使用说明
 description: 这篇文章介绍了Hexo主题Butterfly的导航栏控制插件hexo-butterfly-navctrl的使用方法。内容包括插件的安装、配置和功能展示，帮助用户在博客中实现更灵活的导航栏控制，提高博客的可用性和用户体验
 firstCommit: 2023-12-15 16:42:25+8:00
 lastUpdated: 2023-12-19 17:23:54+8:00
+category: 博客
 tags:
   - Hexo
   - npm

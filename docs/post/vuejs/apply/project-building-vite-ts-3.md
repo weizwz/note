@@ -3,6 +3,7 @@ title: Vite4+Typescript+Vue3+Pinia 从零搭建(3) - Vite配置
 description: 本文介绍了如何使用 Vite4、Typescript、Vue3 和 Pinia 从零搭建项目，重点讲解了 Vite 的配置，包括初始内容、配置别名、环境变量设置及其使用方法
 firstCommit: 2023-11-14 00:18:12+8:00
 lastUpdated: 2023-11-14 00:18:12+8:00
+category: 技术
 tags:
   - Vite
   - Vue.js

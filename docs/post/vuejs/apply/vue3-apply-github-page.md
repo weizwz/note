@@ -3,6 +3,7 @@ title: vue3项目部署到Github
 description: 本文介绍了如何将vue3项目部署到GitHub，包括前提条件、部署配置、创建工作流文件、修改项目部署根目录、提交代码和访问路径的详细步骤和方法
 firstCommit: 2024-09-12 23:39:12+8:00
 lastUpdated: 2024-09-12 23:39:12+8:00
+category: 技术
 tags:
   - Github
   - Vue.js

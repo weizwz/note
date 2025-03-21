@@ -3,6 +3,7 @@ title: VSCode 使用硅基流动的 API 接入 DeepSeek
 description: 本文介绍如何在VS Code中使用硅基流动API接入DeepSeek，详细说明注册硅基流动账号、创建API密钥及配置VS Code插件cline，并展示如何使用cline优化代码片段、项目依赖及新建项目等功能
 firstCommit: 2025-02-12 21:19:23+8:00
 lastUpdated: 2025-02-21 10:50:54+8:00
+category: 资源
 tags: 
  - VSCode
  - AI

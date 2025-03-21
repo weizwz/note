@@ -3,6 +3,7 @@ title: Vite4+Typescript+Vue3+Pinia 从零搭建(7) - request封装
 description: 这篇文章介绍了使用 Vite4、Typescript、Vue3 和 Pinia 从零开始搭建项目中如何 封装请求。文章详细讲解了如何基于 axios 封装请求，支持多域名请求地址，并提供了具体的代码示例和优化建议
 firstCommit: 2023-12-19 17:37:23+8:00
 lastUpdated: 2023-12-19 17:37:23+8:00
+category: 技术
 tags:
   - Vue.js
   - Axios

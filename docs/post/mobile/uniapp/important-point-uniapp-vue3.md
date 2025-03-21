@@ -3,6 +3,7 @@ title: uni-app+vue3常见问题总结
 description: 本文记录了作者在使用uni-app和vue3开发过程中遇到的问题及解决方案，包括单端代码、安全边距、全局组件、DOM信息获取、URL传参、父子组件通信等方面的详细步骤和注意事项
 firstCommit: 2024-02-01 19:34:18+8:00
 lastUpdated: 2024-02-06 22:14:03+8:00
+category: 技术
 tags:
   - uni-app
   - Vue.js

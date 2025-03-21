@@ -3,6 +3,7 @@ title: nginx配置解决跨域访问
 description: 本文介绍了如何通过配置Nginx解决前后端分离项目中的跨域问题，详细讲解了开发和生产环境的配置方法，包括Vite、Axios和代理的使用，并提供了Nginx配置文件的示例
 firstCommit: 2023-10-21 15:35:35+8:00
 lastUpdated: 2023-10-21 15:35:35+8:00
+category: 技术
 tags:
   - nginx
   - 代理

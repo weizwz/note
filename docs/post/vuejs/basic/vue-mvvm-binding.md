@@ -3,6 +3,7 @@ title: Vue 双向绑定原理梳理
 description: 这篇文章介绍了 Vue.js中双向绑定的原理。通过数据劫持和发布-订阅模式，使用 Object.defineProperty() 方法实现数据和视图的同步更新。文章还详细讲解了如何对数组进行劫持，使其响应式更新。
 firstCommit: 2022-11-17 15:13:24+8:00
 lastUpdated: 2022-11-29 18:31:16+8:00
+category: 技术
 tags:
   - Vue.js
 ---

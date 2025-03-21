@@ -3,6 +3,7 @@ title: Github 项目徽标
 description: 这篇文章介绍了如何在GitHub项目中使用shields.io生成各种漂亮的徽标。内容包括徽标的基本模板、样式、图标和动态数据的使用方法。通过这些步骤，用户可以为自己的项目添加自定义徽标，提升项目的专业性和美观度
 firstCommit: 2023-12-06 19:49:11+8:00
 lastUpdated: 2023-12-14 17:23:10+8:00
+category: 资源
 tags:
   - CSS
   - Github

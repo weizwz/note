@@ -3,6 +3,7 @@ title: JS 判断点是否在线段上
 description: 本文介绍了如何利用向量的点积和叉积来判断一个点是否在线段上，并提供了相关的JavaScript代码示例。通过计算向量的点积和叉积，可以确定点是否在直线上或线段上
 firstCommit: 2023-11-15 21:57:37+8:00
 lastUpdated: 2023-11-23 16:10:03+8:00
+category: 技术
 tags:
   - JavaScript
 ---

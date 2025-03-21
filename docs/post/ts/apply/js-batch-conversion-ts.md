@@ -3,6 +3,7 @@ title: JS脚本批量处理TS数据类型
 description: 本文介绍了如何使用JS脚本批量处理TS数据类型，包括处理数据字典中的数据和后台代码中复制的数据的详细步骤和方法
 firstCommit: 2024-08-26 20:52:41+8:00
 lastUpdated: 2024-08-26 20:52:41+8:00
+category: 技术
 tags:
   - TypeScript
   - JavaScript

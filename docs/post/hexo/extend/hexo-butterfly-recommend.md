@@ -3,6 +3,7 @@ title: hexo-butterfly-recommend 使用说明
 description: 这篇文章介绍了Hexo主题Butterfly的推荐组件扩展 hexo-butterfly-recommend。内容包括如何安装和配置此组件，以提升博客的功能和美观度。通过使用此组件，用户可以在博客首页添加滚动Banner、文章推荐卡片等，增强用户体验
 firstCommit: 2023-11-22 16:34:55+8:00
 lastUpdated: 2024-02-01 19:12:14+8:00
+category: 博客
 tags:
   - Hexo
   - npm

@@ -3,6 +3,7 @@ title: Hexo 常用命令和优化指南
 description: 这篇文章详细介绍了Hexo的常用命令，包括初始化网站、创建新文章、生成静态文件、启动本地服务器、部署网站等。通过这些命令，用户可以高效地管理和维护Hexo网站，提高网站的性能和可定制性
 firstCommit: 2022-09-15 11:55:23+8:00
 lastUpdated: 2024-03-15 10:39:35+8:00
+category: 博客
 tags:
   - Hexo
   - Markdown

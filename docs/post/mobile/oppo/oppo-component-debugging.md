@@ -3,6 +3,7 @@ title: OPPO主题组件开发 - 调试与预览
 description: 本文介绍了如何调试和预览OPPO主题组件。主要内容包括：PC端下载adb命令工具并配置环境变量，手机端安装多彩引擎并连接电脑，通过adb命令测试连接、创建widget文件夹、发送组件包到手机，以及手机端预览组件。还介绍了其他常用adb命令和连接OPPO远程真机的方法
 firstCommit: 2023-09-25 14:14:00+8:00
 lastUpdated: 2023-12-14 11:04:06+8:00
+category: 技术
 tags:
   - OPPO
   - Windows

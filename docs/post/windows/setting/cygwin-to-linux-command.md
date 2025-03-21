@@ -3,6 +3,7 @@ title: Cygwin，在Windows中使用linux命令
 description: 这篇文章介绍了如何在Windows中使用Cygwin来执行Linux命令。内容包括Cygwin的下载安装步骤、配置环境变量的方法，以及如何使用常见的Linux命令如ls和pwd。文章还提到选择国内镜像地址以加快下载速度
 firstCommit: 2023-09-22 20:13:00+8:00
 lastUpdated: 2023-12-07 17:23:15+8:00
+category: 资源
 tags:
   - 终端
   - Windows

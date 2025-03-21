@@ -3,6 +3,7 @@ title: 巧用 mask 属性创建一个纯 CSS 图标库
 description: 本文介绍了如何使用CSS的mask属性和SVG图像创建一个纯CSS图标库。通过将SVG图标转换为data URI并在CSS中使用mask属性，可以实现图标的颜色和尺寸控制。文章详细讲解了图标库的创建步骤，包括SVG图标的定义、公共样式设置、多种颜色和尺寸的应用
 firstCommit: 2024-12-23 18:32:05+8:00
 lastUpdated: 2025-01-03 12:10:23+8:00
+category: 技术
 tags:
   - CSS
   - SVG

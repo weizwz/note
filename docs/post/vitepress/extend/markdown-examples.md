@@ -3,6 +3,7 @@ title: Markdown 最全扩展语法示例
 description: 本文展示了 VitePress 提供的内置 Markdown 扩展功能，包括代码块行号显示、图片懒加载、标题锚点、网页链接、图片引用、表格语法、Emoji 表情、折叠语法、容器使用、代码高亮、代码导入、代码嵌套等配置和使用方法
 firstCommit: 2024-12-09 14:34:18+8:00
 lastUpdated: 2024-12-20 15:11:32+8:00
+category: 博客
 tags:
   - Markdown
   - VitePress

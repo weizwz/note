@@ -3,6 +3,7 @@ title: vue3+ts打开echarts的正确方式
 description: 本文介绍了如何在 vite5 + vue3 + ts 项目中正确使用 echarts，包括注册百度地图开发者、引入百度地图、安装 echarts、增加 ts 对百度地图的支持、全局注册 echarts 以及封装 echarts 组件。文章还提供了使用 echarts 普通图表和结合百度地图的示例
 firstCommit: 2023-12-28 20:35:25+8:00
 lastUpdated: 2023-12-28 20:35:25+8:00
+category: 技术
 tags:
   - ECharts
   - 地图
