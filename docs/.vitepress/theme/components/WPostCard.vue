@@ -36,13 +36,9 @@
 </template>
 
 <script setup lang="ts">
-import { HomePost } from '../type/WHome'
 import { withBase } from 'vitepress'
+import { PostCard } from '../type/WPost'
 import { calculateStrLength, truncateStr} from '../../utils/tools'
-
-export interface PostCard extends HomePost {
-  baseUrl?: string
-}
 
 const props = defineProps<{ post?: PostCard; noData?: Boolean }>()
 const post = props?.post as PostCard

@@ -35,28 +35,3 @@
     right: 2px;
   }
 }
-
-#posts {
-  margin: 0 auto;
-  .title-wrapper {
-    margin: calc(var(--weiz-spacing) * 8) 0 calc(var(--weiz-spacing) * 12) 0;
-    height: 1px;
-    background: var(--vp-c-text-5);
-    position: relative;
-  }
-  .title {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%) translateY(-50%);
-    background: var(--vp-c-bg-soft);
-    padding: 0 var(--weiz-spacing-8xl);
-    font-size: var(--weiz-font-size-xl);
-    font-weight: var(--weiz-font-weight-bold);
-    line-height: var(--weiz-text-xl-line-height);
-    text-align: center;
-  }
-  .el-col {
-    margin-bottom: var(--weiz-spacing-6xl);
-  }
-}

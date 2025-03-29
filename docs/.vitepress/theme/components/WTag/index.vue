@@ -14,21 +14,7 @@
       </div>
     </div>
     <div id="posts">
-      <div class="title-wrapper">
-        <h3 class="title">文章列表</h3>
-      </div>
-      <div class="posts-wrapper">
-        <el-row v-if="posts.length === 0" class="container-row" :gutter="24">
-          <el-col v-for="idx of 8" :key="idx" :xs="24" :sm="12" :md="6">
-            <weiz-post-card :noData="true" />
-          </el-col>
-        </el-row>
-        <el-row v-else class="container-row" :gutter="24">
-          <el-col v-for="item of posts" :key="item.url" :xs="24" :sm="12" :md="6">
-            <weiz-post-card :post="Object.assign({ baseUrl: '../' }, item)" />
-          </el-col>
-        </el-row>
-      </div>
+      <weiz-post-list :postList="postList" />
     </div>
   </div>
   <WDocFooter />
@@ -38,14 +24,18 @@
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 import { useRouter } from 'vitepress'
 import WDocFooter from '../WDocFooter.vue'
-import { Post, data } from '../../../utils/post.data'
+import { data } from '../../../utils/post.data'
+import { PostList } from '../../type/WPost'
 
 const routeData = useRouter()
 const tags = ref(data.tags)
 const tagsText = ref(Object.keys(tags.value))
 
 let currentTag = ref('')
-let posts = ref<Post[]>([])
+let postList = ref<PostList[]>([{
+  title: '文章列表',
+  posts: []
+}])
 
 const activeTag = (tag) => {
   routeData.go(routeData.route.path + '?q=' + encodeURIComponent(tag))
@@ -57,7 +47,7 @@ const handleUrlState = () => {
   let tag = params.get('q') ? decodeURIComponent(params.get('q') as string) : ''
   tag = tagsText.value.indexOf(tag) !== -1 ? tag : tagsText.value[0]
   currentTag.value = tag
-  posts.value = tags.value[tag]
+  postList.value[0].posts = tags.value[tag]
 }
 
 onMounted(() => {
