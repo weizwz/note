@@ -35,8 +35,17 @@ const getPost = () => {
   postList.value = _list.reverse()
 }
 
+const getPostLength = () => {
+  let length = 0
+  postList.value.forEach((item) => {
+    length += item.posts.length
+  })
+  postLength.value = length
+}
+
 onMounted(() => {
   getPost()
+  getPostLength()
 })
 </script>
 
