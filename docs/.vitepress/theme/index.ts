@@ -14,11 +14,11 @@ import WTag from './components/WTag/index.vue' // 标签页
 import WPost from './components/WPost/index.vue' // 所有文章页
 import WDocTitleMeta from './components/WDocTitleMeta.vue' //文章顶部
 
-import TwoslashFloatingVue from '@shikijs/vitepress-twoslash/client' // type类型悬浮框
 import '@shikijs/vitepress-twoslash/style.css'
+import TwoslashFloatingVue from '@shikijs/vitepress-twoslash/client' // type类型悬浮框
 import busuanzi from 'busuanzi.pure.js' // 卜算子统计插件
 import '@fancyapps/ui/dist/fancybox/fancybox.css' 
-import { bindFancybox } from './components/ImgViewer'
+import { bindFancybox } from './components/ImgViewer' // 图片查看器
 import { NProgress } from 'nprogress-v2/dist/index.js' // 进度条
 import 'nprogress-v2/dist/index.css'
 // 全局样式
@@ -31,7 +31,7 @@ export default {
     // 获取 frontmatter
     const { frontmatter } = useData()
 
-    /* 为 自定义界面 添加 自定义class */
+    // 为 自定义界面 添加 自定义class
     props.class = frontmatter.value?.layout || ''
 
     return h(WLayout, props)
