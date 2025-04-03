@@ -87,6 +87,12 @@ export const loadPosts = async (mode) => {
 
   // 定义输出路径
   const outputPath = path.resolve(mode === 'production' ? './dist/posts.json' : './docs/posts.json')
+  
+  // 确保目标目录存在，如果不存在则创建，否则首次构建会报错
+  const outputDir = path.dirname(outputPath)
+  if (!fs.existsSync(outputDir)) {
+    fs.mkdirSync(outputDir, { recursive: true }) // 递归创建目录
+  }
 
   // 将数据写入 JSON 文件
   fs.writeFileSync(outputPath, JSON.stringify(formattedPosts, null, 2))
