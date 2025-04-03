@@ -15,10 +15,11 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
 import WDocFooter from '../WDocFooter.vue'
-import { data } from '../../../utils/post.data'
+import { postsYearData, Year } from '../../../utils/post'
 import { PostList } from '../../type/WPost'
 
 let postLength = ref(0)
+let posts = ref<Year>({})
 let postList = ref<PostList[]>([{
   title: new Date().getFullYear().toString(),
   posts: []
@@ -26,10 +27,10 @@ let postList = ref<PostList[]>([{
 
 const getPost = () => {
   let _list: PostList[] = []
-  for (const key in data.years) {
+  for (const key in posts.value) {
     _list.push({
       title: key,
-      posts: data.years[key]
+      posts: posts.value[key]
     })
   }
   postList.value = _list.reverse()
@@ -43,7 +44,8 @@ const getPostLength = () => {
   postLength.value = length
 }
 
-onMounted(() => {
+onMounted(async() => {
+  posts.value = await postsYearData()
   getPost()
   getPostLength()
 })

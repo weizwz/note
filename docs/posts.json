@@ -1,0 +1,1065 @@
+[
+  {
+    "title": "前端术语解读 - 底层运行类",
+    "url": "terminology/low-level-operation",
+    "date": [
+      1740662752000,
+      1740967039000
+    ],
+    "dateText": [
+      "2025/02/27",
+      "2025/03/03"
+    ],
+    "abstract": "前端名词解释大全，主要介绍了前端底层运行原理中的关键概念，如V8引擎及其特点、I/O操作的定义和种类、事件驱动编程的核心概念及应用、JavaScript运行机制等，并通过代码示例详细解读各概念及其应用，包括异步编程模型和垃圾回收机制等。",
+    "category": "技术",
+    "tags": [
+      "底层运行原理",
+      "术语"
+    ]
+  },
+  {
+    "title": "前端术语解读 - 编程思想类",
+    "url": "terminology/design-paradigm",
+    "date": [
+      1740648737000,
+      1740967726000
+    ],
+    "dateText": [
+      "2025/02/27",
+      "2025/03/03"
+    ],
+    "abstract": "前端名词解释大全，介绍了前端开发中的重要编程思想，如面向对象编程（OOP）、MVC和MVVM设计模式、鸭子类型、可变与不可变数据、类（Class）、函数式编程（FP）、Hooks、组合式API、选项式API等，通过代码示例详细解读各概念及其应用。",
+    "category": "技术",
+    "tags": [
+      "编程思想",
+      "术语"
+    ]
+  },
+  {
+    "title": "VSCode 使用硅基流动的 API 接入 DeepSeek",
+    "url": "editor/vscode/vscode-siliconflow",
+    "date": [
+      1739366363000,
+      1740106254000
+    ],
+    "dateText": [
+      "2025/02/12",
+      "2025/02/21"
+    ],
+    "abstract": "本文介绍如何在VS Code中使用硅基流动API接入DeepSeek，详细说明注册硅基流动账号、创建API密钥及配置VS Code插件cline，并展示如何使用cline优化代码片段、项目依赖及新建项目等功能",
+    "category": "资源",
+    "tags": [
+      "VSCode",
+      "AI"
+    ]
+  },
+  {
+    "title": "Vue3.5常用特性整理",
+    "url": "vuejs/basic/vue3.5-new",
+    "date": [
+      1737537142000,
+      1737541691000
+    ],
+    "dateText": [
+      "2025/01/22",
+      "2025/01/22"
+    ],
+    "abstract": "Vue3.5 常用特性总结，包括响应式 Props 解构、watch 深度监听、onWatcherCleanup 清理函数、watch 返回值增强、SSR 改进、useId 生成唯一应用 ID、data-allow-mismatch 属性、useTemplateRef 动态绑定元素等。这些改进提升了 Vue3.5 的开发体验和性能",
+    "category": "技术",
+    "tags": [
+      "Vue.js",
+      "SSR"
+    ]
+  },
+  {
+    "title": "适用于Mac的免费自动点击器 Auto Mouse Click",
+    "url": "macos/app/free-auto-mouse-click",
+    "date": [
+      1736918746000,
+      1737105795000
+    ],
+    "dateText": [
+      "2025/01/15",
+      "2025/01/17"
+    ],
+    "abstract": "本文分享了适用于Mac的免费自动点击器Auto Mouse Click，解压即用，支持坐标定位、自动移动、设置延迟和循环次数、定时、选定鼠标或键盘按键，可保存或加载脚本。下载链接和使用说明详见原文",
+    "category": "资源",
+    "tags": [
+      "应用程序",
+      "MacOS"
+    ]
+  },
+  {
+    "title": "Vitepress中警告Sass API过期：The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0",
+    "url": "vitepress/problem/warning-sass-api-expired",
+    "date": [
+      1736157069000,
+      1736158266000
+    ],
+    "dateText": [
+      "2025/01/06",
+      "2025/01/06"
+    ],
+    "abstract": "本文介绍了在 Vitepress 1.5.0 中引入 Sass 后，控制台出现的告警：The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0。原因是部分API弃用。解决方案是修改配置以使用现代 API，并介绍了 处理其他告警如 Sass @import 规则弃用，以及修改自定义函数如 unquote()、length()、nth() 等的办法",
+    "category": "技术",
+    "tags": [
+      "Sass",
+      "VitePress",
+      "Vite",
+      "webpack"
+    ]
+  },
+  {
+    "title": "VSCode 接入DeepSeek V3大模型，附使用说明",
+    "url": "editor/vscode/vscode-deepseek",
+    "date": [
+      1735896112000,
+      1740714322000
+    ],
+    "dateText": [
+      "2025/01/03",
+      "2025/02/28"
+    ],
+    "abstract": "文章介绍了如何在 VSCode 中接入 DeepSeek V3 大模型，包括插件下载、API Key 注册与配置等，文章还介绍了 Continue 的对话提问、代码优化、自动补全和注释生成代码等功能。DeepSeek V3 是一个拥有 6710 亿参数的专家混合语言模型，支持国内使用，价格便宜。",
+    "category": "资源",
+    "tags": [
+      "VSCode",
+      "AI"
+    ]
+  },
+  {
+    "title": "给网站设置三级域名",
+    "url": "site/third-level-domain",
+    "date": [
+      1735546407000,
+      1735556015000
+    ],
+    "dateText": [
+      "2024/12/30",
+      "2024/12/30"
+    ],
+    "abstract": "本文介绍了如何为使用 GitHub Pages 部署的网站设置三级域名。主要步骤包括在域名平台（如腾讯云）新增解析记录，并在 GitHub 项目设置中配置自定义域名",
+    "category": "资源",
+    "tags": [
+      "网站",
+      "Github"
+    ]
+  },
+  {
+    "title": "巧用 Element 自适应布局",
+    "url": "element/responsive-layout",
+    "date": [
+      1735370709000,
+      1735640693000
+    ],
+    "dateText": [
+      "2024/12/28",
+      "2024/12/31"
+    ],
+    "abstract": "这篇文章介绍了 Element UI 的 响应式布局，包括五个预设的响应尺寸：xs、sm、md、lg 和 xl。每个尺寸对应不同的屏幕宽度范围，并提供了 Vue.js 中的使用示例，展示了如何根据屏幕尺寸调整布局",
+    "category": "技术",
+    "tags": [
+      "Element",
+      "Vue.js"
+    ]
+  },
+  {
+    "title": "巧用 mask 属性创建一个纯 CSS 图标库",
+    "url": "css/apply/mask-svg-icon",
+    "date": [
+      1734949925000,
+      1735877423000
+    ],
+    "dateText": [
+      "2024/12/23",
+      "2025/01/03"
+    ],
+    "abstract": "本文介绍了如何使用CSS的mask属性和SVG图像创建一个纯CSS图标库。通过将SVG图标转换为data URI并在CSS中使用mask属性，可以实现图标的颜色和尺寸控制。文章详细讲解了图标库的创建步骤，包括SVG图标的定义、公共样式设置、多种颜色和尺寸的应用",
+    "category": "技术",
+    "tags": [
+      "CSS",
+      "SVG",
+      "图标"
+    ]
+  },
+  {
+    "title": "渲染报错 Hydration completed but contains mismatches",
+    "url": "vitepress/problem/error-mismatches",
+    "date": [
+      1733973872000,
+      1735610220000
+    ],
+    "dateText": [
+      "2024/12/12",
+      "2024/12/31"
+    ],
+    "abstract": "文章讨论了在 VitePress 项目中，浏览器控制台出现 “Hydration completed but contains mismatches” 错误的原因及解决方案。1主要原因是服务端渲染的 HTML 结构与客户端渲染的虚拟 DOM 不匹配。解决方法是将动态数据的渲染放到 onMounted 钩子中，以确保客户端和服务端的渲染结果一致",
+    "category": "技术",
+    "tags": [
+      "VitePress",
+      "SSR",
+      "Vue.js"
+    ]
+  },
+  {
+    "title": "运行时 API - 含示例",
+    "url": "vitepress/basic/api-examples",
+    "date": [
+      1733739384000,
+      1733971458000
+    ],
+    "dateText": [
+      "2024/12/09",
+      "2024/12/12"
+    ],
+    "abstract": "本文介绍了 VitePress 的常用运行时 API，包括 useData、useRouter 和 withBase。这些 API 允许访问站点数据、编程导航和路径处理。示例代码展示了如何在 .md 和 .vue 文件中使用这些 API",
+    "category": "博客",
+    "tags": [
+      "VitePress"
+    ]
+  },
+  {
+    "title": "Markdown 最全扩展语法示例",
+    "url": "vitepress/extend/markdown-examples",
+    "date": [
+      1733726058000,
+      1734678692000
+    ],
+    "dateText": [
+      "2024/12/09",
+      "2024/12/20"
+    ],
+    "abstract": "本文展示了 VitePress 提供的内置 Markdown 扩展功能，包括代码块行号显示、图片懒加载、标题锚点、网页链接、图片引用、表格语法、Emoji 表情、折叠语法、容器使用、代码高亮、代码导入、代码嵌套等配置和使用方法",
+    "category": "博客",
+    "tags": [
+      "Markdown",
+      "VitePress",
+      "Github"
+    ]
+  },
+  {
+    "title": "vue3项目部署到Github",
+    "url": "vuejs/apply/vue3-apply-github-page",
+    "date": [
+      1726155552000,
+      1726155552000
+    ],
+    "dateText": [
+      "2024/09/12",
+      "2024/09/12"
+    ],
+    "abstract": "本文介绍了如何将vue3项目部署到GitHub，包括前提条件、部署配置、创建工作流文件、修改项目部署根目录、提交代码和访问路径的详细步骤和方法",
+    "category": "技术",
+    "tags": [
+      "Github",
+      "Vue.js",
+      "Vite",
+      "Vue-CLI"
+    ]
+  },
+  {
+    "title": "JS脚本批量处理TS数据类型",
+    "url": "ts/apply/js-batch-conversion-ts",
+    "date": [
+      1724676761000,
+      1724676761000
+    ],
+    "dateText": [
+      "2024/08/26",
+      "2024/08/26"
+    ],
+    "abstract": "本文介绍了如何使用JS脚本批量处理TS数据类型，包括处理数据字典中的数据和后台代码中复制的数据的详细步骤和方法",
+    "category": "技术",
+    "tags": [
+      "TypeScript",
+      "JavaScript"
+    ]
+  },
+  {
+    "title": "常用TS语法总结",
+    "url": "ts/basic/ts-normal-summary",
+    "date": [
+      1707136674000,
+      1707186197000
+    ],
+    "dateText": [
+      "2024/02/05",
+      "2024/02/06"
+    ],
+    "abstract": "本文总结了作者常用的TypeScript写法，包括基本用法、对象、数组、函数、类型联合、类型断言、泛型、动态变量名以及在Vue3中的应用等方面的详细步骤和注意事项",
+    "category": "技术",
+    "tags": [
+      "TypeScript",
+      "Vue.js"
+    ]
+  },
+  {
+    "title": "定制你的清爽Mac版Edge浏览器",
+    "url": "macos/setting/clear-edge",
+    "date": [
+      1706965427000,
+      1707102752000
+    ],
+    "dateText": [
+      "2024/02/03",
+      "2024/02/05"
+    ],
+    "abstract": "本文介绍了如何定制Mac版Edge浏览器，包括禁用更新、禁用告警、关闭诊断、优化新标签页等功能的详细步骤和配置方法",
+    "category": "资源",
+    "tags": [
+      "MacOS",
+      "浏览器"
+    ]
+  },
+  {
+    "title": "uni-app+vue3常见问题总结",
+    "url": "mobile/uniapp/important-point-uniapp-vue3",
+    "date": [
+      1706787258000,
+      1707228843000
+    ],
+    "dateText": [
+      "2024/02/01",
+      "2024/02/06"
+    ],
+    "abstract": "本文记录了作者在使用uni-app和vue3开发过程中遇到的问题及解决方案，包括单端代码、安全边距、全局组件、DOM信息获取、URL传参、父子组件通信等方面的详细步骤和注意事项",
+    "category": "技术",
+    "tags": [
+      "uni-app",
+      "Vue.js",
+      "TypeScript"
+    ]
+  },
+  {
+    "title": "你想要的龙年特效来了",
+    "url": "css/apply/loong-effects",
+    "date": [
+      1706768345000,
+      1706768345000
+    ],
+    "dateText": [
+      "2024/02/01",
+      "2024/02/01"
+    ],
+    "abstract": "这篇文章介绍了如何使用CSS和SVG创建龙年特效。内容包括龙和云的SVG图形、动画效果的实现方法以及相关的CSS代码。通过这些步骤，用户可以在网页中添加动态的龙年特效，提升视觉效果",
+    "category": "技术",
+    "tags": [
+      "CSS",
+      "SVG",
+      "Hexo"
+    ]
+  },
+  {
+    "title": "自用黑苹果问题记录：开机报错/蓝牙/引导",
+    "url": "macos/setting/black-apple-log",
+    "date": [
+      1706514630000,
+      1706516189000
+    ],
+    "dateText": [
+      "2024/01/29",
+      "2024/01/29"
+    ],
+    "abstract": "本文记录了作者在使用黑苹果过程中遇到的问题及解决方案，包括系统安装、键盘设置、开机报错、蓝牙连接等方面的详细步骤和注意事项",
+    "category": "资源",
+    "tags": [
+      "MacOS"
+    ]
+  },
+  {
+    "title": "mac原生终端美化记录",
+    "url": "macos/setting/mac-terminal-beautify",
+    "date": [
+      1706087148000,
+      1716263483000
+    ],
+    "dateText": [
+      "2024/01/24",
+      "2024/05/21"
+    ],
+    "abstract": "本文介绍了在macOS上使用Homebrew对原生终端美化的方法，包括通过代理加速下载、使用国内镜像源、安装和配置zsh、oh-my-zsh、oh-my-posh等工具，以及常用命令和问题处理",
+    "category": "资源",
+    "tags": [
+      "终端",
+      "MacOS"
+    ]
+  },
+  {
+    "title": "uni-app+vue3+ts项目搭建",
+    "url": "mobile/uniapp/project-building-uniapp-vue3",
+    "date": [
+      1704447901000,
+      1704447901000
+    ],
+    "dateText": [
+      "2024/01/05",
+      "2024/01/05"
+    ],
+    "abstract": "本文介绍了如何使用uni-app、Vue3和TypeScript构建项目，包括开发前准备、插件安装与配置、项目初始化、代码规范、请求拦截器封装等内容",
+    "category": "技术",
+    "tags": [
+      "uni-app",
+      "TypeScript",
+      "Vue.js",
+      "Vite"
+    ]
+  },
+  {
+    "title": "Hexo 博客常用标签/语法",
+    "url": "hexo/basic/hexo-markdown",
+    "date": [
+      1704163815000,
+      1704183356000
+    ],
+    "dateText": [
+      "2024/01/02",
+      "2024/01/02"
+    ],
+    "abstract": "这篇文章主要介绍了 Hexo 博客中 Markdown 语法 的使用，包括 引用、图片、链接、表格、分割线、外挂标签、文字标签、行内图片 和 tab页签 等内容",
+    "category": "博客",
+    "tags": [
+      "Hexo",
+      "Markdown"
+    ]
+  },
+  {
+    "title": "vue3+ts打开echarts的正确方式",
+    "url": "vuejs/apply/vue3-ts-echarts",
+    "date": [
+      1703766925000,
+      1703766925000
+    ],
+    "dateText": [
+      "2023/12/28",
+      "2023/12/28"
+    ],
+    "abstract": "本文介绍了如何在 vite5 + vue3 + ts 项目中正确使用 echarts，包括注册百度地图开发者、引入百度地图、安装 echarts、增加 ts 对百度地图的支持、全局注册 echarts 以及封装 echarts 组件。文章还提供了使用 echarts 普通图表和结合百度地图的示例",
+    "category": "技术",
+    "tags": [
+      "ECharts",
+      "地图",
+      "Vue.js",
+      "Vite",
+      "TypeScript"
+    ]
+  },
+  {
+    "title": "Vite4+Typescript+Vue3+Pinia 从零搭建(7) - request封装",
+    "url": "vuejs/apply/project-building-vite-ts-7",
+    "date": [
+      1702978643000,
+      1702978643000
+    ],
+    "dateText": [
+      "2023/12/19",
+      "2023/12/19"
+    ],
+    "abstract": "这篇文章介绍了使用 Vite4、Typescript、Vue3 和 Pinia 从零开始搭建项目中如何 封装请求。文章详细讲解了如何基于 axios 封装请求，支持多域名请求地址，并提供了具体的代码示例和优化建议",
+    "category": "技术",
+    "tags": [
+      "Vue.js",
+      "Axios",
+      "Vite",
+      "TypeScript"
+    ]
+  },
+  {
+    "title": "Windows cmd 终极美化",
+    "url": "windows/setting/terminal-beautify",
+    "date": [
+      1702880491000,
+      1717687513000
+    ],
+    "dateText": [
+      "2023/12/18",
+      "2024/06/06"
+    ],
+    "abstract": "本文介绍了如何美化 Windows Terminal，包括安装 Windows Terminal 和 PowerShell、安装 Nerd Fonts 字体、安装 oh-my-posh 主题、使用自定义主题以及在其他编辑器中使用这些设置。文章提供了详细的步骤和相关链接，帮助用户实现终端美化",
+    "category": "资源",
+    "tags": [
+      "终端",
+      "Windows",
+      "字体"
+    ]
+  },
+  {
+    "title": "hexo-butterfly-navctrl 使用说明",
+    "url": "hexo/extend/hexo-butterfly-navctrl",
+    "date": [
+      1702629745000,
+      1702977834000
+    ],
+    "dateText": [
+      "2023/12/15",
+      "2023/12/19"
+    ],
+    "abstract": "这篇文章介绍了Hexo主题Butterfly的导航栏控制插件hexo-butterfly-navctrl的使用方法。内容包括插件的安装、配置和功能展示，帮助用户在博客中实现更灵活的导航栏控制，提高博客的可用性和用户体验",
+    "category": "博客",
+    "tags": [
+      "Hexo",
+      "npm"
+    ]
+  },
+  {
+    "title": "Github 项目徽标",
+    "url": "css/apply/icon-label-shields",
+    "date": [
+      1701863351000,
+      1702545790000
+    ],
+    "dateText": [
+      "2023/12/06",
+      "2023/12/14"
+    ],
+    "abstract": "这篇文章介绍了如何在GitHub项目中使用shields.io生成各种漂亮的徽标。内容包括徽标的基本模板、样式、图标和动态数据的使用方法。通过这些步骤，用户可以为自己的项目添加自定义徽标，提升项目的专业性和美观度",
+    "category": "资源",
+    "tags": [
+      "CSS",
+      "Github",
+      "Markdown",
+      "Hexo"
+    ]
+  },
+  {
+    "title": "Vite4+Typescript+Vue3+Pinia 从零搭建(6) - 状态管理pina",
+    "url": "vuejs/apply/project-building-vite-ts-6",
+    "date": [
+      1701745256000,
+      1701745256000
+    ],
+    "dateText": [
+      "2023/12/05",
+      "2023/12/05"
+    ],
+    "abstract": "这篇文章介绍了如何使用 Vite4、Typescript、Vue3 和 Pinia 从零搭建项目，重点讲解了 Pinia 的安装、实例创建、状态管理和持久化方法。文章还提供了具体的代码示例，展示了如何在项目中集成和使用 Pinia 进行状态管理",
+    "category": "技术",
+    "tags": [
+      "Vue.js",
+      "Vite",
+      "TypeScript",
+      "Pina",
+      "cookie"
+    ]
+  },
+  {
+    "title": "Vite4+Typescript+Vue3+Pinia 从零搭建(5) - 路由router",
+    "url": "vuejs/apply/project-building-vite-ts-5",
+    "date": [
+      1701264784000,
+      1701264784000
+    ],
+    "dateText": [
+      "2023/11/29",
+      "2023/11/29"
+    ],
+    "abstract": "这篇文章介绍了如何使用 Vite4、Typescript、Vue3 和 Pinia 从零搭建项目的路由部分。内容包括 安装 vue-router、创建示例页面、配置路由文件、修改 App.vue 和 main.ts 以集成路由，并提供了预览和进一步使用的链接",
+    "category": "技术",
+    "tags": [
+      "Vue.js",
+      "Vite",
+      "TypeScript",
+      "路由"
+    ]
+  },
+  {
+    "title": "PixPin - 新截图工具",
+    "url": "app/image/screenshot-pixpin",
+    "date": [
+      1701245588000,
+      1701245588000
+    ],
+    "dateText": [
+      "2023/11/29",
+      "2023/11/29"
+    ],
+    "abstract": "该页面介绍了一款功能强大的截图工具 PixPin，支持长截图、贴图、丰富标注、文本识别和动态图录制。用户可以通过官网下载安装，体验智能拼接、固定屏幕、序号标注、文字识别和动图录制等多种功能",
+    "category": "资源",
+    "tags": [
+      "图片",
+      "应用程序"
+    ]
+  },
+  {
+    "title": "Vite4+Typescript+Vue3+Pinia 从零搭建(4) - 代码规范",
+    "url": "vuejs/apply/project-building-vite-ts-4",
+    "date": [
+      1701162843000,
+      1701162843000
+    ],
+    "dateText": [
+      "2023/11/28",
+      "2023/11/28"
+    ],
+    "abstract": "本文介绍了如何在Vite4、TypeScript、Vue3和Pinia项目中配置代码规范，主要包括EditorConfig、ESLint和Prettier的安装与配置步骤，旨在提高代码质量和维护效率",
+    "category": "技术",
+    "tags": [
+      "Vue.js",
+      "Vite",
+      "TypeScript",
+      "VSCode"
+    ]
+  },
+  {
+    "title": "博客升级 Hexo 版本记录",
+    "url": "hexo/basic/hexo-update",
+    "date": [
+      1700877941000,
+      1740671946000
+    ],
+    "dateText": [
+      "2023/11/25",
+      "2025/02/27"
+    ],
+    "abstract": "这篇文章记录了Hexo博客的升级过程。内容包括如何检查当前版本、安装必要的工具、更新依赖项以及解决常见问题。通过这些步骤，用户可以顺利将Hexo博客升级到最新版本，确保博客的稳定性和安全性",
+    "category": "博客",
+    "tags": [
+      "Hexo",
+      "npm"
+    ]
+  },
+  {
+    "title": "hexo-butterfly-recommend 使用说明",
+    "url": "hexo/extend/hexo-butterfly-recommend",
+    "date": [
+      1700642095000,
+      1706785934000
+    ],
+    "dateText": [
+      "2023/11/22",
+      "2024/02/01"
+    ],
+    "abstract": "这篇文章介绍了Hexo主题Butterfly的推荐组件扩展 hexo-butterfly-recommend。内容包括如何安装和配置此组件，以提升博客的功能和美观度。通过使用此组件，用户可以在博客首页添加滚动Banner、文章推荐卡片等，增强用户体验",
+    "category": "博客",
+    "tags": [
+      "Hexo",
+      "npm"
+    ]
+  },
+  {
+    "title": "JS 判断点是否在线段上",
+    "url": "js/apply/point-in-line",
+    "date": [
+      1700056657000,
+      1700727003000
+    ],
+    "dateText": [
+      "2023/11/15",
+      "2023/11/23"
+    ],
+    "abstract": "本文介绍了如何利用向量的点积和叉积来判断一个点是否在线段上，并提供了相关的JavaScript代码示例。通过计算向量的点积和叉积，可以确定点是否在直线上或线段上",
+    "category": "技术",
+    "tags": [
+      "JavaScript"
+    ]
+  },
+  {
+    "title": "Vite4+Typescript+Vue3+Pinia 从零搭建(3) - Vite配置",
+    "url": "vuejs/apply/project-building-vite-ts-3",
+    "date": [
+      1699892292000,
+      1699892292000
+    ],
+    "dateText": [
+      "2023/11/14",
+      "2023/11/14"
+    ],
+    "abstract": "本文介绍了如何使用 Vite4、Typescript、Vue3 和 Pinia 从零搭建项目，重点讲解了 Vite 的配置，包括初始内容、配置别名、环境变量设置及其使用方法",
+    "category": "技术",
+    "tags": [
+      "Vite",
+      "Vue.js",
+      "TypeScript"
+    ]
+  },
+  {
+    "title": "Vite4+Typescript+Vue3+Pinia 从零搭建(2) - TS配置",
+    "url": "vuejs/apply/project-building-vite-ts-2",
+    "date": [
+      1699528082000,
+      1699528082000
+    ],
+    "dateText": [
+      "2023/11/09",
+      "2023/11/09"
+    ],
+    "abstract": "这篇文章介绍了如何配置 tsconfig.json 和 tsconfig.node.json 文件，以便在 Vite4、Typescript、Vue3 和 Pinia 项目中使用。内容包括 编译选项、路径映射、类型定义 以及 类型检查命令 的设置",
+    "category": "技术",
+    "tags": [
+      "TypeScript",
+      "Vue.js",
+      "Vite"
+    ]
+  },
+  {
+    "title": "Vite4+Typescript+Vue3+Pinia 从零搭建(1) - 项目初始化",
+    "url": "vuejs/apply/project-building-vite-ts-1",
+    "date": [
+      1699520604000,
+      1699520604000
+    ],
+    "dateText": [
+      "2023/11/09",
+      "2023/11/09"
+    ],
+    "abstract": "本文介绍了如何使用 Vite4、Typescript、Vue3 和 Pinia 从零开始搭建项目。内容包括 Node.js 和 VSCode 的准备工作，项目初始化步骤，依赖安装，目录结构查看，以及运行项目的方法",
+    "category": "技术",
+    "tags": [
+      "Vue.js",
+      "Vite",
+      "TypeScript",
+      "VSCode"
+    ]
+  },
+  {
+    "title": "Windows开发环境备份，再也不怕重装系统了",
+    "url": "windows/setting/dev-env-back",
+    "date": [
+      1698243572000,
+      1717688844000
+    ],
+    "dateText": [
+      "2023/10/25",
+      "2024/06/06"
+    ],
+    "abstract": "这篇文章介绍了如何在重装Windows系统后快速恢复开发环境。主要内容包括：软件安装在非系统盘，环境变量恢复，Win11环境优化，以及常用软件恢复。通过这些步骤，可以避免每次重装系统后重新配置环境的繁琐过程",
+    "category": "资源",
+    "tags": [
+      "Windows",
+      "终端",
+      "Node.js"
+    ]
+  },
+  {
+    "title": "nginx配置解决跨域访问",
+    "url": "nginx/nginx-web-cross-domain",
+    "date": [
+      1697873735000,
+      1697873735000
+    ],
+    "dateText": [
+      "2023/10/21",
+      "2023/10/21"
+    ],
+    "abstract": "本文介绍了如何通过配置Nginx解决前后端分离项目中的跨域问题，详细讲解了开发和生产环境的配置方法，包括Vite、Axios和代理的使用，并提供了Nginx配置文件的示例",
+    "category": "技术",
+    "tags": [
+      "nginx",
+      "代理",
+      "Vite",
+      "Vue.js",
+      "Node.js"
+    ]
+  },
+  {
+    "title": "OPPO主题组件开发 - 组件内容自适应",
+    "url": "mobile/oppo/oppo-component-auto",
+    "date": [
+      1696744980000,
+      1696744980000
+    ],
+    "dateText": [
+      "2023/10/08",
+      "2023/10/08"
+    ],
+    "abstract": "这篇文章介绍了OPPO主题组件开发中的自适应内容实现方法。主要包括两种方式：根据宽高等比例缩放和固定内容在中间。1文章通过示例代码详细说明了如何根据实际宽高比例调整组件内容，以及如何在特定条件下将内容固定在中间",
+    "category": "技术",
+    "tags": [
+      "OPPO",
+      "Windows"
+    ]
+  },
+  {
+    "title": "OPPO主题组件开发 - 调试与预览",
+    "url": "mobile/oppo/oppo-component-debugging",
+    "date": [
+      1695622440000,
+      1702523046000
+    ],
+    "dateText": [
+      "2023/09/25",
+      "2023/12/14"
+    ],
+    "abstract": "本文介绍了如何调试和预览OPPO主题组件。主要内容包括：PC端下载adb命令工具并配置环境变量，手机端安装多彩引擎并连接电脑，通过adb命令测试连接、创建widget文件夹、发送组件包到手机，以及手机端预览组件。还介绍了其他常用adb命令和连接OPPO远程真机的方法",
+    "category": "技术",
+    "tags": [
+      "OPPO",
+      "Windows"
+    ]
+  },
+  {
+    "title": "Cygwin，在Windows中使用linux命令",
+    "url": "windows/setting/cygwin-to-linux-command",
+    "date": [
+      1695384780000,
+      1701940995000
+    ],
+    "dateText": [
+      "2023/09/22",
+      "2023/12/07"
+    ],
+    "abstract": "这篇文章介绍了如何在Windows中使用Cygwin来执行Linux命令。内容包括Cygwin的下载安装步骤、配置环境变量的方法，以及如何使用常见的Linux命令如ls和pwd。文章还提到选择国内镜像地址以加快下载速度",
+    "category": "资源",
+    "tags": [
+      "终端",
+      "Windows",
+      "应用程序"
+    ]
+  },
+  {
+    "title": "AI 作画本地搭建",
+    "url": "ai/ai-local-painting",
+    "date": [
+      1682687246000,
+      1702556036000
+    ],
+    "dateText": [
+      "2023/04/28",
+      "2023/12/14"
+    ],
+    "abstract": "该页面介绍了 Novel AI 和 NAI Diffusion，包括安装 Python 3.10.6、下载训练模型文件、运行 Stable Diffusion web UI 的步骤，以及配置国内镜像地址的方法。页面还提供了相关链接和截图，帮助用户顺利启动服务并开始使用 AI 作画功能",
+    "category": "资源",
+    "tags": [
+      "AI",
+      "Python",
+      "Github"
+    ]
+  },
+  {
+    "title": "自用 VSCode 插件",
+    "url": "editor/vscode/vscode-self-plugin",
+    "date": [
+      1682402806000,
+      1702869792000
+    ],
+    "dateText": [
+      "2023/04/25",
+      "2023/12/18"
+    ],
+    "abstract": "这篇文章介绍了作者常用的 VSCode 插件，包括 EditorConfig for VS Code（用于定义编辑器编码格式规范）、Iconify IntelliSense（图标预览插件）和 Code Spell Checker（拼写检查插件）",
+    "category": "资源",
+    "tags": [
+      "VSCode",
+      "图标"
+    ]
+  },
+  {
+    "title": "让你的博客一起过年",
+    "url": "hexo/extend/new-year-theme",
+    "date": [
+      1673354279000,
+      1673443389000
+    ],
+    "dateText": [
+      "2023/01/10",
+      "2023/01/11"
+    ],
+    "abstract": "这篇文章介绍了如何通过修改Hexo和Butterfly主题的配置文件来为博客添加新年灯笼效果。文章详细描述了修改配置文件、添加CSS样式和创建新插件的方法，旨在为博客增添节日气氛",
+    "category": "博客",
+    "tags": [
+      "Hexo",
+      "CSS"
+    ]
+  },
+  {
+    "title": "浏览器好用插件分享",
+    "url": "browser/apply/browser-plugin",
+    "date": [
+      1671275459000,
+      1672719023000
+    ],
+    "dateText": [
+      "2022/12/17",
+      "2023/01/03"
+    ],
+    "abstract": "这篇文章介绍了一些实用的浏览器插件，包括Tab Session Manager、MONKNOW新标签页、Adblock Plus、Stylus、FeHelper和Window Resizer。每个插件都有详细的功能描述和使用建议，旨在提高用户的浏览体验和工作效率",
+    "category": "资源",
+    "tags": [
+      "浏览器"
+    ]
+  },
+  {
+    "title": "开源字体整理",
+    "url": "resource/font/open-source-font",
+    "date": [
+      1671011600000,
+      1710473784000
+    ],
+    "dateText": [
+      "2022/12/14",
+      "2024/03/15"
+    ],
+    "abstract": "这篇文章主要介绍了几款开源字体，包括得意黑、思源黑体、思源宋体、霞鹜文楷、Sarasa Gothic、文泉驿正黑体、Mona Sans 和 Hubot Sans。文章详细描述了每款字体的特点和下载链接",
+    "category": "资源",
+    "tags": [
+      "字体",
+      "Github"
+    ]
+  },
+  {
+    "title": "pnpm 安装和配置",
+    "url": "nodejs/apply/pnpm-setting",
+    "date": [
+      1670070729000,
+      1670070729000
+    ],
+    "dateText": [
+      "2022/12/03",
+      "2022/12/03"
+    ],
+    "abstract": "这篇文章介绍了如何配置pnpm，包括安装pnpm、设置全局安装路径和缓存路径等内容。文章提供了详细的命令和操作步骤，涵盖了pnpm安装和配置中的常见问题",
+    "category": "技术",
+    "tags": [
+      "Node.js",
+      "pnpm"
+    ]
+  },
+  {
+    "title": "GitHub + Hexo 搭建个人博客网站",
+    "url": "hexo/basic/hexo-github-blog",
+    "date": [
+      1669704901000,
+      1702543583000
+    ],
+    "dateText": [
+      "2022/11/29",
+      "2023/12/14"
+    ],
+    "abstract": "这篇文章介绍了如何使用GitHub和Hexo搭建个人博客网站。内容包括注册GitHub账号、创建仓库、安装Hexo、生成博客模板、配置主题以及将本地博客部署到GitHub Pages上。通过这些步骤，用户可以快速建立属于自己的博客网站",
+    "category": "博客",
+    "tags": [
+      "Hexo",
+      "Github"
+    ]
+  },
+  {
+    "title": "Git 使用记录 - 持续更新",
+    "url": "git/use-log",
+    "date": [
+      1669346744000,
+      1710473562000
+    ],
+    "dateText": [
+      "2022/11/25",
+      "2024/03/15"
+    ],
+    "abstract": "这篇文章详细介绍了Git的使用方法，包括初始化配置、生成SSH密钥、设置代理、关联远程仓库、切换远程仓库地址、修改分支名称、解决常见错误等内容。文章还提供了具体的命令和操作步骤，帮助用户更好地管理和使用Git",
+    "category": "资源",
+    "tags": [
+      "Git",
+      "Github",
+      "代理"
+    ]
+  },
+  {
+    "title": "Clash Verge 使用记录：安装、配置",
+    "url": "app/network/clash-verge",
+    "date": [
+      1669129907000,
+      1737884256000
+    ],
+    "dateText": [
+      "2022/11/22",
+      "2025/01/26"
+    ],
+    "abstract": "这篇文章介绍了Clash Verge的下载、配置和使用方法。Clash Verge是一个基于Clash Meta内核的GUI代理工具，支持多种操作系统和代理协议。文章详细讲解了如何加速下载，日常编码如何正确使用代理，以及日常使用中出现的一些问题，文章最后还总结了常用的代理规则，对国内大部分网站都进行了优化，可以直接访问。",
+    "category": "资源",
+    "tags": [
+      "代理",
+      "应用程序",
+      "Github",
+      "npm",
+      "Git"
+    ]
+  },
+  {
+    "title": "Vue 多界面开发",
+    "url": "vuejs/apply/vue-multi-page-dev",
+    "date": [
+      1668862837000,
+      1668862837000
+    ],
+    "dateText": [
+      "2022/11/19",
+      "2022/11/19"
+    ],
+    "abstract": "这篇文章介绍了如何使用 Vue CLI 创建多页面应用。文章详细讲解了安装 Vue CLI、创建项目、修改多页面配置、运行项目查看效果等步骤，并提供了相应的代码示例和配置文件修改方法。",
+    "category": "技术",
+    "tags": [
+      "Vue.js",
+      "Vue-CLI"
+    ]
+  },
+  {
+    "title": "Vue 双向绑定原理梳理",
+    "url": "vuejs/basic/vue-mvvm-binding",
+    "date": [
+      1668669204000,
+      1669717876000
+    ],
+    "dateText": [
+      "2022/11/17",
+      "2022/11/29"
+    ],
+    "abstract": "这篇文章介绍了 Vue.js中双向绑定的原理。通过数据劫持和发布-订阅模式，使用 Object.defineProperty() 方法实现数据和视图的同步更新。文章还详细讲解了如何对数组进行劫持，使其响应式更新。",
+    "category": "技术",
+    "tags": [
+      "Vue.js"
+    ]
+  },
+  {
+    "title": "JS 比较数值大小",
+    "url": "js/apply/compare-number",
+    "date": [
+      1666589657000,
+      1701745893000
+    ],
+    "dateText": [
+      "2022/10/24",
+      "2023/12/05"
+    ],
+    "abstract": "本文详细介绍了在 JavaScript 中比较数值大小的几种方法，并提供了每种方法的代码示例和详细解释，帮助读者理解和应用这些方法来比较数值大小",
+    "category": "技术",
+    "tags": [
+      "JavaScript"
+    ]
+  },
+  {
+    "title": "Nodejs 报错记录",
+    "url": "nodejs/problem/error-log",
+    "date": [
+      1666333216000,
+      1688814621000
+    ],
+    "dateText": [
+      "2022/10/21",
+      "2023/07/08"
+    ],
+    "abstract": "这篇文章记录了作者在使用Node.js和npm过程中遇到的一些常见错误及其解决方法。内容包括Node版本问题、权限问题、Node Sass版本不匹配等，并提供了详细的解决步骤和命令",
+    "category": "技术",
+    "tags": [
+      "Node.js",
+      "npm",
+      "Vue.js",
+      "Sass"
+    ]
+  },
+  {
+    "title": "Hexo 常用命令和优化指南",
+    "url": "hexo/basic/hexo-command-better",
+    "date": [
+      1663214123000,
+      1710470375000
+    ],
+    "dateText": [
+      "2022/09/15",
+      "2024/03/15"
+    ],
+    "abstract": "这篇文章详细介绍了Hexo的常用命令，包括初始化网站、创建新文章、生成静态文件、启动本地服务器、部署网站等。通过这些命令，用户可以高效地管理和维护Hexo网站，提高网站的性能和可定制性",
+    "category": "博客",
+    "tags": [
+      "Hexo",
+      "Markdown",
+      "VSCode"
+    ]
+  }
+]

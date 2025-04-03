@@ -1,4 +1,4 @@
-import { Post } from '../../utils/post.data'
+import { Post } from '../../utils/post'
 import { HomePost } from './WHome'
 
 // 兼容首页需求

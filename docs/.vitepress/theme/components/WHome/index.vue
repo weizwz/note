@@ -112,14 +112,15 @@ import { useData, withBase } from 'vitepress'
 import { onMounted, ref } from 'vue'
 import WDocFooter from '../WDocFooter.vue'
 import { HomeAbout, HomePost } from '../../type/WHome'
-import { data } from '../../../utils/post.data'
+import { Post, postsData, postsTagData } from '../../../utils/post'
 import { countTransK, getRandomElement } from '../../../utils/tools'
 
 const { frontmatter: fm } = useData()
 
 const aboutData = fm.value.about as HomeAbout
+let posts = ref<Post[]>([])
 let postData = ref<HomePost[]>([])
-const tags = fm.value.tags ? fm.value.tags.split(',') : Object.keys(data.tags)
+const tags = ref<string[]>([])
 
 const pv = ref('loading')
 const uv = ref('loading')
@@ -136,14 +137,14 @@ const postMerge = () => {
           return item
         })
       : (() => {
-          const newPosts = data.posts.slice(0, postLength)
+          const newPosts = posts.value.slice(0, postLength)
           let mdPosts = fm.value.post || newPosts
           // 过滤重复数据
           if (fmLength > 0) {
             // 补全首页数据 docs/index.md
             const fullPost = fm.value.post.map(item => {
               // 在第二个数组中查找对应的完整信息
-              const fullInfo = data.posts.find(fullItem => fullItem.url === item.url)
+              const fullInfo = posts.value.find(fullItem => fullItem.url === item.url)
               // 如果找到了对应的信息，合并到当前对象中
               if (fullInfo) {
                 return { ...fullInfo, ...item  }
@@ -183,7 +184,7 @@ const postMerge = () => {
 }
 
 const postRandom = () => {
-  const post = getRandomElement(data.posts)
+  const post = getRandomElement(posts.value)
   lookHref.value = post ? post.url : ''
 }
 
@@ -216,7 +217,10 @@ const getPV = () => {
   }, 500)
 }
 
-onMounted(() => {
+onMounted(async() => {
+  posts.value = await postsData()
+  const tagsData = await postsTagData()
+  tags.value = Object.keys(tagsData)
   postMerge()
   postRandom()
   getUV()

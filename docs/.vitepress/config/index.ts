@@ -4,6 +4,7 @@ import { algolia } from './algolia'
 import { createHead } from './head'
 import { sidebar } from './sidebar'
 import { footer } from './footer'
+import { loadPosts } from './loadPosts'
 import MarkdownPreview from 'vite-plugin-markdown-preview'
 // https://shiki-zh-docs.vercel.app/packages/vitepress
 import { transformerTwoslash } from '@shikijs/vitepress-twoslash'
@@ -133,7 +134,16 @@ export default async ({ mode }) => {
       hostname: 'https://note.weizwz.com'
     },
     vite: {
-      plugins: [MarkdownPreview()],
+      plugins: [
+        MarkdownPreview(),
+        // 开发环境执行
+        {
+          name: 'load-posts-plugin',
+          async configResolved() {
+            await loadPosts(mode)
+          }
+        }
+      ],
       // 解决sass告警的问题 Deprecation Warning: The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.
       css: {
         preprocessorOptions: {
@@ -141,6 +151,15 @@ export default async ({ mode }) => {
             api: 'modern'
           }
         }
+      }
+    },
+    // 构建时执行
+    async buildEnd() {
+      try {
+        // 加载文章
+        loadPosts(mode)
+      } catch (error) {
+        console.error('Error during buildEnd:', error)
       }
     }
   })
