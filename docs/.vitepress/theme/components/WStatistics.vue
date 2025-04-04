@@ -13,14 +13,14 @@
         <span class="statistics-pv" id="pv">{{ pv }}</span>
       </div>
       <div class="chart pv-wrapper">
-        <div class="pv-num" id="pvProgress" style="width: 75%"></div>
+        <div class="pv-num" id="pvProgress" style="width: 5%"></div>
       </div>
       <div class="statistics-wrapper">
         <span class="statistics-title">独立访客</span>
         <span class="statistics-uv" id="uv">{{ uv }}</span>
       </div>
       <div class="chart uv-wrapper">
-        <div class="uv-num" id="uvProgress" style="width: 50%"></div>
+        <div class="uv-num" id="uvProgress" style="width: 5%"></div>
       </div>
     </div>
     <span id="busuanzi_value_site_pv" style="display: none" />
