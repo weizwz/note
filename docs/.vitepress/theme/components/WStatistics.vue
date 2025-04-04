@@ -10,17 +10,17 @@
     <div class="statistics-main">
       <div class="statistics-wrapper">
         <span class="statistics-title">总访问量</span>
-        <span class="statistics-pv">{{ pv }}</span>
+        <span class="statistics-pv" id="pv">{{ pv }}</span>
       </div>
       <div class="chart pv-wrapper">
-        <div class="pv-num" style="width: 75%;"></div>
+        <div class="pv-num" id="pvProgress" style="width: 75%"></div>
       </div>
       <div class="statistics-wrapper">
         <span class="statistics-title">独立访客</span>
-        <span class="statistics-uv">{{ uv }}</span>
+        <span class="statistics-uv" id="uv">{{ uv }}</span>
       </div>
       <div class="chart uv-wrapper">
-        <div class="uv-num" style="width: 50%;"></div>
+        <div class="uv-num" id="uvProgress" style="width: 50%"></div>
       </div>
     </div>
     <span id="busuanzi_value_site_pv" style="display: none" />
@@ -28,12 +28,36 @@
   </div>
 </template>
 
-<script setup lang='ts'>
+<script setup lang="ts">
 import { onMounted, ref } from 'vue'
 import { countTransK } from '../../utils/tools'
 
 const pv = ref('loading')
 const uv = ref('loading')
+
+let timeoutPV = 0
+const getPV = () => {
+  if (timeoutPV) clearTimeout(timeoutPV)
+  timeoutPV = window.setTimeout(() => {
+    const $PV = document.querySelector('#busuanzi_value_site_pv')
+    const text = $PV?.innerHTML
+    if ($PV && text) {
+      pv.value = countTransK(parseInt(text))
+      // 调用封装的函数
+      animateNumberAndProgressBar({
+        counterSelector: '#pv',
+        fillBarSelector: '#pvProgress',
+        start: 8000,
+        end: 88547,
+        totalDuration: 2000,
+        minPercentage: 5,
+        targetPercentage: 75
+      });
+    } else {
+      getPV()
+    }
+  }, 500)
+}
 
 let timeoutUV = 0
 const getUV = () => {
@@ -44,33 +68,90 @@ const getUV = () => {
     if ($UV && text) {
       const text = $UV.innerHTML
       uv.value = countTransK(parseInt(text))
+      // 调用封装的函数
+      animateNumberAndProgressBar({
+        counterSelector: '#uv',
+        fillBarSelector: '#uvProgress',
+        start: 5000,
+        end: 57823,
+        totalDuration: 2000,
+        minPercentage: 5,
+        targetPercentage: 50
+      });
     } else {
       getUV()
     }
   }, 500)
 }
 
-let timeoutPV = 0
-const getPV = () => {
-  if (timeoutPV) clearTimeout(timeoutPV)
-  timeoutPV = window.setTimeout(() => {
-    const $PV = document.querySelector('#busuanzi_value_site_pv')
-    const text = $PV?.innerHTML
-    if ($PV && text) {
-      pv.value = countTransK(parseInt(text))
-    } else {
-      getPV()
+// 统计数字动画
+const animateNumberAndProgressBar = ({
+  counterSelector,
+  fillBarSelector,
+  start = 0,
+  end,
+  totalDuration = 2000,
+  minPercentage = 5,
+  targetPercentage = 75
+}) => {
+  // 如果开始和结束的数字相同，直接返回
+  if (start == end) {
+    return
+  }
+  // 调整进度条起始位置，要基本符合进度条的长度
+  const maxNum = (end * 100) / targetPercentage
+  let startPercentage = (start / maxNum) * 100
+
+  const counterElement = document.querySelector(counterSelector)
+  const fillBarElement = document.querySelector(fillBarSelector)
+
+  let startTime = null
+  const totalSteps = end - start
+
+  function formatNumber(num) {
+    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+  }
+
+  function animateCounter(timestamp) {
+    if (!startTime) startTime = timestamp
+    const elapsed = timestamp - (startTime ?? timestamp)
+
+    const progress = Math.min(elapsed / totalDuration, 1)
+    const currentNumber = Math.floor(start + progress * totalSteps)
+    let stepPercentage = progress * (targetPercentage - startPercentage)
+    // 保证肉眼能看到至少5%的变化
+    if (targetPercentage - startPercentage < minPercentage) {
+      stepPercentage = progress * minPercentage
+      startPercentage = targetPercentage - minPercentage
     }
-  }, 500)
+
+    const currentProgress = startPercentage + stepPercentage
+
+    counterElement.textContent = formatNumber(currentNumber)
+    fillBarElement.style.width = currentProgress + '%'
+
+    if (fillBarElement.style.display !== 'block') {
+      fillBarElement.style.display = 'block'
+    }
+
+    if (progress < 1) {
+      requestAnimationFrame(animateCounter)
+    }
+  }
+
+  fillBarElement.style.width = startPercentage + '%'
+  fillBarElement.style.display = 'block'
+
+  requestAnimationFrame(animateCounter)
 }
 
-onMounted(async() => {
+onMounted(async () => {
   getUV()
   getPV()
 })
 </script>
 
-<style lang='scss' scoped>
+<style lang="scss" scoped>
 .statistics {
   width: 100%;
   display: inline-block;
@@ -121,20 +202,20 @@ onMounted(async() => {
     margin-bottom: var(--weiz-spacing-2xl);
   }
   .chart {
-    height: calc(var( --weiz-spacing) * 2);
-    border-radius: calc(var( --weiz-spacing) * 2);
+    height: calc(var(--weiz-spacing) * 2);
+    border-radius: calc(var(--weiz-spacing) * 2);
     background-color: var(--vp-c-gray-3);
     > div {
       height: 100%;
-      border-radius: calc(var( --weiz-spacing) * 2);
+      border-radius: calc(var(--weiz-spacing) * 2);
       background-color: var(--weiz-primary-color);
     }
   }
   .pv-wrapper {
     margin-bottom: var(--weiz-spacing-4xl);
   }
-  .statistics-title{
-    &+span {
+  .statistics-title {
+    & + span {
       font-size: var(--weiz-font-size-st);
       line-height: var(--weiz-text-st-line-height);
       font-weight: var(--weiz-font-weight-semibold);
