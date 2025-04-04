@@ -32,8 +32,8 @@
 import { onMounted, ref } from 'vue'
 import { countTransK } from '../../utils/tools'
 
-const pv = ref('loading')
-const uv = ref('loading')
+const pv = ref<string|number>('loading')
+const uv = ref<string|number>('loading')
 
 let timeoutPV = 0
 const getPV = () => {
@@ -42,13 +42,13 @@ const getPV = () => {
     const $PV = document.querySelector('#busuanzi_value_site_pv')
     const text = $PV?.innerHTML
     if ($PV && text) {
-      pv.value = countTransK(parseInt(text))
+      pv.value = parseInt(text)
       // 调用封装的函数
       animateNumberAndProgressBar({
         counterSelector: '#pv',
         fillBarSelector: '#pvProgress',
-        start: 8000,
-        end: 88547,
+        start: 1000,
+        end: pv.value,
         totalDuration: 2000,
         minPercentage: 5,
         targetPercentage: 75
@@ -67,13 +67,13 @@ const getUV = () => {
     const text = $UV?.innerHTML
     if ($UV && text) {
       const text = $UV.innerHTML
-      uv.value = countTransK(parseInt(text))
+      uv.value = parseInt(text)
       // 调用封装的函数
       animateNumberAndProgressBar({
         counterSelector: '#uv',
         fillBarSelector: '#uvProgress',
-        start: 5000,
-        end: 57823,
+        start: 1000,
+        end: uv.value,
         totalDuration: 2000,
         minPercentage: 5,
         targetPercentage: 50
