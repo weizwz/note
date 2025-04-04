@@ -61,21 +61,9 @@
             <weiz-post-card :noData="true" />
           </el-col>
           <el-col v-else v-for="(item, index) of postData" :key="index" class="statistic-wrapper" :xs="24" :sm="12" :md="6">
-            <div v-if="item.type && item.type === 'busuanzi'" class="post-card statistic">
-              <div class="post-container">
-                <div class="number">{{ uv }}</div>
-                <div class="desc">本站总访客<span id="busuanzi_value_site_uv" style="display: none" /></div>
-                <div class="desc-line"><span /></div>
-                <div class="desc">本站总访问量<span id="busuanzi_value_site_pv" style="display: none" /></div>
-                <div class="number">{{ pv }}</div>
-              </div>
-              <a class="post-container post-random-container" :href="lookHref" @click="postRandom">
-                <div class="post-more-container">
-                  <span><i class="weiz-icon weiz-icon-random xl"></i></span>
-                  <span>随便看看</span>
-                </div>
-              </a>
-            </div>
+            <template v-if="item.type && item.type === 'busuanzi'">
+              <weiz-statistics />
+            </template>
             <a v-else-if="item.type && item.type === 'more'" class="post-card post-more" href="pages/posts">
               <div class="post-container">
                 <div class="post-more-container">
@@ -113,7 +101,7 @@ import { onMounted, ref } from 'vue'
 import WDocFooter from '../WDocFooter.vue'
 import { HomeAbout, HomePost } from '../../type/WHome'
 import { Post, postsData, postsTagData } from '../../../utils/post'
-import { countTransK, getRandomElement } from '../../../utils/tools'
+import { getRandomElement } from '../../../utils/tools'
 
 const { frontmatter: fm } = useData()
 
@@ -122,8 +110,6 @@ let posts = ref<Post[]>([])
 let postData = ref<HomePost[]>([])
 const tags = ref<string[]>([])
 
-const pv = ref('loading')
-const uv = ref('loading')
 const cardLength = ref(0)
 const lookHref = ref(withBase('editor/vscode/vscode-siliconflow'))
 
@@ -188,43 +174,12 @@ const postRandom = () => {
   lookHref.value = post ? post.url : ''
 }
 
-let timeoutUV = 0
-const getUV = () => {
-  if (timeoutUV) clearTimeout(timeoutUV)
-  timeoutUV = window.setTimeout(() => {
-    const $UV = document.querySelector('#busuanzi_value_site_uv')
-    const text = $UV?.innerHTML
-    if ($UV && text) {
-      const text = $UV.innerHTML
-      uv.value = countTransK(parseInt(text))
-    } else {
-      getUV()
-    }
-  }, 500)
-}
-
-let timeoutPV = 0
-const getPV = () => {
-  if (timeoutPV) clearTimeout(timeoutPV)
-  timeoutPV = window.setTimeout(() => {
-    const $PV = document.querySelector('#busuanzi_value_site_pv')
-    const text = $PV?.innerHTML
-    if ($PV && text) {
-      pv.value = countTransK(parseInt(text))
-    } else {
-      getPV()
-    }
-  }, 500)
-}
-
 onMounted(async() => {
   posts.value = await postsData()
   const tagsData = postsTagData(posts.value)
   tags.value = Object.keys(tagsData)
   postMerge()
   postRandom()
-  getUV()
-  getPV()
 })
 </script>
 <style lang="scss" scoped>

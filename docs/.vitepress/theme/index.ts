@@ -9,6 +9,7 @@ import WLoading from './components/WLoading.vue' // 加载动画
 import WLayout from './components/WLayout.vue' // 布局
 import WPostCard from './components/WPostCard.vue' // 文章小卡片
 import WPostList from './components/WPostList.vue' // 文章列表
+import WStatistics from './components/WStatistics.vue' // 文章统计卡片
 import WHome from './components/WHome/index.vue' // 首页
 import WTag from './components/WTag/index.vue' // 标签页
 import WPost from './components/WPost/index.vue' // 所有文章页
@@ -39,6 +40,7 @@ export default {
   enhanceApp({ app, router }: EnhanceAppContext) {
     app.component('weiz-post-card', WPostCard)
     app.component('weiz-post-list', WPostList)
+    app.component('weiz-statistics', WStatistics)
     app.component('weiz-home', WHome)
     app.component('weiz-tag', WTag)
     app.component('weiz-post', WPost)
