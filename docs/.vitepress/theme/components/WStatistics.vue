@@ -5,7 +5,7 @@
         <span>访问统计</span>
         <span class="title-hover">访问统计</span>
       </div>
-      <i class="weiz-icon weiz-icon-chart-line main xxm"></i>
+      <i class="weiz-icon weiz-icon-chart-line main"></i>
     </div>
     <div class="statistics-main">
       <div class="statistics-wrapper">
@@ -132,9 +132,6 @@ onMounted(async() => {
   }
   .pv-wrapper {
     margin-bottom: var(--weiz-spacing-4xl);
-  }
-  .uv-wrapper {
-    margin-bottom: var(--weiz-spacing-2xl);
   }
   .statistics-title{
     &+span {
