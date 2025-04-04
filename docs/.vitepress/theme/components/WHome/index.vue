@@ -219,7 +219,7 @@ const getPV = () => {
 
 onMounted(async() => {
   posts.value = await postsData()
-  const tagsData = await postsTagData()
+  const tagsData = postsTagData(posts.value)
   tags.value = Object.keys(tagsData)
   postMerge()
   postRandom()

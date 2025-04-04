@@ -24,7 +24,7 @@
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 import { useRouter } from 'vitepress'
 import WDocFooter from '../WDocFooter.vue'
-import { postsTagData, Tag } from '../../../utils/post'
+import { postsData, postsTagData, Tag } from '../../../utils/post'
 import { PostList } from '../../type/WPost'
 
 const routeData = useRouter()
@@ -51,7 +51,8 @@ const handleUrlState = () => {
 }
 
 onMounted(async () => {
-  tags.value = await postsTagData()
+  const _posts = await postsData()
+  tags.value = postsTagData(_posts)
   tagsText.value = Object.keys(tags.value)
   handleUrlState()
   window.addEventListener('popstate', handleUrlState)

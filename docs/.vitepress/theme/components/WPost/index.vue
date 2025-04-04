@@ -15,7 +15,7 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
 import WDocFooter from '../WDocFooter.vue'
-import { postsYearData, Year } from '../../../utils/post'
+import { postsData, postsYearData, Year } from '../../../utils/post'
 import { PostList } from '../../type/WPost'
 
 let postLength = ref(0)
@@ -45,7 +45,8 @@ const getPostLength = () => {
 }
 
 onMounted(async() => {
-  posts.value = await postsYearData()
+  const _posts = await postsData()
+  posts.value = postsYearData(_posts)
   getPost()
   getPostLength()
 })

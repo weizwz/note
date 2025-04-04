@@ -31,8 +31,7 @@ export const postsData = async () => {
 }
 
 // 按年份显示文章
-export const postsYearData = async () => {
-  const posts = await postsData()
+export const postsYearData = (posts: Post[]) => {
   const years: Year = {}
   posts.forEach((item) => {
     const year = new Date(item.date[0]).getFullYear()
@@ -45,8 +44,7 @@ export const postsYearData = async () => {
 }
 
 // 按分类显示文章
-export const postsCategoryData = async () => {
-  const posts = await postsData()
+export const postsCategoryData = (posts: Post[]) => {
   const categories: Category = {}
   posts.forEach((item) => {
     if (item.category) {
@@ -60,8 +58,7 @@ export const postsCategoryData = async () => {
 }
 
 // 按标签显示文章
-export const postsTagData = async () => {
-  const posts = await postsData()
+export const postsTagData = (posts: Post[]) => {
   let tags: Tag = {}
   // 固定文章从最早发布日期开始，以便标签数组能稳定显示（不会因为新发布文章而导致顺序变化）
   const fixPosts = posts.sort((a, b) => a.date[0] - b.date[0])
